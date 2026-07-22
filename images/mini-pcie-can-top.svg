@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#f1f3f4"/>
+  <g transform="translate(150 115)">
+    <rect x="0" y="0" width="900" height="500" rx="14" fill="#18343b" stroke="#11262b" stroke-width="8"/>
+    <rect x="24" y="24" width="852" height="452" rx="8" fill="none" stroke="#35616a" stroke-width="2"/>
+    <g fill="#0d171a" stroke="#4d6166" stroke-width="3">
+      <rect x="360" y="165" width="180" height="170" rx="4"/>
+      <rect x="188" y="190" width="92" height="98" rx="4"/>
+      <rect x="620" y="190" width="92" height="98" rx="4"/>
+    </g>
+    <g fill="#9ba9ac"><circle cx="48" cy="48" r="16"/><circle cx="852" cy="48" r="16"/><circle cx="48" cy="452" r="16"/><circle cx="852" cy="452" r="16"/></g>
+    <g fill="#10191c"><circle cx="48" cy="48" r="8"/><circle cx="852" cy="48" r="8"/><circle cx="48" cy="452" r="8"/><circle cx="852" cy="452" r="8"/></g>
+    <g fill="#d5dde0" font-family="Arial,Helvetica,sans-serif">
+      <text x="70" y="70" font-size="25" font-weight="700" letter-spacing="4">XILUME</text>
+      <text x="70" y="100" font-size="11" letter-spacing="2" fill="#88a0a5">MINI PCIE · DUAL CAN FD</text>
+      <text x="405" y="235" font-size="19" font-weight="700" letter-spacing="3">CORE</text>
+      <text x="417" y="263" font-size="10" letter-spacing="2" fill="#77898d">LOGIC</text>
+      <text x="202" y="242" font-size="11" letter-spacing="1">CAN A</text>
+      <text x="635" y="242" font-size="11" letter-spacing="1">CAN B</text>
+    </g>
+    <g stroke="#67a9a8" stroke-width="3" fill="none" opacity=".75">
+      <path d="M280 215 H320 V205 H360"/><path d="M280 250 H330 V290 H360"/>
+      <path d="M540 205 H580 V215 H620"/><path d="M540 290 H570 V250 H620"/>
+      <path d="M110 340 H315 V315 H360"/><path d="M540 315 H590 V340 H790"/>
+    </g>
+    <g transform="translate(250 465)">
+      <rect width="400" height="55" fill="#c5a64a"/>
+      <g fill="#efd36b">
+        <rect x="8" width="16" height="48"/><rect x="32" width="16" height="48"/><rect x="56" width="16" height="48"/><rect x="80" width="16" height="48"/><rect x="104" width="16" height="48"/><rect x="128" width="16" height="48"/><rect x="152" width="16" height="48"/><rect x="176" width="16" height="48"/><rect x="208" width="16" height="48"/><rect x="232" width="16" height="48"/><rect x="256" width="16" height="48"/><rect x="280" width="16" height="48"/><rect x="304" width="16" height="48"/><rect x="328" width="16" height="48"/><rect x="352" width="16" height="48"/><rect x="376" width="16" height="48"/>
+      </g>
+    </g>
+    <g fill="#9da8ac" stroke="#d1d7d9" stroke-width="3"><rect x="-10" y="170" width="70" height="120"/><rect x="840" y="170" width="70" height="120"/></g>
+    <g fill="#192326"><rect x="4" y="195" width="38" height="22"/><rect x="4" y="240" width="38" height="22"/><rect x="858" y="195" width="38" height="22"/><rect x="858" y="240" width="38" height="22"/></g>
+    <text x="650" y="430" fill="#7d9297" font-family="Arial,Helvetica,sans-serif" font-size="10" letter-spacing="2">ENGINEERING CONCEPT · REV 0</text>
+  </g>
+</svg>
