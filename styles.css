@@ -32,6 +32,12 @@ img { display:block; max-width:100%; }
 .brand-mark .sw { bottom:5px; left:1px; transform:rotate(-45deg); }
 .brand-mark .se { right:1px; bottom:5px; transform:rotate(45deg); }
 .brand-mark .core { width:5px; height:5px; top:11px; left:11px; border-radius:1px; background:var(--blue); }
+.brand-mark {
+  background:url("/brand-mark-192.png") center/contain no-repeat;
+}
+.brand-mark i {
+  display:none;
+}
 
 .eyebrow,.section-label { margin:0 0 15px; color:var(--blue); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
 .home-hero { position:relative; min-height:510px; overflow:hidden; border-bottom:1px solid var(--line); background:#eef3f6; }

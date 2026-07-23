@@ -1,0 +1,21 @@
+{
+  "name": "XILUME",
+  "short_name": "XILUME",
+  "description": "Embedded interface modules and controller ICs for CAN FD, RS-485, and smart-battery systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f8f9",
+  "theme_color": "#1769c2",
+  "icons": [
+    {
+      "src": "/brand-mark-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand-mark-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
