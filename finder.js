@@ -11,7 +11,7 @@
       summary: "Connect by USB to two independent CAN / CAN FD channels.",
       href: "products/usb-dual-can-fd/",
       module: { name: "USB Dual CAN FD Adapter", description: "USB-connected hardware", status: "In development", href: "products/usb-dual-can-fd/#module" },
-      controller: { name: "USB to Dual CAN FD Controller IC", description: "Programmed controller for your PCB", status: "Planned", href: "products/usb-dual-can-fd/#controller" }
+      controller: { name: "USB to Dual CAN FD Controller IC", description: "XILUME controller IC for your PCB", status: "Planned", href: "products/usb-dual-can-fd/#controller" }
     },
     {
       id: "mini-pcie-canfd",
@@ -21,7 +21,7 @@
       summary: "Add two CAN / CAN FD channels through USB signals in a compatible Mini PCIe slot.",
       href: "products/mini-pcie-dual-can-fd/",
       module: { name: "Mini PCIe Dual CAN FD Module", description: "USB-based Mini PCIe hardware", status: "In development", href: "products/mini-pcie-dual-can-fd/" },
-      controller: { name: "Dual CAN FD Controller IC", description: "Programmed controller for a custom Mini PCIe PCB", status: "Planned", href: "products/usb-dual-can-fd/#controller" }
+      controller: { name: "Dual CAN FD Controller IC", description: "XILUME controller IC for a custom Mini PCIe PCB", status: "Planned", href: "products/usb-dual-can-fd/#controller" }
     },
     {
       id: "usb-canfd-rs485",
@@ -31,7 +31,7 @@
       summary: "Connect by USB to two CAN FD networks and two RS-485 buses.",
       href: "products/usb-canfd-rs485/",
       module: { name: "USB Dual CAN FD + Dual RS-485 Adapter", description: "USB-connected hardware", status: "In development", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "USB CAN FD + RS-485 Controller IC", description: "Programmed controller for your PCB", status: "Planned", href: "products/usb-canfd-rs485/#controller" }
+      controller: { name: "USB CAN FD + RS-485 Controller IC", description: "XILUME controller IC for your PCB", status: "Planned", href: "products/usb-canfd-rs485/#controller" }
     },
     {
       id: "mini-pcie-canfd-rs485",
@@ -41,7 +41,7 @@
       summary: "Add two CAN FD and two RS-485 channels through USB signals in a compatible Mini PCIe slot.",
       href: "products/usb-canfd-rs485/",
       module: { name: "Mini PCIe Dual CAN FD + Dual RS-485 Module", description: "USB-based Mini PCIe hardware", status: "In development", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "CAN FD + RS-485 Controller IC", description: "Programmed controller for a custom Mini PCIe PCB", status: "Planned", href: "products/usb-canfd-rs485/#controller" }
+      controller: { name: "CAN FD + RS-485 Controller IC", description: "XILUME controller IC for a custom Mini PCIe PCB", status: "Planned", href: "products/usb-canfd-rs485/#controller" }
     },
     {
       id: "usb-smbus",
@@ -51,7 +51,7 @@
       summary: "Display battery level, voltage, temperature, capacity, cycle count, and status through USB.",
       href: "products/usb-smbus/",
       module: { name: "USB SMBus Battery Reader Module", description: "USB-connected battery reader", status: "In development", href: "products/usb-smbus/#module" },
-      controller: { name: "USB SMBus Controller IC", description: "Programmed controller for your PCB", status: "In development", href: "products/usb-smbus/#controller" }
+      controller: { name: "USB SMBus Controller IC", description: "XILUME controller IC for your PCB", status: "In development", href: "products/usb-smbus/#controller" }
     }
   ];
 

@@ -33,10 +33,10 @@
     summary: root.querySelector("[data-match-summary]"),
     host: root.querySelector("[data-spec-host]"),
     field: root.querySelector("[data-spec-field]"),
-    flash: root.querySelector("[data-spec-flash]"),
+    memory: root.querySelector("[data-spec-memory]"),
     packageName: root.querySelector("[data-spec-package]"),
     supply: root.querySelector("[data-spec-supply]"),
-    firmware: root.querySelector("[data-spec-firmware]"),
+    profile: root.querySelector("[data-spec-profile]"),
     detailLink: root.querySelector("[data-detail-link]"),
     copyStatus: root.querySelector("[data-copy-status]")
   };
@@ -85,8 +85,8 @@
     if (only("field", ["canfd", "rs485"]) && canfd >= 1 && canfd <= 2 && rs485 >= 1 && rs485 <= 2) {
       return {
         model: "XIC-U2C2R2",
-        summary: `USB programmed controller supporting ${canfd} selected CAN FD channel${canfd > 1 ? "s" : ""} and ${rs485} selected RS-485 channel${rs485 > 1 ? "s" : ""}.`,
-        flash: "256 KB class",
+        summary: `XILUME USB interface controller supporting ${canfd} selected CAN FD channel${canfd > 1 ? "s" : ""} and ${rs485} selected RS-485 channel${rs485 > 1 ? "s" : ""}.`,
+        memory: "256 KB class",
         packageName: "64-pin class",
         capacity: "Up to 2 CAN FD + 2 RS-485"
       };
@@ -95,8 +95,8 @@
     if (only("field", ["canfd"]) && canfd >= 1 && canfd <= 2) {
       return {
         model: "XIC-U2C2",
-        summary: `USB programmed controller supporting ${canfd} selected CAN / CAN FD channel${canfd > 1 ? "s" : ""}.`,
-        flash: "128 KB class",
+        summary: `XILUME USB interface controller supporting ${canfd} selected CAN / CAN FD channel${canfd > 1 ? "s" : ""}.`,
+        memory: "128 KB class",
         packageName: "48-pin class",
         capacity: "Up to 2 CAN / CAN FD"
       };
@@ -105,8 +105,8 @@
     if (only("field", ["can"]) && can >= 1 && can <= 2) {
       return {
         model: "XIC-U2C2",
-        summary: `USB programmed controller supporting ${can} selected Classic CAN channel${can > 1 ? "s" : ""}, with CAN FD-capable controller hardware.`,
-        flash: "128 KB class",
+        summary: `XILUME USB interface controller supporting ${can} selected Classic CAN channel${can > 1 ? "s" : ""}, with CAN FD-capable controller hardware.`,
+        memory: "128 KB class",
         packageName: "48-pin class",
         capacity: "Up to 2 CAN / CAN FD"
       };
@@ -115,8 +115,8 @@
     if (only("field", ["rs485"]) && rs485 >= 1 && rs485 <= 2) {
       return {
         model: "XIC-U2R2",
-        summary: `USB programmed controller supporting ${rs485} selected RS-485 channel${rs485 > 1 ? "s" : ""}.`,
-        flash: "128 KB class",
+        summary: `XILUME USB interface controller supporting ${rs485} selected RS-485 channel${rs485 > 1 ? "s" : ""}.`,
+        memory: "128 KB class",
         packageName: "48-pin class",
         capacity: "Up to 2 RS-485"
       };
@@ -125,8 +125,8 @@
     if (only("field", ["smbus"]) && smbus === 1) {
       return {
         model: "XIC-USMB1",
-        summary: "USB programmed controller for one selected smart-battery / SMBus channel.",
-        flash: "128 KB class",
+        summary: "XILUME USB interface controller for one selected smart-battery / SMBus channel.",
+        memory: "128 KB class",
         packageName: "48-pin class",
         capacity: "1 SMBus / smart-battery channel"
       };
@@ -199,11 +199,11 @@
       nodes.model.textContent = "Select interfaces";
       nodes.chipLabel.textContent = "XILUME";
       nodes.summary.textContent = "Choose at least one host-side interface and one field-side interface to begin matching.";
-      nodes.flash.textContent = "—";
+      nodes.memory.textContent = "—";
       nodes.packageName.textContent = "—";
       nodes.supply.textContent = "—";
-      nodes.firmware.textContent = "—";
-      setDetailLink(false, "../products/programmed-controllers/", "View product information");
+      nodes.profile.textContent = "—";
+      setDetailLink(false, "../products/interface-controller-ics/", "View product information");
       return;
     }
 
@@ -214,11 +214,11 @@
       nodes.model.textContent = controller.model;
       nodes.chipLabel.textContent = controller.model;
       nodes.summary.textContent = `${controller.summary} Controller capacity: ${controller.capacity}.`;
-      nodes.flash.textContent = controller.flash;
+      nodes.memory.textContent = controller.memory;
       nodes.packageName.textContent = controller.packageName;
       nodes.supply.textContent = "3.3 V logic";
-      nodes.firmware.textContent = "Factory programmed";
-      setDetailLink(true, `../products/programmed-controllers/#${controller.model}`, "View product information");
+      nodes.profile.textContent = "XILUME fixed-function";
+      setDetailLink(true, `../products/interface-controller-ics/#${controller.model}`, "View product information");
       return;
     }
 
@@ -227,11 +227,11 @@
     nodes.model.textContent = "XILUME configuration";
     nodes.chipLabel.textContent = "ROADMAP";
     nodes.summary.textContent = "This combination is not yet assigned to a released standard controller model. The configuration has still been captured as a clear interface requirement.";
-    nodes.flash.textContent = "To be assigned";
+    nodes.memory.textContent = "To be assigned";
     nodes.packageName.textContent = "To be assigned";
     nodes.supply.textContent = "3.3 V target";
-    nodes.firmware.textContent = "Not released";
-    setDetailLink(true, "../products/programmed-controllers/#roadmap", "View controller roadmap");
+    nodes.profile.textContent = "Not assigned";
+    setDetailLink(true, "../products/interface-controller-ics/#roadmap", "View controller roadmap");
   }
 
   root.querySelectorAll(".interface-toggle").forEach((button) => {

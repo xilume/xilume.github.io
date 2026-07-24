@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Configure a XILUME programmed controller by selecting multiple host and field interfaces and choosing one or two channels for each signal.">
+  <meta name="description" content="Configure a XILUME interface controller IC by selecting multiple host and field interfaces and choosing one or two channels for each signal.">
   <title>Chip Selector | XILUME</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/brand-mark-48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/brand-mark-180.png" sizes="180x180">
   <link rel="stylesheet" href="../styles.css?v=20260724-3">
-  <script defer src="../chip-selector.js?v=20260724-2"></script>
+  <script defer src="../chip-selector.js?v=20260724-3"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.github.io/chip-selector/">
   <meta property="og:site_name" content="XILUME">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Chip Selector | XILUME">
-  <meta property="og:description" content="Select interfaces and channel quantities to review the matched XILUME programmed controller.">
+  <meta property="og:description" content="Select interfaces and channel quantities to review the matched XILUME interface controller IC.">
   <meta property="og:url" content="https://xilume.github.io/chip-selector/">
-  <meta property="og:image" content="https://xilume.github.io/images/programmed-controller-platform.svg">
+  <meta property="og:image" content="https://xilume.github.io/images/interface-controller-platform.svg">
 </head>
 <body>
-  <div class="notice-bar"><div class="container notice-inner"><span>XILUME programmed controller selector</span><a href="../products/programmed-controllers/">Controller family and technical files →</a></div></div>
+  <div class="notice-bar"><div class="container notice-inner"><span>XILUME interface controller selector</span><a href="../products/interface-controller-ics/">Controller family and technical files →</a></div></div>
   <header class="site-header corporate-header">
     <div class="container header-inner">
       <a class="brand" href="../" aria-label="XILUME home"><span class="brand-mark" aria-hidden="true"><i class="arm nw"></i><i class="arm ne"></i><i class="arm sw"></i><i class="arm se"></i><i class="core"></i></span><span>XILUME</span></a>
@@ -35,7 +35,7 @@
         <p class="breadcrumbs"><a href="../">Home</a><span>/</span>Chip selector</p>
         <div class="configurator-hero-grid">
           <div>
-            <p class="section-label">PROGRAMMED CONTROLLER CONFIGURATOR</p>
+            <p class="section-label">XILUME CONTROLLER CONFIGURATOR</p>
             <h1>Select every interface your board needs.</h1>
           </div>
           <div>
@@ -68,7 +68,7 @@
                 <div class="quantity-picker" role="group" aria-label="Ethernet channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
               </article>
               <article class="interface-option" data-side="host" data-signal="spi">
-                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">SPI</span><span><strong>SPI Host</strong><small>MCU or processor</small></span><i>+</i></button>
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">SPI</span><span><strong>SPI Host</strong><small>Embedded processor</small></span><i>+</i></button>
                 <div class="quantity-picker" role="group" aria-label="SPI channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
               </article>
               <article class="interface-option" data-side="host" data-signal="uart">
@@ -89,7 +89,7 @@
               <span class="selector-chip-pins top"></span><span class="selector-chip-pins bottom"></span><span class="selector-chip-pins left"></span><span class="selector-chip-pins right"></span>
               <img src="/favicon.svg" alt="">
               <strong data-chip-label>XILUME</strong>
-              <small>PROGRAMMED CONTROLLER</small>
+              <small>INTERFACE CONTROLLER</small>
             </div>
             <div class="configurator-route route-right"><i></i></div>
             <div class="selected-interface-stack" data-selected-field><small>FIELD SIDE</small><p>No interface selected</p></div>
@@ -146,13 +146,13 @@
           <dl class="configurator-specs">
             <div><dt>Host interfaces</dt><dd data-spec-host>Not selected</dd></div>
             <div><dt>Field interfaces</dt><dd data-spec-field>Not selected</dd></div>
-            <div><dt>Flash class</dt><dd data-spec-flash>—</dd></div>
+            <div><dt>Memory class</dt><dd data-spec-memory>—</dd></div>
             <div><dt>Package class</dt><dd data-spec-package>—</dd></div>
             <div><dt>Logic supply</dt><dd data-spec-supply>—</dd></div>
-            <div><dt>Firmware</dt><dd data-spec-firmware>—</dd></div>
+            <div><dt>Product profile</dt><dd data-spec-profile>—</dd></div>
           </dl>
           <div class="configurator-result-actions">
-            <a class="primary-button is-disabled" data-detail-link href="../products/programmed-controllers/" aria-disabled="true">View product information</a>
+            <a class="primary-button is-disabled" data-detail-link href="../products/interface-controller-ics/" aria-disabled="true">View product information</a>
             <button class="secondary-button" type="button" data-copy-configuration>Copy configuration</button>
           </div>
           <p class="copy-status" data-copy-status></p>
@@ -172,15 +172,15 @@
         <article><span>03</span><strong>Reference schematic</strong><p>Controller, transceiver, USB, protection, and recommended support circuits.</p></article>
         <article><span>04</span><strong>Host protocol</strong><p>Commands, frames, responses, errors, timeouts, and configuration behavior.</p></article>
         <article><span>05</span><strong>Software tools</strong><p>Windows and Linux test tools, examples, and verification procedure.</p></article>
-        <article><span>06</span><strong>Revision record</strong><p>Firmware version, validation status, changes, and known limitations.</p></article>
+        <article><span>06</span><strong>Revision record</strong><p>Product revision, validation status, changes, and known limitations.</p></article>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-grid">
-      <div><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><i class="arm nw"></i><i class="arm ne"></i><i class="arm sw"></i><i class="arm se"></i><i class="core"></i></span><span>XILUME</span></div><p>Programmed interface controllers, modules, and future embedded systems.</p></div>
-      <div><h3>Products</h3><a href="../products/">Browse all products</a><a href="../products/programmed-controllers/">Controller ICs</a><a href="../products/interface-conversion/">Interface modules</a></div>
+      <div><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><i class="arm nw"></i><i class="arm ne"></i><i class="arm sw"></i><i class="arm se"></i><i class="core"></i></span><span>XILUME</span></div><p>Interface controller ICs, modules, and future embedded systems.</p></div>
+      <div><h3>Products</h3><a href="../products/">Browse all products</a><a href="../products/interface-controller-ics/">Controller ICs</a><a href="../products/interface-conversion/">Interface modules</a></div>
       <div><h3>Design</h3><a href="./">Chip selector</a><a href="../documentation/">Documentation</a><a href="../about/">About XILUME</a></div>
       <div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div>
     </div>

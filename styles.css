@@ -1502,7 +1502,7 @@ a.platform-row:hover {
   .hero-flow-line::after,.selector-route i { animation:none; }
 }
 
-/* Programmed controller family page */
+/* Interface controller family page */
 .controller-family-hero {
   border-bottom:1px solid var(--line);
   background:#f3f6f8;

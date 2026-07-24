@@ -13,10 +13,10 @@ same filename and aspect ratio, or provide the new photo to update the HTML refe
   XILUME hardware visible only as part of the system. Avoid a tight single-product shot.
 - Composition: leave the left 35–40% visually quiet because homepage text sits there.
 
-## 02 — Programmed controller platform
+## 02 — Interface controller platform
 
-- Current file: `programmed-controller-platform.svg`
-- Preferred replacement: `programmed-controller-platform.webp`
+- Current file: `interface-controller-platform.svg`
+- Preferred replacement: `interface-controller-platform.webp`
 - Display ratio: approximately 4:3
 - Recommended source size: 1600 × 1200 px or larger
 - Photo content: a clean macro photo of a packaged XILUME controller IC on a neutral
