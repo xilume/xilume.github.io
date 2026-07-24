@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Future motherboard platform illustration</title>
+  <desc id="desc">A reserved technical illustration for future XILUME embedded and industrial motherboards.</desc>
+  <rect width="1200" height="760" fill="#edf1f3"/>
+  <g transform="translate(166 110) rotate(-3 430 270)">
+    <rect x="0" y="0" width="868" height="540" rx="22" fill="#c2d0c5" stroke="#6d8798" stroke-width="6"/>
+    <rect x="265" y="135" width="250" height="220" rx="8" fill="#dfe7e1" stroke="#617c8d" stroke-width="5"/>
+    <rect x="299" y="169" width="182" height="152" rx="4" fill="#b6c5ba" stroke="#617c8d" stroke-width="4"/>
+    <rect x="52" y="60" width="130" height="72" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <rect x="52" y="162" width="130" height="72" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <rect x="52" y="264" width="130" height="72" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <rect x="574" y="72" width="222" height="58" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <rect x="574" y="164" width="222" height="58" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <rect x="574" y="256" width="95" height="95" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <rect x="701" y="256" width="95" height="95" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <rect x="52" y="416" width="744" height="56" fill="#dfe7e1" stroke="#617c8d" stroke-width="4"/>
+    <path d="M182 96h83m250 149h59m-392 54h83m250 5h59M117 336v80m559-194v34m72 95v65" fill="none" stroke="#7094ab" stroke-width="5"/>
+    <circle cx="117" cy="96" r="10" fill="#1769c2"/>
+    <circle cx="675" cy="101" r="9" fill="#1769c2"/>
+    <circle cx="748" cy="445" r="9" fill="#1769c2"/>
+    <text x="390" y="255" fill="#486272" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="middle">COMPUTE</text>
+  </g>
+  <rect x="62" y="52" width="180" height="42" fill="#ffffff" stroke="#aebbc4"/>
+  <text x="152" y="79" fill="#6d7880" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">FUTURE PLATFORM</text>
+</svg>

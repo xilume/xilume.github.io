@@ -1,0 +1,83 @@
+# XILUME homepage image requirements
+
+These filenames are already placed in the website. Replace the file while keeping the
+same filename and aspect ratio, or provide the new photo to update the HTML reference.
+
+## 01 — Homepage brand hero
+
+- Current file: `home-system-hero.svg`
+- Preferred replacement: `home-system-hero.webp`
+- Display ratio: approximately 16:9
+- Recommended source size: 2000 × 1125 px or larger
+- Photo content: a complete embedded/industrial system, lab or robotics scene with
+  XILUME hardware visible only as part of the system. Avoid a tight single-product shot.
+- Composition: leave the left 35–40% visually quiet because homepage text sits there.
+
+## 02 — Programmed controller platform
+
+- Current file: `programmed-controller-platform.svg`
+- Preferred replacement: `programmed-controller-platform.webp`
+- Display ratio: approximately 4:3
+- Recommended source size: 1600 × 1200 px or larger
+- Photo content: a clean macro photo of a packaged XILUME controller IC on a neutral
+  PCB or tray. The package marking must be readable and correctly aligned.
+
+## 03 — Interface module platform
+
+- Current file: `interface-conversion-hero.webp`
+- Display ratio: approximately 4:3
+- Recommended source size: 1600 × 1200 px or larger
+- Future photo content: a clean group photo containing the USB, Mini PCIe, CAN FD,
+  RS-485, and smart-battery modules. Use one background and consistent lighting.
+
+## 04 — Future motherboard platform
+
+- Current file: `motherboard-platform.svg`
+- Preferred replacement: `motherboard-platform.webp`
+- Display ratio: approximately 4:3
+- Recommended source size: 1600 × 1200 px or larger
+- Photo content: use only after a real motherboard prototype exists. Until then the
+  technical illustration should remain and the card must stay marked “Planned”.
+
+## 05 — Featured product photography
+
+- Current file: `mini-pcie-can-top.svg`
+- Preferred replacement: `featured-module.webp`
+- Display ratio: approximately 3:2
+- Recommended source size: 1800 × 1200 px or larger
+- Photo content: one current module photographed straight and at a slight angle, with
+  connector and PCB details visible. No hands, props, or decorative neon lighting.
+
+## 06 — Robotics application
+
+- Current file: `robotics-application.svg`
+- Preferred replacement: `robotics-application.webp`
+- Display ratio: approximately 5:3
+- Recommended source size: 1800 × 1080 px or larger
+- Photo content: robot joint, industrial arm, or mobile robot wiring where CAN FD or
+  RS-485 use is believable. The product does not need to dominate the frame.
+
+## 07 — Battery application
+
+- Current file: `smbus-application.webp`
+- Display ratio: approximately 16:9
+- Recommended source size: 1800 × 1013 px or larger
+- Future photo content: smart battery, XILUME reader, computer, and actual monitoring
+  software shown together in one real test setup.
+
+## 08 — Engineering and validation
+
+- Current file: `engineering-lab-placeholder.svg`
+- Preferred replacement: `engineering-lab.webp`
+- Display ratio: approximately 3:2
+- Recommended source size: 1800 × 1200 px or larger
+- Photo content: oscilloscope, CAN/serial test equipment, PC software, DUT, and clean
+  cabling on a real XILUME engineering bench.
+
+## Photography style
+
+- Neutral white, light gray, or dark navy background
+- Accurate colors and readable silkscreen
+- Soft directional light without heavy reflections
+- No AI-generated components, impossible wiring, or fake interface labels
+- Keep a consistent color temperature across every product photo

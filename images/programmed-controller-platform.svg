@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Programmed controller platform illustration</title>
+  <desc id="desc">A technical illustration of a XILUME programmed interface controller on a circuit board.</desc>
+  <defs>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#8da5b5" stroke-opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="#eaf0f4"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+  <path d="M90 170h250l90 90h130m-470 300h250l90-90h130M1110 170H860l-90 90H640m470 300H860l-90-90H640" fill="none" stroke="#8aa2b2" stroke-width="5"/>
+  <circle cx="90" cy="170" r="12" fill="#1769c2"/>
+  <circle cx="90" cy="560" r="12" fill="#1769c2"/>
+  <circle cx="1110" cy="170" r="12" fill="#1769c2"/>
+  <circle cx="1110" cy="560" r="12" fill="#1769c2"/>
+  <rect x="374" y="154" width="452" height="452" rx="22" fill="#18384f"/>
+  <rect x="410" y="190" width="380" height="380" rx="14" fill="#10283a" stroke="#2e6288" stroke-width="8"/>
+  <path d="M402 205H350m52 42H350m52 42H350m52 42H350m52 42H350m52 42H350m52 42H350m52 42H350m52 42H350M798 205h52m-52 42h52m-52 42h52m-52 42h52m-52 42h52m-52 42h52m-52 42h52m-52 42h52m-52 42h52" stroke="#7f909b" stroke-width="16"/>
+  <path d="M425 182v-52m42 52v-52m42 52v-52m42 52v-52m42 52v-52m42 52v-52m42 52v-52m42 52v-52m42 52v-52M425 578v52m42-52v52m42-52v52m42-52v52m42-52v52m42-52v52m42-52v52m42-52v52m42-52v52" stroke="#7f909b" stroke-width="16"/>
+  <rect x="520" y="296" width="160" height="160" rx="8" fill="#183d58" stroke="#3c7ca9" stroke-width="4"/>
+  <rect x="579" y="355" width="42" height="42" rx="5" fill="#1975bf"/>
+  <path d="M571 346l-23-23m81 23 23-23m-81 82-23 23m81-23 23 23" stroke="#dbe9f2" stroke-width="12" stroke-linecap="square"/>
+  <text x="600" y="490" fill="#e7f0f5" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" text-anchor="middle" letter-spacing="8">XILUME</text>
+  <text x="600" y="525" fill="#72acd4" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="4">PROGRAMMED CONTROLLER</text>
+</svg>

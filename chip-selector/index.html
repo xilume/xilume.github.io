@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Configure a XILUME programmed controller by selecting multiple host and field interfaces and choosing one or two channels for each signal.">
+  <title>Chip Selector | XILUME</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/brand-mark-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/brand-mark-180.png" sizes="180x180">
+  <link rel="stylesheet" href="../styles.css?v=20260724-3">
+  <script defer src="../chip-selector.js?v=20260724-2"></script>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://xilume.github.io/chip-selector/">
+  <meta property="og:site_name" content="XILUME">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chip Selector | XILUME">
+  <meta property="og:description" content="Select interfaces and channel quantities to review the matched XILUME programmed controller.">
+  <meta property="og:url" content="https://xilume.github.io/chip-selector/">
+  <meta property="og:image" content="https://xilume.github.io/images/programmed-controller-platform.svg">
+</head>
+<body>
+  <div class="notice-bar"><div class="container notice-inner"><span>XILUME programmed controller selector</span><a href="../products/programmed-controllers/">Controller family and technical files →</a></div></div>
+  <header class="site-header corporate-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="XILUME home"><span class="brand-mark" aria-hidden="true"><i class="arm nw"></i><i class="arm ne"></i><i class="arm sw"></i><i class="arm se"></i><i class="core"></i></span><span>XILUME</span></a>
+      <nav aria-label="Primary navigation"><a href="../products/">Products</a><a href="../#applications">Applications</a><a href="./" aria-current="page">Chip selector</a><a href="../documentation/">Documentation</a><a href="../about/">About</a><a class="nav-finder" href="../products/">Browse all products</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="configurator-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="../">Home</a><span>/</span>Chip selector</p>
+        <div class="configurator-hero-grid">
+          <div>
+            <p class="section-label">PROGRAMMED CONTROLLER CONFIGURATOR</p>
+            <h1>Select every interface your board needs.</h1>
+          </div>
+          <div>
+            <p>Choose more than one signal on either side. After selecting an interface, set whether you need one or two independent channels. The selector then checks the current XILUME controller family.</p>
+            <div class="configurator-guide"><span><b>1</b>Select interfaces</span><span><b>2</b>Set quantities</span><span><b>3</b>Review the match</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="configurator-section" data-chip-configurator>
+      <div class="wide-container configurator-workspace">
+        <div class="configurator-canvas">
+          <section class="configurator-signal-panel">
+            <div class="configurator-panel-heading">
+              <div><span>INPUT</span><h2>Host-side interfaces</h2></div>
+              <small>Multiple selections allowed</small>
+            </div>
+            <div class="interface-option-list">
+              <article class="interface-option" data-side="host" data-signal="usb">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">USB</span><span><strong>USB 2.0 Device</strong><small>PC or embedded host</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="USB channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="host" data-signal="pcie">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">PCIe</span><span><strong>PCI Express</strong><small>Embedded computer host</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="PCI Express channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="host" data-signal="ethernet">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">ETH</span><span><strong>Ethernet</strong><small>Networked host</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="Ethernet channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="host" data-signal="spi">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">SPI</span><span><strong>SPI Host</strong><small>MCU or processor</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="SPI channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="host" data-signal="uart">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">UART</span><span><strong>UART Host</strong><small>Asynchronous serial</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="UART channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="host" data-signal="i2c">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">I²C</span><span><strong>I²C / SMBus Host</strong><small>Two-wire host bus</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="I2C channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="configurator-chip-panel" aria-label="Selected interfaces and XILUME controller">
+            <div class="selected-interface-stack" data-selected-host><small>HOST SIDE</small><p>No interface selected</p></div>
+            <div class="configurator-route route-left"><i></i></div>
+            <div class="configurator-chip">
+              <span class="selector-chip-pins top"></span><span class="selector-chip-pins bottom"></span><span class="selector-chip-pins left"></span><span class="selector-chip-pins right"></span>
+              <img src="/favicon.svg" alt="">
+              <strong data-chip-label>XILUME</strong>
+              <small>PROGRAMMED CONTROLLER</small>
+            </div>
+            <div class="configurator-route route-right"><i></i></div>
+            <div class="selected-interface-stack" data-selected-field><small>FIELD SIDE</small><p>No interface selected</p></div>
+          </section>
+
+          <section class="configurator-signal-panel">
+            <div class="configurator-panel-heading">
+              <div><span>OUTPUT</span><h2>Field-side interfaces</h2></div>
+              <small>Multiple selections allowed</small>
+            </div>
+            <div class="interface-option-list">
+              <article class="interface-option" data-side="field" data-signal="canfd">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">CAN FD</span><span><strong>CAN FD</strong><small>High-speed field bus</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="CAN FD channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="field" data-signal="rs485">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">485</span><span><strong>RS-485</strong><small>Industrial serial bus</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="RS-485 channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="field" data-signal="can">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">CAN</span><span><strong>Classic CAN</strong><small>CAN 2.0A / 2.0B</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="Classic CAN channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="field" data-signal="lin">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">LIN</span><span><strong>LIN Bus</strong><small>Low-speed vehicle bus</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="LIN channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="field" data-signal="smbus">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">SMB</span><span><strong>SMBus / I²C</strong><small>Battery and sensor data</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="SMBus channel quantity"><span>CHANNELS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+              <article class="interface-option" data-side="field" data-signal="gpio">
+                <button class="interface-toggle" type="button" aria-pressed="false"><span class="interface-code">I/O</span><span><strong>UART / GPIO</strong><small>Status and control</small></span><i>+</i></button>
+                <div class="quantity-picker" role="group" aria-label="UART or GPIO channel quantity"><span>GROUPS</span><button type="button" data-quantity="1" aria-pressed="false">1</button><button type="button" data-quantity="2" aria-pressed="false">2</button></div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <aside class="configurator-result" aria-live="polite">
+          <div class="configurator-result-head">
+            <span data-match-status>WAITING FOR SELECTION</span>
+            <button type="button" data-reset-configuration>Reset</button>
+          </div>
+          <div class="configurator-result-title">
+            <small>RECOMMENDED XILUME CONTROLLER</small>
+            <h2 data-match-model>Select interfaces</h2>
+            <p data-match-summary>Choose at least one host-side interface and one field-side interface to begin matching.</p>
+          </div>
+          <div class="configuration-code">
+            <small>CONFIGURATION</small>
+            <strong data-configuration-id>HOST — / FIELD —</strong>
+          </div>
+          <dl class="configurator-specs">
+            <div><dt>Host interfaces</dt><dd data-spec-host>Not selected</dd></div>
+            <div><dt>Field interfaces</dt><dd data-spec-field>Not selected</dd></div>
+            <div><dt>Flash class</dt><dd data-spec-flash>—</dd></div>
+            <div><dt>Package class</dt><dd data-spec-package>—</dd></div>
+            <div><dt>Logic supply</dt><dd data-spec-supply>—</dd></div>
+            <div><dt>Firmware</dt><dd data-spec-firmware>—</dd></div>
+          </dl>
+          <div class="configurator-result-actions">
+            <a class="primary-button is-disabled" data-detail-link href="../products/programmed-controllers/" aria-disabled="true">View product information</a>
+            <button class="secondary-button" type="button" data-copy-configuration>Copy configuration</button>
+          </div>
+          <p class="copy-status" data-copy-status></p>
+          <p class="engineering-note">Models and values marked Engineering remain provisional until the corresponding release-controlled datasheet is published.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container selector-support-section">
+      <div class="corporate-section-head">
+        <div><p class="section-label">AFTER A CONTROLLER IS MATCHED</p><h2>The exact model carries its own controlled file set.</h2></div>
+        <p class="section-support-copy">The selector is intended to lead directly from an interface requirement to the files required for schematic integration.</p>
+      </div>
+      <div class="selector-support-grid">
+        <article><span>01</span><strong>Datasheet</strong><p>Electrical limits, power, package, and supported functions.</p></article>
+        <article><span>02</span><strong>Fixed pinout</strong><p>Pin number, direction, voltage domain, reset state, and connection.</p></article>
+        <article><span>03</span><strong>Reference schematic</strong><p>Controller, transceiver, USB, protection, and recommended support circuits.</p></article>
+        <article><span>04</span><strong>Host protocol</strong><p>Commands, frames, responses, errors, timeouts, and configuration behavior.</p></article>
+        <article><span>05</span><strong>Software tools</strong><p>Windows and Linux test tools, examples, and verification procedure.</p></article>
+        <article><span>06</span><strong>Revision record</strong><p>Firmware version, validation status, changes, and known limitations.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><i class="arm nw"></i><i class="arm ne"></i><i class="arm sw"></i><i class="arm se"></i><i class="core"></i></span><span>XILUME</span></div><p>Programmed interface controllers, modules, and future embedded systems.</p></div>
+      <div><h3>Products</h3><a href="../products/">Browse all products</a><a href="../products/programmed-controllers/">Controller ICs</a><a href="../products/interface-conversion/">Interface modules</a></div>
+      <div><h3>Design</h3><a href="./">Chip selector</a><a href="../documentation/">Documentation</a><a href="../about/">About XILUME</a></div>
+      <div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 XILUME</span><span>Engineering catalog · Specifications subject to released documentation</span></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Robotics and motion systems placeholder</title>
+  <desc id="desc">A restrained technical illustration reserved for future robotics application photography.</desc>
+  <defs>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#8ca2b1" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="720" fill="#172d3d"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <path d="M98 620h1000" stroke="#476173" stroke-width="4"/>
+  <path d="M265 620l74-178 144-72 166-174 176 67 95 219" fill="none" stroke="#90a7b6" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="341" cy="441" r="48" fill="#172d3d" stroke="#b3c2cb" stroke-width="14"/>
+  <circle cx="483" cy="370" r="43" fill="#172d3d" stroke="#b3c2cb" stroke-width="14"/>
+  <circle cx="649" cy="196" r="39" fill="#172d3d" stroke="#b3c2cb" stroke-width="14"/>
+  <circle cx="825" cy="263" r="37" fill="#172d3d" stroke="#b3c2cb" stroke-width="14"/>
+  <rect x="860" y="435" width="148" height="90" rx="8" fill="#1b3a50" stroke="#84a0b2" stroke-width="6" transform="rotate(5 934 480)"/>
+  <path d="M996 467l76-40m-72 72 81 19" stroke="#93a9b7" stroke-width="12" stroke-linecap="round"/>
+  <rect x="182" y="545" width="204" height="75" rx="8" fill="#1a364a" stroke="#708da0" stroke-width="5"/>
+  <circle cx="223" cy="582" r="11" fill="#2b86c4"/>
+  <path d="M250 575h98m-98 24h72" stroke="#7895a8" stroke-width="6"/>
+  <path d="M386 580h155c66 0 64-75 128-75h181" fill="none" stroke="#2c79af" stroke-width="4" stroke-dasharray="14 12"/>
+</svg>

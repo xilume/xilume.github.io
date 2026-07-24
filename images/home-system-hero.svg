@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">XILUME engineering system placeholder</title>
+  <desc id="desc">A restrained technical illustration representing embedded controllers, industrial interfaces, and connected systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#10283a"/>
+      <stop offset="1" stop-color="#1e3c51"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop offset="0" stop-color="#203f54"/>
+      <stop offset="1" stop-color="#173247"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#8aa7ba" stroke-opacity=".09"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1320" cy="146" r="280" fill="#2a6b98" opacity=".13"/>
+  <circle cx="1280" cy="150" r="170" fill="none" stroke="#6f9dbb" stroke-opacity=".18"/>
+  <path d="M1020 680h465M1110 680l95-175 120-65 115 240" fill="none" stroke="#69889c" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1206" cy="503" r="29" fill="#183246" stroke="#86a2b4" stroke-width="5"/>
+  <circle cx="1325" cy="440" r="25" fill="#183246" stroke="#86a2b4" stroke-width="5"/>
+  <path d="M1439 679l-53-118 86-46" fill="none" stroke="#86a2b4" stroke-width="10" stroke-linecap="round"/>
+  <rect x="1408" y="478" width="104" height="58" rx="4" fill="#173044" stroke="#88a5b7" stroke-width="4" transform="rotate(-9 1460 507)"/>
+  <rect x="930" y="675" width="610" height="32" fill="#0d2130"/>
+  <rect x="180" y="168" width="672" height="510" rx="12" fill="url(#panel)" stroke="#587589" stroke-width="2"/>
+  <rect x="226" y="216" width="580" height="146" rx="6" fill="#142f43" stroke="#49687d"/>
+  <rect x="258" y="246" width="150" height="86" rx="4" fill="#1d4763" stroke="#7192a8"/>
+  <rect x="440" y="246" width="150" height="86" rx="4" fill="#1a3b50" stroke="#55758a"/>
+  <rect x="622" y="246" width="150" height="86" rx="4" fill="#1a3b50" stroke="#55758a"/>
+  <path d="M408 288h32M590 288h32" stroke="#4f91c2" stroke-width="5"/>
+  <circle cx="377" cy="318" r="5" fill="#51a4dc"/>
+  <circle cx="558" cy="318" r="5" fill="#60a46f"/>
+  <circle cx="740" cy="318" r="5" fill="#60a46f"/>
+  <rect x="226" y="402" width="580" height="224" rx="6" fill="#173146" stroke="#49687d"/>
+  <path d="M270 452h232M270 494h420M270 536h346M270 578h466" stroke="#7490a2" stroke-opacity=".45" stroke-width="3"/>
+  <circle cx="744" cy="452" r="9" fill="#51a4dc"/>
+  <circle cx="744" cy="494" r="9" fill="#51a4dc"/>
+  <circle cx="744" cy="536" r="9" fill="#7d99aa"/>
+  <circle cx="744" cy="578" r="9" fill="#60a46f"/>
+  <path d="M852 318h120c54 0 54 65 0 65H876c-54 0-54 65 0 65h72" fill="none" stroke="#4e82a5" stroke-width="3" stroke-dasharray="10 12"/>
+  <rect x="880" y="418" width="154" height="94" rx="4" fill="#102638" stroke="#7594a8"/>
+  <rect x="900" y="438" width="114" height="54" rx="2" fill="#184565"/>
+  <path d="M890 428h-16m16 18h-16m16 18h-16m16 18h-16m16 18h-16m150-72h16m-16 18h16m-16 18h16m-16 18h16m-16 18h16" stroke="#8ca4b3" stroke-width="6"/>
+  <rect x="918" y="454" width="12" height="12" fill="#2d8ed1"/>
+  <path d="M1034 465h70c48 0 48 72 96 72h52" fill="none" stroke="#5c91b5" stroke-width="3"/>
+  <path d="M1040 485h54c44 0 44 90 91 90h44" fill="none" stroke="#718d9f" stroke-width="3"/>
+  <rect x="1218" y="520" width="74" height="104" rx="5" fill="#132c3f" stroke="#7594a8"/>
+  <circle cx="1255" cy="551" r="11" fill="#4d9dd2"/>
+  <path d="M1239 582h33M1239 599h33" stroke="#7796a9" stroke-width="4"/>
+  <rect x="180" y="720" width="850" height="2" fill="#67879b" opacity=".45"/>
+  <rect x="180" y="757" width="460" height="12" fill="#80a1b6" opacity=".18"/>
+  <rect x="180" y="787" width="330" height="12" fill="#80a1b6" opacity=".12"/>
+</svg>
