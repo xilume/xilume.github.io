@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xilume.github.io/sitemap.xml
+Sitemap: https://xilume.co/sitemap.xml
