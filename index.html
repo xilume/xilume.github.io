@@ -14,7 +14,7 @@
   <meta name="application-name" content="Xilume">
   <meta name="apple-mobile-web-app-title" content="Xilume">
   <meta name="theme-color" content="#1769c2">
-  <link rel="stylesheet" href="styles.css?v=20260801-1">
+  <link rel="stylesheet" href="styles.css?v=20260801-2">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/">
   <meta property="og:site_name" content="Xilume">
@@ -63,19 +63,9 @@
   </script>
 </head>
 <body>
-  <div class="notice-bar">
-    <div class="container notice-inner">
-      <span>Controller ICs · Interface modules · Embedded platforms</span>
-      <a href="documentation/">Design resources and product support →</a>
-    </div>
-  </div>
-
   <header class="site-header corporate-header">
     <div class="container header-inner">
-      <a class="brand" href="./" aria-label="Xilume home">
-        <span class="brand-mark" aria-hidden="true"><i class="arm nw"></i><i class="arm ne"></i><i class="arm sw"></i><i class="arm se"></i><i class="core"></i></span>
-        <span>Xilume</span>
-      </a>
+      <a class="brand brand-wordmark" href="./" aria-label="Xilume home"><img src="/images/xilume-wordmark.png" alt="Xilume"></a>
       <nav aria-label="Primary navigation">
         <a href="products/">Products</a>
         <a href="applications/">Applications</a>
@@ -88,23 +78,108 @@
   </header>
 
   <main>
-    <section class="corporate-hero">
-      <img class="corporate-hero-image" src="images/home-system-hero.svg" alt="Embedded controllers and industrial systems connected as one engineering platform">
-      <div class="corporate-hero-overlay"></div>
-      <div class="container corporate-hero-inner">
-        <div class="corporate-hero-copy">
-          <p class="eyebrow">INTERFACE PRODUCTS FOR EMBEDDED SYSTEMS</p>
-          <h1>Build reliable connections into your system.</h1>
-          <p>Xilume develops interface controller ICs and ready-to-integrate communication hardware for industrial, robotic, and embedded products.</p>
-          <div class="hero-actions">
-            <a class="primary-button" href="products/">Explore products</a>
-            <a class="secondary-button secondary-on-dark" href="chip-selector/">Configure a controller</a>
+    <section class="product-hero-carousel" data-hero-carousel aria-label="Featured Xilume products" aria-roledescription="carousel">
+      <div class="product-hero-stage">
+        <article class="product-hero-slide product-hero-chip is-active" data-hero-slide role="tabpanel" aria-label="1 of 4: Xilume Interface Controller IC">
+          <div class="container product-hero-layout">
+            <div class="product-hero-copy">
+              <p class="product-hero-kicker">XILUME CONTROLLER IC</p>
+              <h1>Xilume Interface Controller IC</h1>
+              <p>A configurable controller platform for USB, CAN FD, RS-485, RS-232, SMBus, and control I/O integration.</p>
+              <div class="hero-actions">
+                <a class="primary-button" href="products/interface-controller-ics/">Explore controller ICs</a>
+                <a class="hero-text-link" href="chip-selector/">Configure a controller <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <figure class="product-hero-media" data-image-slot="xilume-controller-ic">
+              <!-- Future image: replace the placeholder inside this figure; the 3:2 Hero layout stays unchanged. -->
+              <div class="product-image-placeholder">
+                <span>PRODUCT IMAGE AREA · 01</span>
+                <strong>Xilume Interface Controller IC</strong>
+                <small>Reserved for a transparent 3:2 PNG or WebP</small>
+              </div>
+            </figure>
           </div>
-        </div>
-        <div class="corporate-hero-caption">
-          <span>CONTROLLERS</span><span>MODULES</span><span>FUTURE MOTHERBOARDS</span>
-        </div>
+        </article>
+
+        <article class="product-hero-slide product-hero-8hub" data-hero-slide role="tabpanel" aria-label="2 of 4: Xilume 8Hub" aria-hidden="true" inert>
+          <div class="container product-hero-layout">
+            <div class="product-hero-copy">
+              <p class="product-hero-kicker">NEW MULTI-INTERFACE HUB</p>
+              <h2>Xilume 8Hub</h2>
+              <p>Two CAN FD, four RS-485, and two RS-232 channels brought together through one clean USB connection.</p>
+              <div class="hero-actions">
+                <a class="primary-button" href="products/">Explore Xilume 8Hub</a>
+                <span class="hero-release-note">Dedicated product page in preparation</span>
+              </div>
+            </div>
+            <figure class="product-hero-media" data-image-slot="xilume-8hub">
+              <!-- Future image: replace the placeholder inside this figure; the 3:2 Hero layout stays unchanged. -->
+              <div class="product-image-placeholder">
+                <span>PRODUCT IMAGE AREA · 02</span>
+                <strong>Xilume 8Hub</strong>
+                <small>Reserved for a transparent 3:2 PNG or WebP</small>
+              </div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="product-hero-slide product-hero-battery" data-hero-slide role="tabpanel" aria-label="3 of 4: Xilume Battery Display Module" aria-hidden="true" inert>
+          <div class="container product-hero-layout">
+            <div class="product-hero-copy">
+              <p class="product-hero-kicker">NATIVE BATTERY STATUS</p>
+              <h2>Xilume Battery Display Module</h2>
+              <p>Bring charge level, current, runtime, health, and operating status directly into Windows and Linux.</p>
+              <div class="hero-actions">
+                <a class="primary-button" href="products/usb-smbus/">View battery module</a>
+                <a class="hero-text-link" href="documentation/">Design resources <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <figure class="product-hero-media" data-image-slot="xilume-battery-display-module">
+              <!-- Future image: replace the placeholder inside this figure; the 3:2 Hero layout stays unchanged. -->
+              <div class="product-image-placeholder">
+                <span>PRODUCT IMAGE AREA · 03</span>
+                <strong>Xilume Battery Display Module</strong>
+                <small>Reserved for a transparent 3:2 PNG or WebP</small>
+              </div>
+            </figure>
+          </div>
+        </article>
+
+        <article class="product-hero-slide product-hero-mini-pcie" data-hero-slide role="tabpanel" aria-label="4 of 4: Xilume Dual Mini PCIe CAN FD" aria-hidden="true" inert>
+          <div class="container product-hero-layout">
+            <div class="product-hero-copy">
+              <p class="product-hero-kicker">EMBEDDED CAN FD INTERFACE</p>
+              <h2>Xilume Dual Mini PCIe CAN FD</h2>
+              <p>Two independent CAN and CAN FD channels in an internal Mini PCIe format for embedded computers and industrial PCs.</p>
+              <div class="hero-actions">
+                <a class="primary-button" href="products/mini-pcie-dual-can-fd/">View Mini PCIe module</a>
+                <a class="hero-text-link" href="products/interface-conversion/">Interface modules <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <figure class="product-hero-media" data-image-slot="xilume-dual-mini-pcie-can-fd">
+              <!-- Future image: replace the placeholder inside this figure; the 3:2 Hero layout stays unchanged. -->
+              <div class="product-image-placeholder">
+                <span>PRODUCT IMAGE AREA · 04</span>
+                <strong>Xilume Dual Mini PCIe CAN FD</strong>
+                <small>Reserved for a transparent 3:2 PNG or WebP</small>
+              </div>
+            </figure>
+          </div>
+        </article>
       </div>
+
+      <div class="product-hero-controls">
+        <button class="hero-arrow hero-arrow-previous" type="button" data-hero-previous aria-label="Previous featured product"><span aria-hidden="true">‹</span></button>
+        <div class="container product-hero-selector" role="tablist" aria-label="Choose a featured product">
+          <button class="hero-product-tab is-active" type="button" role="tab" data-hero-select="0" aria-selected="true"><small>01</small><span>Controller IC</span><i aria-hidden="true"></i></button>
+          <button class="hero-product-tab" type="button" role="tab" data-hero-select="1" aria-selected="false"><small>02</small><span>Xilume 8Hub</span><i aria-hidden="true"></i></button>
+          <button class="hero-product-tab" type="button" role="tab" data-hero-select="2" aria-selected="false"><small>03</small><span>Battery Module</span><i aria-hidden="true"></i></button>
+          <button class="hero-product-tab" type="button" role="tab" data-hero-select="3" aria-selected="false"><small>04</small><span>Dual Mini PCIe</span><i aria-hidden="true"></i></button>
+        </div>
+        <button class="hero-arrow hero-arrow-next" type="button" data-hero-next aria-label="Next featured product"><span aria-hidden="true">›</span></button>
+      </div>
+      <p class="sr-only" aria-live="polite" data-hero-status></p>
     </section>
 
     <nav class="home-paths" aria-labelledby="home-paths-title">
@@ -249,7 +324,7 @@
         <div class="selector-promo-visual" aria-hidden="true">
           <div class="promo-signal-list"><span>USB</span><span>SPI</span><span>ETH</span></div>
           <i></i>
-          <div class="promo-chip"><img src="/favicon.svg" alt=""><strong>Xilume</strong></div>
+          <div class="promo-chip"><img src="/brand-mark-96.png" alt=""><strong>Xilume</strong></div>
           <i></i>
           <div class="promo-signal-list"><span>CAN FD</span><span>RS-485</span><span>SMBus</span></div>
         </div>
@@ -289,7 +364,7 @@
   <footer>
     <div class="container footer-grid">
       <div>
-        <div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><i class="arm nw"></i><i class="arm ne"></i><i class="arm sw"></i><i class="arm se"></i><i class="core"></i></span><span>Xilume</span></div>
+        <div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div>
         <p>Interface controller ICs, modules, and future embedded systems.</p>
       </div>
       <div><h3>Products</h3><a href="products/">Browse all products</a><a href="products/interface-controller-ics/">Controller ICs</a><a href="products/interface-conversion/">Interface modules</a></div>
@@ -298,5 +373,6 @@
     </div>
     <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Engineering catalog · Specifications subject to released documentation</span></div>
   </footer>
+  <script src="hero.js?v=20260801-2"></script>
 </body>
 </html>

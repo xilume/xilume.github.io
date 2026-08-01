@@ -1,13 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-  <title>XILUME brand mark — exact website version on light background</title>
-  <rect width="1024" height="1024" rx="208" fill="#f7f8f9"/>
-  <svg x="192" y="192" width="640" height="640" viewBox="0 0 26 26">
-    <g fill="#1c2832">
-      <rect x="1" y="5" width="11" height="4" rx="1" transform="rotate(45 6.5 7)"/>
-      <rect x="14" y="5" width="11" height="4" rx="1" transform="rotate(-45 19.5 7)"/>
-      <rect x="1" y="17" width="11" height="4" rx="1" transform="rotate(-45 6.5 19)"/>
-      <rect x="14" y="17" width="11" height="4" rx="1" transform="rotate(45 19.5 19)"/>
-    </g>
-    <rect x="11" y="11" width="5" height="5" rx="1" fill="#1769c2"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Xilume official X orbit icon</title>
+  <rect width="512" height="512" fill="#ffffff"/>
+  <image href="/brand-mark-512.png" width="512" height="512" preserveAspectRatio="xMidYMid meet"/>
 </svg>

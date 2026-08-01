@@ -1,17 +1,29 @@
-# XILUME homepage image requirements
+# Xilume homepage image requirements
 
 These filenames are already placed in the website. Replace the file while keeping the
 same filename and aspect ratio, or provide the new photo to update the HTML reference.
 
-## 01 — Homepage brand hero
+## 01 — Four homepage Hero product slots
 
-- Current file: `home-system-hero.svg`
-- Preferred replacement: `home-system-hero.webp`
-- Display ratio: approximately 16:9
-- Recommended source size: 2000 × 1125 px or larger
-- Photo content: a complete embedded/industrial system, lab or robotics scene with
-  XILUME hardware visible only as part of the system. Avoid a tight single-product shot.
-- Composition: leave the left 35–40% visually quiet because homepage text sits there.
+The homepage already reserves a fixed 3:2 image frame for each product. Until final
+images are supplied, the frames remain as labeled placeholders. Future images can be
+inserted without changing the Hero dimensions, text column, controls, or 5-second cycle.
+
+Recommended final filenames:
+
+- `hero/xilume-controller-ic.webp`
+- `hero/xilume-8hub.webp`
+- `hero/xilume-battery-display-module.webp`
+- `hero/xilume-dual-mini-pcie-can-fd.webp`
+
+For every Hero image:
+
+- Display ratio: 3:2
+- Recommended source size: 1800 × 1200 px or larger
+- Preferred format: transparent-background WebP or PNG
+- Composition: center the product inside the frame with safe space around connectors
+- Lighting: neutral and consistent across all four products
+- Do not include titles, buttons, feature labels, or other website text in the image
 
 ## 02 — Interface controller platform
 
