@@ -1,6 +1,6 @@
 {
-  "name": "XILUME",
-  "short_name": "XILUME",
+  "name": "Xilume",
+  "short_name": "Xilume",
   "description": "Embedded interface modules and controller ICs for CAN FD, RS-485, and smart-battery systems.",
   "start_url": "/",
   "display": "standalone",
