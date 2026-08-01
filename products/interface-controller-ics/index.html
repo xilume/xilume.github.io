@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Xilume interface controller ICs for USB, CAN FD, RS-485, and smart-battery integration.">
-  <title>Interface Controller ICs | Xilume</title>
+  <meta name="description" content="A preliminary Xilume controller IC family for defined USB-hosted CAN FD, RS-485, and smart-battery product functions.">
+  <title>Xilume Interface Controller IC</title>
   <link rel="icon" href="/favicon.svg?v=20260801-3" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/brand-mark-48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/brand-mark-180.png" sizes="180x180">
-  <link rel="stylesheet" href="../../styles.css?v=20260801-2">
+  <link rel="stylesheet" href="../../styles.css?v=20260802-1">
+  <script defer src="/site.js?v=20260802-1"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/products/interface-controller-ics/">
   <meta property="og:site_name" content="Xilume">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Interface Controller ICs | Xilume">
-  <meta property="og:description" content="Select a standard signal configuration, review the fixed pinout, and integrate a Xilume interface controller into your design.">
+  <meta property="og:title" content="Xilume Interface Controller IC">
+  <meta property="og:description" content="A preliminary controller family with a planned matched set of pinout, protocol, reference-circuit, and software resources.">
   <meta property="og:url" content="https://xilume.co/products/interface-controller-ics/">
   <meta property="og:image" content="https://xilume.co/images/interface-controller-platform.svg">
 </head>
@@ -27,99 +28,91 @@
     </div>
   </header>
 
-  <main>
-    <section class="controller-family-hero">
-      <div class="container controller-family-hero-grid">
-        <div>
-          <p class="breadcrumbs"><a href="../../">Home</a><span>/</span><a href="../">Products</a><span>/</span>Interface controller ICs</p>
-          <p class="section-label">Xilume CONTROLLER ICs</p>
-          <h1>Standard interface functions in one Xilume controller.</h1>
-          <p>Select an orderable signal configuration, use its fixed functional pinout, and integrate the controller with the released reference design.</p>
-          <div class="hero-actions">
-            <a class="primary-button" href="../../chip-selector/">Use controller selector</a>
-            <a class="secondary-button" href="#controller-models">Compare models</a>
-          </div>
+  <nav class="product-local-nav" aria-label="Interface Controller IC page navigation">
+    <div class="container"><a class="product-local-name" href="#top">Interface Controller IC</a><div><a href="#why">Why it matters</a><a href="#architecture">Architecture</a><a href="#models">Models</a><a href="#applications">Applications</a><a href="#resources">Resources</a></div></div>
+  </nav>
+
+  <main class="product-detail-page product-theme-controller" id="top">
+    <section class="product-story-hero">
+      <div class="container product-story-hero-grid">
+        <div class="product-story-copy">
+          <p class="product-story-kicker">ENGINEERING CONTROLLER FAMILY</p>
+          <h1>Put a defined interface controller at the center of your board.</h1>
+          <p>Xilume controller ICs are designed to connect a USB host to CAN FD, RS-485, or Smart Battery interfaces. Start from a controlled function instead of rebuilding the same communication layer for every product.</p>
+          <div class="product-story-actions"><a class="primary-button" href="../../chip-selector/">Configure a controller</a><a class="product-ghost-button" href="#models">Compare models</a></div>
+          <p class="product-development-note"><span></span>Preliminary engineering family · not yet released or for sale · final limits follow released datasheets</p>
         </div>
-        <div class="family-chip-figure" role="img" aria-label="Xilume interface controller IC concept">
-          <div class="family-chip-inputs"><small>HOST</small><span>USB D+</span><span>USB D−</span><span>POWER</span><span>CONTROL</span></div>
-          <div class="family-chip-line"></div>
-          <div class="family-chip-body">
-            <span class="selector-chip-pins top"></span><span class="selector-chip-pins bottom"></span><span class="selector-chip-pins left"></span><span class="selector-chip-pins right"></span>
-            <img src="/brand-mark-96.png" alt="">
-            <strong>Xilume</strong><small>INTERFACE CONTROLLER</small>
-          </div>
-          <div class="family-chip-line"></div>
-          <div class="family-chip-outputs"><small>FIELD</small><span>CAN FD</span><span>RS-485</span><span>SMBus</span><span>STATUS I/O</span></div>
-        </div>
+        <figure class="product-story-visual product-story-visual-light">
+          <img src="../../images/interface-controller-platform.svg" alt="Technical illustration of a Xilume interface controller in a circuit design">
+          <figcaption>Engineering platform illustration · final packaged-device photography to follow</figcaption>
+        </figure>
+      </div>
+      <div class="container product-proof-grid" aria-label="Interface controller highlights">
+        <div><small>HOST</small><strong>USB 2.0 FS</strong><span>Defined host connection</span></div>
+        <div><small>MODEL PATHS</small><strong>4</strong><span>Current engineering configurations</span></div>
+        <div><small>FIELD OPTIONS</small><strong>CAN FD · RS-485 · SMBus</strong><span>Select the required function</span></div>
+        <div><small>DESIGN CONTROL</small><strong>Planned file set</strong><span>Pinout, protocol, reference circuit</span></div>
       </div>
     </section>
 
-    <section class="container controller-principles">
-      <div class="section-intro">
-        <div><p class="section-label">PRODUCT PRINCIPLE</p><h2>One Xilume model defines one complete behavior.</h2></div>
-        <p>Each controller is supplied as a defined Xilume product. Customers design around its documented electrical characteristics, fixed pinout, and supported interface behavior.</p>
-      </div>
-      <div class="principle-grid">
-        <article><span>FIXED</span><h3>Interface function</h3><p>Communication handling, buffering, status logic, and host protocol are defined by the selected Xilume model.</p></article>
-        <article><span>FIXED</span><h3>Functional pinout</h3><p>Every orderable model has a controlled pin definition for power, host, field interfaces, and status signals.</p></article>
-        <article><span>SELECTABLE</span><h3>Operating settings</h3><p>Supported bus speeds and normal operating options are selected through the documented host protocol.</p></article>
-        <article><span>EXTERNAL</span><h3>Physical-layer design</h3><p>Transceivers, isolation, termination, connectors, and protection follow the reference schematic and system needs.</p></article>
-      </div>
-    </section>
-
-    <section class="controller-model-section" id="controller-models">
+    <section class="product-story-section" id="why">
       <div class="container">
-        <div class="section-intro">
-          <div><p class="section-label">ENGINEERING MODEL FAMILY</p><h2>Current USB-hosted configurations.</h2></div>
-          <p>Part numbers and values remain engineering specifications until the corresponding release-controlled datasheet is published.</p>
+        <div class="product-section-heading"><p>WHY IT MATTERS</p><h2>Stop rebuilding the same interface layer.</h2><span>A custom product may need USB communication, command handling, buffering, status logic, and several field buses before its main application can even begin.</span></div>
+        <div class="product-reason-grid">
+          <article><b>01</b><h3>Shorter integration path</h3><p>Begin with a defined interface function rather than an empty firmware project and a collection of unrelated drivers.</p></article>
+          <article><b>02</b><h3>One controlled target</h3><p>Each future released model is intended to keep its pinout, host protocol, reference schematic, software, and revision record tied together.</p></article>
+          <article><b>03</b><h3>Your physical layer</h3><p>Select external transceivers, isolation, termination, connectors, and protection for the actual environment.</p></article>
         </div>
-        <div class="controller-model-table">
-          <div class="controller-model-head"><span>MODEL</span><span>HOST</span><span>FIELD INTERFACES</span><span>MEMORY CLASS</span><span>PACKAGE CLASS</span><span>STATUS</span></div>
-          <article id="XIC-U2C2R2"><strong>XIC-U2C2R2</strong><span>USB 2.0 FS</span><span>2 CAN FD + 2 RS-485</span><span>256 KB</span><span>64 pin</span><b>Engineering</b></article>
-          <article id="XIC-U2C2"><strong>XIC-U2C2</strong><span>USB 2.0 FS</span><span>2 × CAN / CAN FD</span><span>128 KB</span><span>48 pin</span><b>Engineering</b></article>
-          <article id="XIC-U2R2"><strong>XIC-U2R2</strong><span>USB 2.0 FS</span><span>2 × RS-485</span><span>128 KB</span><span>48 pin</span><b>Engineering</b></article>
-          <article id="XIC-USMB1"><strong>XIC-USMB1</strong><span>USB 2.0 FS</span><span>Smart Battery / SMBus</span><span>128 KB</span><span>48 pin</span><b>Engineering</b></article>
-        </div>
-        <p class="model-disclaimer">The released product datasheet, not this comparison table, controls final electrical, memory, package, and environmental specifications.</p>
       </div>
     </section>
 
-    <section class="container controller-file-section">
-      <div class="section-intro">
-        <div><p class="section-label">RELEASE-CONTROLLED FILE SET</p><h2>Design information follows the exact controller model.</h2></div>
-        <p>Files are grouped by orderable part number and product revision so customers can verify that the schematic, software, and device behavior belong together.</p>
-      </div>
-      <div class="file-register">
-        <div><span>01</span><strong>Datasheet</strong><p>Electrical limits, package dimensions, operating conditions, and functional description.</p><b>PDF</b></div>
-        <div><span>02</span><strong>Pinout table</strong><p>Pin number, name, direction, voltage domain, reset state, and required connection.</p><b>PDF / CSV</b></div>
-        <div><span>03</span><strong>Reference schematic</strong><p>Minimum controller circuit plus recommended transceiver, USB, and protection design.</p><b>PDF</b></div>
-        <div><span>04</span><strong>Host protocol</strong><p>Command frames, responses, error codes, timeouts, and supported configuration settings.</p><b>PDF</b></div>
-        <div><span>05</span><strong>Software package</strong><p>Windows and Linux test tools, examples, device identification, and verification procedure.</p><b>ZIP</b></div>
-        <div><span>06</span><strong>Revision record</strong><p>Product revision, validation state, known limitations, and controlled change history.</p><b>PDF</b></div>
+    <section class="product-story-section product-story-section-dark" id="architecture">
+      <div class="container product-feature-split">
+        <div class="product-feature-copy"><p>DESIGN FLOW</p><h2>One clear path from host commands to field signals.</h2><span>The controller manages the defined host-side behavior. The customer PCB completes the physical layer for the selected buses.</span><div class="product-inline-alert"><strong>Design boundary</strong><p>Physical-layer transceivers and bus-side protection remain on the customer PCB.</p></div></div>
+        <div class="product-flow-diagram" role="img" aria-label="USB host through Xilume controller and external physical layer to field interfaces">
+          <div><small>HOST</small><strong>USB</strong><span>Commands + data</span></div><i>→</i><div class="is-accent"><small>CONTROL</small><strong>Xilume IC</strong><span>Protocol + buffering</span></div><i>→</i><div><small>PCB</small><strong>External PHY</strong><span>Transceivers + protection</span></div><i>→</i><div><small>FIELD</small><strong>CAN FD / RS-485 / SMBus</strong><span>System interfaces</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="controller-roadmap-section" id="roadmap">
-      <div class="container controller-roadmap-grid">
-        <div><p class="section-label">CONTROLLER ROADMAP</p><h2>Additional host interfaces will use the same selection system.</h2><p>SPI, UART, and I²C-hosted parts remain visible in the selector as roadmap functions. They will receive orderable models only after electrical definition, device validation, and documentation are complete.</p></div>
-        <div class="roadmap-list">
-          <div><strong>SPI-hosted controllers</strong><span>Planned</span></div>
-          <div><strong>UART-hosted controllers</strong><span>Planned</span></div>
-          <div><strong>I²C / SMBus-hosted controllers</strong><span>Planned</span></div>
-          <div><strong>Additional channel combinations</strong><span>Planned</span></div>
+    <section class="product-story-section" id="models">
+      <div class="container">
+        <div class="product-section-heading"><p>ENGINEERING MODELS</p><h2>Choose the function your board actually needs.</h2><span>Part numbers remain preliminary until the corresponding release-controlled datasheet is published.</span></div>
+        <div class="product-spec-table product-model-table">
+          <div class="product-spec-head"><span>MODEL</span><span>HOST</span><span>DEFINED FIELD FUNCTION</span><span>STATUS</span></div>
+          <div><strong>XIC-U2C2R2</strong><span>USB 2.0 FS</span><span>2 × CAN FD + 2 × RS-485</span><b>Preliminary</b></div>
+          <div><strong>XIC-U2C2</strong><span>USB 2.0 FS</span><span>2 × CAN / CAN FD</span><b>Preliminary</b></div>
+          <div><strong>XIC-U2R2</strong><span>USB 2.0 FS</span><span>2 × RS-485</span><b>Preliminary</b></div>
+          <div><strong>XIC-USMB1</strong><span>USB 2.0 FS</span><span>Smart Battery / SMBus</span><b>Preliminary</b></div>
+        </div>
+        <div class="product-status-columns product-status-columns-spaced"><div><strong>Defined target</strong><span>USB-hosted engineering configurations</span><span>CAN FD, RS-485, and SMBus function combinations</span><span>External physical layer on the customer PCB</span></div><div><strong>To be published</strong><span>Final package, pinout, and electrical limits</span><span>Validated rates and software support</span><span>Datasheets, design files, and availability</span></div></div>
+      </div>
+    </section>
+
+    <section class="product-story-section product-story-section-soft" id="applications">
+      <div class="container">
+        <div class="product-section-heading"><p>WHERE IT FITS</p><h2>For products that need a repeatable interface foundation.</h2></div>
+        <div class="product-application-grid">
+          <article><span>ROBOTICS</span><h3>Robot controllers and joints</h3><p>Bridge the host system to CAN FD and RS-485 devices while keeping the controller behavior consistent.</p></article>
+          <article><span>INDUSTRIAL</span><h3>Embedded control equipment</h3><p>Add selected field interfaces to a custom PCB without starting the complete host protocol from zero.</p></article>
+          <article><span>TEST SYSTEMS</span><h3>Dedicated interface instruments</h3><p>Build repeatable adapters and validation fixtures around one documented controller target.</p></article>
+          <article><span>BATTERY SYSTEMS</span><h3>Smart-battery integration</h3><p>Connect supported battery data to a host through a defined USB-to-SMBus controller path.</p></article>
         </div>
       </div>
+    </section>
+
+    <section class="product-story-section" id="resources">
+      <div class="container product-feature-split product-feature-split-reverse">
+        <div class="product-photo-placeholder" data-image-slot="controller-ic-package-photo"><span>FINAL PRODUCT IMAGE SLOT</span><strong>Packaged controller IC</strong><small>Reserved for a real macro photograph of the released device</small></div>
+        <div class="product-feature-copy"><p>PLANNED DESIGN RESOURCES</p><h2>The device and its files are planned as one release set.</h2><span>The documentation target for each future released model includes the information an engineering team needs to design, test, and maintain the interface. These files are not presented here as released deliverables.</span><ul class="product-check-list"><li>Release-controlled datasheet and pinout</li><li>Reference schematic and external PHY guidance</li><li>Host protocol and error behavior</li><li>Planned Windows and Linux engineering tools</li><li>Revision record and known limitations</li></ul></div>
+      </div>
+    </section>
+
+    <section class="product-final-cta">
+      <div class="container"><div><p>START A DESIGN</p><h2>Tell us which host and field interfaces your product needs.</h2></div><div><a class="primary-button" href="../../contact/">Discuss your application</a><a class="product-ghost-button" href="../../chip-selector/">Open chip selector</a></div></div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Interface controller ICs, modules, and future embedded systems.</p></div>
-      <div><h3>Controllers</h3><a href="../../chip-selector/">Chip selector</a><a href="#controller-models">Compare models</a><a href="#roadmap">Roadmap</a></div>
-      <div><h3>Products</h3><a href="../">Browse all products</a><a href="../interface-conversion/">Interface modules</a><a href="../../documentation/">Documentation</a></div>
-      <div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div>
-    </div>
-    <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Engineering catalog · Specifications subject to released documentation</span></div>
-  </footer>
+  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Interface controller ICs, modules, and future embedded systems.</p></div><div><h3>Featured products</h3><a href="./">Controller IC</a><a href="../8hub/">8Hub</a><a href="../usb-smbus/">Battery module</a></div><div><h3>Engineering</h3><a href="../../chip-selector/">Chip selector</a><a href="../../documentation/">Documentation</a><a href="../../contact/">Contact</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Preliminary engineering information · Final specifications follow released documentation</span></div></footer>
 </body>
 </html>

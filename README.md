@@ -14,10 +14,11 @@ The site is structured as an expandable product catalog organized by product are
 - `/chip-selector/` — interface controller configuration tool
 - `/documentation/` — engineering and integration resources
 - `/products/interface-conversion/` — interface product area and product finder
+- `/products/8hub/` — target architecture for two CAN FD, four RS-485, and two RS-232 channels through one USB host
 - `/products/usb-dual-can-fd/` — USB dual CAN FD interface
 - `/products/usb-canfd-rs485/` — CAN FD and RS-485 interface
-- `/products/usb-smbus/` — smart-battery data reader
-- `/products/mini-pcie-dual-can-fd/` — Mini PCIe dual CAN FD interface
+- `/products/usb-smbus/` — Battery Display Module for Windows and Linux integration
+- `/products/mini-pcie-dual-can-fd/` — Dual Mini PCIe CAN FD interface
 - `/contact/` — sales and company contact information
 - `/about/` — company and development direction
 

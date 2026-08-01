@@ -1,27 +1,131 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Display smart battery level, voltage, capacity, health, and status through USB with a Xilume module or controller IC."><title>Smart Battery Level &amp; Health Reader — Xilume</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/brand-mark-48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/brand-mark-180.png" sizes="180x180"><link rel="stylesheet" href="../../styles.css?v=20260801-2">  <meta name="robots" content="index, follow">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Xilume Battery Display Module is being developed to connect supported SBS smart-battery data to Windows and Linux systems through USB.">
+  <title>Xilume Battery Display Module</title>
+  <link rel="icon" href="/favicon.svg?v=20260801-3" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/brand-mark-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/brand-mark-180.png" sizes="180x180">
+  <link rel="stylesheet" href="../../styles.css?v=20260802-1">
+  <script defer src="/site.js?v=20260802-1"></script>
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/products/usb-smbus/">
   <meta property="og:site_name" content="Xilume">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Smart Battery Level & Health Reader — Xilume">
-  <meta property="og:description" content="Display smart battery level, voltage, capacity, health, and status through USB with a Xilume module or controller IC.">
+  <meta property="og:title" content="Xilume Battery Display Module">
+  <meta property="og:description" content="An engineering-stage USB-to-SMBus module for proposed Windows and Linux battery-data integration.">
   <meta property="og:url" content="https://xilume.co/products/usb-smbus/">
-  <meta property="og:image" content="https://xilume.co/images/interface-conversion-hero.webp">
+  <meta property="og:image" content="https://xilume.co/images/smbus-application.webp">
   <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-  <header class="site-header"><div class="container header-inner">
-    <a class="brand brand-wordmark" href="../../" aria-label="Xilume home"><img src="/images/xilume-wordmark.png" alt="Xilume"></a>
-    <nav aria-label="Primary navigation"><a href="../" aria-current="page">Products</a><a href="../../applications/">Applications</a><a href="../../chip-selector/">Design tools</a><a href="../../documentation/">Documentation</a><a href="../../about/">Company</a><a class="nav-finder" href="../../contact/">Contact</a></nav>
-  </div></header>
-  <main class="container family-page">
-    <section class="page-header"><p class="breadcrumbs"><a href="../../">Home</a><span>/</span><a href="../">Products</a><span>/</span><a href="../interface-conversion/">Interface Conversion</a><span>/</span>SMBus Smart Battery</p></section>
-    <section class="family-hero"><div class="family-hero-image battery-visual"><img src="../../images/smbus-application.webp" alt="Computer displaying percentage and information from a smart battery"><div class="battery-overlay"><span>SMART BATTERY</span><strong>82%</strong><small>Voltage · Capacity · Health</small></div><span class="image-note">Application image · not a product photo</span></div><div class="family-hero-copy"><div class="path-large"><span>USB</span><b>↔</b><span>SMBus</span><b>↔</b><span>SMART BATTERY</span></div><h1>Smart Battery Level &amp; Health Reader</h1><p>Display battery percentage, voltage, temperature, remaining capacity, cycle count, and status on a computer without developing the SMBus communication yourself.</p></div></section>
-    <section class="format-section"><p class="section-label">CHOOSE A FORMAT</p><h2>Module for testing, controller for integration.</h2><div class="format-compare">
-      <article class="product-format" id="module"><div class="format-title"><h3>Ready-to-use Module</h3><span class="status">In development</span></div><div class="format-product"><h4>USB SMBus Battery Reader Module</h4><p>USB-connected reader board for supported SBS-compatible smart battery packs.</p><div class="feature-icons"><div class="feature-icon"><b>USB</b><span>Computer connection</span></div><div class="feature-icon"><b>BAT</b><span>SMBus battery</span></div><div class="feature-icon"><b>APP</b><span>Battery data view</span></div></div><span class="format-link"><span>Product page after prototype validation</span><b>—</b></span></div></article>
-      <article class="product-format" id="controller"><div class="format-title"><h3>Xilume Controller IC</h3><span class="status">In development</span></div><div class="format-product"><h4>USB SMBus Battery Controller</h4><p>Xilume controller with USB and SMBus functions, supplied with a functional datasheet and reference circuit.</p><div class="feature-icons"><div class="feature-icon"><b>IC</b><span>Xilume controller</span></div><div class="feature-icon"><b>PDF</b><span>Functional datasheet</span></div><div class="feature-icon"><b>REF</b><span>Reference design</span></div></div><span class="format-link"><span>Datasheet after protocol validation</span><b>—</b></span></div></article>
-    </div><div class="technical-note"><strong>Battery compatibility</strong><p>This family is intended for supported SBS-compatible smart batteries. Battery pinout, voltage levels, pull-ups, supported commands, and connector wiring must be confirmed before connection.</p></div></section>
-    <section class="compatibility-grid"><article><h3>Planned information</h3><p>Voltage, current, temperature, state of charge, remaining capacity, full-charge capacity, cycle count, and battery status.</p></article><article><h3>Not a charger</h3><p>This product reads and reports battery information. Charging or battery-protection functions are not implied.</p></article><article><h3>Development stage</h3><p>SMBus communication, supported commands, USB behavior, and host software are still being validated.</p></article></section>
+  <header class="site-header corporate-header">
+    <div class="container header-inner">
+      <a class="brand brand-wordmark" href="../../" aria-label="Xilume home"><img src="/images/xilume-wordmark.png" alt="Xilume"></a>
+      <nav aria-label="Primary navigation"><a href="../" aria-current="page">Products</a><a href="../../applications/">Applications</a><a href="../../chip-selector/">Design tools</a><a href="../../documentation/">Documentation</a><a href="../../about/">Company</a><a class="nav-finder" href="../../contact/">Contact</a></nav>
+    </div>
+  </header>
+
+  <nav class="product-local-nav" aria-label="Battery Display Module page navigation">
+    <div class="container"><a class="product-local-name" href="#top">Battery Display Module</a><div><a href="#why">Why it matters</a><a href="#system">System view</a><a href="#platforms">Platforms</a><a href="#applications">Applications</a><a href="#data">Battery data</a></div></div>
+  </nav>
+
+  <main class="product-detail-page product-theme-battery" id="top">
+    <section class="product-story-hero">
+      <div class="container product-story-hero-grid">
+        <div class="product-story-copy">
+          <p class="product-story-kicker">SMART BATTERY INTERFACE</p>
+          <h1>Make battery status visible to the host system.</h1>
+          <p>Xilume Battery Display Module is designed to read supported SBS smart-battery data over SMBus and deliver it through USB for Windows and Linux integration.</p>
+          <div class="product-story-actions"><a class="primary-button" href="../../contact/">Discuss your battery system</a><a class="product-ghost-button" href="#system">See the data path</a></div>
+          <p class="product-development-note"><span></span>Engineering development · not yet for sale · operating-system integration is being validated</p>
+        </div>
+        <figure class="product-story-visual product-story-visual-photo">
+          <img src="../../images/smbus-application.webp" alt="Smart battery connected to a USB reader beside a computer">
+          <figcaption>Application image · not a final product photograph</figcaption>
+          <div class="product-visual-badge"><small>INTERFACE CONCEPT</small><strong>78%</strong><span>Charge · current · runtime · pack status</span></div>
+        </figure>
+      </div>
+      <div class="container product-proof-grid" aria-label="Battery Display Module highlights">
+        <div><small>BATTERY SIDE</small><strong>SBS / SMBus</strong><span>Supported smart-battery data</span></div>
+        <div><small>HOST SIDE</small><strong>USB</strong><span>Focused system bridge</span></div>
+        <div><small>PLATFORMS</small><strong>Windows · Linux</strong><span>Integration validation in progress</span></div>
+        <div><small>INFORMATION</small><strong>Charge · runtime · pack status</strong><span>Subject to pack command support</span></div>
+      </div>
+    </section>
+
+    <section class="product-story-section" id="why">
+      <div class="container">
+        <div class="product-section-heading"><p>WHY IT MATTERS</p><h2>Battery data exists. Your host may have no practical way to use it.</h2><span>A smart battery can report much more than voltage, but integrating pack commands, wiring, USB communication, and operating-system behavior takes time.</span></div>
+        <div class="product-reason-grid">
+          <article><b>01</b><h3>User-visible battery state</h3><p>Present useful charge and operating information instead of leaving an external battery invisible to the user.</p></article>
+          <article><b>02</b><h3>Engineering diagnostics</h3><p>Review pack data during development, maintenance, validation, and troubleshooting.</p></article>
+          <article><b>03</b><h3>Less custom interface work</h3><p>Avoid rebuilding the complete USB-to-SMBus communication path for every battery-powered system.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-story-section product-story-section-dark" id="system">
+      <div class="container">
+        <div class="product-section-heading product-section-heading-on-dark"><p>SYSTEM VIEW</p><h2>From battery pack data to familiar power information.</h2><span>The module sits between the supported smart battery and the host, translating pack data into a form the operating system or Xilume software can use.</span></div>
+        <figure class="product-wide-figure"><img src="../../images/battery-os-support.svg" alt="Concept showing a smart battery connected by SMBus to a Xilume module, then by USB to proposed Windows and Linux status views"><figcaption>Interface concept · exact operating-system presentation and supported versions will be published after validation</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="product-story-section" id="platforms">
+      <div class="container">
+        <div class="product-section-heading"><p>WINDOWS + LINUX</p><h2>Designed to place battery information where users already look.</h2><span>Final driver method, supported operating-system versions, and native power-interface behavior remain under validation.</span></div>
+        <div class="platform-support-grid">
+          <article><div class="platform-window-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div><small>WINDOWS · TARGET</small><h3>Proposed native power experience</h3><p>Targeted for familiar battery state, charging status, and remaining-time presentation without a separate gauge window for normal use.</p><b>Integration validation in progress</b></div></article>
+          <article><div class="platform-terminal-icon" aria-hidden="true"><span>&gt;_</span></div><div><small>LINUX · TARGET</small><h3>Proposed power-management integration</h3><p>Targeted for desktop indicators, system power services, diagnostic access, and embedded Linux deployments.</p><b>Integration validation in progress</b></div></article>
+        </div>
+        <div class="battery-state-grid" aria-label="Conceptual battery-status examples; final system presentation is under validation">
+          <div><span class="battery-icon"><i style="width:22%"></i></span><strong>22%</strong><small>Low charge</small></div>
+          <div><span class="battery-icon"><i style="width:58%"></i></span><strong>58%</strong><small>In use</small></div>
+          <div><span class="battery-icon is-charging"><i style="width:76%"></i></span><strong>76%</strong><small>Pack reports charging</small></div>
+          <div><span class="battery-icon is-full"><i style="width:96%"></i></span><strong>96%</strong><small>Nearly full</small></div>
+        </div>
+        <p class="interface-concept-note">Interface concepts shown for explanation; final system presentation depends on the released driver and operating-system integration.</p>
+      </div>
+    </section>
+
+    <section class="product-story-section product-story-section-soft" id="applications">
+      <div class="container product-feature-split">
+        <figure class="product-application-photo"><img src="../../images/smbus-application.webp" alt="Battery development setup with a smart battery, interface board, and computer"><figcaption>Smart-battery development and monitoring context</figcaption></figure>
+        <div class="product-feature-copy"><p>WHERE IT FITS</p><h2>For products that need battery information at the system level.</h2><span>The same focused data path can support a finished device, a development bench, or a service tool.</span><ul class="product-check-list"><li>Portable industrial computers</li><li>Mobile robots and autonomous equipment</li><li>Battery-powered instruments</li><li>External battery systems</li><li>Battery development and service fixtures</li></ul></div>
+      </div>
+    </section>
+
+    <section class="product-story-section" id="data">
+      <div class="container">
+        <div class="product-section-heading"><p>BATTERY INFORMATION</p><h2>A useful view of pack state—not just a voltage number.</h2><span>The planned data set depends on which SBS commands the connected battery pack supports.</span></div>
+        <div class="battery-data-grid">
+          <article><small>01</small><strong>State of charge</strong><span>Remaining percentage and operating state</span></article>
+          <article><small>02</small><strong>Voltage + current</strong><span>Pack voltage and charge/discharge direction</span></article>
+          <article><small>03</small><strong>Runtime</strong><span>Remaining-time information when available</span></article>
+          <article><small>04</small><strong>Capacity</strong><span>Remaining and full-charge capacity</span></article>
+          <article><small>05</small><strong>Temperature</strong><span>Pack-reported thermal information</span></article>
+          <article><small>06</small><strong>Pack status + cycles</strong><span>Cycle count, status, and pack-reported health indicators when available</span></article>
+        </div>
+        <div class="product-safety-note"><strong>Hardware scope will be explicit.</strong><p>The display function alone does not imply that the module charges or protects the battery. The released documentation will define compatibility, wiring, voltage levels, pull-ups, command support, and whether a specific hardware revision includes any charging, power-path, or protection function.</p></div>
+      </div>
+    </section>
+
+    <section class="product-story-section product-story-section-dark">
+      <div class="container product-feature-split product-feature-split-reverse">
+        <div class="product-photo-placeholder" data-image-slot="battery-display-module-product-photo"><span>FINAL PRODUCT IMAGE SLOT</span><strong>Battery Display Module + wiring</strong><small>Reserved for a real top-view module photograph with the final connector pinout visible</small></div>
+        <div class="product-feature-copy"><p>PRODUCT PHOTOGRAPHY</p><h2>The final image will show exactly how the module connects.</h2><span>A production photo belongs here once the PCB revision, connector, wire order, and labeling are fixed. Until then, the page uses system diagrams and a clearly labeled application image.</span></div>
+      </div>
+    </section>
+
+    <section class="product-final-cta">
+      <div class="container"><div><p>MAKE BATTERY DATA VISIBLE</p><h2>Tell us the battery pack, host system, and information your application needs.</h2></div><div><a class="primary-button" href="../../contact/">Discuss your battery system</a><a class="product-ghost-button" href="../../documentation/">View engineering resources</a></div></div>
+    </section>
   </main>
-  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Embedded interface hardware and future industrial computing products.</p></div><div><h3>Products</h3><a href="../">All product areas</a><a href="../interface-conversion/">Interface Conversion</a><a href="../interface-conversion/#finder">Product finder</a></div><div><h3>Company</h3><a href="../../about/">About Xilume</a><a href="../../applications/">Applications</a><a href="../../documentation/">Documentation</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1 (657) 345-9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Manufactured in China · Sales: Eddie Chen</span></div></footer>
-</body></html>
+
+  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Interface controller ICs, modules, and future embedded systems.</p></div><div><h3>Featured products</h3><a href="../interface-controller-ics/">Controller IC</a><a href="../8hub/">8Hub</a><a href="./">Battery module</a></div><div><h3>Explore</h3><a href="../mini-pcie-dual-can-fd/">Dual Mini PCIe CAN FD</a><a href="../../applications/">Applications</a><a href="../../documentation/">Documentation</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Engineering development · Platform support subject to validation</span></div></footer>
+</body>
+</html>

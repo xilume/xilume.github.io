@@ -7,6 +7,9 @@
   const selector = carousel.querySelector(".product-hero-selector");
   const previousButton = carousel.querySelector("[data-hero-previous]");
   const nextButton = carousel.querySelector("[data-hero-next]");
+  const autoplayButton = carousel.querySelector("[data-hero-autoplay]");
+  const autoplayIcon = carousel.querySelector("[data-hero-autoplay-icon]");
+  const autoplayLabel = carousel.querySelector("[data-hero-autoplay-label]");
   const status = carousel.querySelector("[data-hero-status]");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const interval = 5000;
@@ -14,6 +17,7 @@
   let activeIndex = 0;
   let timer = null;
   let interactionPaused = false;
+  let userPaused = false;
 
   slides.forEach((slide, index) => {
     slide.id = `featured-product-${index + 1}`;
@@ -41,7 +45,24 @@
     activeTab.classList.add("is-active");
   };
 
-  const canAutoplay = () => !reducedMotion.matches && !interactionPaused && !document.hidden;
+  const canAutoplay = () => !reducedMotion.matches && !interactionPaused && !userPaused && !document.hidden;
+
+  const updateAutoplayButton = () => {
+    if (!autoplayButton) return;
+    if (reducedMotion.matches) {
+      autoplayButton.disabled = true;
+      autoplayButton.setAttribute("aria-pressed", "true");
+      autoplayButton.setAttribute("aria-label", "Automatic product rotation disabled by reduced-motion preference");
+      if (autoplayIcon) autoplayIcon.textContent = "—";
+      if (autoplayLabel) autoplayLabel.textContent = "Motion off";
+      return;
+    }
+    autoplayButton.disabled = false;
+    autoplayButton.setAttribute("aria-pressed", String(userPaused));
+    autoplayButton.setAttribute("aria-label", userPaused ? "Resume automatic product rotation" : "Pause automatic product rotation");
+    if (autoplayIcon) autoplayIcon.textContent = userPaused ? "▶" : "Ⅱ";
+    if (autoplayLabel) autoplayLabel.textContent = userPaused ? "Play" : "Pause";
+  };
 
   const scheduleNext = () => {
     clearTimer();
@@ -70,6 +91,8 @@
       tab.tabIndex = isActive ? 0 : -1;
     });
 
+    tabs[activeIndex]?.scrollIntoView?.({ behavior: announce && !reducedMotion.matches ? "smooth" : "auto", block: "nearest", inline: "nearest" });
+
     if (announce && status) {
       status.textContent = slides[activeIndex].getAttribute("aria-label") || `Featured product ${activeIndex + 1}`;
     }
@@ -90,6 +113,17 @@
 
   previousButton?.addEventListener("click", () => showSlide(activeIndex - 1, true));
   nextButton?.addEventListener("click", () => showSlide(activeIndex + 1, true));
+  autoplayButton?.addEventListener("click", () => {
+    userPaused = !userPaused;
+    updateAutoplayButton();
+    if (userPaused) {
+      carousel.classList.add("is-paused");
+      clearTimer();
+    } else {
+      interactionPaused = false;
+      scheduleNext();
+    }
+  });
 
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => showSlide(index, true));
@@ -97,7 +131,9 @@
 
   carousel.addEventListener("mouseenter", pause);
   carousel.addEventListener("mouseleave", resume);
-  carousel.addEventListener("focusin", pause);
+  carousel.addEventListener("focusin", (event) => {
+    if (!event.target.closest?.("[data-hero-autoplay]")) pause();
+  });
   carousel.addEventListener("focusout", (event) => {
     if (!carousel.contains(event.relatedTarget)) resume();
   });
@@ -125,6 +161,7 @@
 
   const handleMotionPreference = () => {
     carousel.classList.toggle("is-reduced-motion", reducedMotion.matches);
+    updateAutoplayButton();
     if (reducedMotion.matches) {
       clearTimer();
       carousel.classList.add("is-paused");
@@ -139,5 +176,6 @@
     reducedMotion.addListener(handleMotionPreference);
   }
 
+  updateAutoplayButton();
   showSlide(0, false);
 })();

@@ -11,7 +11,7 @@
     <g fill="#9ba9ac"><circle cx="48" cy="48" r="16"/><circle cx="852" cy="48" r="16"/><circle cx="48" cy="452" r="16"/><circle cx="852" cy="452" r="16"/></g>
     <g fill="#10191c"><circle cx="48" cy="48" r="8"/><circle cx="852" cy="48" r="8"/><circle cx="48" cy="452" r="8"/><circle cx="852" cy="452" r="8"/></g>
     <g fill="#d5dde0" font-family="Arial,Helvetica,sans-serif">
-      <text x="70" y="70" font-size="25" font-weight="700" letter-spacing="4">XILUME</text>
+      <text x="70" y="70" font-size="25" font-weight="700" letter-spacing="2">Xilume</text>
       <text x="70" y="100" font-size="11" letter-spacing="2" fill="#88a0a5">MINI PCIE · DUAL CAN FD</text>
       <text x="405" y="235" font-size="19" font-weight="700" letter-spacing="3">CORE</text>
       <text x="417" y="263" font-size="10" letter-spacing="2" fill="#77898d">LOGIC</text>

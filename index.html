@@ -13,8 +13,8 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="application-name" content="Xilume">
   <meta name="apple-mobile-web-app-title" content="Xilume">
-  <meta name="theme-color" content="#1769c2">
-  <link rel="stylesheet" href="styles.css?v=20260801-2">
+  <meta name="theme-color" content="#020712">
+  <link rel="stylesheet" href="styles.css?v=20260802-1">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/">
   <meta property="og:site_name" content="Xilume">
@@ -61,6 +61,7 @@
     ]
   }
   </script>
+  <script defer src="/site.js?v=20260802-1"></script>
 </head>
 <body>
   <header class="site-header corporate-header">
@@ -79,13 +80,14 @@
 
   <main>
     <section class="product-hero-carousel" data-hero-carousel aria-label="Featured Xilume products" aria-roledescription="carousel">
+      <h1 class="sr-only">Xilume interface controllers and embedded hardware</h1>
       <div class="product-hero-stage">
         <article class="product-hero-slide product-hero-chip is-active" data-hero-slide role="tabpanel" aria-label="1 of 4: Xilume Interface Controller IC">
           <div class="container product-hero-layout">
             <div class="product-hero-copy">
               <p class="product-hero-kicker">XILUME CONTROLLER IC</p>
-              <h1>Xilume Interface Controller IC</h1>
-              <p>A configurable controller platform for USB, CAN FD, RS-485, RS-232, SMBus, and control I/O integration.</p>
+              <h2>Xilume Interface Controller IC</h2>
+              <p>A preliminary configurable controller platform for USB, CAN FD, RS-485, SMBus, and control I/O integration.</p>
               <div class="hero-actions">
                 <a class="primary-button" href="products/interface-controller-ics/">Explore controller ICs</a>
                 <a class="hero-text-link" href="chip-selector/">Configure a controller <span aria-hidden="true">→</span></a>
@@ -107,10 +109,10 @@
             <div class="product-hero-copy">
               <p class="product-hero-kicker">NEW MULTI-INTERFACE HUB</p>
               <h2>Xilume 8Hub</h2>
-              <p>Two CAN FD, four RS-485, and two RS-232 channels brought together through one clean USB connection.</p>
+              <p>Being developed to bring two CAN FD, four RS-485, and two RS-232 channels through one clean USB connection.</p>
               <div class="hero-actions">
-                <a class="primary-button" href="products/">Explore Xilume 8Hub</a>
-                <span class="hero-release-note">Dedicated product page in preparation</span>
+                <a class="primary-button" href="products/8hub/">Explore Xilume 8Hub</a>
+                <a class="hero-text-link" href="products/8hub/#architecture">View all eight channels <span aria-hidden="true">→</span></a>
               </div>
             </div>
             <figure class="product-hero-media" data-image-slot="xilume-8hub">
@@ -129,7 +131,7 @@
             <div class="product-hero-copy">
               <p class="product-hero-kicker">NATIVE BATTERY STATUS</p>
               <h2>Xilume Battery Display Module</h2>
-              <p>Bring charge level, current, runtime, health, and operating status directly into Windows and Linux.</p>
+              <p>Designed to bring charge level, current, runtime, pack status, and available health indicators into Windows and Linux systems.</p>
               <div class="hero-actions">
                 <a class="primary-button" href="products/usb-smbus/">View battery module</a>
                 <a class="hero-text-link" href="documentation/">Design resources <span aria-hidden="true">→</span></a>
@@ -177,6 +179,7 @@
           <button class="hero-product-tab" type="button" role="tab" data-hero-select="2" aria-selected="false"><small>03</small><span>Battery Module</span><i aria-hidden="true"></i></button>
           <button class="hero-product-tab" type="button" role="tab" data-hero-select="3" aria-selected="false"><small>04</small><span>Dual Mini PCIe</span><i aria-hidden="true"></i></button>
         </div>
+        <button class="hero-autoplay-toggle" type="button" data-hero-autoplay aria-pressed="false" aria-label="Pause automatic product rotation"><span aria-hidden="true" data-hero-autoplay-icon>Ⅱ</span><b data-hero-autoplay-label>Pause</b></button>
         <button class="hero-arrow hero-arrow-next" type="button" data-hero-next aria-label="Next featured product"><span aria-hidden="true">›</span></button>
       </div>
       <p class="sr-only" aria-live="polite" data-hero-status></p>
@@ -285,8 +288,8 @@
             </div>
             <div class="featured-product-copy">
               <span>SMART BATTERY INTERFACE</span>
-              <h3>Battery data on Windows and Linux</h3>
-              <p>Read charge, capacity, temperature, health, and operating status through a standard USB-connected module.</p>
+              <h3>Battery data for Windows and Linux</h3>
+              <p>Target charge, capacity, temperature, pack status, and available health indicators through a USB-connected module.</p>
               <b>View product →</b>
             </div>
           </a>
@@ -314,7 +317,7 @@
         </article>
         <article class="application-visual-card">
           <img src="images/smbus-application.webp" alt="Smart battery data monitoring application">
-          <div><small>BATTERY SYSTEMS</small><h3>Make smart-battery data visible.</h3><p>Integrate battery capacity, charging, health, and diagnostic information into Windows and Linux systems.</p></div>
+          <div><small>BATTERY SYSTEMS</small><h3>Make smart-battery data visible.</h3><p>Prepare pack-reported capacity, charging state, status, and diagnostics for Windows and Linux integration.</p></div>
         </article>
       </div>
     </section>

@@ -9,7 +9,7 @@
     <path d="M272 300 H350" stroke="#1769c2" stroke-width="4"/>
     <polygon points="350,300 336,292 336,308" fill="#1769c2"/>
     <rect x="350" y="215" width="205" height="170" rx="5" fill="#19373e" stroke="#10272c" stroke-width="3"/>
-    <text x="392" y="278" fill="#e8edef" font-size="17" font-weight="700">XILUME</text>
+    <text x="392" y="278" fill="#e8edef" font-size="17" font-weight="700">Xilume</text>
     <text x="392" y="307" fill="#a8babd" font-size="11">DUAL CAN FD</text>
     <text x="392" y="334" fill="#7f989d" font-size="10">INTERNAL INTERFACE</text>
     <path d="M555 270 H645" stroke="#1769c2" stroke-width="4"/>

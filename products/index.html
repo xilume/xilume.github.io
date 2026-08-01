@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/brand-mark-48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/brand-mark-180.png" sizes="180x180">
-  <link rel="stylesheet" href="../styles.css?v=20260801-2">
+  <link rel="stylesheet" href="../styles.css?v=20260802-1">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/products/">
   <meta property="og:site_name" content="Xilume">
@@ -18,6 +18,7 @@
   <meta property="og:description" content="Browse Xilume controller ICs, interface modules, and future embedded computing products.">
   <meta property="og:url" content="https://xilume.co/products/">
   <meta property="og:image" content="https://xilume.co/images/interface-conversion-hero.webp">
+  <script defer src="/site.js?v=20260802-1"></script>
 </head>
 <body>
   <header class="site-header corporate-header">
@@ -53,6 +54,18 @@
       <a href="#future-products"><span>03</span><img src="../images/motherboard-platform.svg" alt=""><div><small>FUTURE PLATFORM</small><strong>Motherboards</strong></div><b>→</b></a>
     </section>
 
+    <section class="featured-product-roadmap">
+      <div class="container">
+        <div class="featured-product-roadmap-heading"><div><p class="section-label">CURRENT FOCUS</p><h2>Four products built around clear system needs.</h2></div><p>Start with the result your system needs, then review the architecture, application fit, validation state, and future product-photo locations on each page.</p></div>
+        <div class="featured-product-roadmap-grid">
+          <a href="interface-controller-ics/"><span>01 · DESIGN INTO YOUR PCB</span><div><img src="../images/interface-controller-platform.svg" alt=""><b>Controller IC</b></div><h3>A defined interface function for your own hardware.</h3><strong>Explore the controller →</strong></a>
+          <a href="8hub/"><span>02 · MULTI-INTERFACE HUB</span><div><img src="../images/8hub-architecture.svg" alt=""><b>8Hub</b></div><h3>Target two CAN FD, four RS-485, and two RS-232 channels.</h3><strong>Explore Xilume 8Hub →</strong></a>
+          <a href="usb-smbus/"><span>03 · BATTERY STATUS</span><div><img src="../images/smbus-application.webp" alt=""><b>Battery Module</b></div><h3>Prepare smart-battery information for Windows and Linux integration.</h3><strong>Explore battery display →</strong></a>
+          <a href="mini-pcie-dual-can-fd/"><span>04 · INTERNAL CAN FD</span><div><img src="../images/mini-pcie-can-top.svg" alt=""><b>Dual Mini PCIe</b></div><h3>Put two CAN FD channels inside a compatible embedded PC.</h3><strong>Explore Mini PCIe CAN FD →</strong></a>
+        </div>
+      </div>
+    </section>
+
     <section class="product-catalog-section" id="all-products">
       <div class="container">
         <div class="catalog-title-row">
@@ -65,7 +78,7 @@
           <div class="visual-product-grid">
             <a class="visual-product-card visual-product-wide" href="interface-controller-ics/">
               <div class="visual-product-image"><img src="../images/interface-controller-platform.svg" alt="Xilume interface controller IC"><span>ENGINEERING FAMILY</span></div>
-              <div class="visual-product-info"><small>Xilume CONTROLLER ICs</small><h4>Xilume Interface Controller Family</h4><p>Defined interface functions with fixed pin definitions, reference schematics, and matched software documentation.</p><div><b>USB</b><b>CAN FD</b><b>RS-485</b><b>SMBus</b></div><strong>View controller family →</strong></div>
+              <div class="visual-product-info"><small>Xilume CONTROLLER ICs</small><h4>Xilume Interface Controller Family</h4><p>Preliminary interface functions with a planned matched set of pinout, reference-circuit, protocol, and software resources.</p><div><b>USB</b><b>CAN FD</b><b>RS-485</b><b>SMBus</b></div><strong>View controller family →</strong></div>
             </a>
           </div>
         </div>
@@ -73,6 +86,10 @@
         <div class="catalog-group" id="module-products">
           <div class="catalog-group-heading"><span>02</span><div><small>READY-TO-INTEGRATE HARDWARE</small><h3>Interface Modules</h3></div><a href="interface-conversion/">Open module area →</a></div>
           <div class="visual-product-grid">
+            <a class="visual-product-card visual-product-wide" href="8hub/">
+              <div class="visual-product-image"><img src="../images/8hub-architecture.svg" alt="Xilume 8Hub connection architecture"><span>ENGINEERING PREVIEW</span></div>
+              <div class="visual-product-info"><small>MULTI-INTERFACE HUB</small><h4>Xilume 8Hub</h4><p>Target architecture: one USB host connection with two CAN FD, four RS-485, and two RS-232 channels.</p><div><b>2 × CAN FD</b><b>4 × RS-485</b><b>2 × RS-232</b></div><strong>View Xilume 8Hub →</strong></div>
+            </a>
             <a class="visual-product-card" href="usb-dual-can-fd/">
               <div class="visual-product-image"><img src="../images/interface-conversion-hero.webp" alt="USB dual CAN FD module"><span>ENGINEERING</span></div>
               <div class="visual-product-info"><small>USB INTERFACE</small><h4>USB Dual CAN FD</h4><p>Two independent CAN / CAN FD channels connected to a computer through USB.</p><div><b>USB 2.0</b><b>2 × CAN FD</b></div><strong>View product →</strong></div>
@@ -87,7 +104,7 @@
             </a>
             <a class="visual-product-card" href="usb-smbus/">
               <div class="visual-product-image"><img src="../images/smbus-application.webp" alt="USB smart battery reader"><span>ENGINEERING</span></div>
-              <div class="visual-product-info"><small>BATTERY INTERFACE</small><h4>USB Smart Battery Reader</h4><p>Battery capacity, charging, health, and diagnostic data for Windows and Linux.</p><div><b>USB 2.0</b><b>SMBus</b></div><strong>View product →</strong></div>
+              <div class="visual-product-info"><small>BATTERY INTERFACE</small><h4>Xilume Battery Display Module</h4><p>Supported pack-reported charge, runtime, status, and diagnostic data targeted for Windows and Linux integration.</p><div><b>USB</b><b>SBS / SMBus</b><b>Windows + Linux</b></div><strong>View battery module →</strong></div>
             </a>
           </div>
         </div>

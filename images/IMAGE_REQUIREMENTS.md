@@ -31,7 +31,7 @@ For every Hero image:
 - Preferred replacement: `interface-controller-platform.webp`
 - Display ratio: approximately 4:3
 - Recommended source size: 1600 × 1200 px or larger
-- Photo content: a clean macro photo of a packaged XILUME controller IC on a neutral
+- Photo content: a clean macro photo of a packaged Xilume controller IC on a neutral
   PCB or tray. The package marking must be readable and correctly aligned.
 
 ## 03 — Interface module platform
@@ -84,7 +84,23 @@ For every Hero image:
 - Display ratio: approximately 3:2
 - Recommended source size: 1800 × 1200 px or larger
 - Photo content: oscilloscope, CAN/serial test equipment, PC software, DUT, and clean
-  cabling on a real XILUME engineering bench.
+  cabling on a real Xilume engineering bench.
+
+## 09 — Four product-detail page photo slots
+
+The new product pages deliberately separate factual system diagrams from real-product
+photography. Keep each labeled slot empty until the corresponding hardware exists.
+
+- Controller IC: `products/controller-ic-package.webp` — released package marking and pin-1 orientation
+- Xilume 8Hub Hero: `products/xilume-8hub-front.webp` — front or three-quarter enclosure view, 3:2
+- Xilume 8Hub ports: `products/xilume-8hub-ports.webp` — top view with readable connector labels
+- Xilume 8Hub application: `products/xilume-8hub-bench.webp` — real mixed-bus bench installation
+- Battery Display Module: `products/xilume-battery-display-module.webp` — PCB plus final battery and host wiring
+- Dual Mini PCIe CAN FD: `products/xilume-dual-mini-pcie-can-fd.webp` — final PCB top and three-quarter views
+
+Do not replace these slots with AI-generated product hardware. The architecture and
+operating-system illustrations already on the pages are explanatory diagrams, not
+claims about final enclosure, PCB, connector, driver, or interface appearance.
 
 ## Photography style
 

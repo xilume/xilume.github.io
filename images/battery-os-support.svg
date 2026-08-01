@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Concept for battery-data integration with Windows and Linux</title>
+  <desc id="desc">An interface concept showing a smart battery connected by SMBus to a Xilume display module, then by USB to proposed Windows and Linux status views.</desc>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#7ca7c8" stroke-opacity=".10"/>
+    </pattern>
+    <linearGradient id="battery" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#113958"/><stop offset="1" stop-color="#07141f"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#050b12"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <circle cx="588" cy="350" r="310" fill="#0b7fd2" opacity=".08"/>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="62" y="62" fill="#75baff" font-size="13" font-weight="700" letter-spacing="3">FROM BATTERY DATA TO SYSTEM POWER STATUS</text>
+
+    <g transform="translate(62 205)">
+      <rect x="0" y="0" width="260" height="310" rx="18" fill="url(#battery)" stroke="#2e6082" stroke-width="2"/>
+      <rect x="72" y="54" width="116" height="178" rx="14" fill="#06101a" stroke="#75baff" stroke-width="3"/>
+      <rect x="104" y="35" width="52" height="21" rx="5" fill="#75baff"/>
+      <rect x="88" y="84" width="84" height="124" rx="7" fill="#0b3450"/>
+      <rect x="88" y="118" width="84" height="90" rx="7" fill="#168ff1" opacity=".88"/>
+      <text x="130" y="174" fill="#fff" font-size="31" font-weight="700" text-anchor="middle">78%</text>
+      <text x="130" y="265" fill="#eef7fc" font-size="18" font-weight="700" text-anchor="middle">SMART BATTERY</text>
+      <text x="130" y="290" fill="#7e99ab" font-size="12" text-anchor="middle">SBS / SMBus data</text>
+    </g>
+
+    <path d="M322 360H431" stroke="#28b7ae" stroke-width="5"/>
+    <circle cx="378" cy="360" r="7" fill="#4fe0d3" filter="url(#glow)"/>
+    <text x="378" y="337" fill="#73afa9" font-size="12" font-weight="700" text-anchor="middle">SMBus</text>
+
+    <g transform="translate(431 242)">
+      <rect width="300" height="236" rx="18" fill="#0d1d2a" stroke="#2778b2" stroke-width="2"/>
+      <rect x="42" y="47" width="216" height="94" rx="9" fill="#06101a" stroke="#2c526e"/>
+      <text x="150" y="88" fill="#f1f7fb" font-size="24" font-weight="700" text-anchor="middle">Xilume</text>
+      <text x="150" y="117" fill="#67b9f3" font-size="11" font-weight="700" letter-spacing="2" text-anchor="middle">BATTERY DISPLAY MODULE</text>
+      <g fill="#0b2c43" stroke="#3980ad"><circle cx="88" cy="180" r="18"/><circle cx="150" cy="180" r="18"/><circle cx="212" cy="180" r="18"/></g>
+      <text x="150" y="219" fill="#758fa2" font-size="11" text-anchor="middle">READ · TRANSLATE · REPORT</text>
+    </g>
+
+    <path d="M731 360H820" stroke="#168ff1" stroke-width="5"/>
+    <circle cx="777" cy="360" r="7" fill="#77c7ff" filter="url(#glow)"/>
+    <text x="777" y="337" fill="#76a6c9" font-size="12" font-weight="700" text-anchor="middle">USB</text>
+
+    <g transform="translate(820 125)">
+      <rect width="318" height="214" rx="16" fill="#0d1b27" stroke="#326b94" stroke-width="2"/>
+      <rect x="28" y="28" width="262" height="48" rx="6" fill="#142b3e"/>
+      <text x="48" y="59" fill="#edf6fb" font-size="18" font-weight="700">Windows</text>
+      <text x="28" y="112" fill="#7e98a9" font-size="12">Battery</text>
+      <rect x="28" y="131" width="194" height="20" rx="10" fill="#10283a" stroke="#315a77"/>
+      <rect x="28" y="131" width="151" height="20" rx="10" fill="#168ff1"/>
+      <text x="288" y="151" fill="#ecf6fc" font-size="30" font-weight="700" text-anchor="end">78%</text>
+      <text x="28" y="184" fill="#80a1b8" font-size="12">Pack status · remaining time · diagnostic data</text>
+    </g>
+
+    <g transform="translate(820 381)">
+      <rect width="318" height="214" rx="16" fill="#0d1b27" stroke="#2c7775" stroke-width="2"/>
+      <rect x="28" y="28" width="262" height="48" rx="6" fill="#142b3e"/>
+      <text x="48" y="59" fill="#edf6fb" font-size="18" font-weight="700">Linux</text>
+      <text x="28" y="112" fill="#7e98a9" font-size="12">Power status</text>
+      <rect x="28" y="131" width="194" height="20" rx="10" fill="#10283a" stroke="#315a77"/>
+      <rect x="28" y="131" width="151" height="20" rx="10" fill="#25b6ad"/>
+      <text x="288" y="151" fill="#ecf6fc" font-size="30" font-weight="700" text-anchor="end">78%</text>
+      <text x="28" y="184" fill="#80a1b8" font-size="12">Desktop indicator · power management · diagnostics</text>
+    </g>
+
+    <text x="600" y="676" fill="#5f7688" font-size="12" text-anchor="middle" letter-spacing="2">INTERFACE CONCEPT · PLATFORM INTEGRATION UNDER VALIDATION</text>
+  </g>
+</svg>
