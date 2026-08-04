@@ -18,9 +18,9 @@
       host: "mini-pcie",
       target: "canfd",
       title: "Mini PCIe (USB) ↔ Dual CAN FD",
-      summary: "Add two CAN / CAN FD channels through USB signals in a compatible Mini PCIe slot.",
+      summary: "Add two CAN / CAN FD channels up to 8 Mbps with Windows and Linux driver support.",
       href: "products/mini-pcie-dual-can-fd/",
-      module: { name: "Mini PCIe Dual CAN FD Module", description: "USB-based Mini PCIe hardware", status: "R01 engineering hardware", href: "products/mini-pcie-dual-can-fd/" },
+      module: { name: "Mini PCIe Dual CAN FD Module", description: "Dual-channel internal hardware", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
       controller: { name: "Dual CAN FD Controller IC", description: "XILUME controller IC for a custom Mini PCIe PCB", status: "Planned", href: "products/usb-dual-can-fd/#controller" }
     },
     {

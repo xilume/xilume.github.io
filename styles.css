@@ -303,7 +303,7 @@ footer { color:#dce2e7; background:#1b252e; }
 }
 a:focus-visible,button:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
 
-/* Actual R01 hardware inside the homepage product carousel */
+/* Dual Mini PCIe CAN FD product render inside the homepage carousel */
 .product-hero-media-real {
   background:
     radial-gradient(circle at 50% 45%,rgba(84,167,255,.13),transparent 42%),
