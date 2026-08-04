@@ -3,23 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Xilume Dual Mini PCIe CAN FD is an engineering module designed to add two independent CAN and CAN FD channels through USB signals in a compatible full-size Mini PCIe slot.">
-  <title>Xilume Dual Mini PCIe CAN FD</title>
+  <meta name="description" content="Xilume Dual Mini PCIe CAN FD places two independent CAN and CAN FD channels inside compatible embedded computers through a Mini PCIe slot wired for USB 2.0.">
+  <title>Dual Mini PCIe CAN FD Module | Xilume</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
-  <link rel="stylesheet" href="../../styles.css?v=20260802-1">
-  <script defer src="/site.js?v=20260802-1"></script>
+  <link rel="stylesheet" href="../../styles.css?v=20260804-2">
+  <link rel="stylesheet" href="./product.css?v=20260804-2">
+  <script defer src="/site.js?v=20260804-2"></script>
+  <script defer src="./product.js?v=20260804-2"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/products/mini-pcie-dual-can-fd/">
   <meta property="og:site_name" content="Xilume">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Xilume Dual Mini PCIe CAN FD">
-  <meta property="og:description" content="An engineering module in development for two independent internal CAN FD channels in a compatible embedded computer.">
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Xilume Dual Mini PCIe CAN FD Module">
+  <meta property="og:description" content="Two independent CAN / CAN FD channels in a compact internal module for embedded computers and industrial PCs.">
   <meta property="og:url" content="https://xilume.co/products/mini-pcie-dual-can-fd/">
-  <meta property="og:image" content="https://xilume.co/images/mini-pcie-can-top.svg">
+  <meta property="og:image" content="https://xilume.co/images/dual-mini-pcie-can-fd-r01.webp">
+  <meta property="og:image:width" content="1045">
+  <meta property="og:image:height" content="1045">
+  <meta property="og:image:alt" content="Xilume R01 Dual Mini PCIe CAN FD engineering module">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Xilume Dual Mini PCIe CAN FD",
+    "description": "An internal Mini PCIe-format module designed to add two independent CAN and CAN FD channels to compatible embedded computers through USB 2.0 signals in the host slot.",
+    "image": "https://xilume.co/images/dual-mini-pcie-can-fd-r01.webp",
+    "url": "https://xilume.co/products/mini-pcie-dual-can-fd/",
+    "brand": { "@type": "Brand", "name": "Xilume" },
+    "manufacturer": { "@type": "Organization", "name": "Xilume", "url": "https://xilume.co/" }
+  }
+  </script>
 </head>
-<body>
+<body class="dcf-site-shell">
   <header class="site-header corporate-header">
     <div class="container header-inner">
       <a class="brand brand-wordmark" href="../../" aria-label="Xilume home"><img src="/images/xilume-wordmark.png" alt="Xilume"></a>
@@ -27,85 +44,266 @@
     </div>
   </header>
 
-  <nav class="product-local-nav" aria-label="Dual Mini PCIe CAN FD page navigation">
-    <div class="container"><a class="product-local-name" href="#top">Dual Mini PCIe CAN FD</a><div><a href="#why">Why internal</a><a href="#system">System view</a><a href="#compatibility">Compatibility</a><a href="#applications">Applications</a><a href="#specifications">Status</a></div></div>
+  <nav class="dcf-local-nav" aria-label="Dual Mini PCIe CAN FD page navigation">
+    <div class="container dcf-local-inner">
+      <a class="dcf-local-name" href="#top"><span>Xilume</span> Dual Mini PCIe CAN FD</a>
+      <div class="dcf-local-links">
+        <a href="#overview">Overview</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#host-fit">Host fit</a>
+        <a href="#software">Software</a>
+        <a href="#specifications">Specifications</a>
+      </div>
+    </div>
   </nav>
 
-  <main class="product-detail-page product-theme-mini-pcie" id="top">
-    <section class="product-story-hero">
-      <div class="container product-story-hero-grid">
-        <div class="product-story-copy">
-          <p class="product-story-kicker">INTERNAL DUAL CAN FD INTERFACE</p>
-          <h1>Put two CAN FD channels inside the embedded computer.</h1>
-          <p>Xilume Dual Mini PCIe CAN FD is a full-size Mini PCIe module designed to add two independent CAN and CAN FD channels through USB 2.0 signals supplied by a compatible slot.</p>
-          <div class="product-story-actions"><a class="primary-button" href="../../contact/">Check host compatibility</a><a class="product-ghost-button" href="#system">See the installation path</a></div>
-          <p class="product-development-note"><span></span>In development · not yet for sale</p>
+  <main class="dcf-page" id="top">
+    <section class="dcf-hero" aria-labelledby="dcf-title">
+      <div class="dcf-hero-gridlines" aria-hidden="true"></div>
+      <div class="container dcf-hero-layout">
+        <div class="dcf-hero-copy">
+          <div class="dcf-hero-eyebrow"><span>R01 ENGINEERING HARDWARE</span><i></i><b>INTEGRATION VALIDATION</b></div>
+          <h1 id="dcf-title">Two CAN FD networks.<br><em>Inside the host.</em></h1>
+          <p>Dual Mini PCIe CAN FD gives an embedded computer two separate CAN / CAN FD paths without adding another desktop adapter, loose USB cable, or external enclosure.</p>
+          <div class="dcf-hero-actions">
+            <a class="dcf-button dcf-button-primary" href="mailto:echen070301@gmail.com?subject=Dual%20Mini%20PCIe%20CAN%20FD%20design-in%20review">Discuss a design-in <span aria-hidden="true">↗</span></a>
+            <a class="dcf-button dcf-button-quiet" href="#host-fit">Check host compatibility</a>
+          </div>
+          <p class="dcf-hero-disclaimer"><span></span>Actual R01 board shown. Final released specifications follow hardware and driver validation.</p>
         </div>
-        <figure class="product-story-visual product-story-visual-light">
-          <img src="../../images/mini-pcie-can-top.svg" alt="Top-view engineering concept of a full-size Mini PCIe dual CAN FD module">
-          <figcaption>Engineering concept · final PCB, connector, and component placement may differ</figcaption>
+
+        <figure class="dcf-hero-product">
+          <picture><img src="../../images/dual-mini-pcie-can-fd-r01.webp" alt="Top view of the Xilume R01 Dual Mini PCIe CAN FD engineering module"></picture>
+          <div class="dcf-photo-scan" aria-hidden="true"></div>
+          <figcaption>R01 · dual-channel engineering module</figcaption>
+          <div class="dcf-hero-channel-badge" aria-hidden="true"><small>NETWORK PATHS</small><strong>02</strong><span>CAN / CAN FD</span></div>
+          <div class="dcf-hero-photo-label" aria-hidden="true"><i></i><span>ACTUAL HARDWARE</span></div>
         </figure>
       </div>
-      <div class="container product-proof-grid" aria-label="Dual Mini PCIe CAN FD highlights">
-        <div><small>FORM FACTOR</small><strong>Full-size Mini PCIe</strong><span>Internal module format</span></div>
-        <div><small>HOST SIGNAL</small><strong>USB 2.0 FS</strong><span>Provided through the slot</span></div>
-        <div><small>NETWORKS</small><strong>2 × CAN / CAN FD</strong><span>Independent channels</span></div>
-        <div><small>INSTALLATION</small><strong>Inside the host</strong><span>No external desktop adapter</span></div>
+
+      <div class="container dcf-proof-rail" aria-label="Product highlights">
+        <div><small>CHANNELS</small><strong>2 independent</strong><span>Separate CAN / CAN FD networks</span></div>
+        <div><small>FORM</small><strong>Mini PCIe</strong><span>Compact internal card format</span></div>
+        <div><small>HOST LINK</small><strong>USB 2.0</strong><span>Through a compatible host slot</span></div>
+        <div><small>SOFTWARE TARGET</small><strong>Windows + Linux</strong><span>Driver validation in progress</span></div>
       </div>
     </section>
 
-    <section class="product-story-section" id="why">
+    <section class="dcf-manifesto" id="overview">
       <div class="container">
-        <div class="product-section-heading"><p>WHY INTERNAL</p><h2>Keep the CAN interface inside the system.</h2><span>External adapters consume ports, add loose cables, and complicate enclosure design. An internal module creates a cleaner, more repeatable integration path.</span></div>
-        <div class="product-reason-grid">
-          <article><b>01</b><h3>Internal installation</h3><p>Keep the interface secured inside the embedded computer instead of adding another external enclosure.</p></article>
-          <article><b>02</b><h3>Two CAN networks</h3><p>Connect two independent CAN or CAN FD buses from one internal module.</p></article>
-          <article><b>03</b><h3>Cleaner system integration</h3><p>Reserve external USB ports and reduce loose adapter hardware around the finished system.</p></article>
+        <div class="dcf-section-index"><span>01</span><b>WHY INTERNAL</b></div>
+        <div class="dcf-manifesto-heading">
+          <h2>Built as part of the machine.<br>Not another box beside it.</h2>
+          <p>For robots, test equipment, industrial PCs, and mobile systems, the cleanest interface is often the one users never have to see.</p>
+        </div>
+
+        <div class="dcf-system-contrast" aria-label="External adapter and internal module comparison">
+          <article class="dcf-system-path dcf-system-path-external">
+            <div class="dcf-contrast-title"><small>CONVENTIONAL EXTERNAL PATH</small><strong>More pieces around the computer</strong></div>
+            <div class="dcf-path-lineup">
+              <span>HOST</span><i>USB cable</i><span>ADAPTER</span><i>2 harnesses</i><span>CAN A / B</span>
+            </div>
+            <p>Useful for a bench, but it consumes an external port and introduces a separate enclosure and cable path.</p>
+          </article>
+          <article class="dcf-system-path dcf-system-path-internal">
+            <div class="dcf-contrast-title"><small>XILUME INTERNAL PATH</small><strong>The interface travels with the system</strong></div>
+            <div class="dcf-path-lineup">
+              <span>HOST + XILUME</span><i>2 harnesses</i><span>CAN A / B</span>
+            </div>
+            <p>Mount the interface inside the computer, reserve external USB ports, and keep the finished installation repeatable.</p>
+          </article>
+        </div>
+
+        <div class="dcf-benefit-line">
+          <div><b>01</b><strong>Two networks, one internal footprint</strong></div>
+          <div><b>02</b><strong>No external USB adapter enclosure</strong></div>
+          <div><b>03</b><strong>A cleaner production harness plan</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="product-story-section product-story-section-dark" id="system">
-      <div class="container product-feature-split">
-        <div class="product-feature-copy"><p>SYSTEM VIEW</p><h2>From the host slot to two separate field networks.</h2><span>The module receives USB signals from a compatible Mini PCIe slot and exposes two CAN paths to the external equipment.</span><ul class="product-check-list"><li>Embedded PC or industrial computer</li><li>Compatible full-size Mini PCIe slot</li><li>USB 2.0 signals supplied in the slot</li><li>CAN / CAN FD network A and network B</li></ul></div>
-        <figure class="product-diagram-card"><img src="../../images/mini-pcie-can-system.svg" alt="Embedded computer connected internally to a Xilume module and two CAN networks"><figcaption>Internal system context</figcaption></figure>
+    <section class="dcf-architecture-section" id="architecture">
+      <div class="container">
+        <div class="dcf-section-index dcf-section-index-dark"><span>02</span><b>SIGNAL ARCHITECTURE</b></div>
+        <div class="dcf-architecture-heading">
+          <h2>One host link.<br><em>Two independent field buses.</em></h2>
+          <p>The card uses USB 2.0 signals routed through the Mini PCIe connector. The two CAN paths remain separate from the controller to the external networks.</p>
+        </div>
+
+        <div class="dcf-signal-map" aria-label="Host to dual CAN FD signal architecture">
+          <div class="dcf-signal-node dcf-host-node">
+            <small>EMBEDDED COMPUTER</small>
+            <strong>Host system</strong>
+            <span>Mini PCIe mechanical slot</span>
+            <b>USB 2.0 signal pair</b>
+          </div>
+          <div class="dcf-signal-bridge dcf-signal-bridge-in" aria-hidden="true"><i></i><span>USB</span></div>
+          <div class="dcf-signal-node dcf-module-node">
+            <small>XILUME R01</small>
+            <strong>Dual CAN FD controller</strong>
+            <span>One module · two paths</span>
+            <div class="dcf-module-leds" aria-hidden="true"><i></i><i></i></div>
+          </div>
+          <div class="dcf-signal-fanout" aria-hidden="true"><i></i><i></i></div>
+          <div class="dcf-channel-stack">
+            <article>
+              <div><small>CHANNEL A</small><strong>CAN / CAN FD</strong></div>
+              <span class="dcf-live-line" aria-hidden="true"><i></i></span>
+              <b>NETWORK A</b>
+            </article>
+            <article>
+              <div><small>CHANNEL B</small><strong>CAN / CAN FD</strong></div>
+              <span class="dcf-live-line" aria-hidden="true"><i></i></span>
+              <b>NETWORK B</b>
+            </article>
+          </div>
+        </div>
+
+        <div class="dcf-architecture-note"><strong>Important host requirement</strong><p>The connector shape alone does not guarantee compatibility. The host must route USB 2.0 signals to its Mini PCIe slot; a PCIe-lane-only slot cannot communicate with this module.</p><a href="#host-fit">Run the host-fit check →</a></div>
       </div>
     </section>
 
-    <section class="product-story-section" id="compatibility">
+    <section class="dcf-hardware-section" id="hardware">
       <div class="container">
-        <div class="product-compatibility-banner"><div><small>COMPATIBILITY CHECK</small><h2>Mini PCIe connector does not mean PCIe data.</h2></div><p>This module uses USB 2.0 signals in the Mini PCIe slot and does not use PCIe data lanes. Confirm that the host slot exposes compatible USB signals before design-in.</p></div>
-        <div class="product-feature-split product-feature-split-reverse product-feature-split-spaced">
-          <figure class="product-diagram-card"><img src="../../images/mini-pcie-can-interface.svg" alt="Dual CAN FD interface diagram with two independent CAN channels"><figcaption>Two independent CAN / CAN FD paths</figcaption></figure>
-          <div class="product-feature-copy"><p>BEFORE YOU BUY</p><h2>Verify the slot, signal route, and external connector plan.</h2><span>The mechanical connector alone is not enough to guarantee compatibility. The host schematic or manufacturer documentation must confirm the USB connection.</span><ul class="product-check-list"><li>Full-size card space is available</li><li>Slot provides compatible USB 2.0 signals</li><li>External CAN connector or harness is planned</li><li>Power budget and mounting are confirmed</li></ul></div>
+        <div class="dcf-section-index"><span>03</span><b>THE HARDWARE</b></div>
+        <div class="dcf-hardware-grid">
+          <div class="dcf-hardware-copy">
+            <h2>The product is the board.<br><em>No concept render.</em></h2>
+            <p>This page uses the actual R01 hardware so the mounting approach, connection points, and internal format are visible before design-in.</p>
+            <ol class="dcf-anatomy-list">
+              <li data-anatomy-item="1"><b>01</b><div><strong>Dual field connectors</strong><span>Separate board connections for the two CAN network harnesses.</span></div></li>
+              <li data-anatomy-item="2"><b>02</b><div><strong>Two CAN signal paths</strong><span>Dedicated hardware paths for Channel A and Channel B.</span></div></li>
+              <li data-anatomy-item="3"><b>03</b><div><strong>Mini PCIe edge connection</strong><span>Mechanical mounting, host power, and the USB signal route enter here.</span></div></li>
+              <li data-anatomy-item="4"><b>04</b><div><strong>Internal mounting points</strong><span>Designed to be secured inside the compatible host system.</span></div></li>
+            </ol>
+          </div>
+          <figure class="dcf-anatomy-figure">
+            <picture><img src="../../images/dual-mini-pcie-can-fd-r01.webp" alt="Annotated top view of Xilume Dual Mini PCIe CAN FD R01 hardware"></picture>
+            <button type="button" class="dcf-anatomy-marker" style="--x:49%;--y:16%" data-anatomy-marker="1" aria-label="Show dual field connectors">01</button>
+            <button type="button" class="dcf-anatomy-marker" style="--x:52%;--y:54%" data-anatomy-marker="2" aria-label="Show the dual CAN signal paths">02</button>
+            <button type="button" class="dcf-anatomy-marker" style="--x:53%;--y:88%" data-anatomy-marker="3" aria-label="Show the Mini PCIe edge connection">03</button>
+            <button type="button" class="dcf-anatomy-marker" style="--x:18%;--y:22%" data-anatomy-marker="4" aria-label="Show the internal mounting points">04</button>
+            <figcaption>Click a marker to inspect the R01 hardware</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="product-story-section product-story-section-soft" id="applications">
-      <div class="container">
-        <div class="product-section-heading"><p>APPLICATIONS</p><h2>For compact computers that need CAN built in.</h2></div>
-        <div class="product-application-grid">
-          <article><span>ROBOTICS</span><h3>Robot control computers</h3><p>Connect two CAN networks from an internal module while keeping external ports available.</p></article>
-          <article><span>INDUSTRIAL PCs</span><h3>Machine and process control</h3><p>Add internal CAN connectivity to compatible industrial computers and edge systems.</p></article>
-          <article><span>TEST SYSTEMS</span><h3>CAN validation fixtures</h3><p>Build a compact host with two available buses for development and repeated testing.</p></article>
-          <article><span>MOBILE EQUIPMENT</span><h3>Integrated field computers</h3><p>Reduce external adapters in equipment where loose cabling and extra enclosures are undesirable.</p></article>
+    <section class="dcf-fit-section" id="host-fit">
+      <div class="container dcf-fit-layout">
+        <div class="dcf-fit-intro">
+          <div class="dcf-section-index dcf-section-index-dark"><span>04</span><b>HOST-FIT CHECK</b></div>
+          <h2>Mini PCIe outside.<br><em>USB inside.</em></h2>
+          <p>Answer two questions before you reserve the card in your system. This quick check is a design-review aid, not a substitute for the host schematic.</p>
+          <a href="mailto:echen070301@gmail.com?subject=Dual%20Mini%20PCIe%20CAN%20FD%20host%20compatibility" data-fit-email>Send your host model to Xilume →</a>
+        </div>
+
+        <div class="dcf-fit-tool" data-fit-tool>
+          <fieldset class="dcf-fit-question" data-fit-group="space">
+            <legend><span>01</span><strong>Does the host have room for this Mini PCIe card and its cable exit?</strong></legend>
+            <div>
+              <button type="button" data-fit-answer="yes" aria-pressed="false">Yes</button>
+              <button type="button" data-fit-answer="unknown" aria-pressed="false">Not sure</button>
+              <button type="button" data-fit-answer="no" aria-pressed="false">No</button>
+            </div>
+          </fieldset>
+          <fieldset class="dcf-fit-question" data-fit-group="signal">
+            <legend><span>02</span><strong>What data signal reaches the Mini PCIe connector?</strong></legend>
+            <div>
+              <button type="button" data-fit-answer="usb" aria-pressed="false">USB 2.0</button>
+              <button type="button" data-fit-answer="unknown" aria-pressed="false">Unknown</button>
+              <button type="button" data-fit-answer="pcie" aria-pressed="false">PCIe only</button>
+            </div>
+          </fieldset>
+          <div class="dcf-fit-result" data-fit-result aria-live="polite">
+            <span data-fit-icon>?</span>
+            <div><small data-fit-status>WAITING FOR INPUT</small><strong data-fit-title>Choose one answer in each row.</strong><p data-fit-copy>The checker will identify the next compatibility step.</p></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="product-story-section" id="specifications">
-      <div class="container product-feature-split">
-        <div class="product-feature-copy"><p>CURRENT DEFINITION</p><h2>Confirmed structure and open validation items.</h2><div class="product-status-columns"><div><strong>Defined</strong><span>Full-size Mini PCIe format</span><span>USB 2.0 Full-Speed slot signals</span><span>2 independent CAN / CAN FD channels</span><span>Engineering development stage</span></div><div><strong>To be published</strong><span>Final CAN / CAN FD rates</span><span>Driver and operating systems</span><span>Termination, isolation, and protection</span><span>Temperature, compliance, and availability</span></div></div></div>
-        <div class="product-photo-placeholder" data-image-slot="dual-mini-pcie-can-fd-product-photo"><span>FINAL PRODUCT IMAGE SLOT</span><strong>Released Mini PCIe module</strong><small>Reserved for a real top and three-quarter PCB photograph after the hardware revision is fixed</small></div>
+    <section class="dcf-software-section" id="software">
+      <div class="container">
+        <div class="dcf-section-index"><span>05</span><b>SOFTWARE PATH</b></div>
+        <div class="dcf-software-heading">
+          <h2>Hardware is only half the interface.</h2>
+          <p>Xilume is validating the driver path, channel naming, installation flow, and example communication workflow before publishing a release package.</p>
+        </div>
+
+        <div class="dcf-platform-explorer">
+          <div class="dcf-platform-tabs" role="tablist" aria-label="Choose an operating system">
+            <button type="button" role="tab" id="tab-windows" aria-controls="panel-windows" aria-selected="true" data-platform-tab="windows"><span>WINDOWS</span><b>Driver package</b></button>
+            <button type="button" role="tab" id="tab-linux" aria-controls="panel-linux" aria-selected="false" data-platform-tab="linux"><span>LINUX</span><b>SocketCAN path</b></button>
+          </div>
+          <div class="dcf-platform-panel" id="panel-windows" role="tabpanel" aria-labelledby="tab-windows" data-platform-panel="windows">
+            <div class="dcf-platform-state"><span></span><small>VALIDATION IN PROGRESS</small></div>
+            <h3>Two CAN FD channels, presented clearly to Windows.</h3>
+            <p>The target release includes a product-specific installer, separate channel identification, and a repeatable setup path for supported Windows systems.</p>
+            <ul><li>Product-specific driver package</li><li>Two separately identifiable CAN FD channels</li><li>Installation and removal guide</li><li>Basic transmit / receive example</li></ul>
+          </div>
+          <div class="dcf-platform-panel" id="panel-linux" role="tabpanel" aria-labelledby="tab-linux" data-platform-panel="linux" hidden>
+            <div class="dcf-platform-state"><span></span><small>VALIDATION IN PROGRESS</small></div>
+            <h3>A native Linux path built around SocketCAN.</h3>
+            <p>The target Linux package registers two CAN network interfaces and includes installation, bitrate configuration, and loopback / bus-test guidance.</p>
+            <ul><li>Target interface model: can0 and can1</li><li>SocketCAN-compatible workflow</li><li>Install and uninstall scripts</li><li>Command-line send / receive examples</li></ul>
+          </div>
+        </div>
+
+        <div class="dcf-release-path" aria-label="Software release path">
+          <div><span>01</span><strong>Enumerate</strong><p>Confirm stable two-channel discovery across target hosts.</p></div>
+          <i aria-hidden="true"></i>
+          <div><span>02</span><strong>Communicate</strong><p>Validate classic CAN and CAN FD transmit / receive behavior.</p></div>
+          <i aria-hidden="true"></i>
+          <div><span>03</span><strong>Package</strong><p>Publish drivers, setup instructions, examples, and revision notes together.</p></div>
+        </div>
       </div>
     </section>
 
-    <section class="product-final-cta">
-      <div class="container"><div><p>CONFIRM THE HOST FIRST</p><h2>Send us the computer model or Mini PCIe slot documentation.</h2></div><div><a class="primary-button" href="../../contact/">Check compatibility</a><a class="product-ghost-button" href="../interface-conversion/">Browse interface modules</a></div></div>
+    <section class="dcf-spec-section" id="specifications">
+      <div class="container dcf-spec-layout">
+        <div class="dcf-spec-heading">
+          <div class="dcf-section-index"><span>06</span><b>TECHNICAL DEFINITION</b></div>
+          <h2>What is confirmed today.</h2>
+          <p>The table separates visible, defined hardware from items that remain under final validation. It will be updated with released measurements and files rather than estimates.</p>
+        </div>
+        <div class="dcf-spec-table" role="table" aria-label="Dual Mini PCIe CAN FD specifications">
+          <div role="row"><span role="cell">Product</span><strong role="cell">Xilume Dual Mini PCIe CAN FD</strong><b role="cell">R01</b></div>
+          <div role="row"><span role="cell">Network interfaces</span><strong role="cell">2 independent CAN / CAN FD channels</strong><b role="cell">Defined</b></div>
+          <div role="row"><span role="cell">Mechanical format</span><strong role="cell">Mini PCIe card; final drawing to accompany release</strong><b role="cell">Hardware shown</b></div>
+          <div role="row"><span role="cell">Host data path</span><strong role="cell">USB 2.0 signals through the Mini PCIe connector; PCIe lanes are not used</strong><b role="cell">Defined</b></div>
+          <div role="row"><span role="cell">External connection</span><strong role="cell">Two board-mounted CAN harness headers on R01</strong><b role="cell">Hardware shown</b></div>
+          <div role="row"><span role="cell">Operating-system targets</span><strong role="cell">Windows driver package and Linux SocketCAN path</strong><b role="cell">In validation</b></div>
+          <div role="row"><span role="cell">CAN bit-rate matrix</span><strong role="cell">Final nominal and CAN FD data-rate combinations will follow validation</strong><b role="cell">Pending release</b></div>
+          <div role="row"><span role="cell">Documentation package</span><strong role="cell">Quick start, compatibility guide, drivers, and examples</strong><b role="cell">In preparation</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dcf-resources-section" id="resources">
+      <div class="container">
+        <div class="dcf-resources-heading">
+          <div><span>ENGINEERING RESOURCES</span><h2>Everything needed after the board arrives.</h2></div>
+          <p>The release package is being organized around actual integration tasks, so users do not have to assemble the workflow from disconnected files.</p>
+        </div>
+        <div class="dcf-resource-list">
+          <a href="../../documentation/"><span>01</span><div><small>START HERE</small><strong>Quick-start &amp; host compatibility guide</strong></div><b>IN PREPARATION</b><i aria-hidden="true">↗</i></a>
+          <a href="../../documentation/"><span>02</span><div><small>WINDOWS</small><strong>Driver installer &amp; channel setup</strong></div><b>IN VALIDATION</b><i aria-hidden="true">↗</i></a>
+          <a href="../../documentation/"><span>03</span><div><small>LINUX</small><strong>SocketCAN driver &amp; install scripts</strong></div><b>IN VALIDATION</b><i aria-hidden="true">↗</i></a>
+          <a href="mailto:echen070301@gmail.com?subject=Dual%20Mini%20PCIe%20CAN%20FD%20engineering%20files"><span>04</span><div><small>DESIGN-IN</small><strong>Mechanical drawing, pinout &amp; harness notes</strong></div><b>REQUEST ACCESS</b><i aria-hidden="true">↗</i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dcf-final-cta">
+      <div class="container dcf-final-cta-layout">
+        <div><small>DUAL MINI PCIe CAN FD</small><h2>Tell us what computer it needs to fit.</h2><p>Send the host model, slot documentation, and target CAN bit rates. Xilume will review the signal route and integration path with you.</p></div>
+        <div><a class="dcf-button dcf-button-light" href="mailto:echen070301@gmail.com?subject=Dual%20Mini%20PCIe%20CAN%20FD%20compatibility%20review">Start a compatibility review <span aria-hidden="true">↗</span></a><a href="../../products/">Explore all Xilume products</a></div>
+      </div>
     </section>
   </main>
 
-  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Interface controller ICs, modules, and future embedded systems.</p></div><div><h3>Featured products</h3><a href="../interface-controller-ics/">Controller IC</a><a href="../8hub/">8Hub</a><a href="../usb-smbus/">Battery module</a></div><div><h3>Explore</h3><a href="./">Dual Mini PCIe CAN FD</a><a href="../../applications/">Applications</a><a href="../../documentation/">Documentation</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Engineering development · Final specifications follow validated hardware</span></div></footer>
+  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Interface controller ICs, modules, and future embedded systems.</p></div><div><h3>Featured products</h3><a href="../interface-controller-ics/">Controller IC</a><a href="../8hub/">8Hub</a><a href="../usb-smbus/">Battery module</a></div><div><h3>Explore</h3><a href="./">Dual Mini PCIe CAN FD</a><a href="../../applications/">Applications</a><a href="../../documentation/">Documentation</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>R01 engineering hardware · Final specifications follow validation</span></div></footer>
 </body>
 </html>
