@@ -1149,6 +1149,7 @@
 
 .dcf-fit-section {
   position:relative;
+  overflow:hidden;
   padding:110px 0;
   color:#fff;
   background:

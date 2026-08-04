@@ -4,24 +4,37 @@
     .map((link) => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
 
-  if ("IntersectionObserver" in window && observedSections.length) {
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!visible) return;
+  const setCurrentSection = (sectionId) => {
+    localLinks.forEach((link) => {
+      const current = link.getAttribute("href") === `#${sectionId}`;
+      if (current) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  };
 
-        localLinks.forEach((link) => {
-          const current = link.getAttribute("href") === `#${visible.target.id}`;
-          if (current) link.setAttribute("aria-current", "true");
-          else link.removeAttribute("aria-current");
-        });
-      },
-      { rootMargin: "-22% 0px -60%", threshold: [0, 0.15, 0.4] }
-    );
+  if (observedSections.length) {
+    let navigationFrame = null;
+    const updateCurrentSection = () => {
+      navigationFrame = null;
+      const marker = window.innerWidth <= 900 ? 112 : 126;
+      let active = observedSections[0];
+      observedSections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= marker) active = section;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+        active = observedSections[observedSections.length - 1];
+      }
+      setCurrentSection(active.id);
+    };
 
-    observedSections.forEach((section) => sectionObserver.observe(section));
+    localLinks.forEach((link) => {
+      link.addEventListener("click", () => setCurrentSection(link.getAttribute("href").slice(1)));
+    });
+    window.addEventListener("scroll", () => {
+      if (navigationFrame === null) navigationFrame = window.requestAnimationFrame(updateCurrentSection);
+    }, { passive: true });
+    window.addEventListener("resize", updateCurrentSection);
+    updateCurrentSection();
   }
 
   const anatomyMarkers = Array.from(document.querySelectorAll("[data-anatomy-marker]"));
