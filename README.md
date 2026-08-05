@@ -11,7 +11,7 @@ The site is structured as an expandable product catalog organized by product are
 - `/` — brand and catalog overview
 - `/products/` — product catalog
 - `/applications/` — robotics, industrial connectivity, and smart-battery application paths
-- `/chip-selector/` — interface controller configuration tool
+- `/chip-selector/` — application-based selector for the four Xilume LX controller platforms
 - `/documentation/` — engineering and integration resources
 - `/products/interface-conversion/` — interface product area and product finder
 - `/products/8hub/` — target architecture for two CAN FD, four RS-485, and two RS-232 channels through one USB host

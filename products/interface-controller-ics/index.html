@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A preliminary Xilume controller IC family for defined USB-hosted CAN FD, RS-485, and smart-battery product functions.">
-  <title>Xilume Interface Controller IC</title>
+  <meta name="description" content="Explore the Xilume LX controller portfolio for dual CAN FD, dual CAN, eight-channel industrial interfaces, and battery or power integration.">
+  <title>Xilume Controller Portfolio</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
-  <link rel="stylesheet" href="../../styles.css?v=20260802-1">
+  <link rel="stylesheet" href="../../styles.css?v=20260805-1">
   <script defer src="/site.js?v=20260802-1"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/products/interface-controller-ics/">
   <meta property="og:site_name" content="Xilume">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Xilume Interface Controller IC">
-  <meta property="og:description" content="A preliminary controller family with a planned matched set of pinout, protocol, reference-circuit, and software resources.">
+  <meta property="og:title" content="Xilume Controller Portfolio">
+  <meta property="og:description" content="One Xilume controller family for communication, machine control, and battery systems.">
   <meta property="og:url" content="https://xilume.co/products/interface-controller-ics/">
-  <meta property="og:image" content="https://xilume.co/images/interface-controller-platform.svg">
+  <meta property="og:image" content="https://xilume.co/images/chip-family-hero.webp">
 </head>
 <body>
   <header class="site-header corporate-header">
@@ -26,91 +26,92 @@
     </div>
   </header>
 
-  <nav class="product-local-nav" aria-label="Interface Controller IC page navigation">
-    <div class="container"><a class="product-local-name" href="#top">Interface Controller IC</a><div><a href="#why">Why it matters</a><a href="#architecture">Architecture</a><a href="#models">Models</a><a href="#applications">Applications</a><a href="#resources">Resources</a></div></div>
-  </nav>
+  <div class="silicon-local-nav">
+    <div class="container"><a class="silicon-local-name" href="#top">Xilume Silicon</a><nav aria-label="Controller portfolio navigation"><a href="#portfolio">Portfolio</a><a href="#applications">Applications</a><a href="../../chip-selector/">Find a chip</a><a href="../../contact/">Talk to Xilume</a></nav></div>
+  </div>
 
-  <main class="product-detail-page product-theme-controller" id="top">
-    <section class="product-story-hero">
-      <div class="container product-story-hero-grid">
-        <div class="product-story-copy">
-          <p class="product-story-kicker">ENGINEERING CONTROLLER FAMILY</p>
-          <h1>Put a defined interface controller at the center of your board.</h1>
-          <p>Xilume controller ICs are designed to connect a USB host to CAN FD, RS-485, or Smart Battery interfaces. Start from a controlled function instead of rebuilding the same communication layer for every product.</p>
-          <div class="product-story-actions"><a class="primary-button" href="../../chip-selector/">Configure a controller</a><a class="product-ghost-button" href="#models">Compare models</a></div>
-          <p class="product-development-note"><span></span>Preliminary engineering family · not yet released or for sale · final limits follow released datasheets</p>
+  <main class="silicon-page" id="top">
+    <section class="silicon-portfolio-hero">
+      <img src="../../images/chip-family-hero.webp" alt="Four Xilume LX controller chips" class="silicon-hero-image">
+      <div class="silicon-hero-overlay" aria-hidden="true"></div>
+      <div class="container silicon-hero-content">
+        <p>XILUME CONTROLLER PORTFOLIO</p>
+        <h1>One family.<br><span>Many systems.</span></h1>
+        <div class="silicon-hero-bottom">
+          <p>Controllers for CAN, multi-interface equipment, and battery-aware systems.</p>
+          <div><a class="primary-button" href="../../chip-selector/">Find your chip</a><a href="#portfolio">View all four <span aria-hidden="true">↓</span></a></div>
         </div>
-        <figure class="product-story-visual product-story-visual-light">
-          <img src="../../images/interface-controller-platform.svg" alt="Technical illustration of a Xilume interface controller in a circuit design">
-          <figcaption>Engineering platform illustration · final packaged-device photography to follow</figcaption>
-        </figure>
       </div>
-      <div class="container product-proof-grid" aria-label="Interface controller highlights">
-        <div><small>HOST</small><strong>USB 2.0 FS</strong><span>Defined host connection</span></div>
-        <div><small>MODEL PATHS</small><strong>4</strong><span>Current engineering configurations</span></div>
-        <div><small>FIELD OPTIONS</small><strong>CAN FD · RS-485 · SMBus</strong><span>Select the required function</span></div>
-        <div><small>DESIGN CONTROL</small><strong>Planned file set</strong><span>Pinout, protocol, reference circuit</span></div>
-      </div>
+      <div class="container silicon-hero-model-rail" role="group" aria-label="Xilume LX models"><span>LX32F27</span><span>LX32C22</span><span>LX88U48</span><span>LX42P12</span></div>
     </section>
 
-    <section class="product-story-section" id="why">
+    <section class="silicon-model-section" id="portfolio">
       <div class="container">
-        <div class="product-section-heading"><p>WHY IT MATTERS</p><h2>Stop rebuilding the same interface layer.</h2><span>A custom product may need USB communication, command handling, buffering, status logic, and several field buses before its main application can even begin.</span></div>
-        <div class="product-reason-grid">
-          <article><b>01</b><h3>Shorter integration path</h3><p>Begin with a defined interface function rather than an empty firmware project and a collection of unrelated drivers.</p></article>
-          <article><b>02</b><h3>One controlled target</h3><p>Each future released model is intended to keep its pinout, host protocol, reference schematic, software, and revision record tied together.</p></article>
-          <article><b>03</b><h3>Your physical layer</h3><p>Select external transceivers, isolation, termination, connectors, and protection for the actual environment.</p></article>
+        <header class="silicon-section-heading"><div><p>THE LX PORTFOLIO</p><h2>Four clear starting points.</h2></div><a href="../../chip-selector/">Choose by application →</a></header>
+        <div class="silicon-model-grid">
+          <article class="silicon-model-card model-f" id="lx32f27">
+            <div class="silicon-model-top"><span>F SERIES</span><b>01</b></div>
+            <h3>LX32F27</h3>
+            <p>Dual CAN FD controller</p>
+            <ul><li>2 × CAN / CAN FD</li><li>Up to 8 Mbps</li><li>Windows + Linux</li></ul>
+            <a href="../mini-pcie-dual-can-fd/">See it in a product →</a>
+          </article>
+          <article class="silicon-model-card model-c" id="lx32c22">
+            <div class="silicon-model-top"><span>C SERIES</span><b>02</b></div>
+            <h3>LX32C22</h3>
+            <p>Dual Classic CAN controller</p>
+            <ul><li>2 × Classic CAN</li><li>Independent channels</li><li>Windows + Linux</li></ul>
+            <a href="../../contact/">Discuss a design →</a>
+          </article>
+          <article class="silicon-model-card model-u" id="lx88u48">
+            <div class="silicon-model-top"><span>U SERIES</span><b>03</b></div>
+            <h3>LX88U48</h3>
+            <p>Eight-channel hub controller</p>
+            <ul><li>2 × CAN FD</li><li>4 × RS-485</li><li>2 × RS-232</li></ul>
+            <a href="../8hub/">Explore Xilume 8Hub →</a>
+          </article>
+          <article class="silicon-model-card model-p" id="lx42p12">
+            <div class="silicon-model-top"><span>P SERIES</span><b>04</b></div>
+            <h3>LX42P12</h3>
+            <p>Battery + power bridge</p>
+            <ul><li>Smart Battery / SMBus</li><li>Native system status</li><li>Windows + Linux</li></ul>
+            <a href="../usb-smbus/">View battery module →</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="product-story-section product-story-section-dark" id="architecture">
-      <div class="container product-feature-split">
-        <div class="product-feature-copy"><p>DESIGN FLOW</p><h2>One clear path from host commands to field signals.</h2><span>The controller manages the defined host-side behavior. The customer PCB completes the physical layer for the selected buses.</span><div class="product-inline-alert"><strong>Design boundary</strong><p>Physical-layer transceivers and bus-side protection remain on the customer PCB.</p></div></div>
-        <div class="product-flow-diagram" role="img" aria-label="USB host through Xilume controller and external physical layer to field interfaces">
-          <div><small>HOST</small><strong>USB</strong><span>Commands + data</span></div><i>→</i><div class="is-accent"><small>CONTROL</small><strong>Xilume IC</strong><span>Protocol + buffering</span></div><i>→</i><div><small>PCB</small><strong>External PHY</strong><span>Transceivers + protection</span></div><i>→</i><div><small>FIELD</small><strong>CAN FD / RS-485 / SMBus</strong><span>System interfaces</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-story-section" id="models">
+    <section class="silicon-application-section" id="applications">
       <div class="container">
-        <div class="product-section-heading"><p>ENGINEERING MODELS</p><h2>Choose the function your board actually needs.</h2><span>Part numbers remain preliminary until the corresponding release-controlled datasheet is published.</span></div>
-        <div class="product-spec-table product-model-table">
-          <div class="product-spec-head"><span>MODEL</span><span>HOST</span><span>DEFINED FIELD FUNCTION</span><span>STATUS</span></div>
-          <div><strong>XIC-U2C2R2</strong><span>USB 2.0 FS</span><span>2 × CAN FD + 2 × RS-485</span><b>Preliminary</b></div>
-          <div><strong>XIC-U2C2</strong><span>USB 2.0 FS</span><span>2 × CAN / CAN FD</span><b>Preliminary</b></div>
-          <div><strong>XIC-U2R2</strong><span>USB 2.0 FS</span><span>2 × RS-485</span><b>Preliminary</b></div>
-          <div><strong>XIC-USMB1</strong><span>USB 2.0 FS</span><span>Smart Battery / SMBus</span><b>Preliminary</b></div>
+        <header class="silicon-section-heading silicon-section-heading-light"><div><p>WHERE LX FITS</p><h2>Different chips.<br>Different jobs.</h2></div><p>Start from the system outcome, then select the controller behind it.</p></header>
+        <div class="silicon-application-mosaic">
+          <article class="silicon-application-card silicon-app-battery" id="battery-systems">
+            <img src="../../images/chip-battery-application.webp" alt="Xilume battery controller showing battery status on computer systems">
+            <div><span>LX42P12 · BATTERY SYSTEMS</span><h3>Power status, visible where it matters.</h3><p>Windows · Linux · Embedded displays</p></div>
+          </article>
+          <article class="silicon-application-card silicon-app-industrial" id="industrial-control">
+            <img src="../../images/chip-industrial-control.webp" alt="Xilume controller inside an industrial control cabinet">
+            <div><span>LX88U48 · INDUSTRIAL CONTROL</span><h3>One controller at the machine edge.</h3><p>CAN FD · RS-485 · RS-232</p></div>
+          </article>
+          <article class="silicon-application-card silicon-app-robotics" id="robotics-control">
+            <img src="../../images/chip-robotics-multibus.webp" alt="Xilume controller connecting a robotic system">
+            <div><span>LX32 SERIES · ROBOTICS</span><h3>Two networks. One compact control point.</h3><p>CAN · CAN FD · Motion systems</p></div>
+          </article>
         </div>
-        <div class="product-status-columns product-status-columns-spaced"><div><strong>Defined target</strong><span>USB-hosted engineering configurations</span><span>CAN FD, RS-485, and SMBus function combinations</span><span>External physical layer on the customer PCB</span></div><div><strong>To be published</strong><span>Final package, pinout, and electrical limits</span><span>Validated rates and software support</span><span>Datasheets, design files, and availability</span></div></div>
       </div>
     </section>
 
-    <section class="product-story-section product-story-section-soft" id="applications">
+    <section class="silicon-final-section">
       <div class="container">
-        <div class="product-section-heading"><p>WHERE IT FITS</p><h2>For products that need a repeatable interface foundation.</h2></div>
-        <div class="product-application-grid">
-          <article><span>ROBOTICS</span><h3>Robot controllers and joints</h3><p>Bridge the host system to CAN FD and RS-485 devices while keeping the controller behavior consistent.</p></article>
-          <article><span>INDUSTRIAL</span><h3>Embedded control equipment</h3><p>Add selected field interfaces to a custom PCB without starting the complete host protocol from zero.</p></article>
-          <article><span>TEST SYSTEMS</span><h3>Dedicated interface instruments</h3><p>Build repeatable adapters and validation fixtures around one documented controller target.</p></article>
-          <article><span>BATTERY SYSTEMS</span><h3>Smart-battery integration</h3><p>Connect supported battery data to a host through a defined USB-to-SMBus controller path.</p></article>
-        </div>
+        <div><p>START WITH THE SYSTEM</p><h2>Tell us what it needs to control.</h2></div>
+        <div><a class="primary-button" href="../../chip-selector/">Find a controller</a><a href="../../contact/">Talk to an engineer →</a></div>
       </div>
-    </section>
-
-    <section class="product-story-section" id="resources">
-      <div class="container product-feature-split product-feature-split-reverse">
-        <div class="product-photo-placeholder" data-image-slot="controller-ic-package-photo"><span>FINAL PRODUCT IMAGE SLOT</span><strong>Packaged controller IC</strong><small>Reserved for a real macro photograph of the released device</small></div>
-        <div class="product-feature-copy"><p>PLANNED DESIGN RESOURCES</p><h2>The device and its files are planned as one release set.</h2><span>The documentation target for each future released model includes the information an engineering team needs to design, test, and maintain the interface. These files are not presented here as released deliverables.</span><ul class="product-check-list"><li>Release-controlled datasheet and pinout</li><li>Reference schematic and external PHY guidance</li><li>Host protocol and error behavior</li><li>Planned Windows and Linux engineering tools</li><li>Revision record and known limitations</li></ul></div>
-      </div>
-    </section>
-
-    <section class="product-final-cta">
-      <div class="container"><div><p>START A DESIGN</p><h2>Tell us which host and field interfaces your product needs.</h2></div><div><a class="primary-button" href="../../contact/">Discuss your application</a><a class="product-ghost-button" href="../../chip-selector/">Open chip selector</a></div></div>
     </section>
   </main>
 
-  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Interface controller ICs, modules, and future embedded systems.</p></div><div><h3>Featured products</h3><a href="./">Controller IC</a><a href="../8hub/">8Hub</a><a href="../usb-smbus/">Battery module</a></div><div><h3>Engineering</h3><a href="../../chip-selector/">Chip selector</a><a href="../../documentation/">Documentation</a><a href="../../contact/">Contact</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Preliminary engineering information · Final specifications follow released documentation</span></div></footer>
+  <footer>
+    <div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Controller ICs, interface modules, and embedded systems.</p></div><div><h3>Controllers</h3><a href="#portfolio">LX portfolio</a><a href="../../chip-selector/">Chip selector</a><a href="../">All products</a></div><div><h3>Applications</h3><a href="#battery-systems">Battery systems</a><a href="#industrial-control">Industrial control</a><a href="#robotics-control">Robotics</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div>
+    <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Controller portfolio · Xilume LX series</span></div>
+  </footer>
 </body>
 </html>
