@@ -8442,3 +8442,93 @@ footer {
     min-height:240px;
   }
 }
+
+/* Xilume 8Hub home showcase */
+.product-hero-8hub {
+  --hero-accent:0,105,210;
+  --hero-action:#0878e8;
+  overflow:hidden;
+  background:#f6f6f4;
+}
+
+.product-hero-8hub::before {
+  display:none;
+}
+
+.home-8hub-backdrop,
+.home-8hub-shade {
+  position:absolute;
+  inset:0;
+}
+
+.home-8hub-backdrop {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.home-8hub-shade {
+  background:linear-gradient(90deg,rgba(247,247,245,.99) 0%,rgba(247,247,245,.96) 31%,rgba(247,247,245,.58) 47%,rgba(247,247,245,0) 68%);
+}
+
+.home-8hub-layout {
+  grid-template-columns:1fr;
+}
+
+.home-8hub-copy {
+  width:min(540px,45%);
+}
+
+.product-hero-8hub .product-hero-kicker {
+  color:#0878e8;
+}
+
+.product-hero-8hub .product-hero-copy h2 {
+  color:#0d1116;
+}
+
+.product-hero-8hub .product-hero-copy > p:not(.product-hero-kicker) {
+  color:#5a626a;
+  font-weight:600;
+  letter-spacing:.01em;
+}
+
+.product-hero-8hub .hero-text-link {
+  color:#1d5f9e;
+}
+
+.product-hero-8hub .hero-text-link:hover {
+  color:#0878e8;
+}
+
+@media (max-width:850px) {
+  .home-8hub-layout {
+    grid-template-rows:1fr;
+    align-content:center;
+  }
+  .home-8hub-copy {
+    width:min(580px,68%);
+  }
+  .home-8hub-backdrop {
+    object-position:64% center;
+  }
+}
+
+@media (max-width:600px) {
+  .home-8hub-layout {
+    display:flex;
+    min-height:700px;
+    align-items:flex-start;
+    padding-top:64px;
+  }
+  .home-8hub-copy {
+    width:100%;
+  }
+  .home-8hub-backdrop {
+    object-position:68% center;
+  }
+  .home-8hub-shade {
+    background:linear-gradient(180deg,#f7f7f5 0%,rgba(247,247,245,.96) 37%,rgba(247,247,245,.08) 69%,rgba(247,247,245,.46) 100%);
+  }
+}

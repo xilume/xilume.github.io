@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
-  <title id="title">Robotics and motion systems placeholder</title>
-  <desc id="desc">A restrained technical illustration reserved for future robotics application photography.</desc>
+  <title id="title">Robotics and motion systems</title>
+  <desc id="desc">A technical illustration of connected robotics and motion-control equipment.</desc>
   <defs>
     <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
       <path d="M38 0H0V38" fill="none" stroke="#8ca2b1" stroke-opacity=".12"/>

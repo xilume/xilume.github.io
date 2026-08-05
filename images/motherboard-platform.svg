@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Future motherboard platform illustration</title>
-  <desc id="desc">A reserved technical illustration for future Xilume embedded and industrial motherboards.</desc>
+  <title id="title">Embedded motherboard platform</title>
+  <desc id="desc">A technical illustration of an embedded and industrial compute platform.</desc>
   <rect width="1200" height="760" fill="#edf1f3"/>
   <g transform="translate(166 110) rotate(-3 430 270)">
     <rect x="0" y="0" width="868" height="540" rx="22" fill="#c2d0c5" stroke="#6d8798" stroke-width="6"/>
@@ -21,5 +21,5 @@
     <text x="390" y="255" fill="#486272" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="middle">COMPUTE</text>
   </g>
   <rect x="62" y="52" width="180" height="42" fill="#ffffff" stroke="#aebbc4"/>
-  <text x="152" y="79" fill="#6d7880" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">FUTURE PLATFORM</text>
+  <text x="152" y="79" fill="#6d7880" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">EMBEDDED PLATFORM</text>
 </svg>
