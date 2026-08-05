@@ -294,7 +294,6 @@ html {
 .hub-interfaces {
   padding:126px 0 132px;
   background:#fff;
-  scroll-margin-top:118px;
 }
 
 .hub-section-heading {
@@ -467,7 +466,6 @@ html {
   padding:122px 0 130px;
   color:#fff;
   background:#070a0e;
-  scroll-margin-top:118px;
 }
 
 .hub-application-heading {
@@ -659,7 +657,6 @@ html {
 .hub-specifications {
   padding:126px 0 134px;
   background:#fff;
-  scroll-margin-top:118px;
 }
 
 .hub-spec-layout {
