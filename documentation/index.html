@@ -1,34 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Xilume product documentation for selecting and integrating embedded interface modules and controller ICs.">
-  <title>Documentation | Xilume Hardware Integration</title>
-  <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
-  <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
-  <link rel="stylesheet" href="../styles.css?v=20260802-1">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://xilume.co/documentation/">
-  <meta property="og:site_name" content="Xilume">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Documentation | Xilume Hardware Integration">
-  <meta property="og:description" content="Product selection, compatibility, electrical requirements, protocols, and integration status.">
-  <meta property="og:url" content="https://xilume.co/documentation/">
-  <meta property="og:image" content="https://xilume.co/images/interface-conversion-hero.webp">
-  <meta name="twitter:card" content="summary_large_image">
-  <script defer src="/site.js?v=20260802-1"></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Xilume datasheets, reference designs, drivers, SDKs, and integration guides for controller ICs and interface hardware.">
+  <title>Documentation | Xilume</title>
+  <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96"><link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180"><link rel="stylesheet" href="../styles.css?v=20260805-2"><script defer src="/site.js?v=20260802-1"></script>
+  <meta name="robots" content="index, follow"><link rel="canonical" href="https://xilume.co/documentation/">
+  <meta property="og:site_name" content="Xilume"><meta property="og:type" content="website"><meta property="og:title" content="Documentation | Xilume"><meta property="og:description" content="Technical resources for Xilume controller ICs and interface hardware."><meta property="og:url" content="https://xilume.co/documentation/"><meta property="og:image" content="https://xilume.co/images/chip-family-hero-v2.webp">
 </head>
 <body>
-  <header class="site-header"><div class="container header-inner">
-    <a class="brand brand-wordmark" href="../" aria-label="Xilume home"><img src="/images/xilume-wordmark.png" alt="Xilume"></a>
-    <nav aria-label="Primary navigation"><a href="../products/">Products</a><a href="../applications/">Applications</a><a href="../chip-selector/">Design tools</a><a href="./" aria-current="page">Documentation</a><a href="../about/">Company</a><a class="nav-finder" href="../contact/">Contact</a></nav>
-  </div></header>
+  <header class="site-header corporate-header"><div class="container header-inner"><a class="brand brand-wordmark" href="../" aria-label="Xilume home"><img src="/images/xilume-wordmark.png" alt="Xilume"></a><nav aria-label="Primary navigation"><a href="../products/">Products</a><a href="../applications/">Applications</a><a href="../chip-selector/">Design tools</a><a href="./" aria-current="page">Documentation</a><a href="../about/">Company</a><a class="nav-finder" href="../contact/">Contact</a></nav></div></header>
   <main>
-    <section class="page-header container"><p class="breadcrumbs"><a href="../">Home</a><span>/</span>Documentation</p><p class="section-label">DOCUMENTATION</p><h1>Information for product selection and integration.</h1><p>Documentation is published with clear development status so preliminary information is not presented as validated data.</p></section>
-    <section class="container section-space"><div class="info-strip"><article><strong>Module documentation</strong><p>Connections, compatibility, installation, test status, and application requirements.</p></article><article><strong>Controller documentation</strong><p>Functional pinout, electrical requirements, host protocol, and reference circuitry.</p></article><article><strong>Validation status</strong><p>Planned, engineering, and validated information is identified separately.</p></article></div></section>
-    <section class="family-section"><div class="container section-space"><div class="section-head"><div><p class="section-label">CURRENT PRODUCT AREA</p><h2>Interface and protocol conversion</h2></div><a href="../products/interface-conversion/">Open product area →</a></div><div class="compatibility-grid"><article><h3>Dual CAN FD</h3><p>USB and Mini PCIe formats with two independent CAN / CAN FD channels.</p></article><article><h3>CAN FD + RS-485</h3><p>Combined interface hardware for CAN FD and RS-485 equipment.</p></article><article><h3>Smart battery data</h3><p>USB access to battery level, voltage, capacity, temperature, and health.</p></article></div></div></section>
+    <section class="page-header container"><p class="breadcrumbs"><a href="../">Home</a><span>/</span>Documentation</p><p class="section-label">DOCUMENTATION</p><h1>Resources for product selection and integration.</h1><p>Find electrical information, reference circuits, software, drivers, and application guidance by product.</p></section>
+    <section class="container documentation-grid" id="controller-docs">
+      <a id="datasheets" href="../products/interface-controller-ics/"><small>01</small><strong>Datasheets</strong><p>Functional, electrical, interface, and ordering information for LX controllers.</p><span>Browse LX controllers →</span></a>
+      <a id="reference-designs" href="../products/interface-controller-ics/"><small>02</small><strong>Reference designs</strong><p>Transceivers, protection, power, USB, and support circuitry for customer PCBs.</p><span>Browse controller resources →</span></a>
+      <a id="software" href="../products/mini-pcie-dual-can-fd/"><small>03</small><strong>Drivers and SDKs</strong><p>Windows and Linux drivers, APIs, examples, and host integration resources.</p><span>Browse software resources →</span></a>
+      <a href="../products/"><small>04</small><strong>Product guides</strong><p>Connections, compatibility, installation, and application information for complete hardware.</p><span>Browse products →</span></a>
+    </section>
+    <section class="family-section"><div class="container section-space"><div class="section-head"><div><p class="section-label">PRODUCT AREAS</p><h2>Go directly to the product.</h2></div></div><div class="compatibility-grid"><article><h3>LX controllers</h3><p>CAN FD, Classic CAN, multi-interface, and smart-battery controller families.</p><a href="../products/interface-controller-ics/">View LX series →</a></article><article><h3>Interface hardware</h3><p>CAN FD, mixed-bus, and smart-battery hardware for USB and embedded hosts.</p><a href="../products/interface-conversion/">View interface products →</a></article><article><h3>Application support</h3><p>Product selection and integration support for embedded and industrial systems.</p><a href="../contact/">Contact Xilume →</a></article></div></div></section>
   </main>
-  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Embedded interface modules and controller ICs.</p></div><div><h3>Products</h3><a href="../products/">All product areas</a><a href="../products/interface-conversion/">Interface Conversion</a><a href="../products/interface-conversion/#finder">Product finder</a></div><div><h3>Company</h3><a href="../about/">About Xilume</a><a href="./">Documentation</a><a href="../contact/">Contact</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1 (657) 345-9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Manufactured in China · Sales: Eddie Chen</span></div></footer>
+  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Controller ICs and interface hardware for connected systems.</p></div><div><h3>Products</h3><a href="../products/">All products</a><a href="../products/interface-controller-ics/">Controller ICs</a><a href="../products/interface-conversion/">Interface hardware</a></div><div><h3>Resources</h3><a href="#datasheets">Datasheets</a><a href="#reference-designs">Reference designs</a><a href="#software">Drivers and SDKs</a></div><div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Controller ICs · Interface modules · System integration</span></div></footer>
 </body>
 </html>

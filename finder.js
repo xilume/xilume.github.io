@@ -10,8 +10,8 @@
       title: "USB ↔ Dual CAN FD",
       summary: "Connect by USB to two independent CAN / CAN FD channels.",
       href: "products/usb-dual-can-fd/",
-      module: { name: "USB Dual CAN FD Adapter", description: "USB-connected hardware", status: "In development", href: "products/usb-dual-can-fd/#module" },
-      controller: { name: "USB to Dual CAN FD Controller IC", description: "XILUME controller IC for your PCB", status: "Planned", href: "products/usb-dual-can-fd/#controller" }
+      module: { name: "USB Dual CAN FD Adapter", description: "USB-connected hardware", status: "Dual CAN FD", href: "products/usb-dual-can-fd/#module" },
+      controller: { name: "LX32F27", description: "Dual CAN FD controller for your PCB", status: "Up to 8 Mbps", href: "products/interface-controller-ics/lx32f27/" }
     },
     {
       id: "mini-pcie-canfd",
@@ -21,7 +21,7 @@
       summary: "Add two CAN / CAN FD channels up to 8 Mbps with Windows and Linux driver support.",
       href: "products/mini-pcie-dual-can-fd/",
       module: { name: "Mini PCIe Dual CAN FD Module", description: "Dual-channel internal hardware", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
-      controller: { name: "Dual CAN FD Controller IC", description: "XILUME controller IC for a custom Mini PCIe PCB", status: "Planned", href: "products/usb-dual-can-fd/#controller" }
+      controller: { name: "LX32F27", description: "Dual CAN FD controller for your PCB", status: "Up to 8 Mbps", href: "products/interface-controller-ics/lx32f27/" }
     },
     {
       id: "usb-canfd-rs485",
@@ -30,8 +30,8 @@
       title: "USB ↔ Dual CAN FD + Dual RS-485",
       summary: "Connect by USB to two CAN FD networks and two RS-485 buses.",
       href: "products/usb-canfd-rs485/",
-      module: { name: "USB Dual CAN FD + Dual RS-485 Adapter", description: "USB-connected hardware", status: "In development", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "USB CAN FD + RS-485 Controller IC", description: "XILUME controller IC for your PCB", status: "Planned", href: "products/usb-canfd-rs485/#controller" }
+      module: { name: "USB Dual CAN FD + Dual RS-485 Adapter", description: "USB-connected hardware", status: "Multi-interface", href: "products/usb-canfd-rs485/#module" },
+      controller: { name: "LX88U48", description: "Multi-interface controller for your PCB", status: "CAN FD + serial", href: "products/interface-controller-ics/lx88u48/" }
     },
     {
       id: "mini-pcie-canfd-rs485",
@@ -40,8 +40,8 @@
       title: "Mini PCIe (USB) ↔ Dual CAN FD + Dual RS-485",
       summary: "Add two CAN FD and two RS-485 channels through USB signals in a compatible Mini PCIe slot.",
       href: "products/usb-canfd-rs485/",
-      module: { name: "Mini PCIe Dual CAN FD + Dual RS-485 Module", description: "USB-based Mini PCIe hardware", status: "In development", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "CAN FD + RS-485 Controller IC", description: "XILUME controller IC for a custom Mini PCIe PCB", status: "Planned", href: "products/usb-canfd-rs485/#controller" }
+      module: { name: "Mini PCIe Dual CAN FD + Dual RS-485 Module", description: "USB-based Mini PCIe hardware", status: "Multi-interface", href: "products/usb-canfd-rs485/#module" },
+      controller: { name: "LX88U48", description: "Multi-interface controller for your PCB", status: "CAN FD + serial", href: "products/interface-controller-ics/lx88u48/" }
     },
     {
       id: "usb-smbus",
@@ -50,8 +50,8 @@
       title: "USB ↔ Smart Battery Data (SMBus)",
       summary: "Display battery level, voltage, temperature, capacity, cycle count, and status through USB.",
       href: "products/usb-smbus/",
-      module: { name: "USB SMBus Battery Reader Module", description: "USB-connected battery reader", status: "In development", href: "products/usb-smbus/#module" },
-      controller: { name: "USB SMBus Controller IC", description: "XILUME controller IC for your PCB", status: "In development", href: "products/usb-smbus/#controller" }
+      module: { name: "Xilume Battery Display Module", description: "USB-connected smart-battery interface", status: "Windows + Linux", href: "products/usb-smbus/" },
+      controller: { name: "LX42P12", description: "Smart-battery controller for your PCB", status: "SBS / SMBus", href: "products/interface-controller-ics/lx42p12/" }
     }
   ];
 

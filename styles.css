@@ -6,8 +6,8 @@
   --blue:#1769c2;
   --blue-dark:#0f4e92;
   --blue-soft:#eaf3fc;
-  --green:#24926b;
-  --amber:#a66a16;
+  --green:#1769c2;
+  --amber:#66798a;
 }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -70,8 +70,8 @@ img { display:block; max-width:100%; }
 .result-top p { margin:7px 0 0; color:var(--muted); font-size:11px; }
 .status { display:inline-flex; align-items:center; gap:6px; padding:6px 9px; border:1px solid #c6d6e4; color:#36546f; background:#f4f8fb; font-size:9px; font-weight:700; white-space:nowrap; }
 .status::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--blue); }
-.status.planned { color:#785a2f; border-color:#e2cfaf; background:#fff9ef; }
-.status.planned::before { background:#b27b28; }
+.status.planned { color:#36546f; border-color:#c6d6e4; background:#f4f8fb; }
+.status.planned::before { background:#66798a; }
 .result-options { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:18px; }
 .result-option { display:flex; align-items:center; justify-content:space-between; gap:15px; min-height:55px; padding:12px 14px; border:1px solid var(--line); background:#fff; }
 .result-option strong { display:block; font-size:11px; }
@@ -102,8 +102,8 @@ a.product-area-card:hover { border-color:#86a2b9; box-shadow:0 8px 28px rgba(24,
 .planned-area .product-area-copy strong { color:#7c8790; }
 .motherboard-scene { display:grid; place-items:center; background:linear-gradient(135deg,#e6ebef,#f7f9fa); }
 .motherboard-scene::before { content:""; position:absolute; width:330px; height:170px; border:1px solid #b6c3cd; border-radius:8px; background:repeating-linear-gradient(90deg,transparent 0 31px,rgba(81,111,133,.09) 32px),repeating-linear-gradient(0deg,transparent 0 31px,rgba(81,111,133,.09) 32px); transform:rotate(-4deg); }
-.motherboard-board { position:relative; z-index:1; width:265px; height:135px; border:2px solid #7590a4; border-radius:6px; background:#b6c9b9; box-shadow:0 13px 25px rgba(25,45,61,.16); transform:rotate(-4deg); }
-.motherboard-board::before,.motherboard-board::after { content:""; position:absolute; border:1px solid #597283; background:#dce5df; }
+.motherboard-board { position:relative; z-index:1; width:265px; height:135px; border:2px solid #7590a4; border-radius:6px; background:#bfc9d1; box-shadow:0 13px 25px rgba(25,45,61,.16); transform:rotate(-4deg); }
+.motherboard-board::before,.motherboard-board::after { content:""; position:absolute; border:1px solid #597283; background:#dce3e8; }
 .motherboard-board::before { width:58px; height:50px; left:91px; top:39px; }
 .motherboard-board::after { width:72px; height:13px; right:19px; top:18px; }
 .motherboard-board i { position:absolute; width:25px; height:18px; border:1px solid #6d8291; background:#e9eeeb; }
@@ -775,7 +775,7 @@ a.platform-row:hover {
   position:absolute;
   display:block;
   border:1px solid #678298;
-  background:#dbe8df;
+  background:#dce5eb;
 }
 .module-symbol i:nth-child(1) { inset:10px; }
 .module-symbol i:nth-child(2) { width:16px; height:16px; left:16px; top:18px; background:#2f668f; }
@@ -784,7 +784,7 @@ a.platform-row:hover {
   position:absolute;
   inset:10px;
   border:1px solid #8295a4;
-  background:#cbd8ce;
+  background:#cbd6dd;
 }
 .board-symbol i:last-child {
   position:absolute;
@@ -793,7 +793,7 @@ a.platform-row:hover {
   left:21px;
   top:21px;
   border:1px solid #667f92;
-  background:#eef2ef;
+  background:#eef2f4;
 }
 .platform-copy {
   display:block;
@@ -1122,7 +1122,7 @@ a.platform-row:hover {
   line-height:1.45;
 }
 .selector-shell[data-match-state="roadmap"] .match-head span {
-  color:#96651f;
+  color:#66798a;
 }
 .selector-shell[data-match-state="roadmap"] .match-title h3 {
   color:#6f5a39;
@@ -3310,7 +3310,7 @@ a.visual-product-card:hover img {
 }
 .configurator-section[data-match-state="roadmap"] .configurator-result-head > span,
 .configurator-section[data-match-state="roadmap"] .configurator-result-title h2 {
-  color:#896122;
+  color:#66798a;
 }
 .configurator-section[data-match-state="roadmap"] .configurator-chip {
   background:#5a6871;
@@ -4926,7 +4926,7 @@ footer {
 }
 
 .product-spec-table > div > b {
-  color:#8b6934;
+  color:#315b7e;
   font-size:9px;
   text-transform:uppercase;
 }
@@ -5342,8 +5342,13 @@ footer {
   display:block;
   height:100%;
   border-radius:2px;
-  background:#d2a443;
+  background:#1769c2;
 }
+
+.battery-level-22 { width: 22%; }
+.battery-level-58 { width: 58%; }
+.battery-level-76 { width: 76%; }
+.battery-level-96 { width: 96%; }
 
 .battery-icon.is-charging i,
 .battery-icon.is-full i {
@@ -6829,8 +6834,8 @@ footer {
 }
 
 .silicon-model-card.model-c { --model-color:#627889; }
-.silicon-model-card.model-u { --model-color:#0d9a91; }
-.silicon-model-card.model-p { --model-color:#a87324; }
+.silicon-model-card.model-u { --model-color:#1769c2; }
+.silicon-model-card.model-p { --model-color:#66798a; }
 
 .silicon-model-top {
   display:flex;
@@ -7247,8 +7252,8 @@ footer {
 }
 
 .chip-match-card.match-c { --match-color:#617788; }
-.chip-match-card.match-u { --match-color:#0a958c; }
-.chip-match-card.match-p { --match-color:#a37125; }
+.chip-match-card.match-u { --match-color:#1769c2; }
+.chip-match-card.match-p { --match-color:#66798a; }
 
 .chip-match-card[hidden] {
   display:none!important;
@@ -7712,5 +7717,728 @@ footer {
   .home-silicon-gallery img,
   .silicon-application-card img {
     transition:none;
+  }
+}
+
+:root {
+  --green:#1769c2;
+  --amber:#66798a;
+}
+
+.chip-hero-layout-simple {
+  grid-template-columns:minmax(0,650px);
+}
+
+.chip-hero-layout-simple .chip-hero-copy {
+  max-width:650px;
+}
+
+.product-hero-media-diagram {
+  display:grid;
+  place-items:center;
+  padding:32px;
+  background:#07131d;
+}
+
+.product-hero-media-diagram img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.product-form-navigation-two {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.silicon-portfolio-hero-simple .silicon-hero-content {
+  padding-bottom:72px;
+}
+
+.silicon-model-grid-expandable {
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.silicon-model-grid-expandable .silicon-model-card {
+  min-height:360px;
+  color:inherit;
+}
+
+.silicon-model-grid-expandable .silicon-model-card:hover {
+  z-index:1;
+  border-color:#8ab7d8;
+  box-shadow:0 18px 48px rgba(22,55,79,.1);
+}
+
+.silicon-model-card.model-c { --model-color:#526d82; }
+.silicon-model-card.model-u { --model-color:#0c6eb2; }
+.silicon-model-card.model-p { --model-color:#7891a4; }
+
+.silicon-model-purpose {
+  display:block;
+  margin-top:34px;
+  color:#6b7983;
+  font-size:11px;
+  line-height:1.5;
+}
+
+.silicon-model-grid-expandable .silicon-model-card > strong {
+  margin-top:auto;
+  padding-top:28px;
+  color:var(--model-color);
+  font-size:11px;
+}
+
+.silicon-application-card {
+  display:block;
+}
+
+.chip-match-card.match-c { --match-color:#526d82; }
+.chip-match-card.match-u { --match-color:#0c6eb2; }
+.chip-match-card.match-p { --match-color:#7891a4; }
+
+.chip-match-grid-simple {
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+}
+
+.chip-match-grid-simple .chip-match-card {
+  display:flex;
+  min-height:280px;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+  padding:27px;
+  color:inherit;
+  border-left-width:3px;
+}
+
+.chip-match-grid-simple .chip-match-title h2 {
+  margin-top:18px;
+}
+
+.chip-match-grid-simple .chip-match-fit {
+  margin-top:42px;
+}
+
+.chip-match-grid-simple .chip-match-fit strong {
+  max-width:230px;
+}
+
+.chip-match-open {
+  margin-top:auto;
+  padding-top:28px;
+  color:var(--match-color);
+  font-size:11px;
+}
+
+.chip-match-grid-simple .chip-match-card:hover {
+  border-color:#8ab7d8;
+  border-left-color:var(--match-color);
+  box-shadow:0 18px 48px rgba(22,55,79,.1);
+}
+
+.chip-product-nav {
+  position:sticky;
+  top:66px;
+  z-index:24;
+  border-bottom:1px solid #d8e0e5;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+}
+
+.chip-product-nav > .container {
+  display:flex;
+  min-height:48px;
+  align-items:center;
+  gap:18px;
+}
+
+.chip-product-nav > .container > a {
+  color:#6a7882;
+  font-size:10px;
+}
+
+.chip-product-nav strong {
+  margin-right:auto;
+  color:#14212b;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px;
+}
+
+.chip-product-nav div div {
+  display:flex;
+  gap:24px;
+}
+
+.chip-product-nav div div a {
+  color:#52616c;
+  font-size:10px;
+}
+
+.chip-product-page {
+  --chip-accent:#0d78c4;
+  color:#15212a;
+  background:#fff;
+}
+
+.chip-product-c { --chip-accent:#526d82; }
+.chip-product-u { --chip-accent:#0c6eb2; }
+.chip-product-p { --chip-accent:#66849a; }
+
+.chip-product-hero {
+  padding:70px 0 0;
+  border-bottom:1px solid #d6dee3;
+  background:#f3f5f6;
+}
+
+.chip-product-hero-grid {
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  align-items:center;
+  gap:70px;
+  padding-bottom:64px;
+}
+
+.chip-product-copy .breadcrumbs {
+  margin-bottom:46px;
+}
+
+.chip-product-series,
+.chip-product-label,
+.chip-product-heading > p {
+  color:var(--chip-accent);
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.13em;
+}
+
+.chip-product-copy h1 {
+  margin:15px 0 0;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:clamp(54px,6vw,80px);
+  font-weight:650;
+  letter-spacing:-.055em;
+  line-height:.95;
+}
+
+.chip-product-copy h2 {
+  margin:14px 0 0;
+  color:#33434f;
+  font-size:24px;
+  font-weight:560;
+  letter-spacing:-.025em;
+}
+
+.chip-product-copy > p:last-of-type {
+  max-width:520px;
+  margin:22px 0 0;
+  color:#65737d;
+  font-size:15px;
+  line-height:1.65;
+}
+
+.chip-product-visual {
+  position:relative;
+  height:470px;
+  margin:0;
+  overflow:hidden;
+  background:#0a131b;
+}
+
+.chip-product-visual::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(3,9,14,.72),transparent 50%);
+}
+
+.chip-product-visual img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.chip-product-visual figcaption {
+  position:absolute;
+  z-index:1;
+  right:24px;
+  bottom:22px;
+  left:24px;
+  color:#dce8ef;
+  font-size:10px;
+  font-weight:750;
+  letter-spacing:.08em;
+}
+
+.chip-product-facts {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid #cfd8de;
+  border-left:1px solid #cfd8de;
+}
+
+.chip-product-facts > div {
+  min-height:105px;
+  padding:24px;
+  border-right:1px solid #cfd8de;
+  background:#fff;
+}
+
+.chip-product-facts small,
+.chip-product-facts strong {
+  display:block;
+}
+
+.chip-product-facts small {
+  color:#798690;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.11em;
+}
+
+.chip-product-facts strong {
+  margin-top:14px;
+  color:#17242d;
+  font-size:16px;
+  font-weight:650;
+}
+
+.chip-product-section {
+  padding:100px 0;
+}
+
+.chip-product-section[id] {
+  scroll-margin-top:124px;
+}
+
+.chip-product-section-soft {
+  border-top:1px solid #dbe2e6;
+  border-bottom:1px solid #dbe2e6;
+  background:#f4f6f7;
+}
+
+.chip-product-heading {
+  margin-bottom:38px;
+}
+
+.chip-product-heading > p {
+  margin:0 0 14px;
+}
+
+.chip-product-heading h2,
+.chip-product-detail-grid h2 {
+  max-width:760px;
+  margin:0;
+  color:#14212a;
+  font-size:clamp(38px,4.5vw,58px);
+  font-weight:600;
+  letter-spacing:-.052em;
+  line-height:1;
+}
+
+.chip-benefit-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  border-top:1px solid #cfd8de;
+  border-left:1px solid #cfd8de;
+}
+
+.chip-benefit-grid article {
+  min-height:250px;
+  padding:30px;
+  border-right:1px solid #cfd8de;
+  border-bottom:1px solid #cfd8de;
+}
+
+.chip-benefit-grid span {
+  color:var(--chip-accent);
+  font-size:9px;
+  font-weight:800;
+}
+
+.chip-benefit-grid h3 {
+  margin:55px 0 0;
+  font-size:22px;
+}
+
+.chip-benefit-grid p {
+  margin:12px 0 0;
+  color:#66747e;
+  font-size:12px;
+  line-height:1.65;
+}
+
+.chip-product-detail-grid {
+  display:grid;
+  grid-template-columns:1fr .85fr;
+  align-items:start;
+  gap:90px;
+}
+
+.chip-product-detail-grid > div > p:last-child {
+  max-width:620px;
+  margin:25px 0 0;
+  color:#62717b;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.chip-interface-list {
+  margin:0;
+  border-top:1px solid #cfd8de;
+}
+
+.chip-interface-list > div {
+  display:grid;
+  grid-template-columns:135px 1fr;
+  gap:20px;
+  padding:18px 0;
+  border-bottom:1px solid #cfd8de;
+}
+
+.chip-interface-list dt {
+  color:#7b8891;
+  font-size:9px;
+  font-weight:750;
+  text-transform:uppercase;
+}
+
+.chip-interface-list dd {
+  margin:0;
+  color:#293943;
+  font-size:12px;
+  font-weight:650;
+}
+
+.chip-interface-list a {
+  color:var(--chip-accent);
+}
+
+.chip-product-application {
+  position:relative;
+  min-height:460px;
+  overflow:hidden;
+  color:#fff;
+  background:#07131d;
+}
+
+.chip-product-application > img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.58;
+}
+
+.chip-product-application::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(3,10,16,.95),rgba(3,10,16,.24));
+}
+
+.chip-product-application > .container {
+  position:relative;
+  z-index:1;
+  display:flex;
+  min-height:460px;
+  align-items:center;
+}
+
+.chip-product-application > .container > div {
+  max-width:680px;
+}
+
+.chip-product-application p {
+  margin:0 0 15px;
+  color:#72baf0;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+
+.chip-product-application h2 {
+  margin:0;
+  font-size:clamp(40px,5vw,64px);
+  font-weight:580;
+  letter-spacing:-.055em;
+  line-height:1;
+}
+
+.chip-product-application span {
+  display:block;
+  margin-top:22px;
+  color:#b0c0ca;
+  font-size:12px;
+}
+
+.chip-product-application-diagram > img {
+  object-fit:contain;
+  padding:40px;
+  opacity:.48;
+}
+
+.chip-resource-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.chip-resource-grid a {
+  display:flex;
+  min-height:210px;
+  flex-direction:column;
+  padding:27px;
+  border:1px solid #ced8de;
+  background:#fff;
+}
+
+.chip-resource-grid a:hover {
+  border-color:#7fb2d5;
+  box-shadow:0 16px 40px rgba(22,55,79,.08);
+}
+
+.chip-resource-grid small {
+  color:var(--chip-accent);
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.12em;
+}
+
+.chip-resource-grid strong {
+  margin-top:44px;
+  font-size:22px;
+}
+
+.chip-resource-grid span {
+  margin-top:auto;
+  padding-top:20px;
+  color:#66747e;
+  font-size:10px;
+}
+
+.chip-product-scope {
+  padding:28px 0;
+  color:#dfe9ef;
+  background:#0a1822;
+}
+
+.chip-product-scope > .container {
+  display:grid;
+  grid-template-columns:180px 1fr;
+  align-items:center;
+  gap:35px;
+}
+
+.chip-product-scope strong {
+  color:#78bdeb;
+  font-size:11px;
+}
+
+.chip-product-scope p {
+  margin:0;
+  color:#9badb8;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.chip-product-cta {
+  padding:72px 0;
+  color:#fff;
+  background:#0b74c4;
+}
+
+.chip-product-cta > .container {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:50px;
+}
+
+.chip-product-cta p {
+  margin:0 0 12px;
+  color:#d3eaff;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+.chip-product-cta h2 {
+  max-width:760px;
+  margin:0;
+  font-size:clamp(38px,4.5vw,58px);
+  font-weight:580;
+  letter-spacing:-.05em;
+  line-height:1;
+}
+
+.chip-product-cta .primary-button {
+  color:#0b5e9d;
+  border-color:#fff;
+  background:#fff;
+}
+
+.documentation-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  padding-bottom:90px;
+}
+
+.documentation-grid > a {
+  display:flex;
+  min-height:235px;
+  flex-direction:column;
+  padding:30px;
+  border:1px solid #d2dae0;
+  background:#fff;
+  scroll-margin-top:90px;
+}
+
+.documentation-grid > a:hover {
+  border-color:#7fafd0;
+  box-shadow:0 16px 42px rgba(22,55,79,.08);
+}
+
+.documentation-grid small {
+  color:#0c76bf;
+  font-size:9px;
+  font-weight:850;
+}
+
+.documentation-grid strong {
+  margin-top:35px;
+  font-size:24px;
+}
+
+.documentation-grid p {
+  max-width:520px;
+  margin:12px 0 0;
+  color:#677580;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.documentation-grid span {
+  margin-top:auto;
+  padding-top:22px;
+  color:#0b70b7;
+  font-size:10px;
+  font-weight:700;
+}
+
+.product-theme-8hub,
+.product-theme-battery {
+  --product-accent:31,131,202;
+  --product-accent-solid:#1f83ca;
+  --product-accent-text:#0c69a8;
+  --product-action:#0b67a4;
+}
+
+.product-story-visual-diagram {
+  display:grid;
+  place-items:center;
+  padding:32px;
+  background:#07131d;
+}
+
+.product-story-visual-diagram img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.hub-channel-grid .is-rs485 { border-color:#356f99; }
+.hub-channel-grid .is-rs232 { border-color:#607789; }
+.platform-terminal-icon { color:#77bff3; border-color:#387cad; background:#091722; }
+.battery-icon i { background:#73899a; }
+.battery-icon.is-charging i,
+.battery-icon.is-full i { background:#1f83ca; }
+
+@media (max-width:900px) {
+  .chip-product-hero-grid,
+  .chip-product-detail-grid {
+    grid-template-columns:1fr;
+    gap:38px;
+  }
+  .chip-product-visual {
+    height:420px;
+  }
+  .chip-product-facts,
+  .chip-benefit-grid,
+  .chip-resource-grid {
+    grid-template-columns:1fr 1fr;
+  }
+  .chip-benefit-grid article:last-child,
+  .chip-resource-grid a:last-child {
+    grid-column:1 / 3;
+  }
+}
+
+@media (max-width:700px) {
+  .chip-product-nav {
+    top:56px;
+  }
+  .chip-product-nav div div {
+    gap:15px;
+    overflow-x:auto;
+  }
+  .chip-product-nav div div a {
+    white-space:nowrap;
+  }
+  .chip-product-nav > .container > a {
+    display:none;
+  }
+  .chip-product-hero {
+    padding-top:48px;
+  }
+  .chip-product-copy .breadcrumbs {
+    margin-bottom:34px;
+  }
+  .chip-product-visual {
+    height:330px;
+  }
+  .chip-product-facts,
+  .chip-benefit-grid,
+  .chip-resource-grid,
+  .documentation-grid,
+  .product-form-navigation-two {
+    grid-template-columns:1fr;
+  }
+  .chip-benefit-grid article:last-child,
+  .chip-resource-grid a:last-child {
+    grid-column:auto;
+  }
+  .chip-product-facts > div {
+    min-height:85px;
+  }
+  .chip-product-section {
+    padding:72px 0;
+  }
+  .chip-product-detail-grid {
+    gap:45px;
+  }
+  .chip-interface-list > div {
+    grid-template-columns:110px 1fr;
+  }
+  .chip-product-application,
+  .chip-product-application > .container {
+    min-height:390px;
+  }
+  .chip-product-scope > .container,
+  .chip-product-cta > .container {
+    grid-template-columns:1fr;
+    align-items:flex-start;
+  }
+  .chip-product-cta > .container {
+    display:flex;
+    flex-direction:column;
+  }
+  .chip-match-grid-simple {
+    grid-template-columns:1fr;
+  }
+  .chip-match-grid-simple .chip-match-card {
+    min-height:240px;
   }
 }

@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-  <title id="title">Engineering and validation placeholder</title>
-  <desc id="desc">A technical lab bench illustration reserved for future Xilume engineering photography.</desc>
+  <title id="title">Xilume engineering and product support</title>
+  <desc id="desc">A technical workstation representing hardware, software, and system integration.</desc>
   <rect width="1200" height="800" fill="#edf1f3"/>
   <rect x="86" y="105" width="1028" height="520" rx="10" fill="#dce4e8" stroke="#9badb8" stroke-width="4"/>
   <rect x="142" y="162" width="395" height="275" rx="8" fill="#173247"/>
   <rect x="174" y="194" width="331" height="173" rx="4" fill="#102638"/>
   <path d="M206 324l43-39 54 21 70-81 45 36 56-68" fill="none" stroke="#3d94cf" stroke-width="7"/>
   <path d="M206 397h268" stroke="#617d90" stroke-width="5"/>
-  <circle cx="206" cy="397" r="8" fill="#5b9f70"/>
+  <circle cx="206" cy="397" r="8" fill="#2b83be"/>
   <rect x="612" y="162" width="430" height="104" rx="7" fill="#f8fafb" stroke="#90a4b1" stroke-width="4"/>
   <rect x="612" y="297" width="206" height="140" rx="7" fill="#f8fafb" stroke="#90a4b1" stroke-width="4"/>
   <rect x="836" y="297" width="206" height="140" rx="7" fill="#f8fafb" stroke="#90a4b1" stroke-width="4"/>

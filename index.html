@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Xilume develops interface controller ICs, USB and Mini PCIe communication modules, and future embedded computing platforms.">
+  <meta name="description" content="Xilume controller ICs and interface hardware for CAN FD, industrial communication, and smart-battery systems.">
   <title>Xilume</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
@@ -11,7 +11,7 @@
   <meta name="application-name" content="Xilume">
   <meta name="apple-mobile-web-app-title" content="Xilume">
   <meta name="theme-color" content="#020712">
-  <link rel="stylesheet" href="styles.css?v=20260805-1">
+  <link rel="stylesheet" href="styles.css?v=20260805-2">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/">
   <meta property="og:site_name" content="Xilume">
@@ -19,7 +19,7 @@
   <meta property="og:title" content="Xilume">
   <meta property="og:description" content="Xilume controller ICs, interface modules, design resources, and embedded hardware for reliable connected systems.">
   <meta property="og:url" content="https://xilume.co/">
-  <meta property="og:image" content="https://xilume.co/images/chip-family-hero.webp">
+  <meta property="og:image" content="https://xilume.co/images/chip-family-hero-v2.webp">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -80,32 +80,17 @@
       <h1 class="sr-only">Xilume</h1>
       <div class="product-hero-stage">
         <article class="product-hero-slide product-hero-chip is-active" data-hero-slide role="tabpanel" aria-label="1 of 4: Xilume controller portfolio">
-          <img class="chip-hero-backdrop" src="images/chip-family-hero.webp" alt="Four Xilume controller chips from the LX portfolio">
+          <img class="chip-hero-backdrop" src="images/chip-family-hero-v2.webp" alt="Xilume LX controllers in standard IC packages">
           <div class="chip-hero-shade" aria-hidden="true"></div>
-          <div class="container chip-hero-layout">
+          <div class="container chip-hero-layout chip-hero-layout-simple">
             <div class="chip-hero-copy">
               <p class="product-hero-kicker">XILUME SILICON</p>
-              <h2>One family.<br><span>Many systems.</span></h2>
-              <p>Battery status. Industrial control. Multi-bus communication.</p>
+              <h2>Controllers for<br><span>connected systems.</span></h2>
+              <p>CAN. Industrial interfaces. Battery integration.</p>
               <div class="hero-actions">
                 <a class="primary-button" href="chip-selector/">Find your chip</a>
                 <a class="hero-text-link" href="products/interface-controller-ics/">Explore the portfolio <span aria-hidden="true">→</span></a>
               </div>
-              <div class="chip-hero-models" role="group" aria-label="Featured Xilume controller models">
-                <span>LX32F27</span><span>LX32C22</span><span>LX88U48</span><span>LX42P12</span>
-              </div>
-            </div>
-            <div class="chip-hero-scenes" role="group" aria-label="Xilume chip applications">
-              <a href="products/interface-controller-ics/#battery-systems">
-                <img src="images/chip-battery-application.webp" alt="Xilume controller bringing smart-battery status to computer systems">
-                <span>BATTERY + POWER</span>
-                <strong>Status the system can use.</strong>
-              </a>
-              <a href="products/interface-controller-ics/#industrial-control">
-                <img src="images/chip-industrial-control.webp" alt="Xilume controller operating industrial machinery">
-                <span>INDUSTRIAL CONTROL</span>
-                <strong>Built for the machine edge.</strong>
-              </a>
             </div>
           </div>
         </article>
@@ -115,19 +100,14 @@
             <div class="product-hero-copy">
               <p class="product-hero-kicker">NEW MULTI-INTERFACE HUB</p>
               <h2>Xilume 8Hub</h2>
-              <p>Being developed to bring two CAN FD, four RS-485, and two RS-232 channels through one clean USB connection.</p>
+              <p>Two CAN FD, four RS-485, and two RS-232 channels through one USB connection.</p>
               <div class="hero-actions">
                 <a class="primary-button" href="products/8hub/">Explore Xilume 8Hub</a>
                 <a class="hero-text-link" href="products/8hub/#architecture">View all eight channels <span aria-hidden="true">→</span></a>
               </div>
             </div>
-            <figure class="product-hero-media" data-image-slot="xilume-8hub">
-              <!-- Future image: replace the placeholder inside this figure; the 3:2 Hero layout stays unchanged. -->
-              <div class="product-image-placeholder">
-                <span>PRODUCT IMAGE AREA · 02</span>
-                <strong>Xilume 8Hub</strong>
-                <small>Reserved for a transparent 3:2 PNG or WebP</small>
-              </div>
+            <figure class="product-hero-media product-hero-media-diagram">
+              <img src="images/8hub-architecture.svg" alt="Xilume 8Hub connection architecture">
             </figure>
           </div>
         </article>
@@ -137,19 +117,15 @@
             <div class="product-hero-copy">
               <p class="product-hero-kicker">NATIVE BATTERY STATUS</p>
               <h2>Xilume Battery Display Module</h2>
-              <p>Designed to bring charge level, current, runtime, pack status, and available health indicators into Windows and Linux systems.</p>
+              <p>Charge level, current, runtime, and pack status for Windows and Linux systems.</p>
               <div class="hero-actions">
                 <a class="primary-button" href="products/usb-smbus/">View battery module</a>
                 <a class="hero-text-link" href="documentation/">Design resources <span aria-hidden="true">→</span></a>
               </div>
             </div>
-            <figure class="product-hero-media" data-image-slot="xilume-battery-display-module">
-              <!-- Future image: replace the placeholder inside this figure; the 3:2 Hero layout stays unchanged. -->
-              <div class="product-image-placeholder">
-                <span>PRODUCT IMAGE AREA · 03</span>
-                <strong>Xilume Battery Display Module</strong>
-                <small>Reserved for a transparent 3:2 PNG or WebP</small>
-              </div>
+            <figure class="product-hero-media product-hero-media-real">
+              <img src="images/smbus-application.webp" alt="Xilume smart-battery system integration">
+              <figcaption class="product-hero-real-caption"><span>WINDOWS + LINUX</span><strong>Native battery status</strong></figcaption>
             </figure>
           </div>
         </article>
@@ -194,16 +170,16 @@
         <div class="home-paths-heading">
           <div>
             <p class="section-label">Explore Xilume</p>
-            <h2 id="home-paths-title">Start with what you need.</h2>
+            <h2 id="home-paths-title">Explore Xilume.</h2>
           </div>
-          <p>Six direct paths connect the homepage to Xilume's main product, engineering, and company pages.</p>
+          <p>Products, applications, design resources, and support.</p>
         </div>
         <div class="home-paths-grid">
           <a href="products/"><small>01 · PRODUCT DIRECTORY</small><strong>Products</strong><span>Browse every controller and module</span><b>→</b></a>
           <a href="applications/"><small>02 · USE CASES</small><strong>Applications</strong><span>Robotics, industrial links, and batteries</span><b>→</b></a>
           <a href="chip-selector/"><small>03 · DESIGN TOOL</small><strong>Chip Selector</strong><span>Match a real controller to the job</span><b>→</b></a>
-          <a href="documentation/"><small>04 · ENGINEERING RESOURCES</small><strong>Documentation</strong><span>Integration notes, files, and status</span><b>→</b></a>
-          <a href="about/"><small>05 · COMPANY</small><strong>About Xilume</strong><span>Development approach and direction</span><b>→</b></a>
+          <a href="documentation/"><small>04 · ENGINEERING RESOURCES</small><strong>Documentation</strong><span>Datasheets, drivers, and integration guides</span><b>→</b></a>
+          <a href="about/"><small>05 · COMPANY</small><strong>About Xilume</strong><span>Hardware, software, and system integration</span><b>→</b></a>
           <a href="contact/"><small>06 · SALES &amp; SUPPORT</small><strong>Contact</strong><span>Product, sample, and integration questions</span><b>→</b></a>
         </div>
       </div>
@@ -213,29 +189,29 @@
       <div class="container">
         <header class="home-silicon-heading">
           <div><p class="section-label">XILUME CONTROLLER PORTFOLIO</p><h2>Choose the job.<br>Then choose the chip.</h2></div>
-          <div><p>Four controller platforms built around systems we already make.</p><a href="chip-selector/">Find the right controller <span aria-hidden="true">→</span></a></div>
+          <div><p>CAN, industrial interfaces, and battery integration.</p><a href="chip-selector/">Find the right controller <span aria-hidden="true">→</span></a></div>
         </header>
 
         <div class="home-silicon-gallery">
           <a class="home-silicon-family" href="products/interface-controller-ics/">
-            <img src="images/chip-family-hero.webp" alt="Xilume LX controller family">
+            <img src="images/chip-family-hero-v2.webp" alt="Xilume LX controller family">
             <div><span>THE LX PORTFOLIO</span><strong>Communication, control, and power.</strong></div>
           </a>
-          <a class="home-silicon-use home-silicon-use-battery" href="products/interface-controller-ics/#battery-systems">
+          <a class="home-silicon-use home-silicon-use-battery" href="products/interface-controller-ics/lx42p12/">
             <img src="images/chip-battery-application.webp" alt="Xilume battery and power controller application">
             <div><span>BATTERY SYSTEMS</span><strong>Native power status</strong></div>
           </a>
-          <a class="home-silicon-use home-silicon-use-industrial" href="products/interface-controller-ics/#industrial-control">
+          <a class="home-silicon-use home-silicon-use-industrial" href="products/interface-controller-ics/lx88u48/">
             <img src="images/chip-industrial-control.webp" alt="Xilume industrial controller application">
             <div><span>MACHINE CONTROL</span><strong>Reliable field links</strong></div>
           </a>
         </div>
 
         <div class="home-silicon-model-grid" role="group" aria-label="Xilume controller models">
-          <a href="chip-selector/#lx32f27"><small>F SERIES</small><strong>LX32F27</strong><span>Dual CAN FD · 8 Mbps</span><b>→</b></a>
-          <a href="chip-selector/#lx32c22"><small>C SERIES</small><strong>LX32C22</strong><span>Dual Classic CAN</span><b>→</b></a>
-          <a href="chip-selector/#lx88u48"><small>U SERIES</small><strong>LX88U48</strong><span>Eight-channel hub</span><b>→</b></a>
-          <a href="chip-selector/#lx42p12"><small>P SERIES</small><strong>LX42P12</strong><span>Battery + power bridge</span><b>→</b></a>
+          <a href="products/interface-controller-ics/lx32f27/"><small>CAN FD</small><strong>LX32F27</strong><span>Dual CAN FD</span><b>→</b></a>
+          <a href="products/interface-controller-ics/lx32c22/"><small>CLASSIC CAN</small><strong>LX32C22</strong><span>Dual Classic CAN</span><b>→</b></a>
+          <a href="products/interface-controller-ics/lx88u48/"><small>MULTI-INTERFACE</small><strong>LX88U48</strong><span>Eight-channel hub</span><b>→</b></a>
+          <a href="products/interface-controller-ics/lx42p12/"><small>BATTERY + POWER</small><strong>LX42P12</strong><span>Smart-battery bridge</span><b>→</b></a>
         </div>
       </div>
     </section>
@@ -244,8 +220,8 @@
       <div class="container">
         <div class="corporate-section-head compact">
           <div>
-            <p class="section-label">FEATURED ENGINEERING PRODUCTS</p>
-            <h2>Current hardware in development.</h2>
+            <p class="section-label">FEATURED PRODUCTS</p>
+            <h2>Hardware for connected systems.</h2>
           </div>
           <a class="text-link-large" href="products/">View complete catalog →</a>
         </div>
@@ -270,7 +246,7 @@
             <div class="featured-product-copy">
               <span>SMART BATTERY INTERFACE</span>
               <h3>Battery data for Windows and Linux</h3>
-              <p>Target charge, capacity, temperature, pack status, and available health indicators through a USB-connected module.</p>
+              <p>Charge, capacity, temperature, runtime, and pack status through a USB-connected module.</p>
               <b>View product →</b>
             </div>
           </a>
@@ -305,13 +281,13 @@
 
     <section class="container engineering-section">
       <div class="engineering-image">
-        <img src="images/engineering-lab-placeholder.svg" alt="Xilume engineering and validation environment">
+        <img src="images/engineering-lab-placeholder.svg" alt="Xilume engineering and product support">
       </div>
       <div class="engineering-copy">
         <p class="section-label">About Xilume</p>
         <h2>Products supported beyond the hardware.</h2>
-        <p>Xilume is building a product system around three layers: interface controller ICs, ready-to-integrate modules, and future embedded motherboards.</p>
-        <p>Released products are intended to include clear electrical information, fixed pin definitions, reference schematics, host protocols, test software, and revision records.</p>
+        <p>Xilume combines controller ICs, interface modules, host software, and technical resources.</p>
+        <p>Product support includes electrical information, pin definitions, reference circuits, host protocols, drivers, and integration guidance.</p>
         <div class="engineering-links">
           <a href="about/">About Xilume →</a>
           <a href="documentation/">Browse documentation →</a>
@@ -331,13 +307,13 @@
     <div class="container footer-grid">
       <div>
         <div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div>
-        <p>Interface controller ICs, modules, and future embedded systems.</p>
+        <p>Controller ICs and interface hardware for connected systems.</p>
       </div>
       <div><h3>Products</h3><a href="products/">Browse all products</a><a href="products/interface-controller-ics/">Controller ICs</a><a href="products/interface-conversion/">Interface modules</a></div>
       <div><h3>Explore</h3><a href="applications/">Applications</a><a href="chip-selector/">Chip selector</a><a href="documentation/">Documentation</a></div>
       <div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Engineering catalog · Specifications subject to released documentation</span></div>
+    <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Controller ICs · Interface modules · System integration</span></div>
   </footer>
   <script src="hero.js?v=20260805-1"></script>
 </body>
