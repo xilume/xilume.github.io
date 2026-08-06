@@ -18,9 +18,9 @@
       host: "mini-pcie",
       target: "canfd",
       title: "Mini PCIe (USB) ↔ Dual CAN FD",
-      summary: "Add two CAN / CAN FD channels up to 8 Mbps with Windows and Linux driver support.",
+      summary: "Add two CAN / CAN FD channels up to 8 Mbps with signal isolation and Windows and Linux driver support.",
       href: "products/mini-pcie-dual-can-fd/",
-      module: { name: "Mini PCIe Dual CAN FD Module", description: "Dual-channel internal hardware", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
+      module: { name: "Mini PCIe Dual CAN FD Module", description: "Isolated dual-channel internal hardware", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
       controller: { name: "LX32F27", description: "Dual CAN FD controller for your PCB", status: "Up to 8 Mbps", href: "products/interface-controller-ics/lx32f27/" }
     },
     {
