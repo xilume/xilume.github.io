@@ -1,3 +1,4 @@
+// Final Why 8Hub visual v10
 (() => {
   const image = document.querySelector('[data-why-image]');
   if (!image) return;
