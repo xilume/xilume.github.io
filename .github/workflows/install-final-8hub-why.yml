@@ -1,0 +1,87 @@
+name: Install final 8Hub Why image
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.asset-staging/finalwhy-*.b64'
+      - '.github/workflows/install-final-8hub-why.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build final single image
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat \
+            .asset-staging/finalwhy-00.b64 \
+            .asset-staging/finalwhy-01.b64 \
+            .asset-staging/finalwhy-02.b64 \
+            .asset-staging/finalwhy-03.b64 \
+            | base64 -d > images/8hub-embedded-why.webp
+          echo '5de1d5c6b9b2cd016f9d2da9f146a6ff97cd43a9e91b1e82ec255f9c68af4fcd  images/8hub-embedded-why.webp' | sha256sum -c -
+
+      - name: Point page directly at image
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('products/8hub-embedded/index.html')
+          s = p.read_text(encoding='utf-8')
+
+          s = re.sub(r'\s*<script defer src="\./product\.js\?v=[^"]+"></script>', '', s)
+          s = re.sub(
+              r'<img data-why-image src="\.\./\.\./images/8hub-embedded-top\.webp" alt="([^"]+)">',
+              r'<img src="../../images/8hub-embedded-why.webp?v=20260818-9" alt="\1">',
+              s,
+              count=1,
+          )
+          s = s.replace(
+              '.embedded-why-figure img{display:block;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .18s ease}\n    .embedded-why-figure img.is-loaded,.embedded-why-figure img.is-fallback{opacity:1}',
+              '.embedded-why-figure img{display:block;width:100%;height:100%;object-fit:cover;opacity:1}'
+          )
+          s = re.sub(r'product\.css\?v=[^"\']+', 'product.css?v=20260818-9', s)
+
+          if '8hub-embedded-why.webp?v=20260818-9' not in s:
+              raise SystemExit('Final Why image reference was not installed')
+          if 'data-why-image' in s:
+              raise SystemExit('Old JS-loaded image marker still exists')
+          if './product.js' in s:
+              raise SystemExit('Old Why image loader script still exists')
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Remove obsolete loaders and staging files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f products/8hub-embedded/product.js
+          rm -f images/8hub-embedded-why-b64-*.txt
+          rm -f .asset-staging/finalwhy-*.b64
+          rm -f .asset-staging/why8hub*.b64-*
+          rm -f .github/workflows/install-final-8hub-why.yml
+
+      - name: Commit finished website
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Install final 8Hub Embedded Why image'
+          git push
