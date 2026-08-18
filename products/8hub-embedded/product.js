@@ -1,3 +1,4 @@
+// Xilume 8Hub Embedded Why visual loader v8
 (() => {
   const image = document.querySelector('[data-why-image]');
   if (!image) return;
