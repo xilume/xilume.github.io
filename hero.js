@@ -12,7 +12,7 @@
   const autoplayLabel = carousel.querySelector("[data-hero-autoplay-label]");
   const status = carousel.querySelector("[data-hero-status]");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const interval = 5000;
+  const interval = 8000;
 
   let activeIndex = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
   let timer = null;
