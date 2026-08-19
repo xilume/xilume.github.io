@@ -119,10 +119,10 @@ html { scroll-padding-top:124px; }
   position:relative;
   z-index:2;
   display:grid;
-  grid-template-columns:minmax(380px,.84fr) minmax(520px,1.16fr);
+  grid-template-columns:minmax(430px,.95fr) minmax(520px,1.05fr);
   min-height:610px;
   align-items:center;
-  gap:58px;
+  gap:42px;
   padding:66px 0;
 }
 
