@@ -8445,10 +8445,10 @@ footer {
 
 /* Xilume 8Hub home showcase */
 .product-hero-8hub {
-  --hero-accent:0,105,210;
+  --hero-accent:88,201,255;
   --hero-action:#0878e8;
   overflow:hidden;
-  background:#f6f6f4;
+  background:#020812;
 }
 
 .product-hero-8hub::before {
@@ -8465,11 +8465,11 @@ footer {
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center;
+  object-position:center 48%;
 }
 
 .home-8hub-shade {
-  background:linear-gradient(90deg,rgba(247,247,245,.99) 0%,rgba(247,247,245,.96) 31%,rgba(247,247,245,.58) 47%,rgba(247,247,245,0) 68%);
+  background:linear-gradient(90deg,rgba(2,8,18,.99) 0%,rgba(2,8,18,.96) 32%,rgba(2,8,18,.72) 48%,rgba(2,8,18,.16) 67%,rgba(2,8,18,0) 80%);
 }
 
 .home-8hub-layout {
@@ -8477,29 +8477,59 @@ footer {
 }
 
 .home-8hub-copy {
-  width:min(540px,45%);
+  width:min(620px,48%);
 }
 
 .product-hero-8hub .product-hero-kicker {
-  color:#0878e8;
+  color:#63cfff;
 }
 
 .product-hero-8hub .product-hero-copy h2 {
-  color:#0d1116;
+  color:#f7fbff;
+}
+
+.product-hero-8hub .product-hero-copy h2 span {
+  color:#d8f0ff;
 }
 
 .product-hero-8hub .product-hero-copy > p:not(.product-hero-kicker) {
-  color:#5a626a;
-  font-weight:600;
+  color:#c5d6e3;
+  font-weight:540;
   letter-spacing:.01em;
 }
 
+.home-8hub-proof {
+  display:flex;
+  flex-wrap:wrap;
+  gap:0;
+  margin-top:22px;
+  color:#96aec0;
+  font-size:10px;
+  font-weight:680;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+}
+
+.home-8hub-proof span {
+  display:flex;
+  align-items:center;
+}
+
+.home-8hub-proof span:not(:last-child)::after {
+  content:"";
+  width:3px;
+  height:3px;
+  margin:0 12px;
+  border-radius:50%;
+  background:#3d9ed2;
+}
+
 .product-hero-8hub .hero-text-link {
-  color:#1d5f9e;
+  color:#a7d9ff;
 }
 
 .product-hero-8hub .hero-text-link:hover {
-  color:#0878e8;
+  color:#fff;
 }
 
 @media (max-width:850px) {
@@ -8508,10 +8538,10 @@ footer {
     align-content:center;
   }
   .home-8hub-copy {
-    width:min(580px,68%);
+    width:min(600px,62%);
   }
   .home-8hub-backdrop {
-    object-position:64% center;
+    object-position:66% center;
   }
 }
 
@@ -8526,10 +8556,15 @@ footer {
     width:100%;
   }
   .home-8hub-backdrop {
-    object-position:68% center;
+    object-position:72% center;
   }
   .home-8hub-shade {
-    background:linear-gradient(180deg,#f7f7f5 0%,rgba(247,247,245,.96) 37%,rgba(247,247,245,.08) 69%,rgba(247,247,245,.46) 100%);
+    background:linear-gradient(180deg,#020812 0%,rgba(2,8,18,.98) 42%,rgba(2,8,18,.36) 70%,rgba(2,8,18,.72) 100%);
+  }
+  .home-8hub-proof {
+    max-width:330px;
+    gap:8px 0;
+    font-size:9px;
   }
 }
 

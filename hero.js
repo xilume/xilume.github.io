@@ -14,7 +14,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const interval = 5000;
 
-  let activeIndex = 0;
+  let activeIndex = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
   let timer = null;
   let interactionPaused = false;
   let userPaused = false;
@@ -177,5 +177,5 @@
   }
 
   updateAutoplayButton();
-  showSlide(0, false);
+  showSlide(activeIndex, false);
 })();

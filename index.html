@@ -11,7 +11,8 @@
   <meta name="application-name" content="Xilume">
   <meta name="apple-mobile-web-app-title" content="Xilume">
   <meta name="theme-color" content="#020712">
-  <link rel="stylesheet" href="styles.css?v=20260806-2">
+  <link rel="preload" as="image" href="/images/8hub/8hub-home-hero-v1.png">
+  <link rel="stylesheet" href="styles.css?v=20260819-1">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/">
   <meta property="og:site_name" content="Xilume">
@@ -19,7 +20,7 @@
   <meta property="og:title" content="Xilume">
   <meta property="og:description" content="Xilume controller ICs, interface modules, design resources, and embedded hardware for reliable connected systems.">
   <meta property="og:url" content="https://xilume.co/">
-  <meta property="og:image" content="https://xilume.co/images/chip-family-hero-v2.webp">
+  <meta property="og:image" content="https://xilume.co/images/8hub/8hub-home-hero-v1.png">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -79,7 +80,7 @@
     <section class="product-hero-carousel" data-hero-carousel aria-label="Featured Xilume products" aria-roledescription="carousel">
       <h1 class="sr-only">Xilume</h1>
       <div class="product-hero-stage">
-        <article class="product-hero-slide product-hero-chip is-active" data-hero-slide role="tabpanel" aria-label="1 of 4: Xilume controller portfolio">
+        <article class="product-hero-slide product-hero-chip" data-hero-slide role="tabpanel" aria-label="1 of 4: Xilume controller portfolio" aria-hidden="true" inert>
           <img class="chip-hero-backdrop" src="images/chip-family-hero-v2.webp" alt="Xilume LX controllers in standard IC packages">
           <div class="chip-hero-shade" aria-hidden="true"></div>
           <div class="container chip-hero-layout chip-hero-layout-simple">
@@ -95,17 +96,18 @@
           </div>
         </article>
 
-        <article class="product-hero-slide product-hero-8hub" data-hero-slide role="tabpanel" aria-label="2 of 4: Xilume 8Hub" aria-hidden="true" inert>
-          <img class="home-8hub-backdrop" src="images/8hub-hero-studio.webp" alt="Xilume 8Hub with two DE9 connectors and a two-by-nine Phoenix terminal block">
+        <article class="product-hero-slide product-hero-8hub is-active" data-hero-slide role="tabpanel" aria-label="2 of 4: Xilume 8Hub">
+          <img class="home-8hub-backdrop" src="/images/8hub/8hub-home-hero-v1.png" width="1672" height="941" fetchpriority="high" decoding="async" alt="Xilume 8Hub Embedded communication board in a dark studio product scene">
           <div class="home-8hub-shade" aria-hidden="true"></div>
           <div class="container product-hero-layout home-8hub-layout">
             <div class="product-hero-copy home-8hub-copy">
               <p class="product-hero-kicker">XILUME 8HUB</p>
-              <h2>Eight interfaces.<br>One USB.</h2>
-              <p>2 × CAN FD · 4 × RS-485 · 2 × RS-232</p>
+              <h2>Eight interfaces.<br><span>One internal USB.</span></h2>
+              <p>2 × CAN/CAN FD · 4 × RS485 · 2 × RS232</p>
+              <div class="home-8hub-proof" aria-label="8Hub key specifications"><span>8 Mbit/s data phase</span><span>Electrically isolated</span><span>Windows + Linux</span></div>
               <div class="hero-actions">
-                <a class="primary-button" href="products/8hub/">Explore 8Hub</a>
-                <a class="hero-text-link" href="products/8hub/#interfaces">See the interfaces <span aria-hidden="true">→</span></a>
+                <a class="primary-button" href="products/8hub-embedded/">Explore 8Hub</a>
+                <a class="hero-text-link" href="products/8hub-embedded/#hardware">See the interfaces <span aria-hidden="true">→</span></a>
               </div>
             </div>
           </div>
@@ -152,8 +154,8 @@
       <div class="product-hero-controls">
         <button class="hero-arrow hero-arrow-previous" type="button" data-hero-previous aria-label="Previous featured product"><span aria-hidden="true">‹</span></button>
         <div class="container product-hero-selector" role="tablist" aria-label="Choose a featured product">
-          <button class="hero-product-tab is-active" type="button" role="tab" data-hero-select="0" aria-selected="true"><small>01</small><span>Xilume Silicon</span><i aria-hidden="true"></i></button>
-          <button class="hero-product-tab" type="button" role="tab" data-hero-select="1" aria-selected="false"><small>02</small><span>Xilume 8Hub</span><i aria-hidden="true"></i></button>
+          <button class="hero-product-tab" type="button" role="tab" data-hero-select="0" aria-selected="false" tabindex="-1"><small>01</small><span>Xilume Silicon</span><i aria-hidden="true"></i></button>
+          <button class="hero-product-tab is-active" type="button" role="tab" data-hero-select="1" aria-selected="true"><small>02</small><span>Xilume 8Hub</span><i aria-hidden="true"></i></button>
           <button class="hero-product-tab" type="button" role="tab" data-hero-select="2" aria-selected="false"><small>03</small><span>Battery Module</span><i aria-hidden="true"></i></button>
           <button class="hero-product-tab" type="button" role="tab" data-hero-select="3" aria-selected="false"><small>04</small><span>Dual Mini PCIe</span><i aria-hidden="true"></i></button>
         </div>
@@ -313,6 +315,6 @@
     </div>
     <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Controller ICs · Interface modules · System integration</span></div>
   </footer>
-  <script src="hero.js?v=20260805-1"></script>
+  <script src="hero.js?v=20260819-1"></script>
 </body>
 </html>
