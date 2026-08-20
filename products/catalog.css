@@ -16,30 +16,6 @@ body.product-directory-page {
   font-weight: 400;
 }
 
-.product-directory-page .site-header {
-  border-bottom-color: rgba(21, 25, 29, .10);
-  background: rgba(255, 255, 255, .96);
-}
-
-.product-directory-page .header-inner nav a {
-  color: #4f565b;
-  font-size: 13px;
-  font-weight: 450;
-  letter-spacing: .01em;
-}
-
-.product-directory-page .header-inner nav a:hover,
-.product-directory-page .header-inner nav a[aria-current="page"] {
-  color: var(--pd-accent);
-}
-
-.product-directory-page .nav-finder {
-  color: var(--pd-accent) !important;
-  border-color: #aebfba;
-  background: #fbfcfb;
-  font-weight: 500;
-}
-
 .product-directory-page main {
   overflow: hidden;
 }
@@ -219,11 +195,16 @@ body.product-directory-page {
   transform: scale(1.018);
 }
 
-.pd-family-card-embedded .pd-family-card-media img,
 .pd-family-card-diagnostic .pd-family-card-media img,
 .pd-family-card-ics .pd-family-card-media img {
   object-fit: contain;
   padding: 22px 16px 0;
+}
+
+.pd-family-card-embedded .pd-family-card-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .pd-family-card-ics .pd-family-card-media img {
