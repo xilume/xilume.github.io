@@ -2587,7 +2587,7 @@ a.platform-row:hover {
 }
 .support-strip {
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   margin-bottom:90px;
   border-top:1px solid #c6d0d7;
   border-left:1px solid #c6d0d7;
