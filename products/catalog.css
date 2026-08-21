@@ -379,9 +379,20 @@ a.pd-product-card:hover .pd-product-media img {
   background: #101820;
 }
 
+.pd-product-media.is-photo-uniform {
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #020712;
+}
+
 .pd-product-media.is-photo-dark img,
 .pd-product-media.is-photo-wide img {
   object-fit: cover;
+}
+
+.pd-product-media.is-photo-uniform img {
+  object-fit: contain;
+  object-position: center;
 }
 
 .pd-product-status {
