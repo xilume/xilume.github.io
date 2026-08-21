@@ -505,6 +505,169 @@ html {
   font-size:13px;
 }
 
+.dcf-installation {
+  padding:118px 0 124px;
+  background:#eef2f5;
+}
+
+.dcf-installation-layout {
+  display:grid;
+  grid-template-columns:minmax(310px,.68fr) minmax(620px,1.32fr);
+  gap:84px;
+  align-items:center;
+}
+
+.dcf-installation-copy h2 {
+  max-width:520px;
+  margin:18px 0 0;
+  font-size:clamp(44px,4.35vw,64px);
+  font-weight:570;
+  line-height:1.02;
+  letter-spacing:-.054em;
+}
+
+.dcf-installation-copy > p:last-of-type {
+  max-width:500px;
+  margin:24px 0 0;
+  color:var(--dcf-copy);
+  font-size:15px;
+  line-height:1.68;
+}
+
+.dcf-installation-points {
+  margin:36px 0 0;
+  border-top:1px solid #aebbc5;
+}
+
+.dcf-installation-points > div {
+  display:grid;
+  grid-template-columns:minmax(126px,.78fr) minmax(150px,1.22fr);
+  gap:18px;
+  padding:17px 0;
+  border-bottom:1px solid #cbd4db;
+}
+
+.dcf-installation-points dt {
+  color:#132635;
+  font-size:11px;
+  font-weight:720;
+}
+
+.dcf-installation-points dd {
+  margin:0;
+  color:#6b7984;
+  font-size:11px;
+}
+
+.dcf-installation-stage {
+  min-width:0;
+  margin:0;
+}
+
+.dcf-installation-media {
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:4/3;
+  background:#050a0e;
+  box-shadow:0 34px 80px rgba(32,49,62,.18);
+}
+
+.dcf-installation-scene,
+.dcf-installation-scene-focus {
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.dcf-installation-scene {
+  filter:brightness(.68) saturate(.72) blur(.7px);
+  transform:scale(1.004);
+}
+
+.dcf-installation-scene-focus {
+  z-index:1;
+  clip-path:inset(41.4% 48.7% 37.4% 35.3%);
+}
+
+.dcf-installation-focus-frame {
+  position:absolute;
+  z-index:2;
+  left:35.3%;
+  top:41.4%;
+  width:16%;
+  height:21.2%;
+  border:1px solid rgba(102,220,255,.92);
+  box-shadow:0 0 0 6px rgba(102,220,255,.1),0 0 28px rgba(40,163,225,.28);
+  pointer-events:none;
+}
+
+.dcf-installation-detail {
+  position:absolute;
+  z-index:3;
+  right:20px;
+  bottom:20px;
+  display:grid;
+  grid-template-columns:140px minmax(150px,1fr);
+  width:min(395px,52%);
+  overflow:hidden;
+  color:#fff;
+  border:1px solid rgba(125,202,241,.38);
+  background:rgba(4,12,19,.93);
+  box-shadow:0 18px 48px rgba(0,0,0,.38);
+  backdrop-filter:blur(12px);
+}
+
+.dcf-installation-detail img {
+  display:block;
+  width:140px;
+  height:180px;
+  object-fit:cover;
+}
+
+.dcf-installation-detail > div {
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+  justify-content:center;
+  padding:16px 17px;
+}
+
+.dcf-installation-detail span,
+.dcf-installation-stage figcaption span {
+  color:#67cfff;
+  font-size:8px;
+  font-weight:760;
+  letter-spacing:.11em;
+}
+
+.dcf-installation-detail strong {
+  margin-top:8px;
+  color:#f4f8fb;
+  font-size:12px;
+  font-weight:610;
+  line-height:1.4;
+}
+
+.dcf-installation-stage figcaption {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  min-height:50px;
+  padding:13px 16px;
+  color:#fff;
+  background:#07111b;
+}
+
+.dcf-installation-stage figcaption strong {
+  color:#d8e5ed;
+  font-size:11px;
+  font-weight:580;
+}
+
 .dcf-software {
   padding:122px 0;
   background:var(--dcf-soft);
@@ -937,6 +1100,7 @@ html {
   }
 
   .dcf-capabilities-layout,
+  .dcf-installation-layout,
   .dcf-software-layout,
   .dcf-spec-layout,
   .dcf-resources-layout {
@@ -978,6 +1142,7 @@ html {
   }
 
   .dcf-capabilities-layout,
+  .dcf-installation-layout,
   .dcf-software-layout,
   .dcf-spec-layout,
   .dcf-resources-layout {
@@ -985,6 +1150,7 @@ html {
   }
 
   .dcf-capabilities-layout,
+  .dcf-installation-layout,
   .dcf-software-layout {
     gap:50px;
   }
@@ -1051,6 +1217,7 @@ html {
 
   .dcf-hardware,
   .dcf-capabilities,
+  .dcf-installation,
   .dcf-software,
   .dcf-specifications {
     padding:82px 0;
@@ -1091,6 +1258,7 @@ html {
   }
 
   .dcf-capabilities h2,
+  .dcf-installation-copy h2,
   .dcf-software-copy h2,
   .dcf-spec-heading h2 {
     font-size:42px;
@@ -1124,6 +1292,22 @@ html {
     align-items:flex-start;
     flex-direction:column;
     gap:10px;
+  }
+
+  .dcf-installation-detail {
+    right:10px;
+    bottom:10px;
+    grid-template-columns:86px 1fr;
+    width:min(295px,58%);
+  }
+
+  .dcf-installation-detail img {
+    width:86px;
+    height:111px;
+  }
+
+  .dcf-installation-detail > div {
+    padding:12px 13px;
   }
 
   .dcf-resources {
