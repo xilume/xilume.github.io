@@ -9303,6 +9303,10 @@ footer {
   transition:transform .45s ease,filter .3s ease;
 }
 
+.home-category-panel > img.home-category-image-embedded {
+  object-position:68% center;
+}
+
 .home-category-panel:hover > img,
 .home-category-panel:focus-visible > img {
   filter:saturate(1) contrast(1.07);
