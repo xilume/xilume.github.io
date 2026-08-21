@@ -79,6 +79,43 @@
       </div>
     </div>`;
 
+  const solutionsMenuMarkup = `
+    <div class="container solutions-mega-menu-inner">
+      <div class="product-mega-menu-intro">
+        <span>SOLUTIONS</span>
+        <strong>Start with the system problem.</strong>
+        <a href="/solutions/">View all solutions <b aria-hidden="true">→</b></a>
+      </div>
+      <div class="solutions-mega-content">
+        <div class="solutions-mega-heading">
+          <span>EMBEDDED CONNECTIVITY</span>
+          <h2>Choose your expansion path.</h2>
+          <p>Match the host connection and field interfaces to the machine you are building.</p>
+        </div>
+        <div class="solutions-mega-links">
+          <a href="/solutions/#embedded-can-fd-expansion">
+            <span>Embedded CAN FD Expansion</span>
+            <strong>Need CAN FD inside an embedded PC?</strong>
+            <small>Add two isolated CAN/CAN FD channels through Mini PCIe.</small>
+            <em>Dual Mini PCIe CAN FD</em>
+            <b aria-hidden="true">→</b>
+          </a>
+          <a href="/solutions/#can-fd-serial-expansion">
+            <span>CAN FD + Serial Port Expansion</span>
+            <strong>Need CAN FD and serial ports in one machine?</strong>
+            <small>Consolidate CAN FD, RS-485, and RS-232 behind one internal USB connection.</small>
+            <em>8Hub Embedded</em>
+            <b aria-hidden="true">→</b>
+          </a>
+        </div>
+      </div>
+    </div>`;
+
+  const menuDefinitions = [
+    { key: "products", path: "/products", label: "Product menu", markup: productMenuMarkup },
+    { key: "solutions", path: "/solutions", label: "Solutions menu", markup: solutionsMenuMarkup },
+  ];
+
   headers.forEach((header, index) => {
     const inner = header.querySelector(".header-inner");
     const navigation = inner?.querySelector("nav[aria-label='Primary navigation']");
@@ -95,83 +132,104 @@
     button.innerHTML = '<span aria-hidden="true"><i></i><i></i><i></i></span><b>Menu</b>';
     inner.insertBefore(button, navigation);
 
-    const productsLink = Array.from(navigation.querySelectorAll(":scope > a")).find((link) => {
-      const path = new URL(link.href, window.location.href).pathname.replace(/\/+$/, "");
-      return path === "/products";
+    const entries = menuDefinitions.flatMap((definition) => {
+      const trigger = Array.from(navigation.querySelectorAll(":scope > a")).find((link) => {
+        const path = new URL(link.href, window.location.href).pathname.replace(/\/+$/, "");
+        return path === definition.path;
+      });
+      if (!trigger) return [];
+
+      const panelId = `${definition.key}-mega-menu-${index + 1}`;
+      const panel = document.createElement("nav");
+      panel.className = `site-mega-menu site-mega-menu-${definition.key}`;
+      panel.id = panelId;
+      panel.setAttribute("aria-label", definition.label);
+      panel.setAttribute("aria-hidden", "true");
+      panel.inert = true;
+      panel.innerHTML = definition.markup;
+      header.appendChild(panel);
+
+      trigger.classList.add("mega-menu-trigger");
+      trigger.setAttribute("aria-expanded", "false");
+      trigger.setAttribute("aria-controls", panelId);
+
+      return [{ ...definition, trigger, panel }];
     });
 
-    let productMenu;
-    let productMenuScrim;
-    let closeProductMenuTimer;
+    let activeEntry = null;
+    let closeMegaMenuTimer;
+    let megaMenuScrim;
 
-    const closeProductMenu = ({ restoreFocus = false } = {}) => {
-      window.clearTimeout(closeProductMenuTimer);
-      if (restoreFocus) productsLink?.focus({ preventScroll: true });
-      header.classList.remove("is-product-menu-open");
-      productsLink?.setAttribute("aria-expanded", "false");
-      productMenu?.setAttribute("aria-hidden", "true");
-      if (productMenu) productMenu.inert = true;
+    const closeMegaMenu = ({ restoreFocus = false } = {}) => {
+      window.clearTimeout(closeMegaMenuTimer);
+      const entryToClose = activeEntry;
+      activeEntry = null;
+      header.classList.remove("is-mega-menu-open");
+      entries.forEach((entry) => {
+        entry.trigger.setAttribute("aria-expanded", "false");
+        entry.panel.setAttribute("aria-hidden", "true");
+        entry.panel.inert = true;
+      });
+      megaMenuScrim?.setAttribute("aria-hidden", "true");
+      if (restoreFocus) entryToClose?.trigger.focus({ preventScroll: true });
     };
 
-    const openProductMenu = () => {
-      if (!desktopNavigation.matches || !productsLink || !productMenu) return;
-      window.clearTimeout(closeProductMenuTimer);
-      header.classList.add("is-product-menu-open");
-      productsLink.setAttribute("aria-expanded", "true");
-      productMenu.setAttribute("aria-hidden", "false");
-      productMenu.inert = false;
+    const openMegaMenu = (entry) => {
+      if (!desktopNavigation.matches || !entry) return;
+      window.clearTimeout(closeMegaMenuTimer);
+      entries.forEach((candidate) => {
+        const open = candidate === entry;
+        candidate.trigger.setAttribute("aria-expanded", String(open));
+        candidate.panel.setAttribute("aria-hidden", String(!open));
+        candidate.panel.inert = !open;
+      });
+      activeEntry = entry;
+      header.classList.add("is-mega-menu-open");
+      megaMenuScrim?.setAttribute("aria-hidden", "false");
     };
 
-    const queueProductMenuClose = () => {
-      window.clearTimeout(closeProductMenuTimer);
-      closeProductMenuTimer = window.setTimeout(() => {
-        const focusedInProductMenu = document.activeElement === productsLink || productMenu?.contains(document.activeElement);
-        if (!focusedInProductMenu) closeProductMenu();
+    const queueMegaMenuClose = () => {
+      window.clearTimeout(closeMegaMenuTimer);
+      closeMegaMenuTimer = window.setTimeout(() => {
+        const focusInside = activeEntry && (
+          document.activeElement === activeEntry.trigger || activeEntry.panel.contains(document.activeElement)
+        );
+        if (!focusInside) closeMegaMenu();
       }, 180);
     };
 
-    if (productsLink) {
-      const productMenuId = `product-mega-menu-${index + 1}`;
-      productsLink.classList.add("product-menu-trigger");
-      productsLink.setAttribute("aria-expanded", "false");
-      productsLink.setAttribute("aria-controls", productMenuId);
+    if (entries.length) {
+      megaMenuScrim = document.createElement("button");
+      megaMenuScrim.className = "site-mega-scrim";
+      megaMenuScrim.type = "button";
+      megaMenuScrim.tabIndex = -1;
+      megaMenuScrim.setAttribute("aria-label", "Close navigation menu");
+      megaMenuScrim.setAttribute("aria-hidden", "true");
+      megaMenuScrim.addEventListener("click", () => closeMegaMenu({ restoreFocus: true }));
+      megaMenuScrim.addEventListener("mouseenter", queueMegaMenuClose);
+      header.insertBefore(megaMenuScrim, entries[0].panel);
 
-      productMenu = document.createElement("nav");
-      productMenu.className = "product-mega-menu";
-      productMenu.id = productMenuId;
-      productMenu.setAttribute("aria-label", "Product menu");
-      productMenu.setAttribute("aria-hidden", "true");
-      productMenu.inert = true;
-      productMenu.innerHTML = productMenuMarkup;
-      header.appendChild(productMenu);
-
-      productMenuScrim = document.createElement("button");
-      productMenuScrim.className = "product-mega-scrim";
-      productMenuScrim.type = "button";
-      productMenuScrim.tabIndex = -1;
-      productMenuScrim.setAttribute("aria-label", "Close product menu");
-      productMenuScrim.addEventListener("click", () => closeProductMenu({ restoreFocus: true }));
-      productMenuScrim.addEventListener("mouseenter", queueProductMenuClose);
-      header.insertBefore(productMenuScrim, productMenu);
-
-      productsLink.addEventListener("mouseenter", openProductMenu);
-      productsLink.addEventListener("mouseleave", queueProductMenuClose);
-      productMenu.addEventListener("mouseenter", openProductMenu);
-      productMenu.addEventListener("mouseleave", queueProductMenuClose);
-
-      productsLink.addEventListener("focus", openProductMenu);
-      productMenu.addEventListener("focusin", openProductMenu);
-      header.addEventListener("focusin", (event) => {
-        if (event.target !== productsLink && !productMenu.contains(event.target)) {
-          closeProductMenu();
-        }
+      entries.forEach((entry) => {
+        entry.trigger.addEventListener("mouseenter", () => openMegaMenu(entry));
+        entry.trigger.addEventListener("mouseleave", queueMegaMenuClose);
+        entry.panel.addEventListener("mouseenter", () => openMegaMenu(entry));
+        entry.panel.addEventListener("mouseleave", queueMegaMenuClose);
+        entry.trigger.addEventListener("focus", () => openMegaMenu(entry));
+        entry.panel.addEventListener("focusin", () => openMegaMenu(entry));
+        entry.trigger.addEventListener("keydown", (event) => {
+          if (event.key !== "ArrowDown") return;
+          event.preventDefault();
+          openMegaMenu(entry);
+          const firstContentLink = entry.panel.querySelector(".product-mega-links a, .solutions-mega-links a");
+          (firstContentLink || entry.panel.querySelector("a"))?.focus();
+        });
       });
 
-      productsLink.addEventListener("keydown", (event) => {
-        if (event.key !== "ArrowDown") return;
-        event.preventDefault();
-        openProductMenu();
-        productMenu.querySelector(".product-mega-links a")?.focus();
+      header.addEventListener("focusin", (event) => {
+        if (!activeEntry) return;
+        if (event.target !== activeEntry.trigger && !activeEntry.panel.contains(event.target)) {
+          closeMegaMenu();
+        }
       });
     }
 
@@ -193,19 +251,17 @@
     document.addEventListener("click", (event) => {
       if (!header.contains(event.target)) {
         closeMenu();
-        closeProductMenu();
+        closeMegaMenu();
       }
     });
 
     document.addEventListener("focusin", (event) => {
-      if (header.classList.contains("is-product-menu-open") && !header.contains(event.target)) {
-        closeProductMenu();
-      }
+      if (activeEntry && !header.contains(event.target)) closeMegaMenu();
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && header.classList.contains("is-product-menu-open")) {
-        closeProductMenu({ restoreFocus: true });
+      if (event.key === "Escape" && activeEntry) {
+        closeMegaMenu({ restoreFocus: true });
         return;
       }
       if (event.key === "Escape" && header.classList.contains("is-menu-open")) {
@@ -216,15 +272,17 @@
 
     const handleViewport = () => {
       if (desktopNavigation.matches) {
-        if (productsLink) {
-          productsLink.setAttribute("aria-expanded", "false");
-          productsLink.setAttribute("aria-controls", productMenu?.id || "");
-        }
+        entries.forEach((entry) => {
+          entry.trigger.setAttribute("aria-expanded", "false");
+          entry.trigger.setAttribute("aria-controls", entry.panel.id);
+        });
         closeMenu();
       } else {
-        closeProductMenu();
-        productsLink?.removeAttribute("aria-expanded");
-        productsLink?.removeAttribute("aria-controls");
+        closeMegaMenu();
+        entries.forEach((entry) => {
+          entry.trigger.removeAttribute("aria-expanded");
+          entry.trigger.removeAttribute("aria-controls");
+        });
       }
     };
 
