@@ -4132,7 +4132,7 @@ footer {
 }
 
 .hero-product-tab.is-active i::after {
-  animation:hero-product-progress 5s linear forwards;
+  animation:hero-product-progress 3s linear forwards;
 }
 
 .product-hero-carousel.is-paused .hero-product-tab.is-active i::after {
