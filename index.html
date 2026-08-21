@@ -12,7 +12,7 @@
   <meta name="apple-mobile-web-app-title" content="Xilume">
   <meta name="theme-color" content="#020712">
   <link rel="preload" as="image" href="/images/chip-family-hero-v2.webp">
-  <link rel="stylesheet" href="styles.css?v=20260821-2">
+  <link rel="stylesheet" href="styles.css?v=20260821-3">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/">
   <meta property="og:site_name" content="Xilume">
@@ -184,117 +184,69 @@
       <p class="sr-only" aria-live="polite" data-hero-status></p>
     </section>
 
-    <nav class="home-paths" aria-labelledby="home-paths-title">
+    <section class="home-product-categories" id="product-categories" aria-labelledby="product-categories-title">
       <div class="container">
-        <div class="home-paths-heading">
-          <div>
-            <p class="section-label">Explore Xilume</p>
-            <h2 id="home-paths-title">Explore Xilume.</h2>
-          </div>
-          <p>Products, applications, design resources, and support.</p>
-        </div>
-        <div class="home-paths-grid">
-          <a href="products/"><small>01 · PRODUCT DIRECTORY</small><strong>Products</strong><span>Browse every controller and module</span><b>→</b></a>
-          <a href="applications/"><small>02 · USE CASES</small><strong>Applications</strong><span>Robotics, industrial links, and batteries</span><b>→</b></a>
-          <a href="chip-selector/"><small>03 · DESIGN TOOL</small><strong>Chip Selector</strong><span>Match a real controller to the job</span><b>→</b></a>
-          <a href="documentation/"><small>04 · ENGINEERING RESOURCES</small><strong>Documentation</strong><span>Datasheets, drivers, and integration guides</span><b>→</b></a>
-          <a href="about/"><small>05 · COMPANY</small><strong>About Xilume</strong><span>Hardware, software, and system integration</span><b>→</b></a>
-          <a href="contact/"><small>06 · SALES &amp; SUPPORT</small><strong>Contact</strong><span>Product, sample, and integration questions</span><b>→</b></a>
-        </div>
-      </div>
-    </nav>
-
-    <section class="home-silicon-section" id="product-platforms">
-      <div class="container">
-        <header class="home-silicon-heading">
-          <div><p class="section-label">XILUME CONTROLLER PORTFOLIO</p><h2>Choose the job.<br>Then choose the chip.</h2></div>
-          <div><p>CAN, industrial interfaces, and battery integration.</p><a href="chip-selector/">Find the right controller <span aria-hidden="true">→</span></a></div>
+        <header class="home-flow-heading">
+          <div><p class="section-label">PRODUCT CATEGORIES</p><h2 id="product-categories-title">Explore Xilume products.</h2></div>
+          <div><p>Purpose-built hardware for industrial communication, system integration, and power.</p><a href="products/">View all products <span aria-hidden="true">→</span></a></div>
         </header>
 
-        <div class="home-silicon-gallery">
-          <a class="home-silicon-family" href="products/interface-controller-ics/">
-            <img src="images/chip-family-hero-v2.webp" alt="Xilume LX controller family">
-            <div><span>THE LX PORTFOLIO</span><strong>Communication, control, and power.</strong></div>
+        <div class="home-category-panels">
+          <a class="home-category-panel is-featured" href="products/embedded-communication/">
+            <img src="images/embedded-communication-family-real-v1.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Xilume embedded communication hardware in a robotic automation system">
+            <div class="home-category-copy"><span>01</span><small>BUILT-IN CONNECTIVITY</small><h3>Embedded Communication</h3><p>CAN FD and serial modules designed to stay inside industrial PCs, robots, and connected machines.</p><b>Explore family <i aria-hidden="true">→</i></b></div>
           </a>
-          <a class="home-silicon-use home-silicon-use-battery" href="products/interface-controller-ics/lx42p12/">
-            <img src="images/chip-battery-application.webp" alt="Xilume battery and power controller application">
-            <div><span>BATTERY SYSTEMS</span><strong>Native power status</strong></div>
-          </a>
-          <a class="home-silicon-use home-silicon-use-industrial" href="products/interface-controller-ics/lx88u48/">
-            <img src="images/chip-industrial-control.webp" alt="Xilume industrial controller application">
-            <div><span>MACHINE CONTROL</span><strong>Reliable field links</strong></div>
-          </a>
-        </div>
 
-        <div class="home-silicon-model-grid" role="group" aria-label="Xilume controller models">
-          <a href="products/interface-controller-ics/lx32f27/"><small>CAN FD</small><strong>LX32F27</strong><span>Dual CAN FD</span><b>→</b></a>
-          <a href="products/interface-controller-ics/lx32c22/"><small>CLASSIC CAN</small><strong>LX32C22</strong><span>Dual Classic CAN</span><b>→</b></a>
-          <a href="products/interface-controller-ics/lx88u48/"><small>MULTI-INTERFACE</small><strong>LX88U48</strong><span>Eight-channel hub</span><b>→</b></a>
-          <a href="products/interface-controller-ics/lx42p12/"><small>BATTERY + POWER</small><strong>LX42P12</strong><span>Smart-battery bridge</span><b>→</b></a>
+          <a class="home-category-panel" href="products/test-diagnostic-interfaces/">
+            <img src="images/8hub-hero-studio.webp" loading="lazy" decoding="async" alt="Xilume 8Hub portable diagnostic interface">
+            <div class="home-category-copy"><span>02</span><small>BRING-UP &amp; SERVICE</small><h3>Test &amp; Diagnostic Interfaces</h3><p>Portable access to CAN FD and serial networks for commissioning, service, and fault finding.</p><b>Explore family <i aria-hidden="true">→</i></b></div>
+          </a>
+
+          <a class="home-category-panel" href="products/interface-ics/">
+            <img src="images/chip-family-hero-v2.webp" loading="lazy" decoding="async" alt="Xilume interface controller IC family">
+            <div class="home-category-copy"><span>03</span><small>OEM INTEGRATION</small><h3>Interface ICs</h3><p>Integrated interface control for OEM boards and compact connected systems.</p><b>Explore family <i aria-hidden="true">→</i></b></div>
+          </a>
+
+          <a class="home-category-panel" href="products/power-management/">
+            <img src="images/smbus-application.webp" loading="lazy" decoding="async" alt="Xilume smart-battery and power integration hardware">
+            <div class="home-category-copy"><span>04</span><small>BATTERY &amp; POWER</small><h3>Power Management</h3><p>Battery data, charging control, and system-level power visibility for mobile equipment.</p><b>Explore family <i aria-hidden="true">→</i></b></div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="featured-product-section">
+    <section class="home-solutions" id="solutions" aria-labelledby="home-solutions-title">
       <div class="container">
-        <div class="corporate-section-head compact">
-          <div>
-            <p class="section-label">FEATURED PRODUCTS</p>
-            <h2>Hardware for connected systems.</h2>
-          </div>
-          <a class="text-link-large" href="products/">View complete catalog →</a>
-        </div>
+        <header class="home-flow-heading">
+          <div><p class="section-label">SOLUTIONS</p><h2 id="home-solutions-title">Start with the system problem.</h2></div>
+          <div><p>Choose by the host connection, the field interfaces, and where the hardware must live.</p><a href="solutions/">View all solutions <span aria-hidden="true">→</span></a></div>
+        </header>
 
-        <div class="featured-product-grid">
-          <a class="featured-product-main" href="products/mini-pcie-dual-can-fd/">
-            <div class="featured-product-image">
-              <img src="images/dual-mini-pcie-canfd-front-v4.webp" alt="Xilume Dual Mini PCIe CAN FD interface module">
-            </div>
-            <div class="featured-product-copy">
-              <span>MINI PCIe INTERFACE MODULE</span>
-              <h3>Dual CAN FD for embedded computers</h3>
-              <p>Two independent CAN / CAN FD channels up to 8 Mbps, with signal isolation and Windows and Linux drivers.</p>
-              <b>View product →</b>
+        <div class="home-solution-grid">
+          <a class="home-solution-card" href="solutions/#embedded-can-fd-expansion">
+            <figure><img src="images/dual-mini-pcie-canfd-front-v4.webp" loading="lazy" decoding="async" alt="Xilume Dual Mini PCIe CAN FD module"></figure>
+            <div class="home-solution-copy">
+              <small>01 · MINI PCIE HOST</small>
+              <span>EMBEDDED CAN FD EXPANSION</span>
+              <h3>Need CAN FD inside an embedded PC?</h3>
+              <p>Add two isolated CAN and CAN FD channels through a compatible Mini PCIe slot—without an external adapter.</p>
+              <div><small>RECOMMENDED HARDWARE</small><strong>Dual Mini PCIe CAN FD</strong></div>
+              <b>View solution <i aria-hidden="true">→</i></b>
             </div>
           </a>
 
-          <a class="featured-product-secondary" href="products/usb-smbus/">
-            <div class="featured-product-image">
-              <img src="images/smbus-application.webp" alt="Smart battery data reader and software">
-            </div>
-            <div class="featured-product-copy">
-              <span>SMART BATTERY INTERFACE</span>
-              <h3>Battery data for Windows and Linux</h3>
-              <p>Charge, capacity, temperature, runtime, and pack status through a USB-connected module.</p>
-              <b>View product →</b>
+          <a class="home-solution-card" href="solutions/#can-fd-serial-expansion">
+            <figure><img src="images/8hub-embedded-top-dark-v1.webp" loading="lazy" decoding="async" alt="Xilume 8Hub Embedded multi-interface board"></figure>
+            <div class="home-solution-copy">
+              <small>02 · INTERNAL USB HOST</small>
+              <span>CAN FD + SERIAL PORT EXPANSION</span>
+              <h3>Need CAN FD and serial ports in one machine?</h3>
+              <p>Bring two CAN FD, four RS-485, and two RS-232 channels into one robot or industrial machine.</p>
+              <div><small>RECOMMENDED HARDWARE</small><strong>8Hub Embedded</strong></div>
+              <b>View solution <i aria-hidden="true">→</i></b>
             </div>
           </a>
         </div>
-      </div>
-    </section>
-
-    <section class="container application-section" id="applications">
-      <div class="corporate-section-head">
-        <div>
-          <p class="section-label">APPLICATIONS</p>
-          <h2>Designed for real embedded and industrial systems.</h2>
-        </div>
-        <a class="text-link-large" href="applications/">View all applications →</a>
-      </div>
-
-      <div class="application-visual-grid">
-        <article class="application-visual-card application-wide">
-          <img src="images/robotics-application.svg" alt="Robotics and motion-control system">
-          <div><small>ROBOTICS &amp; MOTION</small><h3>Reliable field communication for moving systems.</h3><p>CAN FD, RS-485, status I/O, and host connectivity for robot joints, mobile platforms, and control equipment.</p></div>
-        </article>
-        <article class="application-visual-card">
-          <img src="images/interface-conversion-hero.webp" alt="Industrial interface and protocol hardware">
-          <div><small>INDUSTRIAL CONNECTIVITY</small><h3>Bridge computers and field buses.</h3><p>Connect USB and embedded hosts to independent industrial communication channels.</p></div>
-        </article>
-        <article class="application-visual-card">
-          <img src="images/smbus-application.webp" alt="Smart battery data monitoring application">
-          <div><small>BATTERY SYSTEMS</small><h3>Make smart-battery data visible.</h3><p>Prepare pack-reported capacity, charging state, status, and diagnostics for Windows and Linux integration.</p></div>
-        </article>
       </div>
     </section>
 
