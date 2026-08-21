@@ -159,6 +159,7 @@
     let activeEntry = null;
     let closeMegaMenuTimer;
     let megaMenuScrim;
+    let restoringMegaMenuFocus = false;
 
     const closeMegaMenu = ({ restoreFocus = false } = {}) => {
       window.clearTimeout(closeMegaMenuTimer);
@@ -171,7 +172,11 @@
         entry.panel.inert = true;
       });
       megaMenuScrim?.setAttribute("aria-hidden", "true");
-      if (restoreFocus) entryToClose?.trigger.focus({ preventScroll: true });
+      if (restoreFocus && entryToClose) {
+        restoringMegaMenuFocus = true;
+        entryToClose.trigger.focus({ preventScroll: true });
+        restoringMegaMenuFocus = false;
+      }
     };
 
     const openMegaMenu = (entry) => {
@@ -214,7 +219,9 @@
         entry.trigger.addEventListener("mouseleave", queueMegaMenuClose);
         entry.panel.addEventListener("mouseenter", () => openMegaMenu(entry));
         entry.panel.addEventListener("mouseleave", queueMegaMenuClose);
-        entry.trigger.addEventListener("focus", () => openMegaMenu(entry));
+        entry.trigger.addEventListener("focus", () => {
+          if (!restoringMegaMenuFocus) openMegaMenu(entry);
+        });
         entry.panel.addEventListener("focusin", () => openMegaMenu(entry));
         entry.trigger.addEventListener("keydown", (event) => {
           if (event.key !== "ArrowDown") return;
