@@ -9318,13 +9318,13 @@ footer {
   flex-direction:column;
   align-items:flex-start;
   justify-content:flex-end;
-  padding:36px 34px 34px;
+  padding:36px 25px 34px;
 }
 
 .home-category-copy > span {
   position:absolute;
   top:31px;
-  left:34px;
+  left:25px;
   color:#d7e2ea;
   font-size:12px;
   font-weight:650;
@@ -9342,10 +9342,21 @@ footer {
   max-width:460px;
   margin:12px 0 0;
   color:#fff;
-  font-size:clamp(25px,2.5vw,36px);
+  font-size:24px;
   font-weight:460;
   letter-spacing:-.035em;
   line-height:1.08;
+}
+
+.home-category-panel.is-featured .home-category-copy h3,
+.home-category-panel:hover .home-category-copy h3,
+.home-category-panel:focus-visible .home-category-copy h3 {
+  font-size:clamp(30px,2.5vw,36px);
+}
+
+.home-category-panels:hover .home-category-panel.is-featured:not(:hover) .home-category-copy h3,
+.home-category-panels:focus-within .home-category-panel.is-featured:not(:focus-visible) .home-category-copy h3 {
+  font-size:24px;
 }
 
 .home-category-copy p {
@@ -9553,7 +9564,16 @@ footer {
     left:25px;
   }
   .home-category-copy h3 {
-    font-size:27px;
+    font-size:22px;
+  }
+  .home-category-panel.is-featured .home-category-copy h3,
+  .home-category-panel:hover .home-category-copy h3,
+  .home-category-panel:focus-visible .home-category-copy h3 {
+    font-size:30px;
+  }
+  .home-category-panels:hover .home-category-panel.is-featured:not(:hover) .home-category-copy h3,
+  .home-category-panels:focus-within .home-category-panel.is-featured:not(:focus-visible) .home-category-copy h3 {
+    font-size:22px;
   }
 }
 
@@ -9591,6 +9611,14 @@ footer {
     margin-top:15px;
     opacity:1;
     transform:none;
+  }
+  .home-category-copy h3,
+  .home-category-panel.is-featured .home-category-copy h3,
+  .home-category-panel:hover .home-category-copy h3,
+  .home-category-panel:focus-visible .home-category-copy h3,
+  .home-category-panels:hover .home-category-panel.is-featured:not(:hover) .home-category-copy h3,
+  .home-category-panels:focus-within .home-category-panel.is-featured:not(:focus-visible) .home-category-copy h3 {
+    font-size:27px;
   }
   .home-category-copy > b,
   .home-category-panel.is-featured .home-category-copy > b,
