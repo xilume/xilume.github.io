@@ -91,7 +91,9 @@
       tab.tabIndex = isActive ? 0 : -1;
     });
 
-    tabs[activeIndex]?.scrollIntoView?.({ behavior: announce && !reducedMotion.matches ? "smooth" : "auto", block: "nearest", inline: "nearest" });
+    if (announce) {
+      tabs[activeIndex]?.scrollIntoView?.({ behavior: !reducedMotion.matches ? "smooth" : "auto", block: "nearest", inline: "nearest" });
+    }
 
     if (announce && status) {
       status.textContent = slides[activeIndex].getAttribute("aria-label") || `Featured product ${activeIndex + 1}`;
