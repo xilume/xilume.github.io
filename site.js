@@ -50,25 +50,25 @@
           <div class="product-mega-group-heading">
             <small>03</small>
             <h2 id="product-family-ics"><a href="/products/interface-ics/">Interface ICs</a></h2>
-            <p>CAN FD &amp; serial interface ICs</p>
+            <p>Featured XL devices &amp; interface families</p>
           </div>
           <div class="product-mega-links">
-            <a href="/products/interface-ics/#xl1326">
-              <span>6 Serial + 2 CAN FD</span>
-              <strong>XL1326</strong>
-              <small>Mixed-interface channel configuration</small>
+            <a href="/products/interface-ics/#family-mixed">
+              <span>Serial + CAN FD</span>
+              <strong>Mixed-interface ICs</strong>
+              <small>Integrated multi-bus connectivity</small>
               <b aria-hidden="true">→</b>
             </a>
-            <a href="/products/interface-ics/#xl1108">
-              <span>8 Serial</span>
-              <strong>XL1108</strong>
-              <small>Multi-channel serial configuration</small>
+            <a href="/products/interface-ics/#family-serial">
+              <span>Multi-channel serial</span>
+              <strong>Serial interface ICs</strong>
+              <small>Scalable serial channel integration</small>
               <b aria-hidden="true">→</b>
             </a>
-            <a href="/products/interface-ics/#xl1220">
-              <span>2 CAN FD</span>
-              <strong>XL1220</strong>
-              <small>Dual-channel CAN FD configuration</small>
+            <a href="/products/interface-ics/#family-canfd">
+              <span>CAN FD</span>
+              <strong>CAN FD interface ICs</strong>
+              <small>Dedicated high-speed CAN connectivity</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>
