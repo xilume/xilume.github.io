@@ -24,8 +24,8 @@
               <b aria-hidden="true">→</b>
             </a>
             <a href="/products/8hub-embedded/">
-              <span>CAN FD + Serial Modules</span>
-              <strong>8Hub Embedded</strong>
+              <span>Embedded 8-Channel Communication Module</span>
+              <strong>Xilume XE826</strong>
               <small>2 CAN FD + 6 serial ports via internal USB</small>
               <b aria-hidden="true">→</b>
             </a>
@@ -39,8 +39,8 @@
           </div>
           <div class="product-mega-links">
             <a href="/products/8hub/">
-              <span>CAN FD + Serial Diagnostic Interface</span>
-              <strong>Xilume 8Hub</strong>
+              <span>Desktop 8-Channel Communication Interface</span>
+              <strong>Xilume Octant</strong>
               <small>Portable access to CAN FD, RS-485, and RS-232</small>
               <b aria-hidden="true">→</b>
             </a>
@@ -116,7 +116,7 @@
             <span>CAN FD + Serial Port Expansion</span>
             <strong>Need CAN FD and serial ports in one machine?</strong>
             <small>Consolidate CAN FD, RS-485, and RS-232 behind one internal USB connection.</small>
-            <em>8Hub Embedded</em>
+            <em>Xilume XE826</em>
             <b aria-hidden="true">→</b>
           </a>
         </div>

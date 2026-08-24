@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
-  <title id="title">Xilume 8Hub connection architecture</title>
-  <desc id="desc">One USB host connects through Xilume 8Hub to two CAN FD, four RS-485, and two RS-232 channels.</desc>
+  <title id="title">Xilume Octant connection architecture</title>
+  <desc id="desc">One USB host connects through Xilume Octant to two CAN FD, four RS-485, and two RS-232 channels.</desc>
   <defs>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path d="M48 0H0V48" fill="none" stroke="#7ca7c8" stroke-opacity=".10"/>
@@ -33,7 +33,7 @@
 
     <rect x="416" y="156" width="358" height="408" rx="18" fill="url(#hub)" stroke="#2474ad" stroke-width="2"/>
     <rect x="451" y="196" width="288" height="138" rx="9" fill="#07101a" stroke="#284b67"/>
-    <text x="595" y="253" fill="#f3f8fc" font-size="32" font-weight="700" text-anchor="middle">Xilume 8Hub</text>
+    <text x="595" y="253" fill="#f3f8fc" font-size="32" font-weight="700" text-anchor="middle">Xilume Octant</text>
     <text x="595" y="287" fill="#62b5f2" font-size="12" font-weight="700" letter-spacing="3" text-anchor="middle">MULTI-INTERFACE HUB</text>
     <g fill="#0a1722" stroke="#335c78">
       <rect x="461" y="374" width="71" height="60" rx="6"/><rect x="541" y="374" width="71" height="60" rx="6"/><rect x="621" y="374" width="71" height="60" rx="6"/><rect x="701" y="374" width="28" height="60" rx="6"/>
@@ -63,6 +63,6 @@
     <text x="979" y="517" fill="#eaf5fc" font-size="20" font-weight="700">RS-232</text>
     <text x="913" y="552" fill="#8298a9" font-size="13">Service and legacy equipment</text>
 
-    <text x="600" y="676" fill="#5f7688" font-size="12" text-anchor="middle" letter-spacing="2">XILUME 8HUB · MIXED-BUS INTERFACE</text>
+    <text x="600" y="676" fill="#5f7688" font-size="12" text-anchor="middle" letter-spacing="2">XILUME OCTANT · DESKTOP COMMUNICATION INTERFACE</text>
   </g>
 </svg>

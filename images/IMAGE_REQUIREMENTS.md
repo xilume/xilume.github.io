@@ -92,9 +92,9 @@ The new product pages deliberately separate factual system diagrams from real-pr
 photography. Keep each labeled slot empty until the corresponding hardware exists.
 
 - Controller IC: `products/controller-ic-package.webp` — released package marking and pin-1 orientation
-- Xilume 8Hub Hero: `products/xilume-8hub-front.webp` — front or three-quarter enclosure view, 3:2
-- Xilume 8Hub ports: `products/xilume-8hub-ports.webp` — top view with readable connector labels
-- Xilume 8Hub application: `products/xilume-8hub-bench.webp` — real mixed-bus bench installation
+- Xilume Octant Hero: `products/xilume-8hub-front.webp` — front or three-quarter enclosure view, 3:2
+- Xilume Octant ports: `products/xilume-8hub-ports.webp` — top view with readable connector labels
+- Xilume Octant application: `products/xilume-8hub-bench.webp` — real mixed-bus bench installation
 - Battery Display Module: `products/xilume-battery-display-module.webp` — PCB plus final battery and host wiring
 - Dual Mini PCIe CAN FD: `products/xilume-dual-mini-pcie-can-fd.webp` — final PCB top and three-quarter views
 
