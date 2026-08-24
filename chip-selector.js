@@ -6,11 +6,11 @@
   const cards = Array.from(finder.querySelectorAll("[data-chip-card]"));
   const note = finder.querySelector("[data-chip-result-note]");
   const labels = {
-    all: "Browse the LX series.",
-    canfd: "CAN FD controllers",
-    can: "Classic CAN controllers",
-    multi: "Multi-interface controllers",
-    battery: "Battery and power controllers"
+    all: "Browse the XL interface IC portfolio.",
+    canfd: "CAN FD interface ICs",
+    can: "CAN interface ICs",
+    multi: "Mixed-interface ICs",
+    battery: "Battery and power products"
   };
 
   const selectFilter = (filter, updateHash = false) => {

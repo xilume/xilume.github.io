@@ -11,7 +11,7 @@ The site is structured as an expandable product catalog organized by product are
 - `/` — brand and catalog overview
 - `/products/` — product catalog
 - `/applications/` — robotics, industrial connectivity, and smart-battery application paths
-- `/chip-selector/` — application-based selector for the four Xilume LX controller platforms
+- `/products/interface-ics/` — XL interface IC overview: XL1326 combines 6 serial + 2 CAN FD, XL1108 provides 8 serial, and XL1220 provides 2 CAN FD
 - `/documentation/` — engineering and integration resources
 - `/products/interface-conversion/` — interface product area and product finder
 - `/products/8hub/` — target architecture for two CAN FD, four RS-485, and two RS-232 channels through one USB host

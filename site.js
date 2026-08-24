@@ -49,16 +49,28 @@
         <section class="product-mega-group" aria-labelledby="product-family-ics">
           <div class="product-mega-group-heading">
             <small>03</small>
-            <h2 id="product-family-ics">Interface ICs</h2>
-            <p>CAN FD &amp; serial controllers</p>
+            <h2 id="product-family-ics"><a href="/products/interface-ics/">Interface ICs</a></h2>
+            <p>CAN FD &amp; serial interface ICs</p>
           </div>
           <div class="product-mega-links">
-            <div class="product-mega-product product-mega-product-planned">
-              <span>Dual CAN FD + 6-UART Controller</span>
+            <a href="/products/interface-ics/#xl1326">
+              <span>6 Serial + 2 CAN FD</span>
               <strong>XL1326</strong>
-              <small>Product page in development</small>
-              <em>IN DEVELOPMENT</em>
-            </div>
+              <small>Mixed-interface channel configuration</small>
+              <b aria-hidden="true">→</b>
+            </a>
+            <a href="/products/interface-ics/#xl1108">
+              <span>8 Serial</span>
+              <strong>XL1108</strong>
+              <small>Multi-channel serial configuration</small>
+              <b aria-hidden="true">→</b>
+            </a>
+            <a href="/products/interface-ics/#xl1220">
+              <span>2 CAN FD</span>
+              <strong>XL1220</strong>
+              <small>Dual-channel CAN FD configuration</small>
+              <b aria-hidden="true">→</b>
+            </a>
           </div>
         </section>
         <section class="product-mega-group" aria-labelledby="product-family-power">
@@ -300,5 +312,30 @@
     }
 
     handleViewport();
+  });
+})();
+
+(() => {
+  document.querySelectorAll("[data-production-toggle]").forEach((button) => {
+    const frame = button.closest(".ic-production-video-frame");
+    const video = frame && frame.querySelector("video");
+    if (!video) return;
+
+    const icon = button.querySelector("[data-production-icon]");
+    const label = button.querySelector("[data-production-label]");
+    const sync = () => {
+      const paused = video.paused;
+      if (icon) icon.textContent = paused ? "▶" : "Ⅱ";
+      if (label) label.textContent = paused ? "Play film" : "Pause film";
+      button.setAttribute("aria-label", paused ? "Play production film" : "Pause production film");
+    };
+
+    button.addEventListener("click", () => {
+      if (video.paused) video.play().catch(sync);
+      else video.pause();
+    });
+    video.addEventListener("play", sync);
+    video.addEventListener("pause", sync);
+    sync();
   });
 })();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Xilume controller ICs and interface hardware for CAN FD, industrial communication, and smart-battery systems.">
+  <meta name="description" content="Xilume interface ICs and hardware for serial, CAN FD, industrial communication, and smart-battery systems.">
   <title>Xilume</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
@@ -11,14 +11,14 @@
   <meta name="application-name" content="Xilume">
   <meta name="apple-mobile-web-app-title" content="Xilume">
   <meta name="theme-color" content="#020712">
-  <link rel="preload" as="image" href="/images/chip-family-hero-v2.webp">
+  <link rel="preload" as="image" href="/images/chip-family-hero-xl-v1.webp">
   <link rel="stylesheet" href="styles.css?v=20260821-6">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/">
   <meta property="og:site_name" content="Xilume">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Xilume">
-  <meta property="og:description" content="Xilume controller ICs, interface modules, design resources, and embedded hardware for reliable connected systems.">
+  <meta property="og:description" content="Xilume XL interface ICs, interface modules, design resources, and embedded hardware for reliable connected systems.">
   <meta property="og:url" content="https://xilume.co/">
   <meta property="og:image" content="https://xilume.co/images/8hub/8hub-home-hero-v5.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <script defer src="/site.js?v=20260821-2"></script>
+  <script defer src="/site.js?v=20260824-1"></script>
 </head>
 <body>
   <header class="site-header corporate-header">
@@ -79,16 +79,21 @@
     <section class="product-hero-carousel" data-hero-carousel aria-label="Featured Xilume products" aria-roledescription="carousel">
       <h1 class="sr-only">Xilume</h1>
       <div class="product-hero-stage">
-        <article class="product-hero-slide product-hero-chip is-active" data-hero-slide role="tabpanel" aria-label="1 of 5: Xilume controller portfolio">
-          <img class="chip-hero-backdrop" src="images/chip-family-hero-v2.webp" data-hero-src="images/chip-family-hero-v2.webp" width="1672" height="941" fetchpriority="high" alt="Xilume LX controllers in standard IC packages">
+        <article class="product-hero-slide product-hero-chip is-active" data-hero-slide role="tabpanel" aria-label="1 of 5: Xilume XL interface ICs">
+          <img class="chip-hero-backdrop" src="images/chip-family-hero-xl-v1.webp" data-hero-src="images/chip-family-hero-xl-v1.webp" width="1672" height="941" fetchpriority="high" alt="Xilume XL1326, XL1108, and XL1220 interface ICs">
           <div class="chip-hero-shade" aria-hidden="true"></div>
           <div class="container chip-hero-layout chip-hero-layout-simple">
             <div class="chip-hero-copy">
-              <p class="product-hero-kicker">XILUME SILICON</p>
-              <h2>Controllers for<br><span>connected systems.</span></h2>
-              <p>CAN. Industrial interfaces. Battery integration.</p>
+              <p class="product-hero-kicker">XILUME INTERFACE ICS</p>
+              <h2>Serial and CAN FD.<br><span>Choose your mix.</span></h2>
+              <p>Three channel configurations for serial, CAN FD, or both.</p>
+              <div class="chip-hero-models" aria-label="XL interface IC channel configurations">
+                <span>XL1326 · 6 SERIAL + 2 CAN FD</span>
+                <span>XL1108 · 8 SERIAL</span>
+                <span>XL1220 · 2 CAN FD</span>
+              </div>
               <div class="hero-actions">
-                <a class="primary-button" href="products/interface-ics/">Explore interface ICs</a>
+                <a class="primary-button" href="products/interface-ics/">Explore XL interface ICs</a>
                 <a class="hero-text-link" href="contact/">Talk to engineering <span aria-hidden="true">→</span></a>
               </div>
             </div>
@@ -171,7 +176,7 @@
       <div class="product-hero-controls">
         <button class="hero-arrow hero-arrow-previous" type="button" data-hero-previous aria-label="Previous featured product"><span aria-hidden="true">‹</span></button>
         <div class="container product-hero-selector" role="tablist" aria-label="Choose a featured product">
-          <button class="hero-product-tab is-active" type="button" role="tab" data-hero-select="0" aria-selected="true"><small>01</small><span>Xilume Silicon</span><i aria-hidden="true"></i></button>
+          <button class="hero-product-tab is-active" type="button" role="tab" data-hero-select="0" aria-selected="true"><small>01</small><span>XL Interface ICs</span><i aria-hidden="true"></i></button>
           <button class="hero-product-tab" type="button" role="tab" data-hero-select="1" aria-selected="false" tabindex="-1"><small>02</small><span>Xilume 8Hub</span><i aria-hidden="true"></i></button>
           <button class="hero-product-tab" type="button" role="tab" data-hero-select="2" aria-selected="false" tabindex="-1"><small>03</small><span>8Hub Embedded</span><i aria-hidden="true"></i></button>
           <button class="hero-product-tab" type="button" role="tab" data-hero-select="3" aria-selected="false" tabindex="-1"><small>04</small><span>Battery Module</span><i aria-hidden="true"></i></button>
@@ -202,8 +207,8 @@
           </a>
 
           <a class="home-category-panel" href="products/interface-ics/">
-            <img src="images/chip-family-hero-v2.webp" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-deferred-image alt="Xilume interface controller IC family">
-            <div class="home-category-copy"><span>03</span><small>OEM INTEGRATION</small><h3>Interface ICs</h3><p>Integrated interface control for OEM boards and compact connected systems.</p><b>Explore family <i aria-hidden="true">→</i></b></div>
+            <img src="images/chip-family-hero-xl-v1.webp" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-deferred-image alt="Xilume XL1326, XL1108, and XL1220 interface IC family">
+            <div class="home-category-copy"><span>03</span><small>OEM INTEGRATION</small><h3>Interface ICs</h3><p>Serial, CAN FD, and mixed-interface channel configurations for OEM systems.</p><b>Explore family <i aria-hidden="true">→</i></b></div>
           </a>
 
           <a class="home-category-panel" href="products/power-management/">
@@ -256,7 +261,7 @@
       <div class="engineering-copy">
         <p class="section-label">About Xilume</p>
         <h2>Products supported beyond the hardware.</h2>
-        <p>Xilume combines controller ICs, interface modules, host software, and technical resources.</p>
+        <p>Xilume combines interface ICs, interface modules, host software, and technical resources.</p>
         <p>Product support includes electrical information, pin definitions, reference circuits, host protocols, drivers, and integration guidance.</p>
         <div class="engineering-links">
           <a href="about/">About Xilume →</a>
@@ -276,13 +281,13 @@
     <div class="container footer-grid">
       <div>
         <div class="brand footer-brand"><img src="/images/xilume-wordmark-384.webp" width="384" height="149" loading="lazy" decoding="async" alt="Xilume"></div>
-        <p>Controller ICs and interface hardware for connected systems.</p>
+        <p>Interface ICs and hardware for connected systems.</p>
       </div>
       <div><h3>Products</h3><a href="products/">Browse all products</a><a href="products/embedded-communication/">Embedded communication</a><a href="products/interface-ics/">Interface ICs</a></div>
       <div><h3>Explore</h3><a href="applications/">Applications</a><a href="solutions/">Solutions</a><a href="documentation/">Documentation</a></div>
       <div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Controller ICs · Interface modules · System integration</span></div>
+    <div class="container footer-bottom"><span>© 2026 Xilume</span><span>Interface ICs · Interface modules · System integration</span></div>
   </footer>
   <script src="hero.js?v=20260821-3"></script>
 </body>
