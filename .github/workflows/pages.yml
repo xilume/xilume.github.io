@@ -26,7 +26,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html styles.css finder.js chip-selector.js hero.js site.js favicon.svg favicon.ico xilume-icon-96.png xilume-icon-180.png xilume-icon-192.png xilume-icon-512.png site.webmanifest brand-mark-48.png brand-mark-96.png brand-mark-180.png brand-mark-192.png brand-mark-512.png .nojekyll CNAME robots.txt sitemap.xml google9b5d5cd94eca340c.html _site/
-          cp -R products images contact about documentation chip-selector applications _site/
+          cp -R products images contact about documentation chip-selector applications solutions _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
