@@ -1,6 +1,7 @@
 (() => {
   const carousel = document.querySelector("[data-hero-carousel]");
   if (!carousel) return;
+  const isSimplifiedChinese = document.documentElement.lang.toLowerCase().startsWith("zh");
 
   const slides = Array.from(carousel.querySelectorAll("[data-hero-slide]"));
   const tabs = Array.from(carousel.querySelectorAll("[data-hero-select]"));
@@ -84,7 +85,7 @@
   tabs.forEach((tab, index) => {
     tab.id = `featured-product-tab-${index + 1}`;
     tab.setAttribute("aria-controls", slides[index].id);
-    tab.setAttribute("aria-label", slides[index].getAttribute("aria-label") || `Featured product ${index + 1}`);
+    tab.setAttribute("aria-label", slides[index].getAttribute("aria-label") || (isSimplifiedChinese ? `精选产品 ${index + 1}` : `Featured product ${index + 1}`));
     slides[index].setAttribute("aria-labelledby", tab.id);
   });
 
@@ -119,16 +120,16 @@
     if (reducedMotion.matches) {
       autoplayButton.disabled = true;
       autoplayButton.setAttribute("aria-pressed", "true");
-      autoplayButton.setAttribute("aria-label", "Automatic product rotation disabled by reduced-motion preference");
+      autoplayButton.setAttribute("aria-label", isSimplifiedChinese ? "已根据减少动态效果偏好关闭产品自动轮播" : "Automatic product rotation disabled by reduced-motion preference");
       if (autoplayIcon) autoplayIcon.textContent = "—";
-      if (autoplayLabel) autoplayLabel.textContent = "Motion off";
+      if (autoplayLabel) autoplayLabel.textContent = isSimplifiedChinese ? "动态已关闭" : "Motion off";
       return;
     }
     autoplayButton.disabled = false;
     autoplayButton.setAttribute("aria-pressed", String(userPaused));
-    autoplayButton.setAttribute("aria-label", userPaused ? "Resume automatic product rotation" : "Pause automatic product rotation");
+    autoplayButton.setAttribute("aria-label", isSimplifiedChinese ? (userPaused ? "继续自动轮播产品" : "暂停自动轮播产品") : (userPaused ? "Resume automatic product rotation" : "Pause automatic product rotation"));
     if (autoplayIcon) autoplayIcon.textContent = userPaused ? "▶" : "Ⅱ";
-    if (autoplayLabel) autoplayLabel.textContent = userPaused ? "Play" : "Pause";
+    if (autoplayLabel) autoplayLabel.textContent = isSimplifiedChinese ? (userPaused ? "播放" : "暂停") : (userPaused ? "Play" : "Pause");
   };
 
   const scheduleNext = () => {
@@ -154,7 +155,7 @@
 
     if (!imageReady) {
       carousel.classList.remove("is-preparing-slide");
-      if (announce && status) status.textContent = "This product image is temporarily unavailable.";
+      if (announce && status) status.textContent = isSimplifiedChinese ? "该产品图片暂时无法显示。" : "This product image is temporarily unavailable.";
       if (canAutoplay()) {
         const fallbackIndex = nextAvailableIndex(targetIndex + 1);
         if (fallbackIndex !== activeIndex) {
@@ -188,7 +189,7 @@
     }
 
     if (announce && status) {
-      status.textContent = slides[activeIndex].getAttribute("aria-label") || `Featured product ${activeIndex + 1}`;
+      status.textContent = slides[activeIndex].getAttribute("aria-label") || (isSimplifiedChinese ? `精选产品 ${activeIndex + 1}` : `Featured product ${activeIndex + 1}`);
     }
 
     scheduleNext();

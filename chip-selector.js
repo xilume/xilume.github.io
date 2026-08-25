@@ -5,7 +5,14 @@
   const buttons = Array.from(finder.querySelectorAll("[data-chip-filter]"));
   const cards = Array.from(finder.querySelectorAll("[data-chip-card]"));
   const note = finder.querySelector("[data-chip-result-note]");
-  const labels = {
+  const isSimplifiedChinese = document.documentElement.lang.toLowerCase().startsWith("zh");
+  const labels = isSimplifiedChinese ? {
+    all: "浏览 XL 接口芯片产品组合。",
+    canfd: "CAN FD 接口芯片",
+    can: "CAN 接口芯片",
+    multi: "混合接口芯片",
+    battery: "电池与电源产品"
+  } : {
     all: "Browse the XL interface IC portfolio.",
     canfd: "CAN FD interface ICs",
     can: "CAN interface ICs",
