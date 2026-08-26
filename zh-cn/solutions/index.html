@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="查找适合嵌入式 CAN FD 扩展，或在设备内部集成 CAN FD、RS-485 与 RS-232 的熙联迈产品">
-  <title>嵌入式连接解决方案 | 熙联迈</title>
+  <meta name="description" content="选择熙联迈嵌入式接口硬件，或将 XL 接口芯片直接集成到自有产品设计中">
+  <title>嵌入式连接与芯片集成方案 | 熙联迈</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
   <link rel="stylesheet" href="/styles.css?v=20260826-1">
-  <link rel="stylesheet" href="/solutions/solutions.css?v=20260821-1">
-  <script defer src="/site.js?v=20260826-1"></script>
+  <link rel="stylesheet" href="/solutions/solutions.css?v=20260826-2">
+  <script defer src="/site.js?v=20260826-2"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/zh-cn/solutions/">
   <link rel="alternate" hreflang="en" href="https://xilume.co/solutions/">
@@ -17,8 +17,8 @@
   <link rel="alternate" hreflang="x-default" href="https://xilume.co/solutions/">
   <meta property="og:site_name" content="熙联迈">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="嵌入式连接解决方案 | 熙联迈">
-  <meta property="og:description" content="按主机接口、现场网络和安装位置选择熙联迈硬件">
+  <meta property="og:title" content="嵌入式连接与芯片集成方案 | 熙联迈">
+  <meta property="og:description" content="选择接口模块，或将 XL 接口芯片集成到自有 PCB">
   <meta property="og:url" content="https://xilume.co/zh-cn/solutions/">
   <meta property="og:image" content="https://xilume.co/images/8hub-embedded-top-dark-v1.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +30,7 @@
         "@type": "CollectionPage",
         "name": "熙联迈嵌入式连接解决方案",
         "url": "https://xilume.co/zh-cn/solutions/",
-        "description": "围绕实际问题选择嵌入式 CAN FD，以及 CAN FD 与串行混合连接方案",
+        "description": "按实际需求选择嵌入式 CAN FD、CAN FD 与串行混合连接及接口芯片集成方案",
         "mainEntity": {
           "@type": "ItemList",
           "itemListElement": [
@@ -45,6 +45,12 @@
               "position": 2,
               "name": "CAN FD + 串口扩展",
               "url": "https://xilume.co/zh-cn/solutions/#can-fd-serial-expansion"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "接口芯片集成",
+              "url": "https://xilume.co/zh-cn/solutions/#interface-ic-integration"
             }
           ]
         }
@@ -83,12 +89,12 @@
         <div class="sl-hero-copy">
           <p class="sl-kicker">解决方案</p>
           <h1>按接口需求选择方案</h1>
-          <p class="sl-hero-lead">根据主机接口、现场网络和安装位置选择合适的产品</p>
+          <p class="sl-hero-lead">按主机接口、所需通道和产品形态选择接口模块，或将 XL 接口芯片集成到自有 PCB</p>
           <div class="sl-hero-criteria" aria-label="解决方案选择条件">
             <span>主机连接</span>
             <span>现场接口</span>
             <span>安装位置</span>
-            <span>操作系统</span>
+            <span>产品形态</span>
           </div>
         </div>
       </div>
@@ -112,6 +118,12 @@
             <h3>需要在一台设备中同时使用 CAN FD 和串口？</h3>
             <p>通过一条内部连接，在机器人或工业设备内接入两路 CAN FD、四路 RS-485 和两路 RS-232</p>
             <span class="sl-choice-result">推荐：XE826 <b aria-hidden="true">→</b></span>
+          </a>
+          <a class="sl-choice-card" href="#interface-ic-integration">
+            <small>03 · 自有 PCB</small>
+            <h3>需要把串行或 CAN FD 直接做到自己的产品中？</h3>
+            <p>将 XL 接口芯片集成到自有 PCB，并按接口类型与通道数量选择型号</p>
+            <span class="sl-choice-result">推荐：XL 接口芯片系列 <b aria-hidden="true">→</b></span>
           </a>
         </div>
       </div>
@@ -217,9 +229,66 @@
       </div>
     </section>
 
+    <section class="sl-solution" id="interface-ic-integration" aria-labelledby="interface-ic-solution-heading">
+      <div class="sl-shell">
+        <div class="sl-solution-intro">
+          <span class="sl-solution-index">03 / 解决方案</span>
+          <div>
+            <p class="sl-kicker">接口芯片集成</p>
+            <h2 id="interface-ic-solution-heading">把所需接口直接做到自己的产品中</h2>
+            <p>面向自有 PCB、控制器和嵌入式设备设计，可根据串行与 CAN FD 通道组合选择 XL 接口芯片</p>
+          </div>
+        </div>
+
+        <div class="sl-solution-layout">
+          <div class="sl-solution-detail">
+            <p class="sl-fit-title">适用条件</p>
+            <dl class="sl-fit-list">
+              <div><dt>产品</dt><dd>正在设计或改版自有 PCB</dd></div>
+              <div><dt>接口</dt><dd>需要将串行、CAN FD 或两者直接集成到板上</dd></div>
+              <div><dt>选型</dt><dd>根据接口类型与通道数量选择型号</dd></div>
+              <div><dt>设计</dt><dd>向熙联迈确认封装、电气参数和配套电路要求</dd></div>
+            </dl>
+
+            <div class="sl-architecture" aria-label="接口芯片产品集成路径">
+              <small>集成路径</small>
+              <div class="sl-flow">
+                <div class="sl-flow-node"><small>产品设计</small><strong>自有 PCB</strong></div>
+                <div class="sl-flow-arrow" aria-hidden="true">›</div>
+                <div class="sl-flow-node is-xilume"><small>接口芯片</small><strong>按通道组合选择 XL 器件</strong></div>
+                <div class="sl-flow-arrow" aria-hidden="true">›</div>
+                <div class="sl-flow-node"><small>接口</small><strong>串行、CAN FD 或两者</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <article class="sl-product-recommendation sl-ic-recommendation">
+            <div class="sl-product-copy">
+              <small>推荐系列</small>
+              <div class="sl-product-title-row"><h3>XL 接口芯片</h3><span>用于自有 PCB</span></div>
+              <p class="sl-ic-summary">根据产品所需的接口类型和通道数量选择型号</p>
+              <div class="sl-ic-table-wrap" tabindex="0" role="region" aria-label="可横向滚动的 XL 接口芯片通道对比表">
+                <table class="sl-ic-table">
+                  <caption class="sr-only">XL 接口芯片通道对比</caption>
+                  <thead><tr><th scope="col">型号</th><th scope="col">串行</th><th scope="col">CAN FD</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row"><a href="/zh-cn/products/interface-ics/#xl1326">XL1326</a><small>混合接口</small></th><td>6 路</td><td>2 路</td></tr>
+                    <tr><th scope="row"><a href="/zh-cn/products/interface-ics/#xl1108">XL1108</a><small>串行</small></th><td>8 路</td><td>&#8212;</td></tr>
+                    <tr><th scope="row"><a href="/zh-cn/products/interface-ics/#xl1220">XL1220</a><small>CAN FD</small></th><td>&#8212;</td><td>2 路</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="sl-ic-note">封装、电气参数和配套电路要求请咨询熙联迈工程团队</p>
+              <div class="sl-product-actions"><a href="/zh-cn/products/interface-ics/">查看接口芯片 →</a><a href="/zh-cn/contact/">讨论产品设计</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="sl-next-step">
       <div class="sl-shell sl-next-step-inner">
-        <div><h2>不确定使用 Mini PCIe 还是内部 USB？</h2><p>请提供主机平台、现场接口、操作系统和安装限制，熙联迈可协助确认方案</p></div>
+        <div><h2>不确定应该使用接口模块，还是把芯片集成到自有 PCB？</h2><p>请提供产品类型、接口通道、主机连接和安装限制，熙联迈可协助确认方案</p></div>
         <a href="/zh-cn/contact/">联系熙联迈 →</a>
       </div>
     </section>
@@ -229,7 +298,7 @@
     <div class="container footer-grid">
       <div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="熙联迈"></div><p>接口芯片与接口模块</p></div>
       <div><h3>产品</h3><a href="/zh-cn/products/embedded-communication/">嵌入式通信</a><a href="/zh-cn/products/test-diagnostic-interfaces/">诊断接口</a><a href="/zh-cn/products/interface-ics/">接口芯片</a><a href="/zh-cn/products/power-management/">电源管理</a></div>
-      <div><h3>解决方案</h3><a href="#embedded-can-fd-expansion">嵌入式 CAN FD 扩展</a><a href="#can-fd-serial-expansion">CAN FD + 串口扩展</a><a href="/zh-cn/applications/">应用</a></div>
+      <div><h3>解决方案</h3><a href="#embedded-can-fd-expansion">嵌入式 CAN FD 扩展</a><a href="#can-fd-serial-expansion">CAN FD + 串口扩展</a><a href="#interface-ic-integration">接口芯片集成</a><a href="/zh-cn/applications/">应用</a></div>
       <div><h3>销售</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div>
     </div>
     <div class="container footer-bottom"><span>© 2026 熙联迈</span><span>CAN FD · 串行 · 嵌入式连接</span></div>

@@ -189,9 +189,9 @@
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
-          <span>嵌入式连接</span>
-          <h2>选择主机接口与现场总线</h2>
-          <p>根据主机接口、现场总线和安装方式选择硬件</p>
+          <span>连接与芯片集成</span>
+          <h2>选择硬件或芯片集成方式</h2>
+          <p>根据主机接口、现场总线和产品形态选择</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/zh-cn/solutions/#embedded-can-fd-expansion">
@@ -208,6 +208,13 @@
             <em>XE826</em>
             <b aria-hidden="true">→</b>
           </a>
+          <a href="/zh-cn/solutions/#interface-ic-integration">
+            <span>接口芯片集成</span>
+            <strong>需要把接口直接做到自己的产品中？</strong>
+            <small>将 XL 接口芯片集成到自有 PCB，并按通道组合选择型号</small>
+            <em>XL 接口芯片</em>
+            <b aria-hidden="true">→</b>
+          </a>
         </div>
       </div>
     </div>` : `
@@ -219,9 +226,9 @@
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
-          <span>EMBEDDED CONNECTIVITY</span>
-          <h2>Choose your expansion path.</h2>
-          <p>Match the host connection and field interfaces to the machine you are building.</p>
+          <span>CONNECTIVITY &amp; CHIP INTEGRATION</span>
+          <h2>Choose the right integration path.</h2>
+          <p>Match the host connection, field interfaces, and product format to your design.</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/solutions/#embedded-can-fd-expansion">
@@ -236,6 +243,13 @@
             <strong>Need CAN FD and serial ports in one machine?</strong>
             <small>Consolidate CAN FD, RS-485, and RS-232 behind one internal USB connection.</small>
             <em>Xilume XE826</em>
+            <b aria-hidden="true">→</b>
+          </a>
+          <a href="/solutions/#interface-ic-integration">
+            <span>Interface IC Integration</span>
+            <strong>Need the interfaces built directly into your product?</strong>
+            <small>Integrate an XL interface IC into your PCB and select by channel mix.</small>
+            <em>XL Interface ICs</em>
             <b aria-hidden="true">→</b>
           </a>
         </div>

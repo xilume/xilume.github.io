@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Find the right Xilume interface solution for embedded CAN FD expansion or integrated CAN FD, RS-485, and RS-232 connectivity inside a machine.">
-  <title>Embedded Connectivity Solutions | Xilume</title>
+  <meta name="description" content="Choose Xilume interface hardware for embedded connectivity or integrate an XL interface IC directly into your own product design.">
+  <title>Embedded Connectivity and Chip Integration Solutions | Xilume</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
   <link rel="stylesheet" href="/styles.css?v=20260826-1">
-  <link rel="stylesheet" href="/solutions/solutions.css?v=20260821-1">
-  <script defer src="/site.js?v=20260826-1"></script>
+  <link rel="stylesheet" href="/solutions/solutions.css?v=20260826-2">
+  <script defer src="/site.js?v=20260826-2"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/solutions/">
   <link rel="alternate" hreflang="en" href="https://xilume.co/solutions/">
@@ -17,8 +17,8 @@
   <link rel="alternate" hreflang="x-default" href="https://xilume.co/solutions/">
   <meta property="og:site_name" content="Xilume">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Embedded Connectivity Solutions | Xilume">
-  <meta property="og:description" content="Start with the interface problem, then choose the Xilume hardware that fits the host and field networks.">
+  <meta property="og:title" content="Embedded Connectivity and Chip Integration Solutions | Xilume">
+  <meta property="og:description" content="Choose a ready-to-use interface module or integrate an XL interface IC into your own PCB.">
   <meta property="og:url" content="https://xilume.co/solutions/">
   <meta property="og:image" content="https://xilume.co/images/8hub-embedded-top-dark-v1.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +30,7 @@
         "@type": "CollectionPage",
         "name": "Xilume Embedded Connectivity Solutions",
         "url": "https://xilume.co/solutions/",
-        "description": "Problem-led selection for embedded CAN FD and mixed CAN FD plus serial connectivity.",
+        "description": "Problem-led selection for embedded CAN FD, mixed CAN FD plus serial connectivity, and interface IC integration.",
         "mainEntity": {
           "@type": "ItemList",
           "itemListElement": [
@@ -45,6 +45,12 @@
               "position": 2,
               "name": "CAN FD + Serial Port Expansion",
               "url": "https://xilume.co/solutions/#can-fd-serial-expansion"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Interface IC Integration",
+              "url": "https://xilume.co/solutions/#interface-ic-integration"
             }
           ]
         }
@@ -82,12 +88,12 @@
         <div class="sl-hero-copy">
           <p class="sl-kicker">Solutions</p>
           <h1>Start with the interface problem.</h1>
-          <p class="sl-hero-lead">Choose by the host connection, the field networks you need, and where the hardware must live. Xilume maps each integration need to a complete, supported product.</p>
+          <p class="sl-hero-lead">Choose by the host connection, required interfaces, and product format. Use a complete Xilume module or integrate an XL interface IC into your own PCB.</p>
           <div class="sl-hero-criteria" aria-label="Solution selection criteria">
             <span>Host connection</span>
             <span>Field interfaces</span>
             <span>Installation location</span>
-            <span>Operating system</span>
+            <span>Product format</span>
           </div>
         </div>
       </div>
@@ -111,6 +117,12 @@
             <h3>Need CAN FD and serial ports in one machine?</h3>
             <p>Bring two CAN FD, four RS-485, and two RS-232 channels inside a robot or industrial machine through one internal connection.</p>
             <span class="sl-choice-result">Recommended: Xilume XE826 <b aria-hidden="true">→</b></span>
+          </a>
+          <a class="sl-choice-card" href="#interface-ic-integration">
+            <small>03 · CUSTOM PCB</small>
+            <h3>Need serial or CAN FD built into your own product?</h3>
+            <p>Integrate an XL interface IC into your PCB and select the device by the required channel mix.</p>
+            <span class="sl-choice-result">Recommended: XL Interface ICs <b aria-hidden="true">→</b></span>
           </a>
         </div>
       </div>
@@ -216,9 +228,66 @@
       </div>
     </section>
 
+    <section class="sl-solution" id="interface-ic-integration" aria-labelledby="interface-ic-solution-heading">
+      <div class="sl-shell">
+        <div class="sl-solution-intro">
+          <span class="sl-solution-index">03 / SOLUTION</span>
+          <div>
+            <p class="sl-kicker">Interface IC Integration</p>
+            <h2 id="interface-ic-solution-heading">Build the required interfaces into your own product.</h2>
+            <p>For custom PCBs, controllers, and embedded equipment, choose an XL interface IC by the required serial and CAN FD channel mix.</p>
+          </div>
+        </div>
+
+        <div class="sl-solution-layout">
+          <div class="sl-solution-detail">
+            <p class="sl-fit-title">Best fit when</p>
+            <dl class="sl-fit-list">
+              <div><dt>Product</dt><dd>A custom PCB is being designed or revised.</dd></div>
+              <div><dt>Interfaces</dt><dd>Serial, CAN FD, or both are required directly on the board.</dd></div>
+              <div><dt>Selection</dt><dd>The device is selected by interface type and channel count.</dd></div>
+              <div><dt>Design</dt><dd>Package, electrical, and support-circuit requirements are confirmed with Xilume.</dd></div>
+            </dl>
+
+            <div class="sl-architecture" aria-label="Interface IC product integration architecture">
+              <small>Integration path</small>
+              <div class="sl-flow">
+                <div class="sl-flow-node"><small>Product design</small><strong>Customer PCB</strong></div>
+                <div class="sl-flow-arrow" aria-hidden="true">›</div>
+                <div class="sl-flow-node is-xilume"><small>Interface IC</small><strong>XL device selected by channel mix</strong></div>
+                <div class="sl-flow-arrow" aria-hidden="true">›</div>
+                <div class="sl-flow-node"><small>Interfaces</small><strong>Serial, CAN FD, or both</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <article class="sl-product-recommendation sl-ic-recommendation">
+            <div class="sl-product-copy">
+              <small>Recommended family</small>
+              <div class="sl-product-title-row"><h3>XL Interface ICs</h3><span>For customer PCB</span></div>
+              <p class="sl-ic-summary">Select the device by the interfaces and channel count required in the product.</p>
+              <div class="sl-ic-table-wrap" tabindex="0" role="region" aria-label="Scrollable XL interface IC channel comparison">
+                <table class="sl-ic-table">
+                  <caption class="sr-only">XL interface IC channel comparison</caption>
+                  <thead><tr><th scope="col">Device</th><th scope="col">Serial</th><th scope="col">CAN FD</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row"><a href="/products/interface-ics/#xl1326">XL1326</a><small>Mixed interface</small></th><td>6 channels</td><td>2 channels</td></tr>
+                    <tr><th scope="row"><a href="/products/interface-ics/#xl1108">XL1108</a><small>Serial</small></th><td>8 channels</td><td>&#8212;</td></tr>
+                    <tr><th scope="row"><a href="/products/interface-ics/#xl1220">XL1220</a><small>CAN FD</small></th><td>&#8212;</td><td>2 channels</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="sl-ic-note">Contact Xilume engineering for current package, electrical, and support-circuit requirements.</p>
+              <div class="sl-product-actions"><a href="/products/interface-ics/">View interface ICs →</a><a href="/contact/">Discuss a product design</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="sl-next-step">
       <div class="sl-shell sl-next-step-inner">
-        <div><h2>Not sure whether the host should use Mini PCIe or internal USB?</h2><p>Share the host platform, required field interfaces, operating system, and installation constraints. Xilume can confirm the right path.</p></div>
+        <div><h2>Not sure whether to use a module or integrate an interface IC?</h2><p>Share the product type, required interface channels, host connection, and installation constraints. Xilume can confirm the right path.</p></div>
         <a href="/contact/">Contact Xilume →</a>
       </div>
     </section>
@@ -228,7 +297,7 @@
     <div class="container footer-grid">
       <div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="Xilume"></div><p>Interface ICs and hardware for connected systems.</p></div>
       <div><h3>Products</h3><a href="/products/embedded-communication/">Embedded communication</a><a href="/products/test-diagnostic-interfaces/">Diagnostic interfaces</a><a href="/products/interface-ics/">Interface ICs</a><a href="/products/power-management/">Power management</a></div>
-      <div><h3>Solutions</h3><a href="#embedded-can-fd-expansion">Embedded CAN FD expansion</a><a href="#can-fd-serial-expansion">CAN FD + serial port expansion</a><a href="/applications/">Applications</a></div>
+      <div><h3>Solutions</h3><a href="#embedded-can-fd-expansion">Embedded CAN FD expansion</a><a href="#can-fd-serial-expansion">CAN FD + serial port expansion</a><a href="#interface-ic-integration">Interface IC integration</a><a href="/applications/">Applications</a></div>
       <div><h3>Sales</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div>
     </div>
     <div class="container footer-bottom"><span>© 2026 Xilume</span><span>CAN FD · Serial · Embedded connectivity</span></div>
