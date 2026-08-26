@@ -79,7 +79,7 @@ For every Hero image:
 
 ## 08 — Engineering and validation
 
-- Current file: `engineering-lab-placeholder.svg`
+- Current file: `engineering-lab.svg`
 - Preferred replacement: `engineering-lab.webp`
 - Display ratio: approximately 3:2
 - Recommended source size: 1800 × 1200 px or larger

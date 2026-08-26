@@ -729,6 +729,8 @@ html { scroll-padding-top:124px; }
 }
 
 .x8-section-heading > p { margin:0; color:var(--x8-copy); font-size:14px; line-height:1.7; }
+.x8-section-heading > p a { display:inline-block; margin-top:10px; color:#76c5f1; font-weight:750; }
+.x8-section-heading > p a:hover { color:#fff; }
 
 .x8-software-proof {
   display:grid;

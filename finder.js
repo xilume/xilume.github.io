@@ -134,7 +134,7 @@
       const availableItems = formats.map((type) => solution[type]).filter(Boolean);
       const options = availableItems.length
         ? availableItems.map((item) => `<a class="result-option" href="${resolveHref(root,item.href)}"><div><strong>${item.name}</strong><span>${item.description} · ${item.status}</span></div><b>→</b></a>`).join("")
-        : `<div class="result-option"><div><strong>${isSimplifiedChinese ? "暂无匹配的接口芯片" : "No current interface IC match"}</strong><span>${isSimplifiedChinese ? "请联系销售团队了解接口芯片路线图" : "Contact sales for the interface IC roadmap."}</span></div></div>`;
+        : `<div class="result-option"><div><strong>${isSimplifiedChinese ? "请联系销售团队选择接口芯片" : "Contact sales to choose an interface IC"}</strong><span>${isSimplifiedChinese ? "我们会根据接口与系统要求推荐合适的器件" : "We will recommend the right device for your interface and system requirements."}</span></div></div>`;
 
       result.innerHTML = `<div class="result-path"><span class="path-node">${label(state.host)}</span><span class="path-line"></span><span class="path-node">${label(state.target)}</span></div><div class="result-content"><div class="result-top"><div><h3><a href="${resolveHref(root,solution.href)}">${solution.title}</a></h3><p>${solution.summary}</p></div><span class="status">${isSimplifiedChinese ? "产品系列" : "Product family"}</span></div><div class="result-options">${options}</div></div>`;
     }

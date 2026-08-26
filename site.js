@@ -327,11 +327,11 @@
     const openMegaMenu = (entry) => {
       if (!desktopNavigation.matches || !entry) return;
       window.clearTimeout(closeMegaMenuTimer);
-      entries.forEach((candidate) => {
-        const open = candidate === entry;
-        candidate.trigger.setAttribute("aria-expanded", String(open));
-        candidate.panel.setAttribute("aria-hidden", String(!open));
-        candidate.panel.inert = !open;
+      entries.forEach((option) => {
+        const open = option === entry;
+        option.trigger.setAttribute("aria-expanded", String(open));
+        option.panel.setAttribute("aria-hidden", String(!open));
+        option.panel.inert = !open;
       });
       activeEntry = entry;
       header.classList.add("is-mega-menu-open");
