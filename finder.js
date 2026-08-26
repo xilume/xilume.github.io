@@ -9,7 +9,7 @@
       host: "usb",
       target: "canfd",
       title: "USB ↔ 双通道 CAN FD",
-      summary: "通过 USB 连接 2 路独立 CAN / CAN FD 通道",
+      summary: "通过 USB 接入 2 路独立 CAN/CAN FD 通道",
       href: "products/usb-dual-can-fd/",
       module: { name: "USB 双通道 CAN FD 适配器", description: "USB 外接硬件", status: "双通道 CAN FD", href: "products/usb-dual-can-fd/#module" },
       controller: { name: "XL1220", description: "用于 PCB 的双通道 CAN FD 接口芯片", status: "2 路 CAN FD", href: "products/interface-ics/#xl1220" }
@@ -18,10 +18,10 @@
       id: "mini-pcie-canfd",
       host: "mini-pcie",
       target: "canfd",
-      title: "Mini PCIe (USB) ↔ 双通道 CAN FD",
-      summary: "添加 2 路 CAN / CAN FD 通道，数据速率最高 8 Mbps，支持信号隔离以及 Windows 和 Linux 驱动",
+      title: "Mini PCIe（USB）↔ 双通道 CAN FD",
+      summary: "增加 2 路带信号隔离的 CAN/CAN FD 通道，数据相位最高 8 Mbit/s，支持 Windows 与 Linux 驱动",
       href: "products/mini-pcie-dual-can-fd/",
-      module: { name: "Mini PCIe 双通道 CAN FD 模块", description: "隔离式双通道内置硬件", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
+      module: { name: "Mini PCIe 双通道 CAN FD 模块", description: "双路信号隔离内置模块", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
       controller: { name: "XL1220", description: "用于 PCB 的双通道 CAN FD 接口芯片", status: "2 路 CAN FD", href: "products/interface-ics/#xl1220" }
     },
     {
@@ -29,7 +29,7 @@
       host: "usb",
       target: "canfd-rs485",
       title: "USB ↔ 双通道 CAN FD + 双通道 RS-485",
-      summary: "通过 USB 连接 2 个 CAN FD 网络和 2 条 RS-485 总线",
+      summary: "通过 USB 接入 2 路 CAN FD 和 2 路 RS-485 通道",
       href: "products/usb-canfd-rs485/",
       module: { name: "USB 双通道 CAN FD + 双通道 RS-485 适配器", description: "USB 外接硬件", status: "混合接口", href: "products/usb-canfd-rs485/#module" },
       controller: { name: "XL1326", description: "用于 PCB 的混合接口芯片", status: "6 路串行接口 + 2 路 CAN FD", href: "products/interface-ics/#xl1326" }
@@ -38,7 +38,7 @@
       id: "mini-pcie-canfd-rs485",
       host: "mini-pcie",
       target: "canfd-rs485",
-      title: "Mini PCIe (USB) ↔ 双通道 CAN FD + 双通道 RS-485",
+      title: "Mini PCIe（USB）↔ 双通道 CAN FD + 双通道 RS-485",
       summary: "通过兼容 Mini PCIe 插槽中的 USB 信号添加 2 路 CAN FD 和 2 路 RS-485 通道",
       href: "products/usb-canfd-rs485/",
       module: { name: "Mini PCIe 双通道 CAN FD + 双通道 RS-485 模块", description: "基于 USB 的 Mini PCIe 硬件", status: "混合接口", href: "products/usb-canfd-rs485/#module" },
@@ -48,10 +48,10 @@
       id: "usb-smbus",
       host: "usb",
       target: "smbus",
-      title: "USB ↔ 智能电池数据 (SMBus)",
-      summary: "通过 USB 显示电量、电压、温度、容量、循环次数和电池状态",
+      title: "USB ↔ 智能电池数据（SMBus）",
+      summary: "通过 USB 向主机提供电量、电压、温度、容量、循环次数和状态",
       href: "products/usb-smbus/",
-      module: { name: "Xilume 电池显示模块", description: "USB 智能电池接口", status: "Windows + Linux", href: "products/usb-smbus/" },
+      module: { name: "熙联迈电池显示模块", description: "USB 智能电池接口", status: "Windows + Linux", href: "products/usb-smbus/" },
       controller: null
     }
   ] : [
@@ -126,7 +126,7 @@
 
       const solution = solutions.find((item) => item.target === state.target && item.host === state.host);
       if (!solution) {
-        result.innerHTML = `<div class="result-path"><span class="path-node">${label(state.host)}</span><span class="path-line"></span><span class="path-node">${label(state.target)}</span></div><div class="result-content"><div class="result-top"><div><h3>${isSimplifiedChinese ? "暂无匹配产品" : "No current match"}</h3><p>${isSimplifiedChinese ? "请选择其他接口，或联系销售团队获取定制集成方案" : "Choose another interface or contact sales for a custom integration."}</p></div></div></div>`;
+        result.innerHTML = `<div class="result-path"><span class="path-node">${label(state.host)}</span><span class="path-line"></span><span class="path-node">${label(state.target)}</span></div><div class="result-content"><div class="result-top"><div><h3>${isSimplifiedChinese ? "暂无匹配产品" : "No current match"}</h3><p>${isSimplifiedChinese ? "请选择其他接口，或联系销售确认可选产品" : "Choose another interface or contact sales for a custom integration."}</p></div></div></div>`;
         return;
       }
 
@@ -134,7 +134,7 @@
       const availableItems = formats.map((type) => solution[type]).filter(Boolean);
       const options = availableItems.length
         ? availableItems.map((item) => `<a class="result-option" href="${resolveHref(root,item.href)}"><div><strong>${item.name}</strong><span>${item.description} · ${item.status}</span></div><b>→</b></a>`).join("")
-        : `<div class="result-option"><div><strong>${isSimplifiedChinese ? "请联系销售团队选择接口芯片" : "Contact sales to choose an interface IC"}</strong><span>${isSimplifiedChinese ? "我们会根据接口与系统要求推荐合适的器件" : "We will recommend the right device for your interface and system requirements."}</span></div></div>`;
+        : `<div class="result-option"><div><strong>${isSimplifiedChinese ? "联系销售确认可选产品" : "Contact sales to choose an interface IC"}</strong><span>${isSimplifiedChinese ? "请提供接口和系统要求，熙联迈将推荐合适器件" : "We will recommend the right device for your interface and system requirements."}</span></div></div>`;
 
       result.innerHTML = `<div class="result-path"><span class="path-node">${label(state.host)}</span><span class="path-line"></span><span class="path-node">${label(state.target)}</span></div><div class="result-content"><div class="result-top"><div><h3><a href="${resolveHref(root,solution.href)}">${solution.title}</a></h3><p>${solution.summary}</p></div><span class="status">${isSimplifiedChinese ? "产品系列" : "Product family"}</span></div><div class="result-options">${options}</div></div>`;
     }

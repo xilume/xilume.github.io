@@ -8,7 +8,7 @@
     <div class="container product-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>产品系列</span>
-        <strong>面向互联系统的专业硬件</strong>
+        <strong>接口芯片与接口模块</strong>
         <a href="/zh-cn/products/">查看全部产品 <b aria-hidden="true">→</b></a>
       </div>
       <div class="product-mega-menu-groups">
@@ -21,13 +21,13 @@
           <div class="product-mega-links">
             <a href="/zh-cn/products/mini-pcie-dual-can-fd/">
               <span>CAN FD 模块</span>
-              <strong>Dual Mini PCIe CAN FD</strong>
-              <small>2 路隔离式内置 CAN FD 通道</small>
+              <strong>双路 Mini PCIe CAN FD</strong>
+              <small>2 路带信号隔离的 CAN/CAN FD 通道</small>
               <b aria-hidden="true">→</b>
             </a>
             <a href="/zh-cn/products/8hub-embedded/">
               <span>嵌入式 8 通道通信模块</span>
-              <strong>Xilume XE826</strong>
+              <strong>XE826</strong>
               <small>内置 USB 提供 2 路 CAN FD + 6 路串行接口</small>
               <b aria-hidden="true">→</b>
             </a>
@@ -42,7 +42,7 @@
           <div class="product-mega-links">
             <a href="/zh-cn/products/8hub/">
               <span>桌面 8 通道通信接口</span>
-              <strong>Xilume Octant</strong>
+              <strong>Octant</strong>
               <small>便携接入 CAN FD、RS-485 和 RS-232</small>
               <b aria-hidden="true">→</b>
             </a>
@@ -58,19 +58,19 @@
             <a href="/zh-cn/products/interface-ics/#family-mixed">
               <span>串行接口 + CAN FD</span>
               <strong>混合接口芯片</strong>
-              <small>集成式多总线连接</small>
+              <small>6 路串行 + 2 路 CAN FD</small>
               <b aria-hidden="true">→</b>
             </a>
             <a href="/zh-cn/products/interface-ics/#family-serial">
               <span>多通道串行接口</span>
               <strong>串行接口芯片</strong>
-              <small>可扩展的串行通道集成</small>
+              <small>8 路串行通道</small>
               <b aria-hidden="true">→</b>
             </a>
             <a href="/zh-cn/products/interface-ics/#family-canfd">
               <span>CAN FD</span>
               <strong>CAN FD 接口芯片</strong>
-              <small>专用高速 CAN 连接</small>
+              <small>2 路 CAN FD 通道</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>
@@ -85,7 +85,7 @@
             <a href="/zh-cn/products/usb-smbus/">
               <span>智能电池状态</span>
               <strong>电池显示模块</strong>
-              <small>为 Windows 和 Linux 提供电池数据与原生状态显示</small>
+              <small>为 Windows 和 Linux 提供电池数据与系统状态</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>
@@ -184,28 +184,28 @@
     <div class="container solutions-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>解决方案</span>
-        <strong>从系统问题出发</strong>
+        <strong>按接口需求选择</strong>
         <a href="/zh-cn/solutions/">查看全部解决方案 <b aria-hidden="true">→</b></a>
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
           <span>嵌入式连接</span>
-          <h2>选择合适的扩展路径</h2>
-          <p>根据主机连接、现场接口和设备形态，为系统匹配合适的硬件</p>
+          <h2>选择主机接口与现场总线</h2>
+          <p>根据主机接口、现场总线和安装方式选择硬件</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/zh-cn/solutions/#embedded-can-fd-expansion">
             <span>嵌入式 CAN FD 扩展</span>
-            <strong>需要在嵌入式 PC 内部添加 CAN FD？</strong>
-            <small>通过 Mini PCIe 添加 2 路隔离式 CAN / CAN FD 通道</small>
-            <em>Dual Mini PCIe CAN FD</em>
+            <strong>在嵌入式计算机内部增加 CAN FD</strong>
+            <small>通过 Mini PCIe 增加 2 路带信号隔离的 CAN/CAN FD 通道</small>
+            <em>双路 Mini PCIe CAN FD</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/zh-cn/solutions/#can-fd-serial-expansion">
             <span>CAN FD + 串口扩展</span>
             <strong>需要在一台设备中集成 CAN FD 与串口？</strong>
             <small>通过一个内置 USB 连接整合 CAN FD、RS-485 与 RS-232</small>
-            <em>Xilume XE826</em>
+            <em>XE826</em>
             <b aria-hidden="true">→</b>
           </a>
         </div>
