@@ -1,0 +1,53 @@
+name: Publish interface IC integration solution
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify release base
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD^)" = "6a29fdeb7f78ebab6337499c6d9878e4284ea3f6"
+          test "$(git diff-tree --no-commit-id --name-only -r HEAD)" = ".github/workflows/publish-interface-ic-solution.yml"
+
+      - name: Apply verified release
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 -d > /tmp/xilume-chip-solution.patch.gz <<'XILUME_RELEASE'
+          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
+          XILUME_RELEASE
+          echo "424ff18504ec9317ce9e6dfe439e7d9cb3ad777a96b9ec87ffabadced610d651  /tmp/xilume-chip-solution.patch.gz" | sha256sum -c -
+          gzip -dc /tmp/xilume-chip-solution.patch.gz > /tmp/xilume-chip-solution.patch
+          echo "cec779aec8ec25390e7d62dca59696e62ce452e9cc5a239b52eadfe890be06e9  /tmp/xilume-chip-solution.patch" | sha256sum -c -
+          git apply --check /tmp/xilume-chip-solution.patch
+          git apply /tmp/xilume-chip-solution.patch
+          rm .github/workflows/publish-interface-ic-solution.yml
+          echo "923c43f039754e2d4158ff1e42f392a7da13238ec0bfd31e7d0655cedf36cca8  site.js" | sha256sum -c -
+          echo "e6f9e5cd1707fd95281fe78d8db4b23564794f8aa79d7059f27c06acd6ef6391  solutions/index.html" | sha256sum -c -
+          echo "08f8bff92a871a82e893f6263bf6407d44aff3f4fdfa540cfc83506ee6f0e1bd  solutions/solutions.css" | sha256sum -c -
+          echo "053fdf0417191ded54401a8ac27a87699ccb870116a94404f01a62104ebf6f07  zh-cn/solutions/index.html" | sha256sum -c -
+          actual="$(git status --porcelain | cut -c4- | sort)"
+          expected="$(printf '%s\n' '.github/workflows/publish-interface-ic-solution.yml' 'site.js' 'solutions/index.html' 'solutions/solutions.css' 'zh-cn/solutions/index.html' | sort)"
+          test "$actual" = "$expected"
+
+      - name: Commit release
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add interface IC integration solution"
+          git push origin HEAD:main
