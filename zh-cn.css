@@ -1,0 +1,185 @@
+/*
+ * Simplified Chinese typography
+ * Uses the same system-font approach as Apple China without distributing
+ * Apple's proprietary font files.
+ */
+html[lang="zh-CN"] {
+  --font-cn-text:
+    "SF Pro SC",
+    "SF Pro Text",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei UI",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    "Noto Sans SC",
+    "Source Han Sans SC",
+    system-ui,
+    sans-serif;
+  --font-cn-display:
+    "SF Pro SC",
+    "SF Pro Display",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei UI",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    "Noto Sans SC",
+    "Source Han Sans SC",
+    system-ui,
+    sans-serif;
+}
+
+html[lang="zh-CN"] body,
+html[lang="zh-CN"] button,
+html[lang="zh-CN"] input,
+html[lang="zh-CN"] select,
+html[lang="zh-CN"] textarea,
+html[lang="zh-CN"] .home-product-categories,
+html[lang="zh-CN"] .home-solutions,
+html[lang="zh-CN"] .hub-page,
+html[lang="zh-CN"] .x8-page,
+html[lang="zh-CN"] .dcf-page {
+  font-family:var(--font-cn-text);
+  font-kerning:normal;
+  font-optical-sizing:auto;
+  text-rendering:optimizeLegibility;
+}
+
+html[lang="zh-CN"] body {
+  font-size:17px;
+  font-weight:400;
+  line-height:1.55;
+}
+
+html[lang="zh-CN"] :where(h1,h2,h3,h4,h5,h6) {
+  font-family:var(--font-cn-display);
+  font-weight:600;
+  letter-spacing:normal;
+  text-wrap:balance;
+}
+
+html[lang="zh-CN"] h1 {
+  line-height:1.1;
+}
+
+html[lang="zh-CN"] h2 {
+  line-height:1.12;
+}
+
+html[lang="zh-CN"] h3 {
+  line-height:1.2;
+}
+
+html[lang="zh-CN"] h4,
+html[lang="zh-CN"] h5,
+html[lang="zh-CN"] h6 {
+  line-height:1.25;
+}
+
+html[lang="zh-CN"] :where(p,li,dt,dd,a,button,label,small,strong,b,span) {
+  letter-spacing:normal;
+}
+
+html[lang="zh-CN"] :where(p,li,dt,dd) {
+  line-height:1.55;
+  text-wrap:pretty;
+}
+
+html[lang="zh-CN"] :where(
+  .eyebrow,
+  .section-label,
+  .product-category,
+  .product-hero-kicker,
+  .product-story-kicker,
+  .pd-kicker,
+  .hub-eyebrow,
+  .x8-eyebrow,
+  .dcf-eyebrow,
+  .sl-kicker
+) {
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.04em;
+  line-height:1.4;
+}
+
+html[lang="zh-CN"] .site-header .header-inner > nav:not(.site-language-switch) a,
+html[lang="zh-CN"] .site-header .mega-menu-trigger {
+  font-size:13px;
+  font-weight:400;
+}
+
+html[lang="zh-CN"] .site-header .site-language-switch a {
+  font-weight:500;
+  letter-spacing:normal;
+}
+
+html[lang="zh-CN"] :where(
+  .product-local-nav a,
+  .hub-local-nav a,
+  .x8-local-nav a,
+  .dcf-local-nav a
+) {
+  font-weight:500;
+  letter-spacing:normal;
+}
+
+html[lang="zh-CN"] :where(
+  .primary-button,
+  .secondary-button,
+  .nav-finder,
+  .hero-text-link,
+  .product-ghost-button,
+  .hub-button,
+  .x8-button,
+  .dcf-button,
+  .ic-button-primary
+) {
+  font-weight:600;
+  letter-spacing:normal;
+}
+
+html[lang="zh-CN"] .product-hero-copy :where(h1,h2) {
+  line-height:1.08;
+}
+
+html[lang="zh-CN"] .home-flow-heading h2 {
+  font-weight:600;
+  line-height:1.1;
+}
+
+html[lang="zh-CN"] .home-category-copy h3 {
+  font-weight:600;
+  line-height:1.18;
+}
+
+html[lang="zh-CN"] .home-solution-copy h3 {
+  font-weight:600;
+  line-height:1.14;
+}
+
+html[lang="zh-CN"] :where(
+  .page-header > p:last-child,
+  .family-hero-copy > p,
+  .product-lede,
+  .area-hero p
+) {
+  font-size:16px;
+  line-height:1.6;
+}
+
+@media (max-width:600px) {
+  html[lang="zh-CN"] body {
+    font-size:16px;
+  }
+
+  html[lang="zh-CN"] h1,
+  html[lang="zh-CN"] h2 {
+    line-height:1.14;
+  }
+
+  html[lang="zh-CN"] h3 {
+    line-height:1.22;
+  }
+}
