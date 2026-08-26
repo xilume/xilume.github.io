@@ -1,12 +1,10 @@
-name: Deploy Xilume website
+name: Apply Xilume website release
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -15,13 +13,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  release:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply release files
+        run: |
+          cat xilume-release-piece-* > /tmp/xilume-site-release.tar.gz
+          mkdir -p /tmp/xilume-site-release
+          tar -xzf /tmp/xilume-site-release.tar.gz -C /tmp/xilume-site-release
+          rsync -a --delete --exclude='.git/' --exclude='.github/workflows/' /tmp/xilume-site-release/ ./
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish software and driver download center"
+            git push origin HEAD:main
+          fi
       - name: Prepare static site
         run: |
           mkdir -p _site
