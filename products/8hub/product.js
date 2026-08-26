@@ -7,19 +7,19 @@
       can: {
         kicker:"CAN 1 + CAN 2",
         title:"2 路独立 CAN FD 通道",
-        copy:"支持 Classic CAN 与 CAN FD，数据速率最高可达 8 Mbps。",
+        copy:"支持 Classic CAN 与 CAN FD，数据速率最高可达 8 Mbps",
         meta:["2 × DE9","独立通道"]
       },
       serial: {
         kicker:"串行接口 1–6",
         title:"一个端子集成 6 路串行接口",
-        copy:"2×9 / 3.5 mm 接线端子集中容纳所有串行连接，布线清晰有序。",
+        copy:"2×9 / 3.5 mm 接线端子集中容纳所有串行连接，布线清晰有序",
         meta:["18 个接线位","4 × RS-485 + 2 × RS-232"]
       },
       usb: {
         kicker:"主机",
         title:"一条 USB 连接电脑",
-        copy:"全部 8 个逻辑通道通过一个 Windows 或 Linux 主机接口连接。",
+        copy:"全部 8 个逻辑通道通过一个 Windows 或 Linux 主机接口连接",
         meta:["USB 2.0 Full-Speed","Windows + Linux"]
       }
     } : {

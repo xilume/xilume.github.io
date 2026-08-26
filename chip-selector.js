@@ -7,7 +7,7 @@
   const note = finder.querySelector("[data-chip-result-note]");
   const isSimplifiedChinese = document.documentElement.lang.toLowerCase().startsWith("zh");
   const labels = isSimplifiedChinese ? {
-    all: "浏览 XL 接口芯片产品组合。",
+    all: "浏览 XL 接口芯片产品组合",
     canfd: "CAN FD 接口芯片",
     can: "CAN 接口芯片",
     multi: "混合接口芯片",

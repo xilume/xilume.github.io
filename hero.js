@@ -155,7 +155,7 @@
 
     if (!imageReady) {
       carousel.classList.remove("is-preparing-slide");
-      if (announce && status) status.textContent = isSimplifiedChinese ? "该产品图片暂时无法显示。" : "This product image is temporarily unavailable.";
+      if (announce && status) status.textContent = isSimplifiedChinese ? "该产品图片暂时无法显示" : "This product image is temporarily unavailable.";
       if (canAutoplay()) {
         const fallbackIndex = nextAvailableIndex(targetIndex + 1);
         if (fallbackIndex !== activeIndex) {

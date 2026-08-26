@@ -8,7 +8,7 @@
     <div class="container product-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>产品系列</span>
-        <strong>面向互联系统的专业硬件。</strong>
+        <strong>面向互联系统的专业硬件</strong>
         <a href="/zh-cn/products/">查看全部产品 <b aria-hidden="true">→</b></a>
       </div>
       <div class="product-mega-menu-groups">
@@ -184,27 +184,27 @@
     <div class="container solutions-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>解决方案</span>
-        <strong>从系统问题出发。</strong>
+        <strong>从系统问题出发</strong>
         <a href="/zh-cn/solutions/">查看全部解决方案 <b aria-hidden="true">→</b></a>
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
           <span>嵌入式连接</span>
-          <h2>选择合适的扩展路径。</h2>
-          <p>根据主机连接、现场接口和设备形态，为系统匹配合适的硬件。</p>
+          <h2>选择合适的扩展路径</h2>
+          <p>根据主机连接、现场接口和设备形态，为系统匹配合适的硬件</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/zh-cn/solutions/#embedded-can-fd-expansion">
             <span>嵌入式 CAN FD 扩展</span>
             <strong>需要在嵌入式 PC 内部添加 CAN FD？</strong>
-            <small>通过 Mini PCIe 添加 2 路隔离式 CAN / CAN FD 通道。</small>
+            <small>通过 Mini PCIe 添加 2 路隔离式 CAN / CAN FD 通道</small>
             <em>Dual Mini PCIe CAN FD</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/zh-cn/solutions/#can-fd-serial-expansion">
             <span>CAN FD + 串口扩展</span>
             <strong>需要在一台设备中集成 CAN FD 与串口？</strong>
-            <small>通过一个内置 USB 连接整合 CAN FD、RS-485 与 RS-232。</small>
+            <small>通过一个内置 USB 连接整合 CAN FD、RS-485 与 RS-232</small>
             <em>Xilume XE826</em>
             <b aria-hidden="true">→</b>
           </a>
