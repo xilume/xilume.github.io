@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
-  <title id="title">Xilume XL1326 interface controller</title>
-  <desc id="desc">A clean product rendering of the XL1326 interface controller package.</desc>
+  <title id="title">Xilume XL1326 LQFP48 interface controller</title>
+  <desc id="desc">A clean product rendering of the XL1326 48-pin LQFP interface controller package.</desc>
   <defs>
     <linearGradient id="package" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#29302f"/>
@@ -15,25 +15,25 @@
     <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%">
       <feDropShadow dx="0" dy="30" stdDeviation="26" flood-color="#17201e" flood-opacity=".18"/>
     </filter>
-    <pattern id="pins-horizontal" width="26" height="52" patternUnits="userSpaceOnUse">
-      <rect x="6" width="14" height="46" rx="2" fill="url(#pin)"/>
+    <pattern id="pins-horizontal" width="40" height="80" patternUnits="userSpaceOnUse">
+      <rect x="9" width="22" height="72" rx="2" fill="url(#pin)"/>
     </pattern>
-    <pattern id="pins-vertical" width="52" height="26" patternUnits="userSpaceOnUse">
-      <rect y="6" width="46" height="14" rx="2" fill="url(#pin)"/>
+    <pattern id="pins-vertical" width="80" height="40" patternUnits="userSpaceOnUse">
+      <rect y="9" width="72" height="22" rx="2" fill="url(#pin)"/>
     </pattern>
   </defs>
   <ellipse cx="500" cy="656" rx="310" ry="35" fill="#c8cfcc" opacity=".34"/>
   <g filter="url(#shadow)">
-    <rect x="248" y="68" width="504" height="86" fill="url(#pins-horizontal)"/>
-    <rect x="248" y="606" width="504" height="86" fill="url(#pins-horizontal)"/>
-    <rect x="164" y="154" width="86" height="452" fill="url(#pins-vertical)"/>
-    <rect x="750" y="154" width="86" height="452" fill="url(#pins-vertical)"/>
-    <rect x="238" y="144" width="524" height="472" rx="24" fill="url(#package)" stroke="#3e4846" stroke-width="4"/>
-    <rect x="270" y="176" width="460" height="408" rx="14" fill="none" stroke="#3e4947" stroke-width="2"/>
-    <circle cx="294" cy="200" r="10" fill="#71817d"/>
+    <rect x="260" y="68" width="480" height="80" fill="url(#pins-horizontal)"/>
+    <rect x="260" y="612" width="480" height="80" fill="url(#pins-horizontal)"/>
+    <rect x="170" y="140" width="80" height="480" fill="url(#pins-vertical)"/>
+    <rect x="750" y="140" width="80" height="480" fill="url(#pins-vertical)"/>
+    <rect x="250" y="130" width="500" height="500" rx="24" fill="url(#package)" stroke="#3e4846" stroke-width="4"/>
+    <rect x="282" y="162" width="436" height="436" rx="14" fill="none" stroke="#3e4947" stroke-width="2"/>
+    <circle cx="302" cy="578" r="11" fill="#71817d"/>
     <path d="M329 260h342" stroke="#63706d" stroke-width="2" opacity=".55"/>
-    <text x="500" y="354" fill="#f3f5f4" font-family="Avenir Next,Segoe UI,Helvetica Neue,Arial,sans-serif" font-size="47" font-weight="500" letter-spacing="8" text-anchor="middle">XILUME</text>
-    <text x="500" y="421" fill="#8fd3c8" font-family="Avenir Next,Segoe UI,Helvetica Neue,Arial,sans-serif" font-size="39" font-weight="450" letter-spacing="10" text-anchor="middle">XL1326</text>
-    <path d="M384 473h232" stroke="#0f8b7e" stroke-width="3"/>
+    <text x="500" y="356" fill="#f3f5f4" font-family="Avenir Next,Segoe UI,Helvetica Neue,Arial,sans-serif" font-size="47" font-weight="500" letter-spacing="8" text-anchor="middle">XILUME</text>
+    <text x="500" y="428" fill="#8fd3c8" font-family="Avenir Next,Segoe UI,Helvetica Neue,Arial,sans-serif" font-size="39" font-weight="450" letter-spacing="10" text-anchor="middle">XL1326</text>
+    <text x="500" y="486" fill="#b5bfbc" font-family="Avenir Next,Segoe UI,Helvetica Neue,Arial,sans-serif" font-size="25" font-weight="450" letter-spacing="7" text-anchor="middle">2634A1</text>
   </g>
 </svg>

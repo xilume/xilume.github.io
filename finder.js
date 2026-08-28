@@ -12,7 +12,7 @@
       summary: "通过 USB 接入 2 路独立 CAN/CAN FD 通道",
       href: "products/usb-dual-can-fd/",
       module: { name: "USB 双通道 CAN FD 适配器", description: "USB 外接硬件", status: "双通道 CAN FD", href: "products/usb-dual-can-fd/#module" },
-      controller: { name: "XL1220", description: "用于 PCB 的双通道 CAN FD 接口芯片", status: "2 路 CAN FD", href: "products/interface-ics/#xl1220" }
+      controller: { name: "XL1326-A", description: "用于 PCB 的双通道 CAN FD 接口芯片", status: "仅 2 路 CAN FD · LQFP48", href: "products/interface-ics/#xl1326-a" }
     },
     {
       id: "mini-pcie-canfd",
@@ -22,7 +22,7 @@
       summary: "增加 2 路带信号隔离的 CAN/CAN FD 通道，数据相位最高 8 Mbit/s，支持 Windows 与 Linux 驱动",
       href: "products/mini-pcie-dual-can-fd/",
       module: { name: "Mini PCIe 双通道 CAN FD 模块", description: "双路信号隔离内置模块", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
-      controller: { name: "XL1220", description: "用于 PCB 的双通道 CAN FD 接口芯片", status: "2 路 CAN FD", href: "products/interface-ics/#xl1220" }
+      controller: { name: "XL1326-A", description: "用于 PCB 的双通道 CAN FD 接口芯片", status: "仅 2 路 CAN FD · LQFP48", href: "products/interface-ics/#xl1326-a" }
     },
     {
       id: "usb-canfd-rs485",
@@ -32,7 +32,7 @@
       summary: "通过 USB 接入 2 路 CAN FD 和 2 路 RS-485 通道",
       href: "products/usb-canfd-rs485/",
       module: { name: "USB 双通道 CAN FD + 双通道 RS-485 适配器", description: "USB 外接硬件", status: "混合接口", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "XL1326", description: "用于 PCB 的混合接口芯片", status: "6 路串行接口 + 2 路 CAN FD", href: "products/interface-ics/#xl1326" }
+      controller: { name: "XL1326", description: "用于 PCB 的 8 端口接口芯片", status: "8 个 COM · 6 路串行 + 2 路 CAN FD", href: "products/interface-ics/#xl1326" }
     },
     {
       id: "mini-pcie-canfd-rs485",
@@ -42,7 +42,7 @@
       summary: "通过兼容 Mini PCIe 插槽中的 USB 信号添加 2 路 CAN FD 和 2 路 RS-485 通道",
       href: "products/usb-canfd-rs485/",
       module: { name: "Mini PCIe 双通道 CAN FD + 双通道 RS-485 模块", description: "基于 USB 的 Mini PCIe 硬件", status: "混合接口", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "XL1326", description: "用于 PCB 的混合接口芯片", status: "6 路串行接口 + 2 路 CAN FD", href: "products/interface-ics/#xl1326" }
+      controller: { name: "XL1326", description: "用于 PCB 的 8 端口接口芯片", status: "8 个 COM · 6 路串行 + 2 路 CAN FD", href: "products/interface-ics/#xl1326" }
     },
     {
       id: "usb-smbus",
@@ -63,7 +63,7 @@
       summary: "Connect by USB to two independent CAN / CAN FD channels.",
       href: "products/usb-dual-can-fd/",
       module: { name: "USB Dual CAN FD Adapter", description: "USB-connected hardware", status: "Dual CAN FD", href: "products/usb-dual-can-fd/#module" },
-      controller: { name: "XL1220", description: "Dual CAN FD interface IC for your PCB", status: "2 CAN FD channels", href: "products/interface-ics/#xl1220" }
+      controller: { name: "XL1326-A", description: "Dual CAN FD interface IC for your PCB", status: "2 CAN FD only · LQFP48", href: "products/interface-ics/#xl1326-a" }
     },
     {
       id: "mini-pcie-canfd",
@@ -73,7 +73,7 @@
       summary: "Add two CAN / CAN FD channels up to 8 Mbps with signal isolation and Windows and Linux driver support.",
       href: "products/mini-pcie-dual-can-fd/",
       module: { name: "Mini PCIe Dual CAN FD Module", description: "Isolated dual-channel internal hardware", status: "Windows + Linux", href: "products/mini-pcie-dual-can-fd/" },
-      controller: { name: "XL1220", description: "Dual CAN FD interface IC for your PCB", status: "2 CAN FD channels", href: "products/interface-ics/#xl1220" }
+      controller: { name: "XL1326-A", description: "Dual CAN FD interface IC for your PCB", status: "2 CAN FD only · LQFP48", href: "products/interface-ics/#xl1326-a" }
     },
     {
       id: "usb-canfd-rs485",
@@ -83,7 +83,7 @@
       summary: "Connect by USB to two CAN FD networks and two RS-485 buses.",
       href: "products/usb-canfd-rs485/",
       module: { name: "USB Dual CAN FD + Dual RS-485 Adapter", description: "USB-connected hardware", status: "Multi-interface", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "XL1326", description: "Mixed-interface IC for your PCB", status: "6 serial + 2 CAN FD", href: "products/interface-ics/#xl1326" }
+      controller: { name: "XL1326", description: "8-port interface IC for your PCB", status: "8 COM · 6 serial + 2 CAN FD", href: "products/interface-ics/#xl1326" }
     },
     {
       id: "mini-pcie-canfd-rs485",
@@ -93,7 +93,7 @@
       summary: "Add two CAN FD and two RS-485 channels through USB signals in a compatible Mini PCIe slot.",
       href: "products/usb-canfd-rs485/",
       module: { name: "Mini PCIe Dual CAN FD + Dual RS-485 Module", description: "USB-based Mini PCIe hardware", status: "Multi-interface", href: "products/usb-canfd-rs485/#module" },
-      controller: { name: "XL1326", description: "Mixed-interface IC for your PCB", status: "6 serial + 2 CAN FD", href: "products/interface-ics/#xl1326" }
+      controller: { name: "XL1326", description: "8-port interface IC for your PCB", status: "8 COM · 6 serial + 2 CAN FD", href: "products/interface-ics/#xl1326" }
     },
     {
       id: "usb-smbus",

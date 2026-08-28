@@ -11,7 +11,7 @@ The site is structured as an expandable product catalog organized by product are
 - `/` — brand and catalog overview
 - `/products/` — product catalog
 - `/applications/` — robotics, industrial connectivity, and smart-battery application paths
-- `/products/interface-ics/` — XL interface IC overview: XL1326 combines 6 serial + 2 CAN FD, XL1108 provides 8 serial, and XL1220 provides 2 CAN FD
+- `/products/interface-ics/` — XL interface IC overview: production XL1326 exposes 8 host COM ports (6 serial + 2 CAN FD), XL1108 provides 8 serial channels, and production XL1326-A provides only 2 CAN FD channels; XL1326 and XL1326-A use LQFP48 packages
 - `/documentation/` — engineering and integration resources
 - `/products/interface-conversion/` — interface product area and product finder
 - `/products/8hub/` — target architecture for two CAN FD, four RS-485, and two RS-232 channels through one USB host
@@ -32,4 +32,4 @@ The repository is published through GitHub Pages at `https://xilume.co/`.
 
 ## Status
 
-Product specifications are preliminary until hardware validation is complete.
+XL1326 and XL1326-A are production devices. Specifications for other products remain preliminary until their hardware validation is complete.
