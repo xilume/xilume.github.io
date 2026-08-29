@@ -1,3 +1,7 @@
+.tracebox-page .site-language-switch {
+  display:none !important;
+}
+
 .tracebox-title {
   position:relative;
   overflow:hidden;
