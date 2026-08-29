@@ -11,6 +11,25 @@
   background:#fff;
 }
 
+.downloads-page .brand-wordmark {
+  width:50px;
+  height:50px;
+  overflow:visible;
+}
+
+.downloads-page .brand-wordmark img {
+  width:50px;
+  height:50px;
+  object-fit:contain;
+}
+
+.downloads-page .footer-brand,
+.downloads-page .footer-brand img {
+  width:64px;
+  height:64px;
+  object-fit:contain;
+}
+
 .download-wide {
   width:min(1160px,calc(100% - 48px));
   margin:0 auto;

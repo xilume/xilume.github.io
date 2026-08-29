@@ -120,10 +120,10 @@
 
 .tracebox-overview-crop img {
   display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:50% 14%;
+  width:131.5%;
+  max-width:none;
+  height:auto;
+  transform:translate(-10.6%,-9.2%);
 }
 
 .tracebox-overview-shot figcaption,
@@ -470,7 +470,7 @@
   .tracebox-overview-crop img {
     width:170%;
     max-width:none;
-    object-position:48% 14%;
+    transform:translate(-19%,-8%);
   }
 
   .tracebox-feature {
