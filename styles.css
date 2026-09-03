@@ -8286,7 +8286,8 @@ footer {
   padding-bottom:90px;
 }
 
-.documentation-grid > a {
+.documentation-grid > a,
+.documentation-grid > article {
   display:flex;
   min-height:235px;
   flex-direction:column;
@@ -8296,7 +8297,8 @@ footer {
   scroll-margin-top:90px;
 }
 
-.documentation-grid > a:hover {
+.documentation-grid > a:hover,
+.documentation-grid > article:hover {
   border-color:#7fafd0;
   box-shadow:0 16px 42px rgba(22,55,79,.08);
 }
@@ -8326,6 +8328,43 @@ footer {
   color:#0b70b7;
   font-size:10px;
   font-weight:700;
+}
+
+.datasheet-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+  padding-top:22px;
+}
+
+.datasheet-actions a {
+  display:inline-flex;
+  min-height:38px;
+  align-items:center;
+  justify-content:center;
+  padding:10px 13px;
+  color:#0b70b7;
+  border:1px solid #9abdd5;
+  background:#fff;
+  font-size:10px;
+  font-weight:750;
+}
+
+.datasheet-actions a:first-child {
+  color:#fff;
+  border-color:#0b70b7;
+  background:#0b70b7;
+}
+
+.datasheet-actions a:hover {
+  border-color:#075f9c;
+  background:#eef6fb;
+}
+
+.datasheet-actions a:first-child:hover {
+  color:#fff;
+  background:#075f9c;
 }
 
 .product-theme-8hub,
