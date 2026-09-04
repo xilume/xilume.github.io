@@ -465,6 +465,38 @@ a.pd-product-card:hover .pd-product-media img {
   text-align: right;
 }
 
+.pd-product-commerce {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 17px;
+  padding: 13px 0 0;
+  border-top: 1px solid var(--pd-line);
+  font-variant-numeric: tabular-nums;
+}
+
+.pd-product-commerce strong {
+  color: var(--pd-ink);
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -.02em;
+}
+
+.pd-product-commerce span {
+  color: var(--pd-muted);
+  font-size: 10px;
+  font-weight: 620;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.pd-product-commerce.is-quote strong {
+  color: var(--pd-accent-dark);
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
 .pd-product-link {
   display: inline-flex;
   align-items: center;
@@ -1164,6 +1196,22 @@ a.pd-product-card:hover .pd-product-link b {
   white-space: nowrap;
 }
 
+.ic-product-order {
+  display: grid;
+  align-content: center;
+  justify-items: end;
+  gap: 12px;
+  text-align: right;
+}
+
+.ic-product-order > strong {
+  max-width: 150px;
+  color: var(--pd-accent-dark);
+  font-size: 12px;
+  font-weight: 680;
+  line-height: 1.35;
+}
+
 .ic-production-story {
   position: relative;
   min-height: 700px;
@@ -1545,10 +1593,13 @@ a.pd-product-card:hover .pd-product-link b {
     grid-template-columns: minmax(210px, .72fr) minmax(300px, 1.25fr) minmax(170px, .55fr);
   }
 
-  .ic-product-action {
+  .ic-product-action,
+  .ic-product-order {
     grid-column: 2 / -1;
     justify-self: start;
   }
+
+  .ic-product-order { justify-items: start; text-align: left; }
 
   .ic-production-layout {
     grid-template-columns: minmax(300px, .68fr) minmax(470px, 1.1fr);
@@ -1611,7 +1662,8 @@ a.pd-product-card:hover .pd-product-link b {
     grid-column: 2;
   }
 
-  .ic-product-action {
+  .ic-product-action,
+  .ic-product-order {
     grid-column: 2;
   }
 
@@ -1756,9 +1808,12 @@ a.pd-product-card:hover .pd-product-link b {
   }
 
   .ic-product-facts,
-  .ic-product-action {
+  .ic-product-action,
+  .ic-product-order {
     grid-column: 1;
   }
+
+  .ic-product-order { justify-items: start; text-align: left; }
 
   .ic-production-story {
     min-height: 650px;

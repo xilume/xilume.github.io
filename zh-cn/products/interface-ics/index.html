@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="了解熙联迈量产 XL1326 与 XL1326-A 接口芯片，XL1326 提供 8 个主机 COM 端口，XL1326-A 仅提供 2 路 CAN FD，两者均采用 LQFP48 封装">
+  <meta name="description" content="了解熙联迈量产 XL1326 与 XL1326-A USB 接口芯片，覆盖串行与 CAN FD 控制器通道，均采用 LQFP48 封装">
   <title>XL 接口芯片 | 熙联迈</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
-  <link rel="stylesheet" href="/styles.css?v=20260826-1">
-  <link rel="stylesheet" href="/products/catalog.css?v=20260828-1">
-  <script defer src="/site.js?v=20260904-2"></script>
+  <link rel="stylesheet" href="/styles.css?v=20260904-3">
+  <link rel="stylesheet" href="/products/catalog.css?v=20260904-2">
+  <script defer src="/site.js?v=20260904-3"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/zh-cn/products/interface-ics/">
   <link rel="alternate" hreflang="en" href="https://xilume.co/products/interface-ics/">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="熙联迈">
   <meta property="og:type" content="website">
   <meta property="og:title" content="XL 接口芯片 | 熙联迈">
-  <meta property="og:description" content="XL1326 提供 8 个主机 COM 端口，XL1326-A 仅提供 2 路 CAN FD，两者均采用 48 脚 LQFP 封装">
+  <meta property="og:description" content="XL1326 提供 6 路串行与 2 路 CAN FD 控制器通道，XL1326-A 提供 2 路 CAN FD 控制器通道，均采用 48 脚 LQFP 封装">
   <meta property="og:url" content="https://xilume.co/zh-cn/products/interface-ics/">
   <meta property="og:image" content="https://xilume.co/images/chip-family-hero-xl1326-v4.webp">
   <link rel="stylesheet" href="/zh-cn.css?v=20260826-1">
@@ -47,9 +47,10 @@
         <div class="ic-production-layout ic-video-hero-layout">
           <div class="ic-production-copy ic-video-hero-copy">
             <p class="pd-kicker">熙联迈接口芯片</p>
-            <h1 id="interface-ics-title">串行与 CAN FD<br>接口芯片</h1>
-            <p>熙联迈为嵌入式与工业系统提供串行、CAN FD 及混合接口芯片</p>
-            <div class="ic-hero-actions"><a class="ic-button-primary" href="#families">查看器件系列</a><a class="ic-text-link" href="/zh-cn/contact/">咨询工程团队 <span aria-hidden="true">&#8594;</span></a></div>
+            <h1 id="interface-ics-title">面向串行与 CAN FD 设计的<br>USB 接口芯片</h1>
+            <p>XL 系列覆盖混合接口、纯串行与纯 CAN FD 通道配置，适用于嵌入式和工业产品</p>
+            <div class="product-commerce is-quote" aria-label="XL 接口芯片采购信息"><div class="product-commerce-price"><strong>获取报价</strong></div><div class="product-commerce-copy"><strong>工程样品</strong><span>按器件提供批量采购价格</span></div></div>
+            <div class="ic-hero-actions"><a class="ic-button-primary" href="#products">查看器件</a><a class="ic-text-link" href="/zh-cn/contact/">获取报价 <span aria-hidden="true">&#8594;</span></a></div>
             <div class="ic-production-meta"><span>串行 + CAN FD</span><span>设计支持</span></div>
           </div>
           <div class="ic-production-media ic-video-hero-media">
@@ -67,11 +68,11 @@
     <section class="ic-family-directory" id="families" aria-labelledby="ic-families-title">
       <div class="pd-shell">
         <div class="pd-section-heading ic-section-heading">
-          <div><p class="pd-kicker">产品分类</p><h2 id="ic-families-title">按接口类型选型</h2></div>
-          <p>按接口类型与通道数量筛选 XL 产品</p>
+          <div><p class="pd-kicker">通道配置</p><h2 id="ic-families-title">按接口组合选型</h2></div>
+          <p>对比混合接口、纯串行与纯 CAN FD 器件</p>
         </div>
         <nav class="ic-family-index" aria-label="接口芯片产品系列">
-          <a id="family-mixed" href="#xl1326"><span><b>8 端口混合接口芯片</b><em>8 个主机 COM 端口</em></span><strong>查看器件</strong><i aria-hidden="true">&#8595;</i></a>
+          <a id="family-mixed" href="#xl1326"><span><b>8 端口混合接口芯片</b><em>6 个串行 COM + 2 个 CAN FD 端点</em></span><strong>查看器件</strong><i aria-hidden="true">&#8595;</i></a>
           <a id="family-serial" href="#xl1108"><span><b>多通道串行接口芯片</b><em>串行</em></span><strong>查看器件</strong><i aria-hidden="true">&#8595;</i></a>
           <a id="family-canfd" href="#xl1326-a"><span><b>CAN FD 接口芯片</b><em>仅 CAN FD</em></span><strong>查看器件</strong><i aria-hidden="true">&#8595;</i></a>
         </nav>
@@ -81,18 +82,18 @@
     <section class="ic-products-section" id="products" aria-labelledby="interface-ic-products-heading">
       <div class="pd-shell">
         <div class="pd-section-heading ic-section-heading">
-          <div><p class="pd-kicker">XL 器件</p><h2 id="interface-ic-products-heading">选择器件</h2></div>
-          <p>按接口类型和通道数量查看 XL 器件</p>
+          <div><p class="pd-kicker">XL 接口芯片</p><h2 id="interface-ic-products-heading">当前器件</h2></div>
+          <p>已确认的通道配置与采购状态</p>
         </div>
       </div>
 
       <div class="ic-product-strips">
         <article class="ic-product-strip" id="xl1326" aria-labelledby="xl1326-title">
           <div class="pd-shell ic-product-strip-inner">
-            <header class="ic-product-identity"><span>量产 · 8 端口接口芯片</span><h3 id="xl1326-title">XL1326</h3><p>8 个主机 COM 端口</p></header>
-            <div class="ic-product-description"><p><strong>XL1326</strong> 在 Windows 下显示为 8 个独立 COM 端口，芯片提供 6 路串行与 2 路 CAN FD，采用 LQFP48 封装</p></div>
-            <dl class="ic-product-facts"><div><dt>主机端口</dt><dd>8 个 COM</dd></div><div><dt>通道</dt><dd>6 路串行 + 2 路 CAN FD</dd></div><div><dt>封装</dt><dd>LQFP48</dd></div></dl>
-            <a class="ic-product-action" href="/documentation/files/Xilume_XL1326_Datasheet_V1.05_CN.pdf" type="application/pdf" download aria-label="下载 XL1326 V1.05 中文数据手册 PDF">下载数据手册 <span aria-hidden="true">&#8595;</span></a>
+            <header class="ic-product-identity"><span>量产 · 混合接口芯片</span><h3 id="xl1326-title">XL1326</h3><p>6 路串行 + 2 路 CAN FD</p></header>
+            <div class="ic-product-description"><p><strong>XL1326</strong> 集成 6 路串行与 2 路 CAN FD 控制器通道，配套 Windows 驱动可将 8 路通道分别枚举为命名 COM 端口。串行端口可由标准串口软件使用，CAN FD 端口使用熙联迈 CAN FD 协议；现场总线需外接收发器</p></div>
+            <dl class="ic-product-facts"><div><dt>Windows 枚举</dt><dd>6 个串行 COM + 2 个 CAN FD 端点</dd></div><div><dt>控制器通道</dt><dd>6 路串行 + 2 路 CAN FD</dd></div><div><dt>封装</dt><dd>LQFP48</dd></div></dl>
+            <div class="ic-product-order"><strong>样品与批量采购报价</strong><a class="ic-product-action" href="/documentation/files/Xilume_XL1326_Datasheet_V1.05_CN.pdf" type="application/pdf" download aria-label="下载 XL1326 V1.05 中文数据手册 PDF">下载数据手册 <span aria-hidden="true">&#8595;</span></a><a class="ic-product-action" href="/zh-cn/contact/">获取报价 <span aria-hidden="true">&#8594;</span></a></div>
           </div>
         </article>
 
@@ -101,16 +102,16 @@
             <header class="ic-product-identity"><span>串行接口芯片</span><h3 id="xl1108-title">XL1108</h3><p>八路串行通道</p></header>
             <div class="ic-product-description"><p><strong>XL1108</strong> 提供 8 路串行通道</p></div>
             <dl class="ic-product-facts"><div><dt>串行</dt><dd>8 路</dd></div><div><dt>CAN FD</dt><dd aria-label="此通道配置不包含该接口">&#8212;</dd></div></dl>
-            <a class="ic-product-action" href="/zh-cn/contact/" aria-label="与熙联迈工程团队讨论 XL1108">咨询 XL1108 <span aria-hidden="true">&#8594;</span></a>
+            <div class="ic-product-order"><strong>请确认供货状态</strong><a class="ic-product-action" href="/zh-cn/contact/" aria-label="与熙联迈工程团队讨论 XL1108">咨询工程团队 <span aria-hidden="true">&#8594;</span></a></div>
           </div>
         </article>
 
         <article class="ic-product-strip" id="xl1326-a" aria-labelledby="xl1326-a-title">
           <div class="pd-shell ic-product-strip-inner">
-            <header class="ic-product-identity"><span>量产 · CAN FD 接口芯片</span><h3 id="xl1326-a-title">XL1326-A</h3><p>仅提供 2 路 CAN FD</p></header>
-            <div class="ic-product-description"><p><strong>XL1326-A</strong> 是仅保留 2 路 CAN FD 的型号，不提供 6 路串行接口，与 XL1326 采用相同的 LQFP48 封装</p></div>
-            <dl class="ic-product-facts"><div><dt>主机端口</dt><dd>2 路 CAN FD</dd></div><div><dt>串行</dt><dd>无</dd></div><div><dt>封装</dt><dd>LQFP48</dd></div></dl>
-            <a class="ic-product-action" href="/documentation/files/Xilume_XL1326-A_Datasheet_V1.00_CN.pdf" type="application/pdf" download aria-label="下载 XL1326-A V1.00 中文数据手册 PDF">下载数据手册 <span aria-hidden="true">&#8595;</span></a>
+            <header class="ic-product-identity"><span>量产 · CAN FD 接口芯片</span><h3 id="xl1326-a-title">XL1326-A</h3><p>2 路 CAN FD 控制器通道</p></header>
+            <div class="ic-product-description"><p><strong>XL1326-A</strong> 集成 2 路 CAN FD 控制器通道，采用 LQFP48 封装。配套 Windows 驱动可枚举为 2 个用于熙联迈 CAN FD 协议的命名 COM 端口，每路需外接一个 CAN FD 收发器</p></div>
+            <dl class="ic-product-facts"><div><dt>Windows 枚举</dt><dd>2 个 CAN FD COM 端点</dd></div><div><dt>控制器通道</dt><dd>2 路 CAN FD</dd></div><div><dt>封装</dt><dd>LQFP48</dd></div></dl>
+            <div class="ic-product-order"><strong>样品与批量采购报价</strong><a class="ic-product-action" href="/documentation/files/Xilume_XL1326-A_Datasheet_V1.00_CN.pdf" type="application/pdf" download aria-label="下载 XL1326-A V1.00 中文数据手册 PDF">下载数据手册 <span aria-hidden="true">&#8595;</span></a><a class="ic-product-action" href="/zh-cn/contact/">获取报价 <span aria-hidden="true">&#8594;</span></a></div>
           </div>
         </article>
       </div>
@@ -125,11 +126,11 @@
         <div class="ic-comparison-table-wrap" tabindex="0" role="region" aria-label="可横向滚动的 XL 接口芯片对比表">
           <table class="ic-comparison-table">
             <caption class="sr-only">熙联迈 XL 接口芯片通道配置对比</caption>
-            <thead><tr><th scope="col">产品</th><th scope="col">主机端口</th><th scope="col">串行通道</th><th scope="col">CAN FD 通道</th><th scope="col">封装</th><th scope="col">选型参考</th></tr></thead>
+            <thead><tr><th scope="col">产品</th><th scope="col">Windows 枚举</th><th scope="col">串行控制器通道</th><th scope="col">CAN FD 通道</th><th scope="col">封装</th><th scope="col">选型参考</th></tr></thead>
             <tbody>
-              <tr><th scope="row">XL1326</th><td>8 个 COM</td><td>6</td><td>2</td><td>LQFP48</td><td>8 端口混合接口</td></tr>
+              <tr><th scope="row">XL1326</th><td>6 个串行 COM + 2 个 CAN FD 端点</td><td>6</td><td>2</td><td>LQFP48</td><td>8 端口混合接口</td></tr>
               <tr><th scope="row">XL1108</th><td>&#8212;</td><td>8</td><td>&#8212;</td><td>&#8212;</td><td>多通道串行通信</td></tr>
-              <tr><th scope="row">XL1326-A</th><td>2 路 CAN FD</td><td>&#8212;</td><td>2</td><td>LQFP48</td><td>仅 CAN FD</td></tr>
+              <tr><th scope="row">XL1326-A</th><td>2 个 CAN FD COM 端点</td><td>&#8212;</td><td>2</td><td>LQFP48</td><td>仅 CAN FD</td></tr>
             </tbody>
           </table>
         </div>
@@ -139,8 +140,8 @@
 
     <section class="ic-design-support" id="design-support" aria-labelledby="ic-design-support-title">
       <div class="pd-shell ic-design-support-inner">
-        <div><p class="pd-kicker">设计支持</p><h2 id="ic-design-support-title">需要协助选择 XL 器件？</h2><p>请提供所需的串行与 CAN FD 通道数量，我们可协助选型</p></div>
-        <a href="/zh-cn/contact/">联系工程团队 <span aria-hidden="true">&#8594;</span></a>
+        <div><p class="pd-kicker">设计支持</p><h2 id="ic-design-support-title">选择 XL 接口芯片</h2><p>请提供串行与 CAN FD 通道数量、主机平台和预计用量</p></div>
+        <a href="/zh-cn/contact/">获取报价 <span aria-hidden="true">&#8594;</span></a>
       </div>
     </section>
   </main>

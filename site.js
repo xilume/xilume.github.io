@@ -37,7 +37,7 @@
           <div class="product-mega-group-heading">
             <small>02</small>
             <h2 id="product-family-diagnostic">USB 工业通信</h2>
-            <p>电脑工业接口扩展</p>
+            <p>电脑端工业接口扩展</p>
           </div>
           <div class="product-mega-links">
             <a href="/zh-cn/products/8hub/">
@@ -78,8 +78,8 @@
         <section class="product-mega-group" aria-labelledby="product-family-power">
           <div class="product-mega-group-heading">
             <small>04</small>
-            <h2 id="product-family-power">电源管理</h2>
-            <p>电池管理</p>
+            <h2 id="product-family-power">智能电池接口</h2>
+            <p>SBS / SMBus 数据</p>
           </div>
           <div class="product-mega-links">
             <a href="/zh-cn/products/usb-smbus/">
@@ -95,7 +95,7 @@
     <div class="container product-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>PRODUCT FAMILIES</span>
-        <strong>Hardware for connected systems.</strong>
+        <strong>Industrial interface hardware and ICs.</strong>
         <a href="/products/">View all products <b aria-hidden="true">→</b></a>
       </div>
       <div class="product-mega-menu-groups">
@@ -139,25 +139,25 @@
           <div class="product-mega-group-heading">
             <small>03</small>
             <h2 id="product-family-ics"><a href="/products/interface-ics/">Interface ICs</a></h2>
-            <p>Featured XL devices &amp; interface families</p>
+            <p>XL devices by interface mix</p>
           </div>
           <div class="product-mega-links">
             <a href="/products/interface-ics/#family-mixed">
               <span>Serial + CAN FD</span>
               <strong>Mixed-interface ICs</strong>
-              <small>Integrated multi-bus connectivity</small>
+              <small>6 serial + 2 CAN FD controller channels</small>
               <b aria-hidden="true">→</b>
             </a>
             <a href="/products/interface-ics/#family-serial">
               <span>Multi-channel serial</span>
               <strong>Serial interface ICs</strong>
-              <small>Scalable serial channel integration</small>
+              <small>8 serial controller channels</small>
               <b aria-hidden="true">→</b>
             </a>
             <a href="/products/interface-ics/#family-canfd">
               <span>CAN FD</span>
               <strong>CAN FD interface ICs</strong>
-              <small>Dedicated high-speed CAN connectivity</small>
+              <small>2 CAN FD controller channels</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>
@@ -165,8 +165,8 @@
         <section class="product-mega-group" aria-labelledby="product-family-power">
           <div class="product-mega-group-heading">
             <small>04</small>
-            <h2 id="product-family-power">Power Management</h2>
-            <p>Battery management</p>
+            <h2 id="product-family-power">Smart-Battery Interfaces</h2>
+            <p>SBS / SMBus data</p>
           </div>
           <div class="product-mega-links">
             <a href="/products/usb-smbus/">

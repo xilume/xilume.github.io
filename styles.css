@@ -9,6 +9,155 @@
   --green:#1769c2;
   --amber:#66798a;
 }
+
+/* Product pricing and quote status */
+.product-commerce {
+  --commerce-ink:#101820;
+  --commerce-muted:#55636d;
+  --commerce-line:rgba(16,24,32,.16);
+  --commerce-surface:rgba(255,255,255,.7);
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:center;
+  gap:10px 17px;
+  width:min(100%,520px);
+  margin-top:25px;
+  padding:14px 16px;
+  color:var(--commerce-ink);
+  border:1px solid var(--commerce-line);
+  background:var(--commerce-surface);
+  backdrop-filter:blur(8px);
+}
+
+.product-commerce-price {
+  display:flex;
+  align-items:baseline;
+  gap:5px;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+
+.product-commerce-price small {
+  color:var(--commerce-muted);
+  font-size:11px;
+  font-weight:720;
+  letter-spacing:.06em;
+}
+
+.product-commerce-price strong {
+  color:var(--commerce-ink);
+  font-size:30px;
+  font-weight:620;
+  letter-spacing:-.045em;
+  line-height:1;
+}
+
+.product-commerce-copy {
+  display:grid;
+  gap:3px;
+  padding-left:17px;
+  border-left:1px solid var(--commerce-line);
+}
+
+.product-commerce-copy strong {
+  color:var(--commerce-ink);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+
+.product-commerce-copy span {
+  color:var(--commerce-muted);
+  font-size:11px;
+  line-height:1.4;
+}
+
+.product-commerce.is-quote .product-commerce-price strong {
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:0;
+}
+
+.hub-hero .product-commerce {
+  --commerce-ink:#111820;
+  --commerce-muted:#52606a;
+  --commerce-line:rgba(17,24,32,.15);
+  --commerce-surface:rgba(255,255,255,.78);
+}
+
+.dcf-hero .product-commerce,
+.x8-hero .product-commerce,
+.product-story-hero .product-commerce,
+.ic-production-story .product-commerce {
+  --commerce-ink:#f5f8fa;
+  --commerce-muted:#b8c5ce;
+  --commerce-line:rgba(211,228,238,.22);
+  --commerce-surface:rgba(8,18,27,.5);
+}
+
+.home-commerce {
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:7px 12px;
+  margin-top:22px;
+  color:#eef6fc;
+  font-variant-numeric:tabular-nums;
+}
+
+.home-commerce strong {
+  font-size:24px;
+  font-weight:650;
+  letter-spacing:-.035em;
+}
+
+.home-commerce span {
+  color:#bfcfda;
+  font-size:11px;
+  font-weight:620;
+  line-height:1.4;
+}
+
+.home-commerce.is-quote strong {
+  font-size:15px;
+  letter-spacing:0;
+}
+
+.product-hero-8hub .home-commerce { color:#101820; }
+.product-hero-8hub .home-commerce span { color:#56636d; }
+
+.family-commerce {
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:15px;
+  padding:10px 11px;
+  color:#143a57;
+  border:1px solid #d2dce4;
+  background:#f7fafc;
+  font-variant-numeric:tabular-nums;
+}
+
+.family-commerce strong { font-size:15px; font-weight:720; }
+.family-commerce span { color:#61717d; font-size:10px; font-weight:650; text-align:right; }
+
+@media (max-width:600px) {
+  .product-commerce {
+    grid-template-columns:1fr;
+    gap:7px;
+    padding:13px 14px;
+  }
+  .product-commerce-copy {
+    padding:8px 0 0;
+    border-top:1px solid var(--commerce-line);
+    border-left:0;
+  }
+  .product-commerce-price strong { font-size:27px; }
+  .home-commerce { margin-top:17px; }
+  .family-commerce { align-items:flex-start; flex-direction:column; gap:3px; }
+  .family-commerce span { text-align:left; }
+}
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; color:var(--ink); background:#fff; font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; }
@@ -76,6 +225,7 @@ img { display:block; max-width:100%; }
 .result-option { display:flex; align-items:center; justify-content:space-between; gap:15px; min-height:55px; padding:12px 14px; border:1px solid var(--line); background:#fff; }
 .result-option strong { display:block; font-size:11px; }
 .result-option span { display:block; margin-top:4px; color:var(--muted); font-size:9px; }
+.result-option em { display:block; margin-top:7px; color:var(--blue-dark); font-size:10px; font-style:normal; font-weight:750; }
 .result-option b { color:var(--blue); font-size:16px; }
 .result-option:hover { border-color:#8ba7bf; background:#f8fbfd; }
 

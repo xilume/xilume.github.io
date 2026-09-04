@@ -26,7 +26,7 @@
       can: {
         kicker:"CAN 1 + CAN 2",
         title:"Two independent CAN FD channels",
-        copy:"Classic CAN and CAN FD, with data rates up to 8 Mbps.",
+        copy:"Classical CAN and CAN FD, with data rates up to 8 Mbit/s.",
         meta:["2 × DE9","Independent channels"]
       },
       serial: {
