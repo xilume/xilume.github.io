@@ -19,7 +19,7 @@
       usb: {
         kicker:"主机",
         title:"一条 USB 连接主机",
-        copy:"一条 USB 可接入全部 8 个逻辑通道，支持 Windows 与 Linux",
+        copy:"一个 USB 为电脑扩展全部 8 路通信通道，支持 Windows 与 Linux",
         meta:["USB 2.0 全速","Windows + Linux"]
       }
     } : {
@@ -38,7 +38,7 @@
       usb: {
         kicker:"HOST",
         title:"One USB connection to the computer",
-        copy:"All eight logical channels arrive through one Windows or Linux host interface.",
+        copy:"One USB adds all eight communication channels to the Windows or Linux computer.",
         meta:["USB 2.0 Full-Speed","Windows + Linux"]
       }
     };

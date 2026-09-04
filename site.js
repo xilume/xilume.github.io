@@ -36,14 +36,14 @@
         <section class="product-mega-group" aria-labelledby="product-family-diagnostic">
           <div class="product-mega-group-heading">
             <small>02</small>
-            <h2 id="product-family-diagnostic">测试与诊断接口</h2>
-            <p>便携式总线接口</p>
+            <h2 id="product-family-diagnostic">USB 工业通信</h2>
+            <p>电脑工业接口扩展</p>
           </div>
           <div class="product-mega-links">
             <a href="/zh-cn/products/8hub/">
-              <span>桌面 8 通道通信接口</span>
-              <strong>Octant</strong>
-              <small>便携接入 CAN FD、RS-485 和 RS-232</small>
+              <span>八通道 USB 工业通信扩展坞</span>
+              <strong>型号 Octant</strong>
+              <small>让 Windows 或 Linux 电脑接入 CAN FD、RS-485 和 RS-232</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>
@@ -123,14 +123,14 @@
         <section class="product-mega-group" aria-labelledby="product-family-diagnostic">
           <div class="product-mega-group-heading">
             <small>02</small>
-            <h2 id="product-family-diagnostic">Test &amp; Diagnostic Interfaces</h2>
-            <p>Portable bus interfaces</p>
+            <h2 id="product-family-diagnostic">USB Industrial Communication</h2>
+            <p>Host interface expansion</p>
           </div>
           <div class="product-mega-links">
             <a href="/products/8hub/">
-              <span>Desktop 8-Channel Communication Interface</span>
-              <strong>Xilume Octant</strong>
-              <small>Portable access to CAN FD, RS-485, and RS-232</small>
+              <span>8-Channel USB Industrial Communication Hub</span>
+              <strong>Model Octant</strong>
+              <small>Connect Windows or Linux hosts to CAN FD, RS-485, and RS-232</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>

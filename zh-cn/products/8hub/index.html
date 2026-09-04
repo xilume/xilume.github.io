@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="熙联迈 Octant 桌面八通道工业通信接口，通过一个 USB 提供两路 CAN FD 和六路串行通道，支持 Windows 与 Linux">
-  <title>熙联迈 Octant | 桌面八通道工业通信接口</title>
+  <meta name="description" content="通过一个 USB，让 Windows 或 Linux 电脑同时连接 CAN FD、RS-485 与 RS-232 设备。熙联迈 Octant 提供 2 路 CAN FD、4 路 RS-485 和 2 路 RS-232。">
+  <title>八通道 USB 工业通信扩展坞 | 熙联迈 Octant</title>
   <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
   <link rel="stylesheet" href="/styles.css?v=20260826-1">
-  <link rel="stylesheet" href="/products/8hub/product.css?v=20260904-2">
-  <script defer src="/site.js?v=20260826-1"></script>
-  <script defer src="/products/8hub/product.js?v=20260904-1"></script>
+  <link rel="stylesheet" href="/products/8hub/product.css?v=20260904-3">
+  <script defer src="/site.js?v=20260904-2"></script>
+  <script defer src="/products/8hub/product.js?v=20260904-2"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/zh-cn/products/8hub/">
   <link rel="alternate" hreflang="en" href="https://xilume.co/products/8hub/">
@@ -18,27 +18,27 @@
   <link rel="alternate" hreflang="x-default" href="https://xilume.co/products/8hub/">
   <meta property="og:site_name" content="熙联迈">
   <meta property="og:type" content="product">
-  <meta property="og:title" content="熙联迈 Octant | 桌面八通道工业通信接口">
-  <meta property="og:description" content="一个封闭式桌面 USB 接口，集成两路 CAN FD、四路 RS-485 与两路 RS-232 通道">
+  <meta property="og:title" content="八通道 USB 工业通信扩展坞 | 熙联迈 Octant">
+  <meta property="og:description" content="通过一个 USB，为 Windows 或 Linux 电脑增加两路 CAN FD、四路 RS-485 与两路 RS-232。">
   <meta property="og:url" content="https://xilume.co/zh-cn/products/8hub/">
   <meta property="og:image" content="https://xilume.co/images/8hub-hero-studio.webp?v=20260904-1">
-  <meta property="og:image:alt" content="熙联迈 Octant 桌面八通道工业通信接口">
+  <meta property="og:image:alt" content="熙联迈八通道 USB 工业通信扩展坞，型号 Octant">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "熙联迈 Octant",
+    "name": "熙联迈八通道 USB 工业通信扩展坞",
     "model": "Octant",
-    "category": "桌面八通道工业通信接口",
-    "description": "一款封闭式桌面 USB 接口，提供两路 CAN / CAN FD 通道及六路串行通道，适用于工业系统、工程工作台和现场维护",
+    "category": "USB 工业通信扩展坞",
+    "description": "通过一个 USB，将 Windows 或 Linux 电脑连接至两路 CAN FD、四路 RS-485 和两路 RS-232 设备。",
     "image": "https://xilume.co/images/8hub-hero-studio.webp?v=20260904-1",
     "url": "https://xilume.co/zh-cn/products/8hub/",
     "brand": { "@type": "Brand", "name": "熙联迈", "alternateName": "Xilume" },
     "manufacturer": { "@type": "Organization", "name": "熙联迈", "url": "https://xilume.co/zh-cn/" },
     "additionalProperty": [
       { "@type": "PropertyValue", "name": "CAN 通道", "value": "2 路独立 CAN / CAN FD" },
-      { "@type": "PropertyValue", "name": "串行通道", "value": "4 路 RS-485 + 2 路 RS-232，或 6 路 RS-485" },
+      { "@type": "PropertyValue", "name": "串行通道", "value": "4 路 RS-485 + 2 路 RS-232" },
       { "@type": "PropertyValue", "name": "CAN FD 最高数据比特率", "value": "8 Mbit/s" },
       { "@type": "PropertyValue", "name": "操作系统", "value": "Windows 与 Linux" }
     ]
@@ -54,11 +54,12 @@
     </div>
   </header>
 
-  <nav class="hub-local-nav" aria-label="Octant 页面导航">
+  <nav class="hub-local-nav" aria-label="熙联迈 USB 工业通信扩展坞页面导航">
     <div class="hub-wide hub-local-inner">
-      <a class="hub-local-name" href="#top">Octant</a>
+      <a class="hub-local-name" href="#top">USB 工业通信扩展坞 <span>· Octant</span></a>
       <div class="hub-local-links">
         <a href="#interfaces">接口</a>
+        <a href="#host-access">系统识别</a>
         <a href="#applications">应用</a>
         <a href="#specifications">规格</a>
         <a class="hub-local-cta" href="mailto:echen070301@gmail.com?subject=Xilume%20Octant%20inquiry">联系销售</a>
@@ -73,39 +74,57 @@
       </picture>
       <div class="hub-wide hub-hero-inner">
         <div class="hub-hero-copy">
-          <p class="hub-eyebrow">熙联迈 Octant · 八通道桌面接口</p>
-          <h1 id="hub-title">八路接口<br><span>一个 USB</span></h1>
-          <p>面向 CAN FD 与串行设备的桌面八通道工业通信接口</p>
+          <p class="hub-eyebrow">八通道 USB 工业通信扩展坞 · 型号 Octant</p>
+          <h1 id="hub-title">一台电脑<br><span>连接八路工业设备</span></h1>
+          <p>通过一个 USB，为 Windows 或 Linux 电脑增加 CAN FD、RS-485 与 RS-232 接口</p>
           <div class="hub-hero-actions">
             <a class="hub-button hub-button-primary" href="mailto:echen070301@gmail.com?subject=Xilume%20Octant%20inquiry">联系销售 <span aria-hidden="true">↗</span></a>
-            <a class="hub-button hub-button-secondary" href="#interfaces">查看接口</a>
+            <a class="hub-button hub-button-secondary" href="#host-access">查看系统识别</a>
           </div>
         </div>
       </div>
       <div class="hub-wide hub-hero-facts" role="group" aria-label="Octant 主要规格">
-        <div><strong>2 × CAN FD</strong><span>数据相位最高 8 Mbit/s</span></div>
-        <div><strong>4 × RS-485</strong><span>工业串行通信</span></div>
-        <div><strong>2 × RS-232</strong><span>维护设备</span></div>
-        <div><strong>Windows + Linux</strong><span>驱动支持</span></div>
+        <div><strong>2 × CAN FD</strong><span>BMS / 底盘通信</span></div>
+        <div><strong>4 × RS-485</strong><span>传感器 / 驱动器</span></div>
+        <div><strong>2 × RS-232</strong><span>配置 / 维护</span></div>
+        <div><strong>Windows + Linux</strong><span>笔记本 / 工控机</span></div>
       </div>
     </section>
 
-    <section class="hub-editorial" aria-labelledby="hub-editorial-title">
-      <figure>
-        <img src="/images/8hub-workbench-system.webp?v=20260904-1" alt="Octant 在工作台上连接工业计算机、测试设备与机械硬件">
-      </figure>
-      <div class="hub-editorial-shade" aria-hidden="true"></div>
-      <div class="hub-wide hub-editorial-copy">
-        <p class="hub-eyebrow">桌面式接口</p>
-        <h2 id="hub-editorial-title">一个 USB 连接多种总线</h2>
+    <section class="hub-role" aria-labelledby="hub-role-title">
+      <div class="hub-wide hub-role-layout">
+        <header class="hub-role-copy">
+          <p class="hub-eyebrow">以电脑为中心的工业通信</p>
+          <h2 id="hub-role-title">电脑运行软件<br><span>扩展坞连接设备</span></h2>
+          <p>用一个设备替代多个单用途 CAN 与串口适配器，同时保留现有电脑、脚本、测试工具与工作流程。Octant 负责扩展连接，不是 PLC，也不替代独立控制器。</p>
+        </header>
+        <div class="hub-role-flow" aria-label="电脑通过 Octant 连接工业设备的流程">
+          <div class="hub-role-node">
+            <small>主机电脑</small>
+            <strong>Windows 或 Linux</strong>
+            <span>应用程序 · 脚本 · 测试软件</span>
+          </div>
+          <span class="hub-role-link">一个 USB</span>
+          <div class="hub-role-node is-hub">
+            <small>工业通信扩展坞</small>
+            <strong>型号 Octant</strong>
+            <span>八路独立通信通道</span>
+          </div>
+          <span class="hub-role-link">八路接口</span>
+          <div class="hub-role-node">
+            <small>工业设备</small>
+            <strong>CAN FD · RS-485 · RS-232</strong>
+            <span>BMS · 底盘 · 传感器 · 驱动器 · 仪表</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="hub-interfaces" id="interfaces" aria-labelledby="hub-interfaces-title">
       <div class="hub-wide">
         <header class="hub-section-heading">
-          <p class="hub-eyebrow">接口</p>
-          <h2 id="hub-interfaces-title">八路现场接口</h2>
+          <p class="hub-eyebrow">八路物理通道</p>
+          <h2 id="hub-interfaces-title">一个扩展坞<br>接入三种工业接口</h2>
         </header>
 
         <div class="hub-interface-viewer" data-hub-interface-viewer>
@@ -138,34 +157,95 @@
       </div>
     </section>
 
+    <section class="hub-enumeration" id="host-access" aria-labelledby="hub-enumeration-title">
+      <div class="hub-wide hub-enumeration-layout">
+        <div class="hub-enumeration-copy">
+          <p class="hub-eyebrow">WINDOWS 端口识别</p>
+          <h2 id="hub-enumeration-title">八个标准 COM 口<br><span>名称一目了然</span></h2>
+          <p>安装熙联迈驱动后，2 路 CAN FD 与 6 路串行通道在 Windows 中呈现为 8 个命名清晰的 COM 口。常用串口工具、脚本和自动化测试软件可以分别访问每一路通道。</p>
+          <dl class="hub-enumeration-facts">
+            <div><dt>CAN FD</dt><dd>Xilume CAN FD 1–2</dd></div>
+            <div><dt>Serial</dt><dd>Xilume Serial 1–6</dd></div>
+            <div><dt>Windows</dt><dd>标准 COM 接口</dd></div>
+          </dl>
+        </div>
+        <figure class="hub-system-window">
+          <div class="hub-window-bar" aria-hidden="true"><span></span><span></span><span></span><strong>Windows 设备管理器</strong></div>
+          <img src="/images/8hub/evidence/device-manager-en-v3.png" width="1340" height="980" loading="lazy" decoding="async" alt="Windows 设备管理器显示 Xilume CAN FD 1 和 2，以及 Xilume Serial 1 至 6 的八个命名 COM 口">
+          <figcaption>Windows 设备管理器视图 · 2 个 CAN FD + 6 个 Serial 命名 COM 口</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="hub-applications" id="applications" aria-labelledby="hub-applications-title">
       <div class="hub-wide">
         <header class="hub-application-heading">
-          <div><p class="hub-eyebrow">应用</p><h2 id="hub-applications-title">测试与设备连接</h2></div>
+          <div><p class="hub-eyebrow">工程应用</p><h2 id="hub-applications-title">从研发联调<br>到现场诊断</h2></div>
+          <p>设备、总线和项目阶段不断变化，电脑端的工作方式无需改变。</p>
         </header>
 
-        <div class="hub-scene">
-          <figure><img src="/images/8hub-workbench-system.webp?v=20260904-1" alt="位于工业测试工作台中心的 Octant"></figure>
-          <div><small>配置与测试</small><h3>连接控制器、仪器和维护设备</h3><p>统一接入 CAN FD、RS-485 与 RS-232</p></div>
+        <div class="hub-use-case-grid">
+          <article class="hub-use-case hub-use-case-wide">
+            <small>01 · 机器人与 AGV</small>
+            <h3>机器人 / AGV 研发联调</h3>
+            <p>CAN FD 接 BMS 或底盘，RS-485 接传感器与驱动器，RS-232 接配置口，由一台电脑同时管理。</p>
+            <div class="hub-use-case-tags"><span>CAN FD → BMS / 底盘</span><span>RS-485 → 传感器 / 驱动器</span><span>RS-232 → 配置口</span></div>
+          </article>
+          <article class="hub-use-case hub-use-case-wide">
+            <small>02 · 验证测试</small>
+            <h3>自动化测试台</h3>
+            <p>同时连接多块控制板、驱动器或仪表，再由主机软件自动完成收发、记录与报告流程。</p>
+            <div class="hub-use-case-tags"><span>多设备并行</span><span>通信记录</span><span>主机自动化</span></div>
+          </article>
+          <article class="hub-use-case">
+            <small>03 · 现场维护</small>
+            <h3>现场维修诊断</h3>
+            <p>工程师携带笔记本到现场，读取故障、修改参数并检查通信。</p>
+          </article>
+          <article class="hub-use-case">
+            <small>04 · 接口扩展</small>
+            <h3>工控机接口扩展</h3>
+            <p>无需更换主板，为缺少串口与 CAN 的 Windows 或 Linux 工控机增加工业接口。</p>
+          </article>
+          <article class="hub-use-case">
+            <small>05 · 教学开发</small>
+            <h3>高校实验室</h3>
+            <p>用一个设备完成 RS-232、RS-485、CAN 与 CAN FD 开发和教学。</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="hub-platforms" aria-labelledby="hub-platforms-title">
-      <div class="hub-wide hub-platform-layout">
-        <div>
-          <p class="hub-eyebrow">软件支持</p>
-          <h2 id="hub-platforms-title">Windows 与 Linux<br>驱动支持</h2>
+    <section class="hub-software" aria-labelledby="hub-software-title">
+      <div class="hub-wide">
+        <header class="hub-software-heading">
+          <div>
+            <p class="hub-eyebrow">主机软件</p>
+            <h2 id="hub-software-title">配置、收发<br>筛选与记录</h2>
+          </div>
+          <p>熙联迈 CAN FD 工具与产品驱动，让封闭式桌面扩展坞可直接用于研发联调、测试与诊断。</p>
+        </header>
+        <div class="hub-software-grid">
+          <figure class="hub-software-card">
+            <div class="hub-window-bar" aria-hidden="true"><span></span><span></span><span></span><strong>熙联迈 CAN FD 控制中心</strong></div>
+            <img src="/images/8hub/evidence/xilume-control-center-en-v3.png" width="1648" height="940" loading="lazy" decoding="async" alt="熙联迈 CAN FD 控制中心显示 CAN FD 发送、接收、实时流量、筛选和 CSV 记录">
+            <figcaption><strong>CAN FD 控制中心</strong><span>发送 · 周期发送 · 实时流量 · 筛选 · 保存 CSV</span></figcaption>
+          </figure>
+          <figure class="hub-software-card">
+            <div class="hub-window-bar" aria-hidden="true"><span></span><span></span><span></span><strong>CAN FD 位时序</strong></div>
+            <img src="/images/8hub/evidence/canfd-timing-8m-en-v3.png" width="1618" height="655" loading="lazy" decoding="async" alt="熙联迈 CAN FD 位时序界面显示 500 kbit/s 标称速率与 8 Mbit/s 数据速率">
+            <figcaption><strong>数据相位最高 8 Mbit/s</strong><span>画面显示 500 kbit/s 标称速率 · 8 Mbit/s 数据速率</span></figcaption>
+          </figure>
         </div>
-        <div class="hub-platform-list">
+        <div class="hub-platform-list hub-platform-list-inline">
           <article>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3.8 10.8 2.6v8.6H2V3.8Zm10 7.4V2.4L22 1v10.2H12ZM2 12.5h8.8v8.6L2 19.9v-7.4Zm10 0h10V23l-10-1.4v-9.1Z"/></svg>
-            <div><small>Windows</small><strong>产品驱动</strong></div>
+            <div><small>Windows</small><strong>八个命名 COM 口</strong></div>
             <span>支持</span>
           </article>
           <article>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4V5Zm2 2v10h12V7H6Zm1.4 2.1 1.1-1 3 3-3 3-1.1-1 2-2-2-2Zm4.4 4.6h4.8v1.5h-4.8v-1.5Z"/></svg>
-            <div><small>Linux</small><strong>Linux 驱动</strong></div>
+            <div><small>Linux</small><strong>2 路 SocketCAN + 6 路串行设备</strong></div>
             <span>支持</span>
           </article>
         </div>
@@ -180,13 +260,14 @@
           <a href="mailto:echen070301@gmail.com?subject=Xilume%20Octant%20technical%20question">咨询技术问题 →</a>
         </div>
         <dl class="hub-spec-list">
+          <div><dt>产品角色</dt><dd>USB 主机接口扩展，由电脑运行应用程序</dd></div>
           <div><dt>主机</dt><dd>USB 2.0 全速</dd></div>
           <div><dt>CAN</dt><dd>2 路独立 CAN / CAN FD 通道</dd></div>
           <div><dt>最高数据比特率</dt><dd>CAN FD 数据相位 <strong>8 Mbit/s</strong></dd></div>
           <div><dt>标准串行配置</dt><dd>4 × RS-485 + 2 × RS-232</dd></div>
-          <div><dt>RS-485 配置</dt><dd>6 × RS-485</dd></div>
           <div><dt>现场接口</dt><dd>2 × DE9 + 2×9 / 3.5 mm 插拔式接线端子</dd></div>
-          <div><dt>操作系统</dt><dd>Windows + Linux</dd></div>
+          <div><dt>Windows 主机接口</dt><dd>8 个命名标准 COM 口</dd></div>
+          <div><dt>Linux 主机接口</dt><dd>2 路 SocketCAN + 6 路串行设备</dd></div>
           <div><dt>外壳</dt><dd>黑色 1.2 mm 钣金 · 约 100 × 96 × 40 mm</dd></div>
         </dl>
       </div>
@@ -205,13 +286,13 @@
 
     <section class="hub-final-cta">
       <div class="hub-wide">
-        <p class="hub-eyebrow">熙联迈 Octant · 八通道桌面接口</p>
-        <h2>一个 USB 连接八路接口</h2>
+        <p class="hub-eyebrow">八通道 USB 工业通信扩展坞 · 型号 Octant</p>
+        <h2>为一台电脑增加八路工业接口</h2>
         <a class="hub-button hub-button-light" href="mailto:echen070301@gmail.com?subject=Xilume%20Octant%20inquiry">联系熙联迈 <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="熙联迈"></div><p>接口芯片与接口模块</p></div><div><h3>产品</h3><a href="/zh-cn/products/interface-ics/">接口芯片</a><a href="/zh-cn/products/8hub/">Octant</a><a href="/zh-cn/products/usb-smbus/">电池模块</a></div><div><h3>资源</h3><a href="/zh-cn/products/mini-pcie-dual-can-fd/">双路 Mini PCIe CAN FD</a><a href="/zh-cn/applications/">应用</a><a href="/zh-cn/documentation/">文档</a></div><div><h3>销售</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 熙联迈</span><span>2 × CAN FD · 6 × 串行 · Windows + Linux</span></div></footer>
+  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="熙联迈"></div><p>接口芯片与接口模块</p></div><div><h3>产品</h3><a href="/zh-cn/products/interface-ics/">接口芯片</a><a href="/zh-cn/products/8hub/">USB 工业通信扩展坞 · Octant</a><a href="/zh-cn/products/usb-smbus/">电池模块</a></div><div><h3>资源</h3><a href="/zh-cn/products/mini-pcie-dual-can-fd/">双路 Mini PCIe CAN FD</a><a href="/zh-cn/applications/">应用</a><a href="/zh-cn/documentation/">文档</a></div><div><h3>销售</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 熙联迈</span><span>2 × CAN FD · 6 × 串行 · Windows + Linux</span></div></footer>
 </body>
 </html>
