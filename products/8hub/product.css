@@ -380,10 +380,10 @@ html {
   font-weight:780;
 }
 
-.hub-port-can-one { left:31%; top:49%; }
-.hub-port-can-two { left:31%; top:66%; }
-.hub-port-serial { left:62%; top:61%; }
-.hub-port-usb { left:50%; top:64%; }
+.hub-port-can-one { left:calc(50% + 187px); top:42%; }
+.hub-port-can-two { left:calc(50% + 187px); top:63%; }
+.hub-port-serial { left:calc(50% - 170px); top:61%; }
+.hub-port-usb { left:59%; top:61%; }
 
 .hub-interface-console {
   display:flex;
@@ -486,32 +486,6 @@ html {
   font-weight:550;
   line-height:1;
   letter-spacing:-.057em;
-}
-
-.hub-scene-tabs {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-  gap:4px;
-  padding:4px;
-  border:1px solid #2c333a;
-  background:#10151b;
-}
-
-.hub-scene-tabs button {
-  min-height:39px;
-  padding:9px 15px;
-  color:#8e9aa5;
-  border:0;
-  background:transparent;
-  cursor:pointer;
-  font-size:10px;
-  font-weight:690;
-}
-
-.hub-scene-tabs button[aria-selected="true"] {
-  color:#fff;
-  background:#29333c;
 }
 
 .hub-scene {
@@ -803,6 +777,8 @@ html {
   .hub-hero { min-height:640px; }
   .hub-hero-inner { min-height:525px; }
   .hub-interface-viewer { grid-template-columns:minmax(0,1.25fr) minmax(290px,.75fr); min-height:620px; }
+  .hub-port-can-one,.hub-port-can-two { left:calc(50% + 168px); }
+  .hub-port-serial { left:calc(50% - 152px); }
   .hub-platform-layout { grid-template-columns:minmax(0,.8fr) minmax(470px,1.2fr); gap:60px; }
   .hub-spec-layout,.hub-resources-layout { gap:70px; }
 }
@@ -832,10 +808,11 @@ html {
   .hub-interfaces,.hub-applications,.hub-specifications { padding:92px 0 98px; }
   .hub-interface-viewer { grid-template-columns:1fr; min-height:0; }
   .hub-interface-stage { min-height:68vw; border-right:0; border-bottom:1px solid var(--hub-line); }
+  .hub-port-can-one,.hub-port-can-two { left:70%; }
+  .hub-port-serial { left:32%; }
   .hub-interface-console { min-height:330px; }
   .hub-interface-detail { padding-top:45px; }
   .hub-application-heading { align-items:flex-start; flex-direction:column; gap:28px; }
-  .hub-scene-tabs { justify-content:flex-start; }
   .hub-scene { min-height:78vw; }
   .hub-platform-layout,.hub-spec-layout,.hub-resources-layout { grid-template-columns:1fr; gap:55px; }
   .hub-platforms,.hub-resources { padding:88px 0 94px; }
@@ -869,13 +846,12 @@ html {
   .hub-interface-stage { min-height:465px; }
   .hub-interface-image img { object-fit:cover; }
   .hub-port-marker { width:35px; height:35px; }
-  .hub-port-can-one { left:25%; top:49%; }
-  .hub-port-can-two { left:25%; top:66%; }
-  .hub-port-serial { left:66%; top:61%; }
+  .hub-port-can-one { left:74%; top:42%; }
+  .hub-port-can-two { left:74%; top:63%; }
+  .hub-port-serial { left:29%; top:61%; }
+  .hub-port-usb { left:59%; top:60%; }
   .hub-interface-console { min-height:300px; padding:22px; }
   .hub-interface-detail h3 { font-size:32px; }
-  .hub-scene-tabs { width:100%; }
-  .hub-scene-tabs button { flex:1; padding:8px 10px; }
   .hub-scene { min-height:620px; }
   .hub-scene img { object-position:center; }
   .hub-scene > div { right:24px; bottom:26px; left:24px; }

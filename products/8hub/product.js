@@ -79,20 +79,6 @@
     viewButtons.forEach((button) => button.addEventListener("click", () => setView(button.dataset.hubView)));
   }
 
-  const sceneButtons = Array.from(document.querySelectorAll("[data-hub-scene-select]"));
-  const scenes = Array.from(document.querySelectorAll("[data-hub-scene]"));
-
-  const setScene = (name) => {
-    sceneButtons.forEach((button) => button.setAttribute("aria-selected", String(button.dataset.hubSceneSelect === name)));
-    scenes.forEach((scene) => {
-      const active = scene.dataset.hubScene === name;
-      scene.hidden = !active;
-      scene.classList.toggle("is-active", active);
-    });
-  };
-
-  sceneButtons.forEach((button) => button.addEventListener("click", () => setScene(button.dataset.hubSceneSelect)));
-
   const localLinks = Array.from(document.querySelectorAll(".hub-local-links a[href^='#']"));
   const localSections = localLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
 
