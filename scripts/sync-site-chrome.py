@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='20260907-solutions1'
+VERSION='20260907-solutions2'
 
 def header(zh,path):
  p='/zh-cn' if zh else ''

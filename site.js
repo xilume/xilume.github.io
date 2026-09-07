@@ -396,6 +396,9 @@
         entry.trigger.addEventListener("mouseleave", queueMegaMenuClose);
         entry.panel.addEventListener("mouseenter", () => openMegaMenu(entry));
         entry.panel.addEventListener("mouseleave", queueMegaMenuClose);
+        entry.panel.addEventListener("click", (event) => {
+          if (event.target.closest("a[href]")) closeMegaMenu();
+        });
         entry.trigger.addEventListener("focus", () => {
           if (!restoringMegaMenuFocus) openMegaMenu(entry);
         });
