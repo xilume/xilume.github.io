@@ -4,19 +4,19 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Octant 与 XE826 安装指南 | 熙联迈</title>
   <meta name="description" content="熙联迈 Octant 与 XE826 的硬件连接、Windows 与 Linux 驱动安装及通道检查">
-  <link rel="icon" href="/favicon.svg?v=20260907-1" type="image/svg+xml"><link rel="apple-touch-icon" href="/xilume-icon-180.png?v=20260907-1" sizes="180x180">
-  <link rel="stylesheet" href="/styles.css?v=20260907-1"><link rel="stylesheet" href="/zh-cn.css?v=20260907-1">
-  <link rel="stylesheet" href="/documentation/docs-support.css?v=20260907-1"><script defer src="/site.js?v=20260907-1"></script>
+  <link rel="icon" href="/favicon.svg?v=20260907-brand2" type="image/svg+xml"><link rel="apple-touch-icon" href="/xilume-icon-180.png?v=20260907-brand2" sizes="180x180">
+  <link rel="stylesheet" href="/styles.css?v=20260907-brand2"><link rel="stylesheet" href="/zh-cn.css?v=20260907-brand2">
+  <link rel="stylesheet" href="/documentation/docs-support.css?v=20260907-1"><script defer src="/site.js?v=20260907-brand2"></script>
   <link rel="canonical" href="https://xilume.co/zh-cn/documentation/octant-xe826/"><meta name="robots" content="index, follow">
   <link rel="alternate" hreflang="en" href="https://xilume.co/documentation/octant-xe826/"><link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/documentation/octant-xe826/"><link rel="alternate" hreflang="x-default" href="https://xilume.co/documentation/octant-xe826/">
   <meta property="og:site_name" content="熙联迈"><meta property="og:type" content="website"><meta property="og:title" content="Octant 与 XE826 安装指南 | 熙联迈"><meta property="og:description" content="熙联迈 Octant 与 XE826 的硬件连接、Windows 与 Linux 驱动安装及通道检查"><meta property="og:url" content="https://xilume.co/zh-cn/documentation/octant-xe826/">
-  <link rel="stylesheet" href="/site-refinement.css?v=20260907-1">
+  <link rel="stylesheet" href="/site-refinement.css?v=20260907-brand2">
 </head>
 <body class="docs-page">
   <a class="skip-link" href="#main-content">跳到正文</a>
 <header class="site-header corporate-header">
     <div class="container header-inner">
-      <a class="brand brand-symbol" href="/zh-cn/" aria-label="熙联迈首页"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="熙联迈" fetchpriority="high"></a>
+      <a class="brand brand-symbol" href="/zh-cn/" aria-label="熙联迈首页"><img src="/images/xilume-official-wordmark.webp" width="160" height="62" alt="熙联迈" fetchpriority="high"></a>
       <nav aria-label="主导航"><a href="/zh-cn/products/">产品</a><a href="/zh-cn/solutions/">解决方案</a><a href="/zh-cn/downloads/">软件与驱动</a><a href="/zh-cn/applications/">应用</a><a href="/zh-cn/documentation/">文档</a><a href="/zh-cn/about/">公司</a><a class="nav-finder" href="/zh-cn/contact/">联系我们</a></nav>
     </div>
   </header>
@@ -29,7 +29,7 @@ sudo ip link set can0 type can bitrate 500000 dbitrate 5000000 fd on
 sudo ip link set can0 up</code></pre><p>更高数据速率需要同时满足收发器、布线长度、终端和对端配置条件；8 Mbit/s 是 CAN FD 数据阶段速率</p></section><section class="docs-section" id="serial"><h2>串口使用</h2><p>Windows 使用设备管理器中标有 Serial 的六个 COM 端口，Linux 使用六个 serial 路径；将应用中的逻辑通道与实物端口逐一对应后，再连接目标设备</p><div class="docs-table-wrap"><table class="docs-table"><thead><tr><th scope="col">项目</th><th scope="col">设置</th></tr></thead><tbody><tr><td>接口</td><td>4 × RS-485 · 2 × RS-232</td></tr><tr><td>应用设置</td><td>波特率、数据位、校验、停止位与对端一致</td></tr><tr><td>通道映射</td><td>以设备标识与驱动检查结果为准</td></tr></tbody></table></div></section><section class="docs-section" id="compatibility"><h2>接口与兼容性</h2><div class="docs-table-wrap"><table class="docs-table"><thead><tr><th scope="col">平台</th><th scope="col">当前驱动与接口</th></tr></thead><tbody><tr><td>Windows</td><td>7.1.9.0 · 两个 CAN FD COM 端点与六个串行 COM 端口</td></tr><tr><td>Linux</td><td>1.2.3 · 2 路 SocketCAN + 6 路串口</td></tr><tr><td>CAN 协议</td><td>经典 CAN 数据帧、CAN FD 数据帧与 BRS</td></tr></tbody></table></div><p>当前 CAN 文本协议不表示 RTR 远程帧，也不能区分数值不高于 0x7FF 的扩展帧与标准帧；选择目标协议或开发接口时请核对这一条件</p></section><section class="docs-section" id="checks"><h2>识别与通信检查</h2><div class="docs-table-wrap"><table class="docs-table"><thead><tr><th scope="col">现象</th><th scope="col">检查方法</th></tr></thead><tbody><tr><td>未发现设备</td><td>先检查主机 USB 通道、供电和连接；Linux 使用 <code>lsusb</code> 查看 USB 识别</td></tr><tr><td>已识别但无 CAN 接口</td><td>在驱动包 Linux 文件夹运行 <code>./verify.sh</code>，保存实际输出和内核版本</td></tr><tr><td>有通道但无接收</td><td>核对 CANH/CANL、总线末端终端、参考地以及双方速率和帧模式</td></tr><tr><td>重启后通道名称变化</td><td>按检查结果重新映射实际接口名，避免在应用中直接假定 can0/can1 或固定 COM 编号</td></tr></tbody></table></div></section><section class="docs-section" id="resources"><h2>相关下载</h2><div class="docs-reference-links"><a href="/downloads/files/Xilume_Octant_XE826_Driver_Package.zip">下载驱动包 ↓</a><a href="/zh-cn/downloads/#control-center">CAN FD 控制中心 →</a><a href="/downloads/tracebox-analyzer-pro/">TraceBox Analyzer Pro · EN →</a><a href="/zh-cn/products/8hub/">产品信息 →</a></div><p class="docs-source">本指南依据当前驱动包中的 README、安装程序与检查脚本整理，具体版本见软件与驱动页面</p></section><aside class="docs-support"><div><h2>需要集成支持？</h2><p>请提供产品型号、系统与内核版本，以及安装检查结果，便于核对对应配置</p></div><a href="/zh-cn/contact/">联系技术支持 →</a></aside></article></div></main>
 <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-identity"><a class="brand footer-brand brand-symbol" href="/zh-cn/" aria-label="熙联迈首页"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="熙联迈" loading="lazy"></a><p>熙联迈<br>工业通信接口与芯片</p><a href="/zh-cn/about/">了解熙联迈 →</a></div>
+      <div class="footer-identity"><a class="brand footer-brand brand-symbol" href="/zh-cn/" aria-label="熙联迈首页"><img src="/images/xilume-official-wordmark.webp" width="160" height="62" alt="熙联迈" loading="lazy"></a><p>熙联迈<br>工业通信接口与芯片</p><a href="/zh-cn/about/">了解熙联迈 →</a></div>
       <div><h3>产品</h3><a href="/zh-cn/products/embedded-communication/">嵌入式通信</a><a href="/zh-cn/products/8hub/">Octant 工业通信扩展坞</a><a href="/zh-cn/products/interface-ics/">接口芯片</a><a href="/zh-cn/products/usb-smbus/">智能电池接口</a></div><div><h3>支持</h3><a href="/zh-cn/downloads/">软件与驱动</a><a href="/zh-cn/documentation/">技术资料</a><a href="/zh-cn/applications/">安装与应用</a><a href="/zh-cn/contact/">联系我们</a></div>
       <div><h3>销售与技术咨询</h3><p>Eddie Chen</p><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a><a href="tel:+16573459435">+1 (657) 345-9435</a></div>
     </div>

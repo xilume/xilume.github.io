@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='20260907-1'
+VERSION='20260907-brand2'
 
 def header(zh,path):
  p='/zh-cn' if zh else ''
@@ -17,7 +17,7 @@ def header(zh,path):
   links.append(f'<a{cls} href="{p}/{target}/"{active}>{cn if zh else en}</a>')
  return f'''<header class="site-header corporate-header">
     <div class="container header-inner">
-      <a class="brand brand-symbol" href="{p}/" aria-label="{label}"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="{'熙联迈' if zh else 'Xilume'}" fetchpriority="high"></a>
+      <a class="brand brand-symbol" href="{p}/" aria-label="{label}"><img src="/images/xilume-official-wordmark.webp" width="160" height="62" alt="{'熙联迈' if zh else 'Xilume'}" fetchpriority="high"></a>
       <nav aria-label="{'主导航' if zh else 'Primary navigation'}">{''.join(links)}</nav>
     </div>
   </header>'''
@@ -29,7 +29,7 @@ def footer(zh):
  content=''.join(f'<div><h3>{title}</h3>'+''.join(a(path,label) for path,label in items)+'</div>' for title,items in groups)
  return f'''<footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-identity"><a class="brand footer-brand brand-symbol" href="{p}/" aria-label="{'熙联迈首页' if zh else 'Xilume home'}"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="{'熙联迈' if zh else 'Xilume'}" loading="lazy"></a><p>{'熙联迈<br>工业通信接口与芯片' if zh else 'Xilume<br>Industrial communication interfaces &amp; ICs'}</p>{a('about','了解熙联迈 →' if zh else 'About Xilume →')}</div>
+      <div class="footer-identity"><a class="brand footer-brand brand-symbol" href="{p}/" aria-label="{'熙联迈首页' if zh else 'Xilume home'}"><img src="/images/xilume-official-wordmark.webp" width="160" height="62" alt="{'熙联迈' if zh else 'Xilume'}" loading="lazy"></a><p>{'熙联迈<br>工业通信接口与芯片' if zh else 'Xilume<br>Industrial communication interfaces &amp; ICs'}</p>{a('about','了解熙联迈 →' if zh else 'About Xilume →')}</div>
       {content}
       <div><h3>{'销售与技术咨询' if zh else 'Sales &amp; technical inquiries'}</h3><p>Eddie Chen</p><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a><a href="tel:+16573459435">+1 (657) 345-9435</a></div>
     </div>
