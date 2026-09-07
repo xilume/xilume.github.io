@@ -184,41 +184,40 @@
     <div class="container solutions-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>解决方案</span>
-        <strong>按应用与接口需求选择</strong>
+        <strong>找到您的应用场景</strong>
         <a href="/zh-cn/solutions/">查看全部解决方案 <b aria-hidden="true">→</b></a>
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
-          <span>设备集成与现场测试</span>
-          <h2>从设备内部到调试现场</h2>
-          <p>为设备集成、现场调试和汽车电子测试选择合适的工业接口</p>
+          <h2>您的工业接口用在哪里？</h2>
+          <p>从移动调试电脑、设备内部扩展，到自己的原理图与电路板设计</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/zh-cn/solutions/#embedded-can-fd-expansion">
-            <span>嵌入式 CAN FD 扩展</span>
-            <strong>在嵌入式计算机内部增加 CAN FD</strong>
-            <small>通过 Mini PCIe 增加 2 路带信号隔离的 CAN/CAN FD 通道</small>
+            <span>工控机连接 CAN 设备</span>
+            <strong>为现有工控机内置双路隔离 CAN FD</strong>
+            <small>通过 Mini PCIe 在机箱内扩展 CAN/CAN FD，连接电机驱动器、控制模块或传感器，用于设备改造与嵌入式控制</small>
             <em>双路 Mini PCIe CAN FD</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/zh-cn/solutions/#can-fd-serial-expansion">
-            <span>CAN FD + 串口扩展</span>
-            <strong>需要在一台设备中集成 CAN FD 与串口？</strong>
-            <small>通过一个内置 USB 连接整合 CAN FD、RS-485 与 RS-232</small>
+            <span>机器人与自动化设备</span>
+            <strong>在设备内部集中接入多种工业接口</strong>
+            <small>通过内置 USB 扩展 CAN FD、RS-485 和 RS-232，在机器人或自动化设备中连接驱动器、仪表与传感器</small>
             <em>XE826</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/zh-cn/solutions/#external-usb-expansion">
-            <span>现场调试与汽车电子测试</span>
-            <strong>为笔记本增加工业接口</strong>
-            <small>通过 USB 连接 CAN FD、RS-485 与 RS-232 设备，完成台架测试和现场联调</small>
+            <span>汽车测试与工业现场</span>
+            <strong>为移动调试电脑增加工业接口</strong>
+            <small>笔记本或便携工控机通过 USB 接入 CAN FD、RS-485 和 RS-232，用于汽车电子台架测试、设备联调和现场排查</small>
             <em>Octant</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/zh-cn/solutions/#interface-ic-integration">
-            <span>接口芯片集成</span>
-            <strong>需要把接口直接做到自己的产品中？</strong>
-            <small>将 XL 接口芯片集成到自有 PCB，并按通道组合选择型号</small>
+            <span>自研控制器与电路板</span>
+            <strong>把通信接口集成到自己的原理图设计中</strong>
+            <small>设计控制器或专用设备时，选用 XL 接口芯片，将 CAN FD 或多路串口电路直接集成到原理图与 PCB 中</small>
             <em>XL 接口芯片</em>
             <b aria-hidden="true">→</b>
           </a>
@@ -228,41 +227,40 @@
     <div class="container solutions-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>SOLUTIONS</span>
-        <strong>Start with the system problem.</strong>
+        <strong>Find your application.</strong>
         <a href="/solutions/">View all solutions <b aria-hidden="true">→</b></a>
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
-          <span>INTEGRATION &amp; FIELD TESTING</span>
-          <h2>From embedded systems to the field.</h2>
-          <p>Choose industrial interfaces for system integration, field commissioning, and automotive bench testing.</p>
+          <h2>Where do you need industrial interfaces?</h2>
+          <p>Connect a portable test computer, expand a machine, or design the interfaces into your own circuit board.</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/solutions/#embedded-can-fd-expansion">
-            <span>Embedded CAN FD Expansion</span>
-            <strong>Need CAN FD inside an embedded PC?</strong>
-            <small>Add two isolated CAN/CAN FD channels through Mini PCIe.</small>
+            <span>Industrial PC upgrades</span>
+            <strong>Add isolated CAN FD inside an existing industrial PC.</strong>
+            <small>Use Mini PCIe to connect motor drives, control modules or sensors over two CAN/CAN FD channels for machine upgrades and embedded control.</small>
             <em>Dual Mini PCIe CAN FD</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/solutions/#can-fd-serial-expansion">
-            <span>CAN FD + Serial Port Expansion</span>
-            <strong>Need CAN FD and serial ports in one machine?</strong>
-            <small>Consolidate CAN FD, RS-485, and RS-232 behind one internal USB connection.</small>
-            <em>Xilume XE826</em>
+            <span>Robotics &amp; automation</span>
+            <strong>Connect multiple industrial interfaces inside a machine.</strong>
+            <small>Use internal USB to add CAN FD, RS-485 and RS-232, connecting drives, instruments and sensors inside a robot or automation system.</small>
+            <em>XE826</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/solutions/#external-usb-expansion">
-            <span>Field &amp; automotive testing</span>
-            <strong>Bring industrial interfaces to your laptop.</strong>
-            <small>Connect CAN FD, RS-485, and RS-232 equipment through USB for bench tests and field commissioning.</small>
+            <span>Automotive tests &amp; industrial fieldwork</span>
+            <strong>Add industrial ports to a portable test computer.</strong>
+            <small>Connect a laptop or portable industrial PC to CAN FD, RS-485 and RS-232 over USB for automotive bench tests, equipment commissioning and field troubleshooting.</small>
             <em>Octant</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/solutions/#interface-ic-integration">
-            <span>Interface IC Integration</span>
-            <strong>Need the interfaces built directly into your product?</strong>
-            <small>Integrate an XL interface IC into your PCB and select by channel mix.</small>
+            <span>Custom controllers &amp; circuit boards</span>
+            <strong>Integrate communication interfaces into your own schematic.</strong>
+            <small>Choose an XL interface IC when designing a controller or dedicated device, and build CAN FD or multi-channel serial circuits into your schematic and PCB.</small>
             <em>XL Interface ICs</em>
             <b aria-hidden="true">→</b>
           </a>

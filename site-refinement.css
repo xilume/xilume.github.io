@@ -81,7 +81,14 @@ img { max-width: 100%; }
  .solutions-mega-heading { margin-bottom:20px; }
  .solutions-mega-links { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
  .solutions-mega-links > a { padding:17px 35px 17px 18px; }
- .solutions-mega-links > a > strong { margin-top:7px; font-size:13px; white-space:normal; overflow:visible; text-overflow:clip; }
- .solutions-mega-links > a > small { margin-top:7px; font-size:10px; white-space:normal; overflow:visible; text-overflow:clip; }
+ .solutions-mega-links > a > strong { margin-top:7px; font-size:15px; white-space:normal; overflow:visible; text-overflow:clip; }
+ .solutions-mega-links > a > small { margin-top:9px; font-size:12px; line-height:1.65; white-space:normal; overflow:visible; text-overflow:clip; }
  .solutions-mega-links > a > em { position:static; max-width:none; margin-top:14px; text-align:left; transform:none; font-size:9px; }
+}
+
+@media (min-width:901px) {
+ .solutions-mega-links > a > span { font-size:10px; line-height:1.5; }
+ .solutions-mega-links > a > em { align-self:end; font-size:10px; }
+ .solutions-mega-heading h2 { margin-top:0; font-size:18px; }
+ .solutions-mega-heading p { font-size:12px; line-height:1.6; }
 }
