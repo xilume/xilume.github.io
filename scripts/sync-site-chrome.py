@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='20260907-brand2'
+VERSION='20260907-brand3'
 
 def header(zh,path):
  p='/zh-cn' if zh else ''
@@ -31,7 +31,7 @@ def footer(zh):
     <div class="container footer-grid">
       <div class="footer-identity"><a class="brand footer-brand brand-symbol" href="{p}/" aria-label="{'熙联迈首页' if zh else 'Xilume home'}"><img src="/images/xilume-official-wordmark.webp" width="160" height="62" alt="{'熙联迈' if zh else 'Xilume'}" loading="lazy"></a><p>{'熙联迈<br>工业通信接口与芯片' if zh else 'Xilume<br>Industrial communication interfaces &amp; ICs'}</p>{a('about','了解熙联迈 →' if zh else 'About Xilume →')}</div>
       {content}
-      <div><h3>{'销售与技术咨询' if zh else 'Sales &amp; technical inquiries'}</h3><p>Eddie Chen</p><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a><a href="tel:+16573459435">+1 (657) 345-9435</a></div>
+      <div><h3>{'销售与技术咨询' if zh else 'Sales &amp; technical inquiries'}</h3><p>Eddie Chen</p><a href="mailto:contact@xilume.co">contact@xilume.co</a><a href="tel:+16573459435">+1 (657) 345-9435</a></div>
     </div>
     <div class="container footer-bottom"><span>© 2026 {'熙联迈' if zh else 'Xilume'}</span><span>CAN FD · RS-485 · RS-232 · SBS / SMBus</span></div>
   </footer>'''
