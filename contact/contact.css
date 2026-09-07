@@ -1,0 +1,71 @@
+/* Contact channels follow the same order in both site languages. */
+.ca-contact-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  padding-bottom: 72px;
+}
+.ca-contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 30px 24px 22px;
+  border: 1px solid #d1dbe2;
+  border-radius: 12px;
+  background: #fff;
+}
+.ca-contact-icon {
+  display: block;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 27px;
+  color: #18232d;
+}
+.ca-contact-card h2 {
+  margin: 0 0 9px;
+  color: #5c6a75;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 550;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+.ca-contact-card .ca-contact-value {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  margin: -7px 0 9px;
+  color: #1266ad;
+  font-size: clamp(17px, 1.55vw, 22px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -.025em;
+  overflow-wrap: anywhere;
+}
+.ca-contact-value:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.ca-contact-card p {
+  margin: 0 0 22px;
+  color: #5c6a75;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.ca-contact-card .ca-link { margin-top: auto; font-size: 13px; }
+.ca-contact-page .ca-section-heading h2 { max-width: 740px; }
+@media (max-width: 1100px) {
+  .ca-contact-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ca-contact-card { padding: 30px; }
+  .ca-contact-card .ca-contact-value { font-size: 23px; }
+}
+@media (max-width: 600px) {
+  .ca-contact-cards { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-bottom: 42px; }
+  .ca-contact-card { padding: 26px 24px 19px; }
+  .ca-contact-icon { width: 40px; height: 40px; margin-bottom: 22px; }
+  .ca-contact-card .ca-contact-value { font-size: 22px; }
+  .ca-contact-card p { margin-bottom: 14px; }
+}
