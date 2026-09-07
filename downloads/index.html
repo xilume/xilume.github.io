@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Download Xilume TraceBox Analyzer Pro, CAN FD Control Center, and official Windows and Linux driver packages for Xilume hardware.">
   <title>Software &amp; Drivers | Xilume</title>
-  <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
-  <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
-  <link rel="stylesheet" href="/styles.css?v=20260826-2">
+  <link rel="icon" href="/favicon.svg?v=20260907-1" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/xilume-icon-180.png?v=20260907-1" sizes="180x180">
+  <link rel="stylesheet" href="/styles.css?v=20260907-1">
   <link rel="stylesheet" href="/downloads/downloads.css?v=20260829-2">
-  <script defer src="/site.js?v=20260904-3"></script>
+  <script defer src="/site.js?v=20260907-1"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/downloads/">
   <link rel="alternate" hreflang="en" href="https://xilume.co/downloads/">
@@ -20,33 +20,35 @@
   <meta property="og:title" content="Software &amp; Drivers | Xilume">
   <meta property="og:description" content="Xilume CAN FD diagnostic software and driver packages for Windows and Linux.">
   <meta property="og:url" content="https://xilume.co/downloads/">
+  <link rel="stylesheet" href="/documentation/docs-support.css?v=20260907-1">
+  <link rel="stylesheet" href="/site-refinement.css?v=20260907-1">
 </head>
 <body class="downloads-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header corporate-header">
     <div class="container header-inner">
-      <a class="brand brand-wordmark" href="/" aria-label="Xilume home"><img src="/brand-mark-96.png" alt="Xilume"></a>
-      <nav aria-label="Primary navigation">
-        <a href="/products/">Products</a><a href="/solutions/">Solutions</a><a href="/downloads/" aria-current="page">Software &amp; Drivers</a><a href="/applications/">Applications</a><a href="/documentation/">Documentation</a><a href="/about/">Company</a><a class="nav-finder" href="/contact/">Contact</a>
-      </nav>
+      <a class="brand brand-symbol" href="/" aria-label="Xilume home"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="Xilume" fetchpriority="high"></a>
+      <nav aria-label="Primary navigation"><a href="/products/">Products</a><a href="/solutions/">Solutions</a><a href="/downloads/" aria-current="page">Software &amp; Drivers</a><a href="/applications/">Applications</a><a href="/documentation/">Documentation</a><a href="/about/">Company</a><a class="nav-finder" href="/contact/">Contact</a></nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="download-page-header">
       <div class="download-wide">
         <p class="download-breadcrumbs"><a href="/">Home</a><span>/</span>Software &amp; Drivers</p>
         <div class="download-heading-row">
           <div>
             <h1>Software &amp; Drivers</h1>
-            <p>PC software and Windows or Linux drivers for Xilume CAN FD products.</p>
+            <p>Software, drivers and installation guides for Xilume CAN FD and serial products.</p>
           </div>
-          <p class="download-updated">Updated <strong>2026-09-04</strong></p>
+          <p class="download-updated">Updated <strong>2026-09-07</strong></p>
         </div>
       </div>
     </section>
 
     <section class="download-catalog" id="current-releases">
       <div class="download-wide">
+<div class="docs-download-guide"><strong>Choose your host environment</strong><p>PC applications are for Windows x64. Driver packages include Windows and Linux files; Linux installation requires local build tools and matching kernel headers. See the product guide for package requirements.</p><a href="/documentation/">View installation guides →</a></div>
         <section class="download-group" aria-labelledby="pc-software-heading">
           <header class="download-group-heading">
             <h2 id="pc-software-heading">PC Software</h2>
@@ -113,6 +115,7 @@
                 <h4>Octant &amp; XE826 Driver Package</h4>
                 <p>Windows installer and Linux driver package for two CAN FD and six serial interfaces.</p>
                 <p class="download-products"><strong>Products</strong> Xilume Octant, Xilume XE826</p>
+              <a class="download-detail-link" href="/documentation/octant-xe826/">Installation &amp; interface guide <span aria-hidden="true">→</span></a>
               </div>
               <dl class="download-row-meta">
                 <div><dt>Windows</dt><dd>7.1.9.0</dd></div>
@@ -133,6 +136,7 @@
                 <h4>Dual Mini PCIe CAN FD Driver Package</h4>
                 <p>Windows and Linux drivers for two independent CAN and CAN FD interfaces. Linux 2.0.2 fixes an occasional binding failure after a host reboot or USB re-enumeration.</p>
                 <p class="download-products"><strong>Product</strong> Dual Mini PCIe CAN FD</p>
+              <a class="download-detail-link" href="/documentation/dual-canfd/">Installation &amp; interface guide <span aria-hidden="true">→</span></a>
               </div>
               <dl class="download-row-meta">
                 <div><dt>Windows</dt><dd>1.0.0.1</dd></div>
@@ -155,8 +159,9 @@
             <article class="download-row" id="xl1326-driver">
               <div class="download-row-main">
                 <h4>XL1326 Driver Package</h4>
-                <p>On Windows, XL1326 appears as eight Xilume COM ports. On Linux, the package provides two SocketCAN interfaces and six serial interfaces.</p>
+                <p>Windows exposes two CAN FD protocol COM endpoints and six serial COM ports. Linux provides two SocketCAN interfaces and six serial interfaces.</p>
                 <p class="download-products"><strong>Product</strong> Xilume XL1326</p>
+              <a class="download-detail-link" href="/documentation/interface-ics/#host-interfaces">Installation &amp; interface guide <span aria-hidden="true">→</span></a>
               </div>
               <dl class="download-row-meta">
                 <div><dt>Windows</dt><dd>7.1.9.0</dd></div>
@@ -175,8 +180,9 @@
             <article class="download-row" id="xl1326-a-driver">
               <div class="download-row-main">
                 <h4>XL1326-A Driver Package</h4>
-                <p>Windows provides two CAN/CAN FD COM ports, while Linux provides two SocketCAN interfaces. Linux 2.0.2 fixes an occasional binding failure after a host reboot or USB re-enumeration.</p>
+                <p>Windows provides two COM endpoints for Xilume CAN FD software and protocol. Linux provides two SocketCAN interfaces. Linux 2.0.2 fixes an occasional binding failure after a host reboot or USB re-enumeration.</p>
                 <p class="download-products"><strong>Product</strong> Xilume XL1326-A</p>
+              <a class="download-detail-link" href="/documentation/interface-ics/#host-interfaces">Installation &amp; interface guide <span aria-hidden="true">→</span></a>
               </div>
               <dl class="download-row-meta">
                 <div><dt>Windows</dt><dd>1.0.0.1</dd></div>
@@ -204,6 +210,13 @@
     </section>
   </main>
 
-  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><img src="/brand-mark-96.png" alt="Xilume"></div><p>Interface ICs and hardware for connected systems.</p></div><div><h3>Products</h3><a href="/products/mini-pcie-dual-can-fd/">Dual Mini PCIe CAN FD</a><a href="/products/8hub/">USB Industrial Hub · Octant</a><a href="/products/8hub-embedded/">Xilume XE826</a></div><div><h3>Support</h3><a href="/downloads/">Software &amp; Drivers</a><a href="/downloads/#compatibility">Device drivers</a><a href="/documentation/">Documentation</a></div><div><h3>Support contact</h3><p>Eddie Chen</p><a href="tel:+16573459435">+1&nbsp;(657)&nbsp;345&#8209;9435</a><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a></div></div><div class="container footer-bottom"><span>© 2026 Xilume</span><span>Official software · Device drivers · Integration resources</span></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-identity"><a class="brand footer-brand brand-symbol" href="/" aria-label="Xilume home"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="Xilume" loading="lazy"></a><p>Xilume<br>Industrial communication interfaces &amp; ICs</p><a href="/about/">About Xilume →</a></div>
+      <div><h3>Products</h3><a href="/products/embedded-communication/">Embedded communication</a><a href="/products/8hub/">Octant USB hub</a><a href="/products/interface-ics/">Interface ICs</a><a href="/products/usb-smbus/">Smart-battery interfaces</a></div><div><h3>Support</h3><a href="/downloads/">Software &amp; Drivers</a><a href="/documentation/">Documentation</a><a href="/applications/">Applications</a><a href="/contact/">Contact</a></div>
+      <div><h3>Sales &amp; technical inquiries</h3><p>Eddie Chen</p><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a><a href="tel:+16573459435">+1 (657) 345-9435</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Xilume</span><span>CAN FD · RS-485 · RS-232 · SBS / SMBus</span></div>
+  </footer>
 </body>
 </html>

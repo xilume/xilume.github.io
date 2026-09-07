@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="查看适用于机器人、工业互联、嵌入式计算机和智能电池系统的熙联迈接口产品">
+  <meta name="description" content="查看 DualCANFD 与 XE826 工控机内接实例、Octant 外部 USB 连接及 Windows 和 Linux 智能电池集成">
   <title>应用 | 熙联迈</title>
-  <link rel="icon" href="/xilume-icon-96.png" type="image/png" sizes="96x96">
-  <link rel="apple-touch-icon" href="/xilume-icon-180.png" sizes="180x180">
-  <link rel="stylesheet" href="/styles.css?v=20260826-1">
+  <link rel="icon" href="/favicon.svg?v=20260907-1" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/xilume-icon-180.png?v=20260907-1" sizes="180x180">
+  <link rel="stylesheet" href="/styles.css?v=20260907-1">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/zh-cn/applications/">
   <link rel="alternate" hreflang="en" href="https://xilume.co/applications/">
@@ -16,9 +16,9 @@
   <meta property="og:site_name" content="熙联迈">
   <meta property="og:type" content="website">
   <meta property="og:title" content="应用 | 熙联迈">
-  <meta property="og:description" content="为机器人、工业通信和智能电池系统查找合适的接口芯片与硬件">
+  <meta property="og:description" content="查看 DualCANFD 与 XE826 工控机内接实例、Octant 外部 USB 连接及 Windows 和 Linux 智能电池集成">
   <meta property="og:url" content="https://xilume.co/zh-cn/applications/">
-  <meta property="og:image" content="https://xilume.co/images/robotics-application.svg">
+  <meta property="og:image" content="https://xilume.co/images/8hub/8hub-embedded-installed-io-v1.webp">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -30,73 +30,49 @@
     ]
   }
   </script>
-  <script defer src="/site.js?v=20260904-3"></script>
-  <link rel="stylesheet" href="/zh-cn.css?v=20260826-1">
+  <script defer src="/site.js?v=20260907-1"></script>
+  <link rel="stylesheet" href="/zh-cn.css?v=20260907-1">
+  <link rel="stylesheet" href="/company-applications.css?v=20260907-1">
+  <link rel="stylesheet" href="/site-refinement.css?v=20260907-1">
 </head>
-<body>
+<body class="ca-page">
+  <a class="skip-link" href="#main-content">跳到正文</a>
   <header class="site-header corporate-header">
     <div class="container header-inner">
-      <a class="brand brand-wordmark" href="/zh-cn/" aria-label="熙联迈首页"><img src="/images/xilume-wordmark.png" alt="熙联迈"></a>
+      <a class="brand brand-symbol" href="/zh-cn/" aria-label="熙联迈首页"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="熙联迈" fetchpriority="high"></a>
       <nav aria-label="主导航"><a href="/zh-cn/products/">产品</a><a href="/zh-cn/solutions/">解决方案</a><a href="/zh-cn/downloads/">软件与驱动</a><a href="/zh-cn/applications/" aria-current="page">应用</a><a href="/zh-cn/documentation/">文档</a><a href="/zh-cn/about/">公司</a><a class="nav-finder" href="/zh-cn/contact/">联系我们</a></nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-header container">
-      <p class="breadcrumbs"><a href="/zh-cn/">首页</a><span>/</span>应用</p>
-      <p class="section-label">应用</p>
-      <h1>按应用选择接口产品</h1>
-      <p>查找接口芯片、接口硬件、软件和技术资料</p>
+  <main class="ca-main" id="main-content">
+    <section class="container ca-intro">
+      <p class="breadcrumbs"><a href="/zh-cn/">首页</a><span>/</span>应用</p><p class="section-label">应用实例</p><h1>看得见的安装方式</h1><p class="ca-lead">从工控机内接到工作台外接，按安装位置与所需接口选择产品</p>
     </section>
-
-    <section class="container application-section">
-      <div class="corporate-section-head">
-        <div><p class="section-label">应用方向</p><h2>按实际接口需求选择</h2></div>
-        <a class="text-link-large" href="/zh-cn/products/">查看全部产品 →</a>
-      </div>
-      <div class="application-visual-grid">
-        <article class="application-visual-card application-wide">
-          <img src="/images/robotics-application.svg" alt="通过 CAN FD 和 RS-485 连接的机器人与运动控制系统">
-          <div><small>机器人与运动控制</small><h3>连接控制器、关节、传感器和主机</h3><p>现场设备通过 CAN FD 或 RS-485 通信，主机侧可选 USB 或 Mini PCIe</p><a href="/zh-cn/products/usb-canfd-rs485/">查看 CAN FD + RS-485 硬件 →</a></div>
-        </article>
-        <article class="application-visual-card">
-          <img src="/images/interface-conversion-hero.webp" alt="工业接口与协议硬件">
-          <div><small>工业互联</small><h3>为嵌入式计算机增加现场总线</h3><p>通过 USB 或 Mini PCIe 将主机连接到 CAN FD 和 RS-485 设备，无需重新设计整个接口层</p><a href="/zh-cn/products/interface-conversion/">查看接口模块 →</a></div>
-        </article>
-        <article class="application-visual-card">
-          <img src="/images/smbus-application.webp" alt="在计算机上显示智能电池信息">
-          <div><small>智能电池系统</small><h3>操作系统直接读取电池状态</h3><p>向 Windows 和 Linux 提供容量、充电状态、电压、运行状态和诊断数据</p><a href="/zh-cn/products/usb-smbus/">查看智能电池接口 →</a></div>
-        </article>
-      </div>
+    <section class="container ca-cases" aria-label="工控机安装实例">
+      <article class="ca-case" id="internal-can-fd">
+        <figure class="ca-case-media"><div class="ca-case-stage"><img src="/images/dual-mini-pcie-canfd-customer-installation-v1.webp" alt="DualCANFD 安装在工控机存储设备旁的 Mini PCIe 插槽内" width="1448" height="1086" fetchpriority="high" decoding="async"><span class="ca-hardware-marker ca-marker-dual" aria-hidden="true">1</span></div><figcaption><span>1</span> DualCANFD · 主机内部 Mini PCIe 模块</figcaption></figure>
+        <div class="ca-case-copy"><p class="section-label">内部 CAN FD 扩展</p><h2>双路 CAN FD，装进主机内部</h2><p>DualCANFD 安装在兼容的 Mini PCIe 插槽中，接口板和主机连接均留在机箱内部，图中模块位于存储设备旁</p><dl class="ca-case-facts"><div><dt>主机连接</dt><dd>提供 USB 2.0 信号的 Mini PCIe 插槽</dd></div><div><dt>新增接口</dt><dd>2 路独立 CAN / CAN FD，带信号隔离</dd></div><div><dt>软件</dt><dd>Windows / Linux</dd></div></dl><a class="ca-link" href="/zh-cn/products/mini-pcie-dual-can-fd/">查看 DualCANFD <span aria-hidden="true">→</span></a></div>
+      </article>
+      <article class="ca-case ca-case-reverse" id="internal-multibus">
+        <figure class="ca-case-media"><div class="ca-case-stage"><img src="/images/8hub/8hub-embedded-installed-io-v1.webp" alt="XE826 固定在工控机主板上方，通过排线引出两个面板 DB9 接口，接线端子从侧面开口引出" width="1672" height="941" loading="lazy" decoding="async"><span class="ca-hardware-marker ca-marker-xe" aria-hidden="true">1</span><span class="ca-hardware-marker ca-marker-db9" aria-hidden="true">2</span></div><figcaption><span>1</span> XE826 <span>2</span> 面板 CAN 接口</figcaption></figure>
+        <div class="ca-case-copy"><p class="section-label">内部多接口扩展</p><h2>一块通信板，整合设备接口</h2><p>XE826 通过支柱固定在机箱内部，接入主板 USB 排针，本例使用排线将 CAN 接口引出到两个面板 DB9，串口接线端子通过机箱开口对外连接</p><dl class="ca-case-facts"><div><dt>主机连接</dt><dd>主板内部 USB 排针</dd></div><div><dt>新增接口</dt><dd>2 × CAN FD · 4 × RS-485 · 2 × RS-232</dd></div><div><dt>安装形式</dt><dd>板卡内接，现场接口引至面板</dd></div></dl><a class="ca-link" href="/zh-cn/products/8hub-embedded/">查看 XE826 <span aria-hidden="true">→</span></a></div>
+      </article>
+      <p class="ca-caption-note">安装实例用于展示板卡位置与接口引出方式，图中主机、面板组件和线缆用于展示，具体产品与配件配置请按安装需求确认</p>
     </section>
-
-    <section class="application-product-rail">
-      <div class="container">
-        <div class="application-product-rail-heading"><div><p class="section-label">精选产品</p><h2>按系统需求选择熙联迈产品</h2></div><p>用于 CAN FD、串行通信与智能电池数据接入的接口芯片和硬件</p></div>
-        <div class="application-product-rail-grid">
-          <a href="/zh-cn/products/interface-ics/"><small>集成到自有 PCB</small><h3>接口芯片</h3><p>连接主机与现场总线</p><span>查看产品 →</span></a>
-          <a href="/zh-cn/products/8hub/"><small>USB 工业通信扩展坞</small><h3>八通道 USB 工业通信扩展坞</h3><p>型号 Octant 让一台电脑接入两路 CAN FD 与六路串行通道</p><span>查看产品 →</span></a>
-          <a href="/zh-cn/products/usb-smbus/"><small>电池供电系统</small><h3>电池显示模块</h3><p>向 Windows 和 Linux 提供电池信息</p><span>查看产品 →</span></a>
-          <a href="/zh-cn/products/mini-pcie-dual-can-fd/"><small>内部 CAN FD</small><h3>双路 Mini PCIe CAN FD</h3><p>在兼容的工业或嵌入式计算机中增加两路带信号隔离的 CAN 网络</p><span>查看产品 →</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="container support-strip" aria-label="应用后续步骤">
-      <a href="/zh-cn/products/"><small>产品目录</small><strong>浏览全部产品</strong><span>→</span></a>
-      <a href="/zh-cn/documentation/"><small>工程资源</small><strong>阅读文档</strong><span>→</span></a>
-      <a href="/zh-cn/contact/"><small>销售与支持</small><strong>咨询应用方案</strong><span>→</span></a>
-    </section>
+    <section class="ca-band"><div class="container ca-section"><div class="ca-section-heading"><p class="section-label">更多接入方式</p><h2>连接工作台与电池系统</h2></div><div class="ca-use-grid">
+      <article class="ca-use"><figure><img src="/images/8hub-workbench-system.webp" alt="工作台上的 Xilume Octant 工业通信扩展坞" width="1672" height="941" loading="lazy" decoding="async"></figure><div><p class="section-label">工作台与现场连接</p><h3>Octant</h3><p>通过外部 USB，将 Windows 或 Linux 主机连接到 2 路 CAN FD、4 路 RS-485 和 2 路 RS-232，带外壳的形态适合设备验证、通信采集和测试台搭建</p><a class="ca-link" href="/zh-cn/products/8hub/">查看 Octant <span aria-hidden="true">→</span></a></div></article>
+      <article class="ca-use"><figure><img src="/images/smbus-application.webp" alt="连接电池组与主机的智能电池接口应用" width="1199" height="675" loading="lazy" decoding="async"></figure><div><p class="section-label">电池供电系统</p><h3>智能电池接口</h3><p>将兼容电池组上报的信息接入 Windows 和 Linux，选型时需确认电量计、通信协议及主机要求，再匹配接口配置</p><a class="ca-link" href="/zh-cn/products/usb-smbus/">查看电池接口 <span aria-hidden="true">→</span></a></div></article>
+    </div></div></section>
+    <section class="container ca-section ca-next"><div><p class="section-label">自有 PCB 集成</p><h2>准备直接集成到自己的产品中？</h2><p>XL 接口芯片提供板级集成方案，按通道组合选择型号，并参考器件资料设计外围电路</p></div><div class="ca-actions"><a class="ca-link" href="/zh-cn/products/interface-ics/">查看接口芯片 <span aria-hidden="true">→</span></a><a class="ca-link" href="/zh-cn/contact/">咨询安装方案 <span aria-hidden="true">→</span></a></div></section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-grid">
-      <div><div class="brand footer-brand"><img src="/images/xilume-wordmark.png" alt="熙联迈"></div><p>接口芯片与接口模块</p></div>
-      <div><h3>产品</h3><a href="/zh-cn/products/">浏览全部产品</a><a href="/zh-cn/products/interface-ics/">接口芯片</a><a href="/zh-cn/products/embedded-communication/">嵌入式通信</a></div>
-      <div><h3>导航</h3><a href="/zh-cn/applications/">应用</a><a href="/zh-cn/solutions/">解决方案</a><a href="/zh-cn/documentation/">文档</a></div>
-      <div><h3>公司</h3><a href="/zh-cn/about/">关于熙联迈</a><a href="/zh-cn/contact/">联系我们</a></div>
+      <div class="footer-identity"><a class="brand footer-brand brand-symbol" href="/zh-cn/" aria-label="熙联迈首页"><img src="/images/xilume-symbol.svg" width="44" height="40" alt="熙联迈" loading="lazy"></a><p>熙联迈<br>工业通信接口与芯片</p><a href="/zh-cn/about/">了解熙联迈 →</a></div>
+      <div><h3>产品</h3><a href="/zh-cn/products/embedded-communication/">嵌入式通信</a><a href="/zh-cn/products/8hub/">Octant 工业通信扩展坞</a><a href="/zh-cn/products/interface-ics/">接口芯片</a><a href="/zh-cn/products/usb-smbus/">智能电池接口</a></div><div><h3>支持</h3><a href="/zh-cn/downloads/">软件与驱动</a><a href="/zh-cn/documentation/">技术资料</a><a href="/zh-cn/applications/">安装与应用</a><a href="/zh-cn/contact/">联系我们</a></div>
+      <div><h3>销售与技术咨询</h3><p>Eddie Chen</p><a href="mailto:echen070301@gmail.com">echen070301@gmail.com</a><a href="tel:+16573459435">+1 (657) 345-9435</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 熙联迈</span><span>接口芯片 · 接口模块 · 系统集成</span></div>
+    <div class="container footer-bottom"><span>© 2026 熙联迈</span><span>CAN FD · RS-485 · RS-232 · SBS / SMBus</span></div>
   </footer>
 </body>
 </html>

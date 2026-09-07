@@ -1,0 +1,73 @@
+/* Product refinements: one shared rhythm, clear model names, contained imagery. */
+.hub-hero h1,.x8-hero h1,.dcf-hero h1{font-size:clamp(54px,5.2vw,76px);line-height:1.03;letter-spacing:-.045em;text-wrap:balance}
+.hub-hero h1 span,.x8-hero h1 span,.dcf-hero h1 span{display:block;max-width:24ch;margin-top:16px;font-size:clamp(23px,2.15vw,32px);line-height:1.18;font-weight:450;letter-spacing:-.025em}
+.hub-hero-copy,.x8-hero-copy,.dcf-hero-copy{min-width:0}
+.hub-hero-inner{min-height:560px}
+.x8-hero-inner{min-height:650px;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:34px}
+.dcf-hero-inner{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:42px}
+/* Mask only the outside image margin; no filtering of components or lettering. */
+.x8-hero-product img,.dcf-hero-product img{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 5%,#000 95%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 5%,#000 95%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 5%,#000 95%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 5%,#000 95%,transparent 100%);mask-composite:intersect}
+.ref-integration-note{margin:32px 0 0;padding:28px 30px;background:#f0f4f4;border-left:3px solid #386965;color:#223738}
+.ref-integration-note strong{font-size:16px;font-weight:650}
+.ref-integration-note p{max-width:900px;margin:11px 0 16px;font-size:14px;line-height:1.75;color:#526166}
+.ref-integration-note a{font-size:14px;font-weight:650;color:#155c59}
+.ref-integration-note a:hover{text-decoration:underline;text-underline-offset:4px}
+/* Legacy category routes now lead to the actual orderable product formats. */
+.ref-selection-page{background:#fff;color:#172126;padding-bottom:76px}
+.ref-selection-intro{padding-top:52px;padding-bottom:42px}
+.ref-selection-intro .breadcrumbs{margin-bottom:38px;font-size:12px}
+.ref-kicker{margin:0;color:#23645e;font-size:11px;font-weight:650;letter-spacing:.11em;text-transform:uppercase}
+.ref-selection-intro h1{margin:14px 0 18px;max-width:900px;font-size:clamp(36px,4vw,56px);font-weight:550;letter-spacing:-.04em;line-height:1.13;text-wrap:balance}
+.ref-selection-intro>p:last-child{max-width:750px;font-size:17px;line-height:1.75;color:#626d72}
+.ref-selection-list{border-top:1px solid #dde4e4}
+.ref-product-row{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.1fr) 145px;align-items:center;gap:36px;padding:34px 0;border-bottom:1px solid #dde4e4}
+.ref-selection-image{position:relative;aspect-ratio:4/3;margin:0;overflow:hidden;background:#f1f3f2}
+.ref-selection-image img{display:block;width:100%;height:100%;object-fit:contain}
+.ref-selection-copy h2,.ref-design-row h2{margin:10px 0 15px;font-size:32px;line-height:1.1;font-weight:560;letter-spacing:-.03em}
+.ref-selection-copy>p:not(.ref-kicker),.ref-design-row p:not(.ref-kicker){color:#626d72;font-size:15px;line-height:1.75}
+.ref-selection-facts{margin-top:18px;padding-top:17px;border-top:1px solid #e2e7e6;font-size:12px;line-height:1.75;font-weight:600;color:#32484a}
+.ref-selection-action{display:grid;gap:24px;justify-items:start}
+.ref-selection-action strong{font-size:19px;font-weight:550}
+.ref-selection-action a{display:inline-flex;gap:18px;align-items:center;min-height:44px;border-bottom:1px solid #76958e;color:#185e57;font-size:14px;font-weight:650}
+.ref-design-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:60px;align-items:center;padding-top:56px;padding-bottom:48px}
+.ref-design-row p{max-width:720px}
+.ref-design-row>div:last-child{display:grid;gap:20px}
+.ref-design-row a,.ref-selection-help>a{font-size:14px;color:#185e57;font-weight:650}
+.ref-selection-help{padding-top:28px;border-top:1px solid #dde4e4}
+.ref-selection-help h2{font-size:22px;font-weight:550;margin:0 0 14px}
+.ref-selection-help p{max-width:840px;font-size:15px;line-height:1.75;color:#626d72;margin-bottom:20px}
+/* Battery scene and magnified detail refer to the very same source image. */
+.product-theme-battery .product-story-hero-grid{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:48px;min-height:590px}
+.product-theme-battery .product-story-copy h1{font-size:clamp(42px,4.1vw,60px);line-height:1.08;letter-spacing:-.04em}
+.battery-detail-visual{margin:0;min-width:0;background:#111e25;border:1px solid #35494e;box-shadow:0 24px 70px #0003;overflow:hidden}
+.battery-scene{position:relative;aspect-ratio:1199/675;overflow:hidden}
+.battery-scene>img{display:block;width:100%;height:100%;object-fit:cover}
+.battery-module-focus{position:absolute;left:23.5%;top:72%;width:18%;height:11%;border:1.5px solid #e8ffef;box-shadow:0 0 0 3px #12332c55}
+.battery-module-leader{position:absolute;left:33%;top:58%;height:14%;border-left:1px solid #e8ffef}
+.battery-module-label{position:absolute;left:20%;top:48%;padding:8px 10px;color:#f1f8f5;background:#18352fea;font-size:clamp(9px,.9vw,12px);font-weight:600}
+.battery-detail-bottom{display:grid;grid-template-columns:minmax(0,1fr) 46%;align-items:center;gap:18px;padding:22px}
+.battery-detail-bottom small{display:block;color:#8cbbb0;font-size:10px;letter-spacing:.1em}
+.battery-detail-bottom strong{display:block;margin-top:12px;font-size:16px;font-weight:550;color:#e3eeeb;line-height:1.45}
+.battery-detail-bottom p{margin:8px 0 0;color:#a6b8b4;font-size:12px;line-height:1.55}
+.battery-detail-inset{position:relative;aspect-ratio:1.9;overflow:hidden;border:1px solid #637c78;background:#aeb8b8}
+.battery-detail-inset img{position:absolute;left:-95%;top:-312%;width:440%;height:auto;max-width:none}
+.ref-example-label{margin:30px 0 12px;color:#67767a;font-size:12px;line-height:1.6}
+.product-theme-battery .battery-state-grid{margin-top:14px}
+.ref-technical-list{margin:38px 0 0;border-top:1px solid #cad7d4}
+.ref-technical-list>div{display:grid;grid-template-columns:220px 1fr;gap:30px;padding:21px 0;border-bottom:1px solid #d5dfdc;font-size:14px;line-height:1.75}
+.ref-technical-list dt{font-weight:600;color:#355551}
+.ref-technical-list dd{margin:0;color:#526166}
+.ref-installation-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;counter-reset:steps;list-style:none;margin:46px 0 0;padding:0}
+.ref-installation-steps li{counter-increment:steps;border-top:1px solid #b8cbc5;padding-top:22px}
+.ref-installation-steps li:before{content:'0' counter(steps);display:block;margin-bottom:20px;color:#367466;font-size:12px;font-weight:600}
+.ref-installation-steps strong{font-size:18px;font-weight:600}
+.ref-installation-steps p{color:#63716e;font-size:14px;line-height:1.8;margin:14px 0 0}
+@media(max-width:1100px){.x8-hero-inner{grid-template-columns:1fr}.x8-hero-copy{max-width:690px}.x8-hero-product{max-width:850px}.dcf-hero-inner{gap:24px}.ref-product-row{grid-template-columns:minmax(190px,.75fr) minmax(0,1fr);gap:24px}.ref-selection-action{grid-column:2;display:flex;align-items:center;gap:26px}.product-theme-battery .product-story-hero-grid{gap:30px}.battery-detail-bottom{padding:16px;gap:12px}}
+@media(max-width:850px){.dcf-hero-inner{grid-template-columns:1fr}.dcf-hero-copy{max-width:680px}.dcf-hero-product{max-width:720px}.product-theme-battery .product-story-hero-grid{grid-template-columns:1fr;gap:40px}.battery-detail-visual{width:100%;max-width:680px}.ref-design-row{gap:28px}.ref-installation-steps{gap:24px}.ref-technical-list>div{grid-template-columns:170px 1fr}}
+@media(max-width:620px){.hub-hero h1,.x8-hero h1,.dcf-hero h1{font-size:54px}.hub-hero h1 span,.x8-hero h1 span,.dcf-hero h1 span{font-size:24px;margin-top:13px}.x8-hero-inner{min-height:auto;padding-top:40px}.hub-hero-inner{min-height:0}.ref-product-row{grid-template-columns:1fr;padding:28px 0;gap:22px}.ref-selection-image{aspect-ratio:16/9}.ref-selection-action{grid-column:auto;justify-content:space-between}.ref-selection-intro{padding-top:32px;padding-bottom:22px}.ref-selection-intro .breadcrumbs{margin-bottom:30px}.ref-selection-intro>p:last-child{font-size:15px}.ref-design-row{grid-template-columns:1fr;padding-top:36px;padding-bottom:34px}.ref-integration-note{padding:22px}.ref-technical-list>div{grid-template-columns:1fr;gap:5px;padding:18px 0}.ref-installation-steps{grid-template-columns:1fr;gap:28px}.ref-installation-steps li:before{margin-bottom:12px}.battery-detail-bottom{padding:16px;grid-template-columns:minmax(0,1fr) 44%}.battery-detail-bottom strong{font-size:13px}.battery-detail-bottom small{font-size:9px}.battery-detail-bottom p{font-size:11px}.battery-module-label{font-size:9px}.ref-selection-page{padding-bottom:48px}}
+.ref-battery-use{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
+.ref-battery-use .product-feature-copy>p:last-child{color:#64716d;font-size:15px;line-height:1.8;margin-top:22px}
+.ref-battery-use-list{margin:0;padding:0;list-style:none;border-top:1px solid #cbd8d3}
+.ref-battery-use-list li{padding:23px 2px;border-bottom:1px solid #d6e0dc;font-size:17px;line-height:1.5;color:#304b40}
+.ref-battery-diagram-note{margin:18px 0 0;text-align:center;color:#a1b4be;font-size:12px;line-height:1.7}
+@media(max-width:850px){.ref-battery-use{grid-template-columns:1fr;gap:35px}}

@@ -369,4 +369,58 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://xilume.co/documentation/dual-canfd/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/documentation/dual-canfd/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/documentation/dual-canfd/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/documentation/dual-canfd/" />
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xilume.co/zh-cn/documentation/dual-canfd/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/documentation/dual-canfd/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/documentation/dual-canfd/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/documentation/dual-canfd/" />
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xilume.co/documentation/octant-xe826/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/documentation/octant-xe826/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/documentation/octant-xe826/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/documentation/octant-xe826/" />
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xilume.co/zh-cn/documentation/octant-xe826/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/documentation/octant-xe826/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/documentation/octant-xe826/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/documentation/octant-xe826/" />
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xilume.co/documentation/interface-ics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/documentation/interface-ics/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/documentation/interface-ics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/documentation/interface-ics/" />
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xilume.co/zh-cn/documentation/interface-ics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/documentation/interface-ics/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/documentation/interface-ics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/documentation/interface-ics/" />
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

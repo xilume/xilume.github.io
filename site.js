@@ -278,13 +278,17 @@
     button.innerHTML = `<span aria-hidden="true"><i></i><i></i><i></i></span><b>${isSimplifiedChinese ? "菜单" : "Menu"}</b>`;
     inner.insertBefore(button, navigation);
 
-    const englishPath = isSimplifiedChinese
+    const alternatePath = (language) => {
+      const link = document.querySelector(`link[rel="alternate"][hreflang="${language}"]`);
+      return link ? new URL(link.href, window.location.href).pathname : null;
+    };
+    const englishPath = alternatePath("en") || (isSimplifiedChinese
       ? window.location.pathname.replace(/^\/zh-cn(?=\/|$)/, "") || "/"
-      : window.location.pathname;
-    const chinesePath = isSimplifiedChinese
+      : window.location.pathname);
+    const chinesePath = alternatePath("zh-CN") || (isSimplifiedChinese
       ? window.location.pathname
-      : `/zh-cn${window.location.pathname === "/" ? "/" : window.location.pathname}`;
-    const locationSuffix = `${window.location.search}${window.location.hash}`;
+      : window.location.pathname.startsWith("/downloads/") ? "/zh-cn/downloads/" : "/zh-cn/");
+    const locationSuffix = document.querySelector('link[rel="alternate"][hreflang="zh-CN"]') ? `${window.location.search}${window.location.hash}` : "";
     const languageSwitch = document.createElement("nav");
     languageSwitch.className = "site-language-switch";
     languageSwitch.setAttribute("aria-label", isSimplifiedChinese ? "语言选择" : "Language selector");
@@ -402,12 +406,14 @@
     const closeMenu = () => {
       header.classList.remove("is-menu-open");
       button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", isSimplifiedChinese ? "打开导航菜单" : "Open navigation menu");
     };
 
     button.addEventListener("click", () => {
       const open = !header.classList.contains("is-menu-open");
       header.classList.toggle("is-menu-open", open);
       button.setAttribute("aria-expanded", String(open));
+      button.setAttribute("aria-label", isSimplifiedChinese ? (open ? "关闭导航菜单" : "打开导航菜单") : (open ? "Close navigation menu" : "Open navigation menu"));
     });
 
     navigation.addEventListener("click", (event) => {
@@ -482,6 +488,8 @@
       if (video.paused) video.play().catch(sync);
       else video.pause();
     });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reducedMotion.matches) { video.autoplay = false; video.pause(); }
     video.addEventListener("play", sync);
     video.addEventListener("pause", sync);
     sync();

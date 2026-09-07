@@ -1,0 +1,64 @@
+/* Shared brand, navigation and page finish. Updated together by sync-site-chrome.py. */
+:root { --site-focus: #43a6ef; }
+html { scroll-padding-top: 132px; }
+body { -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; }
+:where(a,button,input,select,summary):focus-visible { outline: 2px solid var(--site-focus); outline-offset: 5px; }
+.skip-link { position: fixed; z-index: 10000; top: 8px; left: 12px; padding: 12px 18px; background: #fff; color: #102337; transform: translateY(-180%); }
+.skip-link:focus { transform: none; }
+.site-header .header-inner > .brand-symbol { display: flex; align-items: center; justify-content: flex-start; width: 72px; height: 62px; min-width: 54px; flex: 0 0 72px; padding: 0; background: none; }
+.site-header .brand-symbol img { width: 44px; height: 40px; object-fit: contain; margin: 0; filter: none; }
+.site-header .header-inner { min-height: 64px; gap: 22px; }
+.site-header .header-inner > nav:not(.site-language-switch) { margin-left: auto; }
+.site-header .header-inner .site-language-switch { margin-left: 0; padding: 7px 9px; background: transparent; border-color: #283341; }
+.site-header .header-inner .site-language-switch a { font-size: 11px; }
+.site-header .header-inner > nav:not(.site-language-switch) a { line-height: 1.4; }
+.site-header .nav-finder { border-color: #314356; box-shadow: none; }
+.site-menu-toggle { min-width: 44px; min-height: 44px; }
+.site-footer { background: #050a12; color: #c5cdd7; border-top: 1px solid #1a2633; }
+.site-footer .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.3fr; gap: 36px; padding-top: 52px; padding-bottom: 46px; }
+.site-footer .brand-symbol { width: 54px; height: 48px; display: flex; align-items: center; }
+.site-footer .brand-symbol img { width: 44px; height: 40px; object-fit: contain; filter: none; }
+.site-footer h3 { color: #eef3f8; font-size: 13px; font-weight: 650; margin: 0 0 18px; }
+.site-footer p { color: #a1b0bf; font-size: 13px; line-height: 1.7; margin: 12px 0; }
+.site-footer a:not(.brand-symbol) { display: block; width: fit-content; color: #aebdcb; font-size: 13px; line-height: 1.55; margin: 10px 0; text-decoration: none; overflow-wrap: anywhere; }
+.site-footer a:hover { color: #fff; }
+.site-footer .footer-bottom { color: #8795a4; border-color: #1a2633; padding-top: 22px; padding-bottom: 24px; font-size: 11px; gap: 20px; }
+.product-hero-carousel .product-hero-kicker { font-size: 12px; letter-spacing: .1em; }
+.product-hero-carousel :is(.chip-hero-copy,.product-hero-copy) h2 { text-wrap: balance; }
+.home-flow-heading h2 { font-size: clamp(30px,3.8vw,48px); line-height: 1.12; }
+.engineering-image img { object-fit: cover; }
+.engineering-copy h2 { font-size: clamp(28px,3.1vw,42px); }
+@media (min-width: 901px) and (max-width: 1150px) {
+ .site-header .header-inner { gap: 13px; }
+ .site-header .header-inner > nav:not(.site-language-switch) { gap: 16px; }
+ .site-header .header-inner > nav:not(.site-language-switch) a { font-size: 12px; }
+ .site-header .header-inner > .brand-symbol { flex-basis: 54px; width: 54px; }
+}
+@media (max-width: 900px) {
+ html { scroll-padding-top: 112px; }
+ .site-header .header-inner { min-height: 60px; gap: 12px; }
+ .site-header .header-inner > .brand-symbol { order: 1; width: 48px; height: 58px; flex-basis: 48px; }
+ .site-header .brand-symbol img { width: 38px; height: 36px; }
+ .site-header .header-inner > nav:not(.site-language-switch) { margin-left: 0; max-height: calc(100dvh - 72px); overflow-y: auto; }
+ .site-header .header-inner .site-language-switch { order: 2; margin-left: auto; }
+ .site-header .site-menu-toggle { order: 3; min-height: 42px; }
+ .site-header.is-menu-open .header-inner > nav:not(.site-language-switch) a { min-height: 44px; }
+ .site-footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 26px; }
+ .site-footer .footer-identity { grid-column: 1 / -1; }
+ .site-footer .footer-grid > div:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+ .site-header .header-inner { gap: 10px; }
+ .site-header .header-inner .site-language-switch a { font-size: 10px; }
+ .site-footer .footer-grid { padding-top: 34px; padding-bottom: 30px; }
+ .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
+ .site-footer a:not(.brand-symbol) { padding: 3px 0; }
+ .product-hero-carousel .product-hero-kicker { font-size: 10px; line-height: 1.5; }
+ .engineering-section { gap: 26px; }
+ .support-strip { margin-top: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ *,*::before,*::after { animation-duration: .01ms!important; transition-duration: .01ms!important; animation-iteration-count: 1!important; }
+}
