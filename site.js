@@ -184,14 +184,14 @@
     <div class="container solutions-mega-menu-inner">
       <div class="product-mega-menu-intro">
         <span>解决方案</span>
-        <strong>按接口需求选择</strong>
+        <strong>按应用与接口需求选择</strong>
         <a href="/zh-cn/solutions/">查看全部解决方案 <b aria-hidden="true">→</b></a>
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
-          <span>连接与芯片集成</span>
-          <h2>选择硬件或芯片集成方式</h2>
-          <p>根据主机接口、现场总线和产品形态选择</p>
+          <span>设备集成与现场测试</span>
+          <h2>从设备内部到调试现场</h2>
+          <p>为设备集成、现场调试和汽车电子测试选择合适的工业接口</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/zh-cn/solutions/#embedded-can-fd-expansion">
@@ -206,6 +206,13 @@
             <strong>需要在一台设备中集成 CAN FD 与串口？</strong>
             <small>通过一个内置 USB 连接整合 CAN FD、RS-485 与 RS-232</small>
             <em>XE826</em>
+            <b aria-hidden="true">→</b>
+          </a>
+          <a href="/zh-cn/solutions/#external-usb-expansion">
+            <span>现场调试与汽车电子测试</span>
+            <strong>为笔记本增加工业接口</strong>
+            <small>通过 USB 连接 CAN FD、RS-485 与 RS-232 设备，完成台架测试和现场联调</small>
+            <em>Octant</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/zh-cn/solutions/#interface-ic-integration">
@@ -226,9 +233,9 @@
       </div>
       <div class="solutions-mega-content">
         <div class="solutions-mega-heading">
-          <span>CONNECTIVITY &amp; CHIP INTEGRATION</span>
-          <h2>Choose the right integration path.</h2>
-          <p>Match the host connection, field interfaces, and product format to your design.</p>
+          <span>INTEGRATION &amp; FIELD TESTING</span>
+          <h2>From embedded systems to the field.</h2>
+          <p>Choose industrial interfaces for system integration, field commissioning, and automotive bench testing.</p>
         </div>
         <div class="solutions-mega-links">
           <a href="/solutions/#embedded-can-fd-expansion">
@@ -243,6 +250,13 @@
             <strong>Need CAN FD and serial ports in one machine?</strong>
             <small>Consolidate CAN FD, RS-485, and RS-232 behind one internal USB connection.</small>
             <em>Xilume XE826</em>
+            <b aria-hidden="true">→</b>
+          </a>
+          <a href="/solutions/#external-usb-expansion">
+            <span>Field &amp; automotive testing</span>
+            <strong>Bring industrial interfaces to your laptop.</strong>
+            <small>Connect CAN FD, RS-485, and RS-232 equipment through USB for bench tests and field commissioning.</small>
+            <em>Octant</em>
             <b aria-hidden="true">→</b>
           </a>
           <a href="/solutions/#interface-ic-integration">
