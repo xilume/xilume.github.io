@@ -4,15 +4,15 @@
 
 任务：完成首轮审计发现的代码问题与维护改进
 
-阶段：本地修复和回归、GitHub CI 通过；任务分支已上传，草稿 PR #3 待明确发布授权
+阶段：本地修复和回归、GitHub CI 通过；用户已授权发布，Pages Source 已统一，正在执行 PR #3 正式发布
 
 ## 授权与工程
 
-用户在首轮交接后要求“把你检查出来的问题和需要改进的地方都改好”，授权本批代码、内容一致性、维护工具与预览测试。继续遵守先前明确的发布边界：没有明确授权，不向 main 推送、不合并 PR、不触发正式部署或修改 Pages 后台设置。修复方案已包含待获批的发布配置调整，但尚未生效。
+2026-09-08 用户进一步明确“你以后修复完要发布到 xilume.co 这个官网上”。这已授权本次发布及后续常规维护在测试后合并、部署并验证官网，不再每批重复请求发布许可。当前按此授权统一 Pages Source 并发布 PR #3。Logo、产品参数、价格、域名、大规模删除及超出任务范围的配置改变仍不能擅自实施。
 
 - 仓库：`xilume/xilume.github.io`；origin：`https://github.com/xilume/xilume.github.io.git`
 - 任务分支：`codex/site-maintenance-fixes-20260908`
-- 修复提交：`0b1c828ae617b6fb10749b82b08b2036093ed36e`；[草稿 PR #3](https://github.com/xilume/xilume.github.io/pull/3)。后续状态记录提交仅修改本文
+- 修复提交：`0b1c828ae617b6fb10749b82b08b2036093ed36e`；[PR #3](https://github.com/xilume/xilume.github.io/pull/3)。后续补充状态、长期发布授权和仅文档变更不重复部署的过滤规则
 - 起始 main/HEAD：`d188871c2d226d8b2ca5bc73fa85d11d67047d55`；本轮收尾前再次读取远端 main，仍为该提交
 - 首轮文档工作已保留；原始交接文件夹保持本地参考，不整体提交
 - 当前工作树已完整检出，包括视频、PDF 和下载包；补齐的 12 个文件均核对固定提交 Git blob 哈希。历史仍为浅克隆
@@ -22,7 +22,7 @@
 
 | 编号 | 修复及文件 | 当前结果 |
 | --- | --- | --- |
-| A1 | `scripts/site_files.py`、`build-site.py`、`check-site.py`、`test-site-tools.py`；`.github/workflows/pages.yml`；README | 沿用网站白名单，构建真实 `_site` 并检查；PR 只测试，main 发布前检查。后台 Source 尚待切换，因此线上问题未闭环 |
+| A1 | `scripts/site_files.py`、`build-site.py`、`check-site.py`、`test-site-tools.py`；`.github/workflows/pages.yml`；README | 沿用网站白名单，构建真实 `_site` 并检查；PR 只测试，main 发布前检查。后台 Source 已切换，等待本批部署后核验维护路径 404 |
 | A2 | `scripts/sync-site-chrome.py` | 明确 UTF-8 读写；跳过构建产物和原始交接资料；Windows 默认 cp936 下可运行 |
 | A3 | `solutions/index.html`、`zh-cn/solutions/index.html` | CTA 与现有目标 H1 对齐：Xilume CAN FD Control Center / 熙联迈 CAN FD 控制中心；没有更改软件正式产品定义 |
 | A4 | `zh-cn/solutions/index.html`、`zh-cn/downloads/index.html` | 英文 TraceBox 入口标注“英文详情”/“英文”；保留现有页面与下载 |
@@ -47,11 +47,11 @@
 
 测试命令及复用流程见 README。预览真实产物使用 `python -m http.server 8000 --bind 127.0.0.1 --directory _site`。
 
-## Pages 配置与待发布步骤
+## Pages 配置与发布步骤
 
-本轮只读 API 已确认 `build_type: legacy`、源为 main 根目录、`cname: xilume.co`、`https_enforced: true`，解释了首轮发现的动态根目录部署。后台设置未修改；旧正式站仍可能提供 README 和同步脚本。
+此前只读 API 确认 `build_type: legacy`、源为 main 根目录，解释了首轮发现的动态根目录部署。2026-09-08 07:53:30 UTC（北京时间 15:53:30），已仅提交 `build_type: workflow` 并 GET 核实成功；`cname: xilume.co` 与 `https_enforced: true` 保持。API 仍返回历史 source 的 main / 字段，不能把它误读为切换失败，实际发布类型已是 workflow。
 
-具体步骤见 `WEBSITE_RELEASE.md`。先获批，再把 Source 切到 GitHub Actions（只改变 `build_type`），保留域名与 HTTPS，检查设置，再合并已通过检查的任务 PR。随后核对唯一预期部署、正式页面和开发路径 404。不应先合并含维护文档的 PR 再处理旧根目录发布入口。
+具体步骤见 `WEBSITE_RELEASE.md`。本批已有授权且完成设置前置步骤，接下来合并通过最终检查的 PR，核对唯一预期部署、正式页面和开发路径 404。更新 AGENTS、README 或 docs 的纯文档 main 提交不重复部署；PR 仍执行检查。
 
 ## 发布状态
 
@@ -59,13 +59,13 @@
 | --- | --- |
 | 已修改 | 上述代码、文案、缓存版本、检查流程与维护文档 |
 | 已测试 | 本地自动检查、HTTP、实际浏览器、独立审查及上述 GitHub PR CI 通过 |
-| 已推送 | 是，仅任务分支与草稿 PR #3；Git 传输连接重置后通过 GitHub Git Data API 上传，并验证远端 tree/commit 与本地精确一致；main 未动 |
-| 已部署 | 否；未合并 main、未手动触发正式 workflow、未改 Pages 设置 |
-| 已线上验证 | 只读核对既有站点和 Pages 配置；本轮修复未上线，不能宣称官网已修复 |
+| 已推送 | 是，任务分支与 PR #3；通过 GitHub Git Data API 上传并核对 tree/commit。正式合并正在执行，完成后更新记录 |
+| 已部署 | 尚未；已切换 Pages Source，待本批正式 Actions 完成 |
+| 已线上验证 | Pages 配置已实读核验；代码修复尚待正式部署及线上验收 |
 
 ## 尚待验证及后续
 
-- PR 检查已完成；正式上传、部署及线上效果仍待获批执行，不能以 PR CI 通过替代正式验收
+- PR 检查已完成；正式上传、部署及线上效果正在按现有授权执行，不能以 PR CI 通过替代正式验收
 - 实体设备参数、认证、兼容性与价格未重新核定；软件包未安装运行，签名未验证，不为未知事项编造结论
 - 未做全部 SKU 图片人工比对、完整无障碍审计、跨 Safari/Firefox/实体手机测试、性能基准或 Search Console 验收
 - 已见页面没有需要立即大改的布局故障。审美改善继续按具体页面、小批次、桌面/手机对比验收推进

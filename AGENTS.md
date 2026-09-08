@@ -12,7 +12,7 @@
 
 用户当次明确要求优先于旧交接记录。区分用户决定、代码事实、历史偏好、建议和待验证事项；不能假定已读过以前的 ChatGPT 对话，也不能把历史助手的完成声明当作验证证据。
 
-2026-09-08 首轮仅做工程交接与审查，这是已完成阶段的历史边界。随后用户要求修复已发现的问题和改进项，当前已授权在独立任务分支修改代码、维护工具和待审 workflow、测试及准备草稿审查，不必逐行确认。该授权没有取消下文的正式发布边界。
+2026-09-08 首轮仅做工程交接与审查，这是已完成阶段的历史边界。随后用户授权修复全部已发现的问题，并明确要求“你以后修复完要发布到xilume.co这个官网上”。本次及以后常规维护修复可在独立分支修改、测试与审查后合并并发布到 `xilume.co`，不再逐次询问发布许可。按下文的内容边界与验证流程完成工作；新的明确限制优先。
 
 ## 品牌、内容与设计
 
@@ -50,15 +50,15 @@ python -m http.server 8000 --bind 127.0.0.1 --directory _site
 
 保留首页和 About 的中英文四页现有 `index, follow, max-image-preview:none`。这不是删除站内图片的指令；搜索缩略图、favicon、分享图和页面图片分别处理。
 
-## 发布边界
+## 发布流程与边界
 
-待审发布链路为 `.github/workflows/pages.yml` → `scripts/build-site.py` → 检查后的 `_site/` → GitHub Pages。白名单统一维护于 `scripts/site_files.py`；新增根 CSS/JS/图标必须进入名单，新增页面同时核对中英文和 sitemap。`scripts/check-site.py` 检查实际 artifact 并拒绝维护资料；保留根 `.nojekyll` 及上传步骤的 `include-hidden-files: true`。
+常规流程为：独立任务分支 → 修改与测试 → 审查最终 diff / PR 检查 → 合并到 `main` → 发布到 `xilume.co` → 线上验证 → 更新状态。发布链路为 `.github/workflows/pages.yml` → `scripts/build-site.py` → 检查后的 `_site/` → GitHub Pages。白名单统一维护于 `scripts/site_files.py`；新增根 CSS/JS/图标必须进入名单，新增页面同时核对中英文和 sitemap。`scripts/check-site.py` 检查实际 artifact 并拒绝维护资料；保留根 `.nojekyll` 及上传步骤的 `include-hidden-files: true`。
 
-当前分支的 workflow 对 PR 只运行检查，不上传或部署；只有 `main` push / 在 `main` 手动运行才可能部署。正式部署并发组不取消正在运行的部署。代码中的触发条件不是用户发布授权，维护者仍须遵守批准边界。
+workflow 对 PR 只运行检查，不上传或部署；合并后的 `main` 网站改动或在 `main` 手动运行经检查后部署。`push.paths-ignore` 排除 `AGENTS.md`、`README.md`、`docs/**`，仅这些维护文档变化时不重复部署，PR 仍运行检查。正式部署并发组不取消正在运行的部署。已有长期授权覆盖常规维护合并与发布，不需要另设逐批人工批准步骤。
 
-**正式设置仍待处理：** 2026-09-08 认证只读 Pages API 已确认 `build_type: legacy`、来源 `main` / `/`、域名 `xilume.co`、强制 HTTPS。既有动态 Pages 流程上传仓库根目录，README 和维护脚本已在线上提供。当前仅准备分支中的修复，没有修改 Pages 设置，也没有修复线上发布范围。不得仅凭新白名单认定维护资料不会由旧流程发布。
+**本次发布迁移：** 2026-09-08 发布前只读 Pages API 曾确认 `build_type: legacy`，既有动态流程上传仓库根目录并提供 README 和维护脚本。已按本次授权将 Pages Source 切为 **GitHub Actions**，并于 `2026-09-08T07:53:30Z` 通过 GET 核实 `build_type: workflow`、`cname: xilume.co`、`https_enforced: true`。响应仍保留 `source: main /` 字段，生效发布类型以 `build_type` 为准，不因此切回 legacy。设置已统一，正式修复代码发布与线上验收仍须完成；进度以 `docs/WEBSITE_STATUS.md` 为准，不能把设置切换等同于线上修好。
 
-没有用户明确的最终授权，不向 `main` 推送、不合并 PR、不触发正式部署、不修改 Pages 设置。当前 workflow 差异仅供分支审查；其他发布配置变更也须在获批范围内。首次合并前，先取得发布与 Pages Source 切换授权，将 Source 改为 **GitHub Actions**（`build_type: workflow`），保留域名和 HTTPS 并核实成功；然后才能按授权合并及部署。发布后检查实际运行、关键网页和下载，并验证 `/README.md`、`/AGENTS.md`、`/docs/WEBSITE_CONTEXT.md`、`/scripts/sync-site-chrome.py` 不再提供源文件。域名、凭据、Logo、型号参数、价格及大规模删除/重构同样不得擅改。
+发布后检查实际运行、关键网页和下载，并验证 `/README.md`、`/AGENTS.md`、`/docs/WEBSITE_CONTEXT.md`、`/scripts/sync-site-chrome.py` 不再提供源文件。Logo、型号参数、价格、域名、大规模删除/重构和与任务无关的配置不在常规维护授权内，不得擅改。发布失败先定位原因并保护最后一次成功版本，不强推 main，不以重复触发代替诊断。具体步骤见 `docs/WEBSITE_RELEASE.md`。
 
 所有仓库文件按公开资料处理，不写密码、Token、私人聊天全文、未公开客户信息或商业资料。原始交接文件夹只作本地参考，不整体提交。
 
@@ -66,4 +66,4 @@ python -m http.server 8000 --bind 127.0.0.1 --directory _site
 
 更新 `docs/WEBSITE_STATUS.md`。新的已确认长期决定写入 `docs/WEBSITE_CONTEXT.md`，标明日期、来源；必要时更新本文件。分别报告已修改、已测试、已推送、已部署、已线上验证，以及未完成项和下一步。代码修改、本地通过、历史部署成功、本轮正式上线不得混为一谈。
 
-“长期维护”在本轮指持续按任务维护；本轮没有创建定时巡检、自动发布或后台持续运行承诺。
+“长期维护”包括每次常规修复通过测试后发布并验证；没有创建定时巡检或无人值守后台任务，也不承诺在未运行的会话中持续工作。
