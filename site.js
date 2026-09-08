@@ -300,11 +300,19 @@
     const chinesePath = alternatePath("zh-CN") || (isSimplifiedChinese
       ? window.location.pathname
       : window.location.pathname.startsWith("/downloads/") ? "/zh-cn/downloads/" : "/zh-cn/");
-    const locationSuffix = document.querySelector('link[rel="alternate"][hreflang="zh-CN"]') ? `${window.location.search}${window.location.hash}` : "";
+    const hasChineseAlternate = !!document.querySelector('link[rel="alternate"][hreflang="zh-CN"]');
     const languageSwitch = document.createElement("nav");
     languageSwitch.className = "site-language-switch";
     languageSwitch.setAttribute("aria-label", isSimplifiedChinese ? "语言选择" : "Language selector");
-    languageSwitch.innerHTML = `<a lang="zh-CN" hreflang="zh-CN" href="${chinesePath}${locationSuffix}"${isSimplifiedChinese ? ' aria-current="page"' : ""}>简体中文</a><span aria-hidden="true">/</span><a lang="en" hreflang="en" href="${englishPath}${locationSuffix}"${isSimplifiedChinese ? "" : ' aria-current="page"'}>English</a>`;
+    languageSwitch.innerHTML = `<a lang="zh-CN" hreflang="zh-CN" href="${chinesePath}"${isSimplifiedChinese ? ' aria-current="page"' : ""}>简体中文</a><span aria-hidden="true">/</span><a lang="en" hreflang="en" href="${englishPath}"${isSimplifiedChinese ? "" : ' aria-current="page"'}>English</a>`;
+    const updateLanguageLinks = () => {
+      const locationSuffix = hasChineseAlternate ? `${window.location.search}${window.location.hash}` : "";
+      languageSwitch.querySelector('[hreflang="zh-CN"]').setAttribute("href", `${chinesePath}${locationSuffix}`);
+      languageSwitch.querySelector('[hreflang="en"]').setAttribute("href", `${englishPath}${locationSuffix}`);
+    };
+    updateLanguageLinks();
+    window.addEventListener("hashchange", updateLanguageLinks);
+    window.addEventListener("popstate", updateLanguageLinks);
     inner.appendChild(languageSwitch);
 
     const entries = menuDefinitions.flatMap((definition) => {
