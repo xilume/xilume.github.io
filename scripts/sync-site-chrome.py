@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='20260907-scenarios1'
+VERSION='20260908-maintenance1'
 
 def header(zh,path):
  p='/zh-cn' if zh else ''
@@ -38,8 +38,8 @@ def footer(zh):
 
 changed=[]
 for file in ROOT.rglob('*.html'):
- if '.git' in file.parts: continue
- text=file.read_text()
+ if any(part in {'.git', '_site', 'Xilume_Website_Codex_Handoff'} for part in file.relative_to(ROOT).parts): continue
+ text=file.read_text(encoding='utf-8')
  if not re.search(r'<header\b[^>]*class="[^"]*site-header',text): continue
  rel=file.relative_to(ROOT)
  zh=rel.parts[0]=='zh-cn'
@@ -63,5 +63,5 @@ for file in ROOT.rglob('*.html'):
   mid=idmatch.group(1) if idmatch else 'main-content'
   if not idmatch: text=text[:main.start()]+main.group()[:-1]+' id="main-content">'+text[main.end():]
   text=re.sub(r'(<body\b[^>]*>)',rf'\g<1>\n  <a class="skip-link" href="#{mid}">{"跳到正文" if zh else "Skip to content"}</a>',text,count=1)
- if text!=old: file.write_text(text);changed.append(str(rel))
+ if text!=old: file.write_text(text, encoding='utf-8');changed.append(str(rel))
 print(f'Synchronized {len(changed)} pages')
