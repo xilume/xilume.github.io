@@ -23,7 +23,7 @@ This is a plain HTML, CSS, and JavaScript site, with no application build step. 
 - `/products/usb-dual-can-fd/` and `/products/usb-canfd-rs485/` — selection pages linking to current named products
 - `/products/usb-smbus/` — Battery Display Module for Windows and Linux integration
 - `/products/mini-pcie-dual-can-fd/` — Dual Mini PCIe CAN FD interface
-- `/contact/` — sales and company contact information
+- `/contact/` — direct pricing, product selection and support inquiries, plus email and phone contact options
 - `/about/` — company and development direction
 
 ## Local preview
@@ -33,6 +33,7 @@ Use Python 3.12+ and Node.js 24. From the repository root, run:
 ```sh
 python scripts/test-site-tools.py
 node scripts/test-language-navigation.cjs
+node scripts/test-contact-form.cjs
 python scripts/build-site.py
 python scripts/check-site.py _site
 python -m http.server 8000 --bind 127.0.0.1 --directory _site
