@@ -63,7 +63,7 @@
 
 本轮发布链路以 `scripts/site_files.py` 作为唯一白名单来源，由 `scripts/build-site.py` 构建 `_site/` 并先检查；根资源显式列出，网站目录递归复制并排除维护资料。`.nojekyll` 保留且上传步骤显式包含隐藏文件。PR 运行工具、语言导航、artifact 与 JavaScript 检查，不上传 Pages artifact，不取消正在运行的正式部署。合并后的 main 网站改动经检查后部署；`push.paths-ignore` 排除 `AGENTS.md`、`README.md`、`docs/**`，仅这些文档变化时不重复部署，PR 检查照常运行。
 
-**A1 的发布设置已统一，正式代码发布与线上验收继续执行。** 已按授权切换 Source 为 **GitHub Actions**，于 `2026-09-08T07:53:30Z` GET 核实 `build_type: workflow`、`cname: xilume.co`、`https_enforced: true`。响应中的 `source` 字段仍显示 `main` / `/`，生效发布类型已经是 workflow；不把保留字段误判为切换失败。仅改变 Source 还不能证明现有网站内容已更新。正式部署后需核对唯一预期入口、artifact 范围、关键页面和下载，并验证维护文件 URL 返回 404。最终完成情况以 `WEBSITE_STATUS.md` 的实际记录为准，本背景文档不提前宣称上线成功。即使以后不随站点发布，公开仓库中的维护文件仍不是秘密。
+**A1 的发布设置、正式代码部署与维护路径验收已完成。** 已按授权切换 Source 为 **GitHub Actions**，于 `2026-09-08T07:53:30Z` GET 核实 `build_type: workflow`、`cname: xilume.co`、`https_enforced: true`。响应中的 `source` 字段仍显示 `main` / `/`，生效发布类型已经是 workflow；不把保留字段误判为切换失败。本批已由 PR #3 合并并在生产 run `34202648965` 部署提交 `322902a62883e701a2c348ced358e73e07146972`；同提交只有预期的自定义发布流程。2026-09-08 08:08:14 UTC 的线上核验确认 200 个发布文件可访问、115 个文本资源与构建一致、6 类维护路径原 URL 与刷新查询 URL 均返回 404。具体范围与浏览器连接限制见 `WEBSITE_STATUS.md`。即使以后不随站点发布，公开仓库中的维护文件仍不是秘密。
 
 ## 品牌素材与历史偏好
 

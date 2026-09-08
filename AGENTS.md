@@ -56,7 +56,7 @@ python -m http.server 8000 --bind 127.0.0.1 --directory _site
 
 workflow 对 PR 只运行检查，不上传或部署；合并后的 `main` 网站改动或在 `main` 手动运行经检查后部署。`push.paths-ignore` 排除 `AGENTS.md`、`README.md`、`docs/**`，仅这些维护文档变化时不重复部署，PR 仍运行检查。正式部署并发组不取消正在运行的部署。已有长期授权覆盖常规维护合并与发布，不需要另设逐批人工批准步骤。
 
-**本次发布迁移：** 2026-09-08 发布前只读 Pages API 曾确认 `build_type: legacy`，既有动态流程上传仓库根目录并提供 README 和维护脚本。已按本次授权将 Pages Source 切为 **GitHub Actions**，并于 `2026-09-08T07:53:30Z` 通过 GET 核实 `build_type: workflow`、`cname: xilume.co`、`https_enforced: true`。响应仍保留 `source: main /` 字段，生效发布类型以 `build_type` 为准，不因此切回 legacy。设置已统一，正式修复代码发布与线上验收仍须完成；进度以 `docs/WEBSITE_STATUS.md` 为准，不能把设置切换等同于线上修好。
+**本次发布迁移：** 2026-09-08 发布前只读 Pages API 曾确认 `build_type: legacy`，既有动态流程上传仓库根目录并提供 README 和维护脚本。已按本次授权将 Pages Source 切为 **GitHub Actions**，并于 `2026-09-08T07:53:30Z` 通过 GET 核实 `build_type: workflow`、`cname: xilume.co`、`https_enforced: true`。响应仍保留 `source: main /` 字段，生效发布类型以 `build_type` 为准，不因此切回 legacy。设置与本批修复已正式发布，生产 run `34202648965` 成功，线上 200 个发布文件可访问，6 类维护路径返回 404。完整范围和工具限制见 `docs/WEBSITE_STATUS.md`；后续仍须分别核对设置、部署和线上结果。
 
 发布后检查实际运行、关键网页和下载，并验证 `/README.md`、`/AGENTS.md`、`/docs/WEBSITE_CONTEXT.md`、`/scripts/sync-site-chrome.py` 不再提供源文件。Logo、型号参数、价格、域名、大规模删除/重构和与任务无关的配置不在常规维护授权内，不得擅改。发布失败先定位原因并保护最后一次成功版本，不强推 main，不以重复触发代替诊断。具体步骤见 `docs/WEBSITE_RELEASE.md`。
 
