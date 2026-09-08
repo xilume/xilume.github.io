@@ -36,6 +36,7 @@
 python scripts/sync-site-chrome.py
 python scripts/test-site-tools.py
 node scripts/test-language-navigation.cjs
+node scripts/test-contact-form.cjs
 python scripts/build-site.py
 python scripts/check-site.py _site
 node --check site.js
@@ -63,6 +64,8 @@ workflow 对 PR 只运行检查，不上传或部署；合并后的 `main` 网�
 所有仓库文件按公开资料处理，不写密码、Token、私人聊天全文、未公开客户信息或商业资料。原始交接文件夹只作本地参考，不整体提交。
 
 ## 每轮收尾
+
+Contact 表单维护：中英文页面共用 `contact/contact.js` 和 `contact/contact.css`，收件人固定为公开业务邮箱 `contact@xilume.co`，不改为私人邮箱。用户于 2026-09-08 授权“一个工作日内回复”的承诺；邮箱与问题必填、姓名选填，保持低门槛，不无故增加必填公司、电话或采购规模。采用 FormSubmit 原生 POST 与 AJAX 增强；收件人激活、接口接受、实际收件和线上提交须分别记录。禁止仅凭 HTTP 200、字符串真假值或激活提示声称发送成功；失败保留内容，不自动重试，不记录访客输入或 URL 查询。维护细节与供应商限制见 `docs/WEBSITE_CONTACT.md`。
 
 更新 `docs/WEBSITE_STATUS.md`。新的已确认长期决定写入 `docs/WEBSITE_CONTEXT.md`，标明日期、来源；必要时更新本文件。分别报告已修改、已测试、已推送、已部署、已线上验证，以及未完成项和下一步。代码修改、本地通过、历史部署成功、本轮正式上线不得混为一谈。
 
