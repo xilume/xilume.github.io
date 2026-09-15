@@ -141,3 +141,9 @@ python -m http.server 8000 --bind 127.0.0.1 --directory _site
 - [采用当前品牌素材的提交](https://github.com/xilume/xilume.github.io/commit/a37640e7a4744ab9e536e5a7be960b0c24fe3c2b)
 - 用户提供的 `Xilume_Website_Codex_Handoff_20260908.zip` 三份规则/背景/状态文档
 - 2026-09-08 用户后续修复要求及“以后修复完要发布到 xilume.co”的明确长期决定、认证只读 Pages API 核对、当前任务分支及 STATUS/AUDIT 中的验证记录
+
+## 2026-09-15 DualCANFD 随附内容
+
+来源：用户本轮明确要求及提供的配件实物照片、资料目录截图
+
+DualCANFD 附赠全高扩展挡板与两条 DB9 转接线（用户称 DP9），每个 CAN / CAN FD 通道各一条；资料目录为 `01_用户手册`、`02_SDK`、`03_驱动` 和 `README_开始这里.md`。中英文产品页、资料说明和下载入口同步维护。英文目录标签可翻译，不能据此宣称已有另行打包的英文资料或新增未收到的文件下载。

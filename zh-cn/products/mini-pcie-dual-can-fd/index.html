@@ -58,6 +58,7 @@
   </script>
   <link rel="stylesheet" href="/zh-cn.css?v=20260908-maintenance1">
   <link rel="stylesheet" href="/products/product-refinement.css?v=20260907-1">
+  <link rel="stylesheet" href="/products/mini-pcie-dual-can-fd/included.css?v=20260915-1">
   <link rel="stylesheet" href="/site-refinement.css?v=20260908-maintenance1">
 </head>
 <body class="dcf-site-shell">
@@ -75,8 +76,10 @@
       <div class="dcf-local-links">
         <a href="#hardware">硬件</a>
         <a href="#installation">安装</a>
+        <a href="#included">标配附件</a>
         <a href="#software">软件</a>
         <a href="#specifications">规格</a>
+        <a href="#resources">随附资料与软件</a>
         <a class="dcf-local-cta" href="mailto:contact@xilume.co?subject=Dual%20Mini%20PCIe%20CAN%20FD%20order%20inquiry">购买咨询</a>
       </div>
     </div>
@@ -93,6 +96,7 @@
             <div class="product-commerce-price"><small>US$</small><strong>69.99</strong></div>
             <div class="product-commerce-copy"><strong>单个模块</strong><span>批量采购可询价</span></div>
           </div>
+          <p class="dcf-included-summary"><a href="#included">附赠全高扩展挡板 + 两条 DB9 转接线</a></p>
           <div class="dcf-hero-actions">
             <a class="dcf-button dcf-button-primary" href="mailto:contact@xilume.co?subject=Dual%20Mini%20PCIe%20CAN%20FD%20order%20inquiry">购买咨询 <span aria-hidden="true">↗</span></a>
             <a class="dcf-button dcf-button-secondary" href="#specifications">查看技术规格</a>
@@ -184,6 +188,25 @@
       </div>
     </section>
 
+    <section class="dcf-included" id="included" aria-labelledby="dcf-included-title">
+      <div class="dcf-wide dcf-included-layout">
+        <div class="dcf-included-copy">
+          <p class="dcf-eyebrow">标配附件</p>
+          <h2 id="dcf-included-title">安装与接线配件，随模块附赠</h2>
+          <p class="dcf-included-lead">DualCANFD 随附全高扩展挡板和两条 DB9 转接线，便于安装模块并引出两路 CAN / CAN FD 接口</p>
+          <dl class="dcf-included-list">
+            <div><dt>全高扩展挡板</dt><dd>随模块附赠</dd></div>
+            <div><dt>DB9 转接线 × 2</dt><dd>每路 CAN / CAN FD 通道各配一条</dd></div>
+          </dl>
+          <a class="dcf-included-link" href="/zh-cn/documentation/dual-canfd/#package">在线安装指南 →</a>
+        </div>
+        <figure class="dcf-included-photo">
+          <img src="/images/dualcanfd-db9-breakout-cables.png" width="1024" height="1024" loading="lazy" decoding="async" alt="DualCANFD 模块连接随附的两条 9 针 D-sub（DB9）转接线">
+          <figcaption>连接示例 · 两条 DB9 转接线</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="dcf-software" id="software">
       <div class="dcf-wide dcf-software-layout">
         <div class="dcf-software-copy">
@@ -225,18 +248,33 @@
           <div><dt>Windows 接口</dt><dd>2 个用于熙联迈 CAN FD 传输的命名 COM 端口</dd></div>
           <div><dt>Linux 接口</dt><dd>两个 SocketCAN 接口</dd></div>
           <div><dt>操作系统</dt><dd>Windows 与 Linux</dd></div>
+          <div><dt>随附配件</dt><dd>全高扩展挡板 + 两条 DB9 转接线</dd></div>
         </dl>
       </div>
       <div class="dcf-wide dcf-host-note"><strong>主机要求</strong><p>Mini PCIe 插槽必须提供 USB 2.0 信号</p></div>
     </section>
 
-    <section class="dcf-resources">
-      <div class="dcf-wide dcf-resources-layout">
-        <div><p class="dcf-eyebrow">资源</p><h2>软件与文档</h2></div>
-        <div class="dcf-resource-links">
-          <a href="/zh-cn/documentation/dual-canfd/"><span>快速入门</span><b>↗</b></a>
-          <a href="/zh-cn/downloads/#dual-canfd-driver"><span>Windows + Linux 驱动</span><b>↗</b></a>
-          <a href="/zh-cn/downloads/#control-center"><span>CAN FD 控制中心</span><b>↗</b></a>
+    <section class="dcf-resources dcf-support-materials" id="resources" aria-labelledby="dcf-resources-title">
+      <div class="dcf-wide dcf-support-layout">
+        <div>
+          <p class="dcf-eyebrow">随附资料与软件</p>
+          <h2 id="dcf-resources-title">从首次连接，到二次开发</h2>
+          <p class="dcf-support-lead">我们提供用户手册、SDK、驱动和入门 README，方便完成安装、使用与应用集成</p>
+          <div class="dcf-resource-links">
+            <a href="/zh-cn/documentation/dual-canfd/#support-package"><span>查看随附资料说明</span><b aria-hidden="true">↗</b></a>
+            <a href="/zh-cn/downloads/#dual-canfd-driver"><span>Windows + Linux 驱动</span><b aria-hidden="true">↗</b></a>
+            <a href="/zh-cn/downloads/#control-center"><span>CAN FD 控制中心</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </div>
+        <div class="dcf-file-panel" role="group" aria-label="随附资料目录">
+          <div class="dcf-file-heading"><span>DualCANFD</span><span>随附资料目录</span></div>
+          <ul class="dcf-file-list">
+            <li><span class="dcf-file-icon " aria-hidden="true"></span><div><strong>01_用户手册</strong><span>安装、接线与使用说明</span></div></li>
+            <li><span class="dcf-file-icon " aria-hidden="true"></span><div><strong>02_SDK</strong><span>用于二次开发与应用集成的软件开发工具包</span></div></li>
+            <li><span class="dcf-file-icon " aria-hidden="true"></span><div><strong>03_驱动</strong><span>Windows 与 Linux 驱动</span></div></li>
+            <li><span class="dcf-file-icon dcf-file-readme" aria-hidden="true"></span><div><strong>README_开始这里.md</strong><span>优先阅读，了解资料内容与安装顺序</span></div></li>
+          </ul>
+          <a class="dcf-file-footer" href="/zh-cn/contact/?product=DualCANFD">联系获取完整资料包 <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
