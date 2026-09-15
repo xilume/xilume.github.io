@@ -57,6 +57,7 @@
   }
   </script>
   <link rel="stylesheet" href="/products/product-refinement.css?v=20260907-1">
+  <link rel="stylesheet" href="/products/mini-pcie-dual-can-fd/included.css?v=20260915-1">
   <link rel="stylesheet" href="/site-refinement.css?v=20260908-maintenance1">
 </head>
 <body class="dcf-site-shell">
@@ -74,8 +75,10 @@
       <div class="dcf-local-links">
         <a href="#hardware">Hardware</a>
         <a href="#installation">Installation</a>
+        <a href="#included">Included accessories</a>
         <a href="#software">Software</a>
         <a href="#specifications">Specifications</a>
+        <a href="#resources">Documentation &amp; software</a>
         <a class="dcf-local-cta" href="mailto:contact@xilume.co?subject=Dual%20Mini%20PCIe%20CAN%20FD%20order%20inquiry">Order inquiry</a>
       </div>
     </div>
@@ -92,6 +95,7 @@
             <div class="product-commerce-price"><small>US$</small><strong>69.99</strong></div>
             <div class="product-commerce-copy"><strong>Single module</strong><span>Volume pricing available</span></div>
           </div>
+          <p class="dcf-included-summary"><a href="#included">Full-height bracket + 2 DB9 breakout cables included</a></p>
           <div class="dcf-hero-actions">
             <a class="dcf-button dcf-button-primary" href="mailto:contact@xilume.co?subject=Dual%20Mini%20PCIe%20CAN%20FD%20order%20inquiry">Order inquiry <span aria-hidden="true">↗</span></a>
             <a class="dcf-button dcf-button-secondary" href="#specifications">View specifications</a>
@@ -183,6 +187,25 @@
       </div>
     </section>
 
+    <section class="dcf-included" id="included" aria-labelledby="dcf-included-title">
+      <div class="dcf-wide dcf-included-layout">
+        <div class="dcf-included-copy">
+          <p class="dcf-eyebrow">Included accessories</p>
+          <h2 id="dcf-included-title">Mounting and connections, included.</h2>
+          <p class="dcf-included-lead">Every DualCANFD module comes with a full-height expansion bracket and two DB9 breakout cables.</p>
+          <dl class="dcf-included-list">
+            <div><dt>Full-height expansion bracket</dt><dd>Included with the module</dd></div>
+            <div><dt>DB9 breakout cables × 2</dt><dd>One cable for each CAN / CAN FD channel</dd></div>
+          </dl>
+          <a class="dcf-included-link" href="/documentation/dual-canfd/#package">Online installation guide →</a>
+        </div>
+        <figure class="dcf-included-photo">
+          <img src="/images/dualcanfd-db9-breakout-cables.png" width="1024" height="1024" loading="lazy" decoding="async" alt="DualCANFD module connected to the two included 9-pin D-sub (DB9) breakout cables">
+          <figcaption>Connection example · two DB9 breakout cables</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="dcf-software" id="software">
       <div class="dcf-wide dcf-software-layout">
         <div class="dcf-software-copy">
@@ -224,18 +247,33 @@
           <div><dt>Windows interface</dt><dd>Two named COM endpoints for Xilume CAN FD transport</dd></div>
           <div><dt>Linux interface</dt><dd>Two SocketCAN interfaces</dd></div>
           <div><dt>Operating systems</dt><dd>Windows and Linux</dd></div>
+          <div><dt>Included accessories</dt><dd>Full-height expansion bracket + 2 DB9 breakout cables</dd></div>
         </dl>
       </div>
       <div class="dcf-wide dcf-host-note"><strong>Host requirement</strong><p>The Mini PCIe slot must provide USB 2.0 signals.</p></div>
     </section>
 
-    <section class="dcf-resources">
-      <div class="dcf-wide dcf-resources-layout">
-        <div><p class="dcf-eyebrow">Resources</p><h2>Drivers and software</h2></div>
-        <div class="dcf-resource-links">
-          <a href="/documentation/dual-canfd/"><span>Quick start</span><b>↗</b></a>
-          <a href="/downloads/#dual-canfd-driver"><span>Windows + Linux drivers</span><b>↗</b></a>
-          <a href="/downloads/#control-center"><span>CAN FD Control Center</span><b>↗</b></a>
+    <section class="dcf-resources dcf-support-materials" id="resources" aria-labelledby="dcf-resources-title">
+      <div class="dcf-wide dcf-support-layout">
+        <div>
+          <p class="dcf-eyebrow">Documentation &amp; software</p>
+          <h2 id="dcf-resources-title">From first connection to your own application.</h2>
+          <p class="dcf-support-lead">We provide a user manual, SDK, drivers and a getting-started README with DualCANFD.</p>
+          <div class="dcf-resource-links">
+            <a href="/documentation/dual-canfd/#support-package"><span>View the supplied materials</span><b aria-hidden="true">↗</b></a>
+            <a href="/downloads/#dual-canfd-driver"><span>Windows + Linux drivers</span><b aria-hidden="true">↗</b></a>
+            <a href="/downloads/#control-center"><span>CAN FD Control Center</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </div>
+        <div class="dcf-file-panel" role="group" aria-label="Included support materials">
+          <div class="dcf-file-heading"><span>DualCANFD</span><span>Included support materials</span></div>
+          <ul class="dcf-file-list">
+            <li><span class="dcf-file-icon " aria-hidden="true"></span><div><strong>01_User_Manual</strong><span>Installation, connection and operating instructions</span></div></li>
+            <li><span class="dcf-file-icon " aria-hidden="true"></span><div><strong>02_SDK</strong><span>Software development kit for application integration</span></div></li>
+            <li><span class="dcf-file-icon " aria-hidden="true"></span><div><strong>03_Drivers</strong><span>Windows and Linux drivers</span></div></li>
+            <li><span class="dcf-file-icon dcf-file-readme" aria-hidden="true"></span><div><strong>README_Start_Here.md</strong><span>Read this first for the package overview and setup order</span></div></li>
+          </ul>
+          <a class="dcf-file-footer" href="/contact/?product=DualCANFD">Contact us for the complete support package <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>

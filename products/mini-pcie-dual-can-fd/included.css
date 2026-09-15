@@ -1,0 +1,48 @@
+/* DualCANFD accessories and supplied materials; scoped to this product page. */
+.dcf-included-summary { margin:0 0 22px; color:#b8cbd9; font-size:13px; line-height:1.7; }
+.dcf-included-summary a { color:inherit; text-underline-offset:4px; }
+.dcf-included-summary a:hover { color:#fff; text-decoration:underline; }
+.dcf-included { padding:88px 0; background:#f6f8fa; border-block:1px solid #dbe2e8; }
+.dcf-included-layout, .dcf-support-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:80px; align-items:center; }
+.dcf-included-copy h2, .dcf-support-materials h2 { margin:18px 0 22px; max-width:570px; color:#101820; font-size:clamp(30px,3.1vw,44px); font-weight:650; line-height:1.16; letter-spacing:-.035em; text-wrap:balance; }
+.dcf-included-lead, .dcf-support-lead { max-width:560px; color:#566472; font-size:16px; line-height:1.85; }
+.dcf-included-list { margin:30px 0; border-top:1px solid #c9d3dc; }
+.dcf-included-list > div { padding:20px 0; border-bottom:1px solid #dbe2e8; }
+.dcf-included-list dt { font-size:17px; font-weight:650; color:#182b3c; }
+.dcf-included-list dd { margin:7px 0 0; font-size:14px; color:#5a6874; line-height:1.6; }
+.dcf-included-link { display:inline-block; padding:8px 0; color:#0864ba; font-size:14px; font-weight:600; }
+.dcf-included-link:hover { text-decoration:underline; text-underline-offset:4px; }
+.dcf-included-photo { margin:0; min-width:0; background:white; border:1px solid #dbe2e8; }
+.dcf-included-photo img { display:block; width:100%; height:auto; }
+.dcf-included-photo figcaption { padding:17px 22px; border-top:1px solid #e5eaf0; color:#536575; font-size:12px; line-height:1.6; }
+.dcf-support-materials { background:#fff; }
+.dcf-support-layout { align-items:start; }
+.dcf-support-materials .dcf-resource-links { margin-top:28px; }
+.dcf-file-panel { min-width:0; overflow:hidden; border:1px solid #ccd8e1; background:#f7f9fb; border-radius:12px; }
+.dcf-file-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 20px; padding:22px 26px; border-bottom:1px solid #dbe2e8; }
+.dcf-file-heading span:first-child { color:#162f43; font-size:17px; font-weight:650; }
+.dcf-file-heading span:last-child { color:#617382; font-size:12px; }
+.dcf-file-list { margin:0; padding:8px 26px; list-style:none; }
+.dcf-file-list li { display:flex; gap:18px; align-items:flex-start; padding:24px 0; }
+.dcf-file-list li + li { border-top:1px solid #e0e7ed; }
+.dcf-file-list li > div { min-width:0; }
+.dcf-file-list strong { display:block; color:#183449; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:15px; font-weight:600; line-height:1.5; overflow-wrap:anywhere; }
+.dcf-file-list div > span { display:block; margin-top:7px; color:#5d6f7e; font-size:13px; line-height:1.65; }
+.dcf-file-icon { position:relative; flex:0 0 27px; height:20px; margin-top:4px; border:1px solid #9bb5cb; border-radius:3px; background:#e0eaf3; }
+.dcf-file-icon::before { content:""; position:absolute; left:1px; top:-5px; width:12px; height:5px; border:1px solid #9bb5cb; border-bottom:0; border-radius:3px 3px 0 0; background:#e0eaf3; }
+.dcf-file-readme { flex-basis:21px; height:26px; margin-left:3px; margin-right:3px; background:#fff; }
+.dcf-file-readme::before { top:7px; left:4px; width:11px; height:7px; border:0; border-block:1px solid #9bb5cb; border-radius:0; background:none; }
+.dcf-file-footer { display:flex; justify-content:space-between; gap:18px; padding:20px 26px; border-top:1px solid #ccd8e1; color:#0864ba; font-size:13px; font-weight:600; line-height:1.7; }
+.dcf-file-footer:hover { background:#edf3f8; }
+@media(max-width:1050px) { .dcf-included-layout,.dcf-support-layout { gap:38px; } }
+@media(max-width:760px) {
+  .dcf-included { padding:56px 0; }
+  .dcf-included-layout,.dcf-support-layout { grid-template-columns:1fr; gap:30px; }
+  .dcf-included-copy h2,.dcf-support-materials h2 { font-size:32px; }
+  .dcf-included-lead,.dcf-support-lead { font-size:15px; }
+  .dcf-included-photo { max-width:540px; width:100%; justify-self:center; }
+  .dcf-file-heading,.dcf-file-footer { padding:19px 20px; }
+  .dcf-file-list { padding:4px 20px; }
+  .dcf-file-list li { gap:14px; padding:21px 0; }
+  .dcf-file-list strong { font-size:14px; }
+}
