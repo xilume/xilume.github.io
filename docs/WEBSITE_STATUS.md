@@ -7,7 +7,10 @@
 - 已修改：XE826 中英文询价页由缺少报价/评价的 `Product` 改为 `WebPage`，保留名称、描述、图片、语言、canonical 和四级 `BreadcrumbList`；仅更新两页 sitemap 日期，不改变页面正文、价格、库存、图片或购买入口
 - 已测试：新增检查先在未修复 artifact 上准确报告两项 XE826 错误；修复后 10 项维护测试、12 项语言导航断言、40 项离线联系表单场景通过，205 文件 / 61 HTML / 47 可索引页面 / 2445 本地引用通过。共享页面同步无额外修改
 - 回归保护：发布检查增加 Product 必填信息和报价数值/币种基本检查；测试覆盖双语价格标记与可见售价一致，以及询价页保留面包屑而不发布无报价的 Product
-- 待完成：提交、PR 检查、正式发布与发布后线上验证
+- 已推送与合并：[PR #12](https://github.com/xilume/xilume.github.io/pull/12)，源提交 `2b3c76435eb4aea85bba574ae826bc2c20921dfd`；PR 检查 run `35465502946` 全部通过，合并提交 `c78aa66866c31eec52b88aedb638ec1bde380f5b`
+- 已部署：[正式发布 run 35465547772](https://github.com/xilume/xilume.github.io/actions/runs/35465547772) 的 build 与 deploy 均成功，2026-09-19 19:50:25 UTC 完成
+- 已线上验证：2026-09-19 19:51:40 UTC，六个中英文产品页、双语首页、双语下载页和 sitemap 共 11 个 URL 均 HTTP 200 且逐字节匹配构建产物；DualCANFD 与 Octant 报价标记正确，XE826 只含 WebPage 和 BreadcrumbList。四个维护路径的原 URL 与刷新查询 URL 均为 404
+- 后续：在 Search Console 的该问题页面点击 Validate Fix，等待 Google 重新抓取与验证；本轮没有提交 Search Console 验证，不能据网站上线声明搜索报告已经清除
 - 验证边界：基本结构检查不替代 Google 富媒体测试或 Search Console 验证；本轮不编造评论、评分、库存或 XE826 售价，没有视觉/交互改动，不声称完成新的浏览器视觉验收或 Google 重新抓取
 
 ## 2026-09-15 XL1326-A 官方丝印与下载图片
