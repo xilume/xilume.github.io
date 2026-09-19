@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Check the built Xilume artifact, using only the Python standard library.
 
-Checks local HTML/CSS references, literal JS links, IDs, JSON-LD syntax,
-manifest resources, the sitemap and bilingual SEO links. Does not execute JS,
-contact external sites, or validate product facts, downloads or visual layout.
+Checks local HTML/CSS references, literal JS links, IDs, JSON-LD syntax and
+Product snippet essentials, manifest resources, the sitemap and bilingual SEO
+links. Does not execute JS, contact external sites, or validate product facts,
+full Google rich-result eligibility, downloads or visual layout.
 Usage: python scripts/check-site.py [PATH_TO_SITE]
 """
 import argparse
@@ -111,6 +112,59 @@ def route(path):
     return value[:-10] if value.endswith("index.html") else value
 
 
+def json_nodes(value):
+    """Include nested JSON-LD nodes, @graph entries and top-level arrays."""
+    if isinstance(value, dict):
+        yield value
+        for child in value.values():
+            yield from json_nodes(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from json_nodes(child)
+
+
+def has_schema_type(node, expected):
+    types = node.get("@type", [])
+    if isinstance(types, str):
+        types = [types]
+    return isinstance(types, list) and any(
+        value in {expected, f"https://schema.org/{expected}", f"http://schema.org/{expected}"}
+        for value in types if isinstance(value, str)
+    )
+
+
+def product_snippet_errors(value):
+    """Catch missing snippet inputs, not a substitute for Google's test.
+
+    Inquiry-only pages should use WebPage/BreadcrumbList until real public
+    offer or review data is available. Never synthesize prices or ratings.
+    """
+    errors = []
+    for node in json_nodes(value):
+        if not has_schema_type(node, "Product"):
+            continue
+        if not isinstance(node.get("name"), str) or not node["name"].strip():
+            errors.append("Product requires a nonempty name")
+        if not any(node.get(key) for key in ("offers", "review", "aggregateRating")):
+            errors.append("Product requires offers, review or aggregateRating for product snippets")
+        offers = node.get("offers", [])
+        for offer in offers if isinstance(offers, list) else [offers]:
+            if not isinstance(offer, dict):
+                errors.append("Product offers must be an Offer or AggregateOffer object")
+                continue
+            specification = offer.get("priceSpecification", {})
+            if not isinstance(specification, dict):
+                specification = {}
+            field = "lowPrice" if has_schema_type(offer, "AggregateOffer") else "price"
+            price = offer.get(field, specification.get("price"))
+            if isinstance(price, bool) or not re.fullmatch(r"\d+(?:\.\d+)?", str(price)):
+                errors.append(f"Product offer requires a nonnegative numeric {field}")
+            currency = offer.get("priceCurrency", specification.get("priceCurrency", ""))
+            if not isinstance(currency, str) or not re.fullmatch(r"[A-Z]{3}", currency):
+                errors.append("Product offer requires a three-letter priceCurrency")
+    return errors
+
+
 def check(root):
     errors = []
     references = 0
@@ -161,9 +215,11 @@ def check(root):
             reference(name, value, line)
         for block in page.json_blocks:
             try:
-                json.loads(block)
+                data = json.loads(block)
             except json.JSONDecodeError as error:
                 errors.append(f"{name}: invalid JSON-LD: {error}")
+            else:
+                errors.extend(f"{name}: {error}" for error in product_snippet_errors(data))
     for name in sorted(files):
         suffix = PurePosixPath(name).suffix.lower()
         if suffix not in {".css", ".js"}:
