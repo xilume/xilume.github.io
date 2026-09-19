@@ -28,11 +28,10 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Product",
-        "@id": "https://xilume.co/zh-cn/products/8hub-embedded/#product",
+        "@type": "WebPage",
+        "@id": "https://xilume.co/zh-cn/products/8hub-embedded/#webpage",
         "name": "熙联迈 XE826",
-        "model": "XE826",
-        "category": "嵌入式八通道工业通信模块",
+        "inLanguage": "zh-CN",
         "description": "一款嵌入式工业通信板卡，通过一个内部 USB 连接提供两路 CAN / CAN FD 通道、四路 RS-485、两路 RS-232、电气隔离以及 Windows 与 Linux 支持",
         "image": [
           "https://xilume.co/images/8hub/8hub-hero-v4.png",
@@ -40,18 +39,11 @@
           "https://xilume.co/images/8hub/8hub-embedded-install-detail-v1.webp"
         ],
         "url": "https://xilume.co/zh-cn/products/8hub-embedded/",
-        "brand": { "@type": "Brand", "name": "熙联迈", "alternateName": "Xilume" },
-
-        "additionalProperty": [
-          { "@type": "PropertyValue", "name": "CAN 通道", "value": "2 路独立 CAN / CAN FD" },
-          { "@type": "PropertyValue", "name": "串行通道", "value": "4 路 RS-485 + 2 路 RS-232" },
-          { "@type": "PropertyValue", "name": "CAN FD 最高数据比特率", "value": "8 Mbit/s" },
-          { "@type": "PropertyValue", "name": "主机连接", "value": "内部 USB" },
-          { "@type": "PropertyValue", "name": "操作系统", "value": "Windows 与 Linux" }
-        ]
+        "breadcrumb": { "@id": "https://xilume.co/zh-cn/products/8hub-embedded/#breadcrumb" }
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://xilume.co/zh-cn/products/8hub-embedded/#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://xilume.co/zh-cn/" },
           { "@type": "ListItem", "position": 2, "name": "产品", "item": "https://xilume.co/zh-cn/products/" },
