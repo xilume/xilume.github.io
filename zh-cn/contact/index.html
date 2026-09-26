@@ -14,7 +14,7 @@
   <script defer src="/site.js?v=20260908-maintenance1"></script>
   <link rel="stylesheet" href="/zh-cn.css?v=20260908-maintenance1">
   <link rel="stylesheet" href="/company-applications.css?v=20260907-1">
-  <script defer src="/contact/contact.js?v=20260908-contact1"></script>
+  <script defer src="/contact/contact.js?v=20260925-autoreply1"></script>
   <link rel="stylesheet" href="/contact/contact.css?v=20260908-contact1">
   <link rel="stylesheet" href="/site-refinement.css?v=20260908-maintenance1">
 </head>
@@ -46,11 +46,14 @@
               <h2 id="contact-form-title">快速咨询</h2>
               <p>留下邮箱和问题，就可以开始</p>
             </div>
-            <noscript><p class="contact-noscript">发送后将打开 FormSubmit 页面完成提交，也可以发邮件至 <a href="mailto:contact@xilume.co">contact@xilume.co</a></p></noscript>
+            <p class="contact-noscript">发送后将打开 FormSubmit 页面完成提交，也可以发邮件至 <a href="mailto:contact@xilume.co">contact@xilume.co</a></p>
             <form class="contact-form" method="post" action="https://formsubmit.co/contact@xilume.co" data-contact-form>
               <input type="hidden" name="_url" value="https://xilume.co/zh-cn/contact/">
-              <input type="hidden" name="_subject" value="Xilume website inquiry">
+              <input type="hidden" name="_subject" value="Xilume website inquiry — 中文">
               <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="language" value="zh-CN">
+              <input type="hidden" name="_captcha" value="true">
+              <input type="hidden" name="_autoresponse" value="Thank you for contacting Xilume&#10;&#10;Hello,&#10;Thank you for reaching out to Xilume.&#10;Your message has been received. Our team will review your inquiry and get back to you as soon as possible.&#10;If you would like to provide additional information, files, or screenshots, simply reply to this email.&#10;&#10;Best regards,&#10;Xilume Team&#10;contact@xilume.co&#10;xilume.co&#10;&#10;This is an automated confirmation email.">
               <div class="contact-field">
                 <label for="contact-email">联系邮箱<span>用于接收回复</span></label>
                 <input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@company.com" maxlength="254" required aria-describedby="contact-email-error">

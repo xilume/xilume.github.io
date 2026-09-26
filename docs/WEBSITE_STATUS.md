@@ -1,5 +1,14 @@
 # Xilume 官网维护状态
 
+## 2026-09-25 Contact 自动确认邮件
+
+- 基线：`0bab0fbef061565362d99bb376e55edf0365929e`；独立 worktree / 分支 `codex/contact-autoreply-20260925`，保留原工作区未提交图片修改
+- 已修改：中英文 Contact 增加用户提供的英文 `_autoresponse` 文案、显式启用 reCAPTCHA；移除不支持自动回复的 AJAX 路径，使用原生 POST，保留校验、蜜罐和输入内容
+- 已测试：8 项联系表单场景、10 项维护工具测试、12 项导航断言、Contact JS 语法与构建检查通过；205 个文件、61 HTML、47 可索引页面、2445 站内引用；共享同步未产生额外差异
+- 浏览器边界：本地 Playwright 缺少 Chromium 可执行文件，Cloud Browser 访问本地预览被 ERR_BLOCKED_BY_CLIENT 拒绝；未完成本地实际浏览器提交或移动端视觉检查，计划发布后核对正式页面
+- 发布状态：待推送、PR 检查、合并与部署；尚未验证实际确认邮件送达或其 Reply-To
+
+
 ## 2026-09-19 产品结构化数据修复
 
 - 核对基线：`56d71c3dec05c8c08d343901a2bf7112b3da5ebc`；独立分支 `codex/product-schema-fix-20260919`，起始工作树干净

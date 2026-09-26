@@ -1,6 +1,6 @@
 // Run with Node.js 24: node scripts/test-contact-form.cjs
 // Offline behavior tests: execute the full contact script with a minimal DOM and
-// mocked fetch/timers. These do not prove browser rendering or email delivery.
+// network tripwires and native-submit events. These do not prove browser rendering or email delivery.
 'use strict';
 
 const assert = require('node:assert/strict');
@@ -146,211 +146,75 @@ function page(language = 'en', fetchImplementation = async () => response({ succ
 }
 
 function response(result, ok = true) { return { ok, json: async () => result }; }
-function deferred() {
-  let resolve;
-  let reject;
-  const promise = new Promise((yes, no) => { resolve = yes; reject = no; });
-  return { promise, resolve, reject };
-}
-
 for (const language of ['en', 'zh-CN']) {
-  test(`${language}: HTML requirements, whitespace and invalid email block network requests`, async () => {
+  test(`${language}: autoresponse uses native POST with reCAPTCHA and visitor email`, async () => {
     const p = page(language);
     assert.equal(p.form.getAttribute('method').toLowerCase(), 'post');
     assert.equal(p.form.getAttribute('action'), 'https://formsubmit.co/contact@xilume.co');
+    assert.equal(p.fields._captcha.value, 'true');
+    assert.equal(p.fields.language.value, language);
+    assert.match(p.fields._autoresponse.value, /Thank you for contacting Xilume/);
+    assert.match(p.fields._autoresponse.value, /Your message has been received/);
+    assert.match(p.fields._autoresponse.value, /This is an automated confirmation email/);
     assert.equal(p.fields.email.required, true);
     assert.equal(p.fields.message.required, true);
-    assert.equal(p.fields.name.required, false, 'name stays optional');
-    for (const invalid of [{ email: '' }, { message: '' }, { email: ' \t\n ' }, { message: ' \t\n ' }, { email: 'not-an-email' }]) {
+    assert.equal(p.fields.name.required, false);
+    p.fill({ name: '' });
+    const submission = p.submit();
+    await submission.settled;
+    assert.equal(submission.event.prevented, false, 'valid submission navigates natively');
+    assert.equal(p.requests.length, 0, 'AJAX would suppress the autoresponse');
+    assert.notEqual(p.status.dataset.state, 'success', 'navigation does not prove delivery');
+    p.expectPreserved({ email: 'visitor@example.com', name: '' });
+    p.expectRestored();
+  });
+
+  test(`${language}: invalid input blocks submission and recovers after editing`, async () => {
+    const p = page(language);
+    for (const invalid of [{ email: '' }, { message: '' }, { email: '   ' }, { message: '   ' }, { email: 'not-an-email' }]) {
       p.fill(invalid);
       await p.fields.email.emit('input');
       await p.fields.message.emit('input');
-      await p.submit().settled;
-      assert.equal(p.requests.length, 0);
+      const submission = p.submit();
+      await submission.settled;
+      assert.equal(submission.event.prevented, true);
+      assert.equal(p.form.resetCount, 0);
     }
-    p.fill();
+    p.fill({ email: ' visitor@example.com ', name: ' Sample Visitor ', message: ' A price question ' });
     await p.fields.email.emit('input');
     await p.fields.message.emit('input');
-    assert.equal(p.fields.email.validationMessage, '', 'editing clears custom validation');
-    assert.equal(p.fields.message.validationMessage, '');
-    await p.submit().settled;
-    assert.equal(p.requests.length, 1, 'corrected fields can be submitted');
-    p.expectRestored();
+    const submission = p.submit();
+    await submission.settled;
+    assert.equal(submission.event.prevented, false);
+    p.expectPreserved({ email: 'visitor@example.com', name: 'Sample Visitor', message: 'A price question' });
   });
 
-  for (const acknowledged of [true, 'true']) {
-    test(`${language}: ${JSON.stringify(acknowledged)} acknowledgement clears unchanged form`, async () => {
-      const p = page(language, async () => response({ success: acknowledged }));
-      p.fill({ email: ' visitor@example.com ', name: ' 测试 Visitor ', message: ' A price question ' });
-      const submission = p.submit();
-      assert.equal(submission.event.prevented, true);
-      assert.equal(p.button.disabled, true);
-      assert.equal(p.form.getAttribute('aria-busy'), 'true');
-      assert.equal(p.status.dataset.state, 'sending');
-      assert.match(p.label.textContent, language === 'en' ? /Sending/ : /正在发送/);
-      await submission.settled;
-      assert.equal(p.status.dataset.state, 'success');
-      assert.match(p.status.textContent, language === 'en' ? /one business day/ : /一个工作日/);
-      assert.equal(p.status.hidden, false);
-      assert.equal(p.fields.email.value, '');
-      assert.equal(p.fields.name.value, '');
-      assert.equal(p.fields.message.value, '');
-      assert.equal(p.form.resetCount, 1);
-      p.expectRestored();
-    });
-  }
-
-  test(`${language}: payload has only intended fields and no visitor URL or credentials`, async () => {
-    const p = page(language);
-    p.fill({ name: '', topic: 'selection' });
-    await p.submit().settled;
-    const { url, options } = p.requests[0];
-    assert.equal(url, 'https://formsubmit.co/ajax/contact@xilume.co');
-    assert.equal(options.method, 'POST');
-    assert.equal(options.credentials, 'omit');
-    assert.equal(options.headers.Accept, 'application/json');
-    assert.equal(options.headers['Content-Type'], 'application/json');
-    assert.equal(options.signal instanceof AbortSignal, true);
-    const payload = JSON.parse(options.body);
-    assert.deepEqual(Object.keys(payload).sort(), ['email', 'name', 'message', 'topic', 'language', '_subject', '_url', '_template', '_honey'].sort());
-    assert.equal(payload._url, language === 'en' ? 'https://xilume.co/contact/' : 'https://xilume.co/zh-cn/contact/');
-    assert.equal(payload.language, language);
-    assert.equal(payload.topic, 'selection');
-    assert.equal(payload.name, '', 'optional name does not prevent sending');
-    assert.equal(payload._honey, '');
-    assert.doesNotMatch(options.body, /visitor-only|DO_NOT_FORWARD|private-fragment|[?]private=/);
-    assert.equal(Object.keys(options.headers).some(key => /authorization|cookie/i.test(key)), false);
-    p.expectRestored();
-  });
-
-  test(`${language}: honeypot blocks submission without claiming success`, async () => {
+  test(`${language}: honeypot blocks native submission without claiming success`, async () => {
     const p = page(language);
     p.fill({ _honey: 'https://spam.example.invalid' });
-    await p.submit().settled;
+    const submission = p.submit();
+    await submission.settled;
+    assert.equal(submission.event.prevented, true);
+    assert.equal(p.status.dataset.state, 'error');
     assert.equal(p.requests.length, 0);
-    assert.equal(p.status.dataset.state, 'error');
-    p.expectPreserved({ email: 'visitor@example.com', message: 'What is the price for 10 units of Octant?' });
-    p.expectRestored();
+    p.expectPreserved({ email: 'visitor@example.com' });
   });
 
-  for (const rejected of [false, 'false', undefined]) {
-    test(`${language}: ${String(rejected)} success value is not acknowledged`, async () => {
-      const p = page(language, async () => response({ success: rejected }));
-      p.fill();
-      await p.submit().settled;
-      assert.equal(p.status.dataset.state, 'error');
-      assert.match(p.status.textContent, language === 'en' ? /could not confirm/ : /无法确认/);
-      p.expectPreserved({ email: 'visitor@example.com', name: 'Sample Visitor', message: 'What is the price for 10 units of Octant?' });
-      p.expectRestored();
-    });
-  }
-
-  for (const providerMessage of ['Please activate your form', 'Please confirm your email', 'Please verify your email', 'Email verification required']) {
-    test(`${language}: activation/verification message overrides true success (${providerMessage})`, async () => {
-      const p = page(language, async () => response({ success: 'true', message: providerMessage }));
-      p.fill();
-      await p.submit().settled;
-      assert.equal(p.status.dataset.state, 'error');
-      assert.match(p.status.textContent, language === 'en' ? /temporarily unavailable/ : /暂未就绪/);
-      p.expectPreserved({ email: 'visitor@example.com', message: 'What is the price for 10 units of Octant?' });
-      p.expectRestored();
-    });
-  }
-
-  const failures = [
-    ['non-JSON response', async () => ({ ok: true, json: async () => { throw new SyntaxError('Unexpected HTML'); } })],
-    ['HTTP error with success body', async () => response({ success: true }, false)],
-    ['network rejection', async () => { throw new TypeError('Offline'); }],
-    ['null JSON', async () => response(null)]
-  ];
-  for (const [label, fetchImplementation] of failures) {
-    test(`${language}: ${label} retains input and restores UI`, async () => {
-      const p = page(language, fetchImplementation);
-      p.fill();
-      await p.submit().settled;
-      assert.equal(p.status.dataset.state, 'error');
-      assert.equal(p.requests.length, 1, 'failure does not retry automatically');
-      p.expectPreserved({ email: 'visitor@example.com', name: 'Sample Visitor', message: 'What is the price for 10 units of Octant?' });
-      p.expectRestored();
-    });
-  }
-
-  test(`${language}: double submit is suppressed; success retains edits made in flight`, async () => {
-    const request = deferred();
-    const p = page(language, () => request.promise);
-    p.fill();
-    const first = p.submit();
-    await p.submit().settled;
-    assert.equal(p.requests.length, 1);
-    p.fields.message.value = 'Another question added while sending';
-    request.resolve(response({ success: true }));
-    await first.settled;
-    assert.equal(p.status.dataset.state, 'success');
-    p.expectPreserved({ email: 'visitor@example.com', message: 'Another question added while sending' });
-    p.expectRestored();
-  });
-
-  test(`${language}: success preserves a topic changed in flight`, async () => {
-    const request = deferred();
-    const p = page(language, () => request.promise);
-    p.fill();
-    const submission = p.submit();
-    p.fields.topic.value = 'support';
-    request.resolve(response({ success: true }));
-    await submission.settled;
-    p.expectPreserved({ topic: 'support', message: 'What is the price for 10 units of Octant?' });
-    p.expectRestored();
-  });
-
-  test(`${language}: abort timeout keeps input, never retries, and permits a later explicit retry`, async () => {
-    let callCount = 0;
-    const p = page(language, (url, { signal }) => {
-      callCount++;
-      if (callCount > 1) return Promise.resolve(response({ success: true }));
-      return new Promise((resolve, reject) => signal.addEventListener('abort', () => reject(new Error('Aborted')), { once: true }));
-    });
-    p.fill();
-    const submission = p.submit();
-    assert.equal(p.timers.size, 1);
-    const timer = [...p.timers.values()][0];
-    assert.ok(timer.delay > 0 && timer.delay <= 30000, 'request timeout is bounded');
-    timer.callback();
-    await submission.settled;
-    assert.equal(p.requests[0].options.signal.aborted, true);
-    assert.equal(p.requests.length, 1);
-    assert.equal(p.status.dataset.state, 'error');
-    p.expectPreserved({ email: 'visitor@example.com', message: 'What is the price for 10 units of Octant?' });
-    p.expectRestored();
-    await p.submit().settled;
-    assert.equal(p.requests.length, 2, 'only an explicit new submit starts the second request');
-    assert.equal(p.status.dataset.state, 'success');
-    p.expectRestored();
-  });
-}
-
-for (const missingFeature of ['fetch', 'abort']) {
-  test(`native form fallback remains available without ${missingFeature}`, async () => {
-    const p = page('en', undefined, { [missingFeature]: false });
+  test(`${language}: no fetch or AbortController required, fixed public source`, async () => {
+    const p = page(language, undefined, { fetch: false, abort: false });
     p.fill();
     const submission = p.submit();
     await submission.settled;
     assert.equal(submission.event.prevented, false);
-    assert.equal(p.requests.length, 0);
-    assert.equal(p.form.getAttribute('action'), 'https://formsubmit.co/contact@xilume.co');
+    assert.equal(p.fields._url.value, language === 'en' ? 'https://xilume.co/contact/' : 'https://xilume.co/zh-cn/contact/');
+    assert.doesNotMatch(JSON.stringify(Object.fromEntries(Object.entries(p.fields).map(([key, field]) => [key, field.value]))), /visitor-only|DO_NOT_FORWARD|private-fragment/);
   });
 }
 
 (async () => {
-  let failures = 0;
   for (const { name, run } of tests) {
-    try {
-      await run();
-      console.log(`PASS ${name}`);
-    } catch (error) {
-      failures++;
-      console.error(`FAIL ${name}\n${error.stack}`);
-    }
+    await run();
+    console.log(`PASS ${name}`);
   }
-  console.log(`${tests.length - failures}/${tests.length} contact-form scenarios passed. Offline DOM/fetch mocks only; no email or network requests were sent.`);
-  if (failures) process.exitCode = 1;
-})();
+  console.log(`Passed ${tests.length} contact form scenarios (offline; no email sent).`);
+})().catch(error => { console.error(error); process.exitCode = 1; });
