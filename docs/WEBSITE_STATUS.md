@@ -6,7 +6,10 @@
 - 已修改：中英文 Contact 增加用户提供的英文 `_autoresponse` 文案、显式启用 reCAPTCHA；移除不支持自动回复的 AJAX 路径，使用原生 POST，保留校验、蜜罐和输入内容
 - 已测试：8 项联系表单场景、10 项维护工具测试、12 项导航断言、Contact JS 语法与构建检查通过；205 个文件、61 HTML、47 可索引页面、2445 站内引用；共享同步未产生额外差异
 - 浏览器边界：本地 Playwright 缺少 Chromium 可执行文件，Cloud Browser 访问本地预览被 ERR_BLOCKED_BY_CLIENT 拒绝；未完成本地实际浏览器提交或移动端视觉检查，计划发布后核对正式页面
-- 发布状态：待推送、PR 检查、合并与部署；尚未验证实际确认邮件送达或其 Reply-To
+- 已推送与合并：[PR #14](https://github.com/xilume/xilume.github.io/pull/14)，源提交 `01758cf74d773a85ee57b6eef1e008ef670e3ad1`，PR build run `36211039696` 成功；合并提交 `f40420e1a291cdf4dfabbe782ad2dc56738fccb7`
+- 已部署：[正式发布 run 36211107137](https://github.com/xilume/xilume.github.io/actions/runs/36211107137)，build 与 deploy 均成功，2026-09-26 02:16:01 UTC 完成
+- 已线上验证：中英文 Contact HTML 与 Contact JS 返回 200 且逐字节匹配审查产物；四个维护路径均 404。正式浏览器确认两页显示提交说明、加载新版脚本、空表单被邮箱必填校验拦截；中文桌面截图未见布局问题，英文桌面无横向溢出。浏览器日志只观察到扩展 metadata 报错，不归因为网站
+- 验证限制：浏览器只读 DOM 对隐藏 input value 进行了省略，因此确认文案/验证码值以线上 HTML 精确匹配与本地 HTML 解码核对为证据。没有完成真实表单 POST、验证码挑战、实际确认邮件收件或 Reply-To 检查；已请用户从自有邮箱提交一次作端到端验证。未完成手机浏览器视觉检查
 
 
 ## 2026-09-19 产品结构化数据修复
