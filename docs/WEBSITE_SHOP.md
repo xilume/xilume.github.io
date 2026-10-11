@@ -2,6 +2,14 @@
 
 Prepared 2026-10-11. This change is a review branch, not an active payment service.
 
+The 2026-10-11 local takeover rechecked the Stripe connection: only a sandbox
+with `livemode=false` is available. No live merchant has been selected or verified,
+and both public payment links remain null. Cloudflare preview deployment does
+not enable payments. Stock, shipping destinations/rates, dispatch estimates,
+refund/returns terms, actual merchant details and tax configuration remain
+owner-confirmed launch prerequisites. Authentication and bank verification
+must be completed by the owner directly in Stripe.
+
 ## Hosting migration
 
 The existing official site is hosted on GitHub Pages. Its usage limits explicitly

@@ -4,6 +4,29 @@ Prepared 2026-10-11 following the owner's explicit migration authorization.
 Current deployment evidence belongs in `WEBSITE_STATUS.md`; this guide does not
 claim that a Cloudflare project, DNS change or live payment service is complete.
 
+## Verified project, 2026-10-11
+
+The Git-integrated Pages project is `xilume`, production `main`, with automatic
+previews limited to `codex/cloudflare-20261011`. Build image version 3 uses
+`PYTHON_VERSION=3.12.14` in production and preview. The specified build command,
+repository-root directory and `_site` output were verified in the dashboard and
+successful build log. Initial main deployment is a separate baseline; it is not
+the Shop preview or proof of a custom-domain cutover.
+
+Preview `530c650d-b40a-467c-bf87-f2b85266446b` deployed
+`7745ed6c98ea88d26fd2acbb2c1ed89df14ee422` successfully:
+[atomic URL](https://530c650d.xilume.pages.dev/) and
+[branch alias](https://codex-cloudflare-20261011.xilume.pages.dev/).
+The live artifact, HTTP indexing/404 behavior and desktop/mobile browser checks
+passed; see `WEBSITE_STATUS.md` for exact scope and remaining checks.
+
+The Free DNS zone is pending activation. Its automatic scan omitted the actual
+Dynadot DKIM CNAME, demonstrating why a complete provider backup is required.
+The Pages UI currently requires activation of the apex zone before it can add
+`xilume.co`. Preserve the existing website records until the Pages association
+and certificate are ready; changing DNS authority and moving website traffic
+are separate operations. Full DNS backups remain outside the public repository.
+
 ## Scope and build settings
 
 Keep the existing GitHub repository, static HTML/CSS/JavaScript, `xilume.co` and

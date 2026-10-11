@@ -1,5 +1,7 @@
 # Xilume 官网维护与发布步骤
 
+> 2026-10-11：以下 GitHub Pages 章节保留为历史发布与回退依据。当前 Cloudflare 迁移和上线请遵循 `WEBSITE_CLOUDFLARE.md`，实际状态见 `WEBSITE_STATUS.md`；Shop 合并后的 GitHub workflow 仅检查，不能按下文旧流程重新部署商店至 GitHub Pages
+
 日期：2026-09-08。本次范围：审计 A1–A5 的维护修复；流程同时适用于以后常规维护。
 
 用户已明确要求“你以后修复完要发布到xilume.co这个官网上”。本次及以后常规修复通过测试和审查后，按独立分支 → 合并到 main → 发布到 `xilume.co` → 线上验证 → 更新状态执行，不再逐次询问发布许可。本次 Pages legacy → workflow 设置切换和 PR #3 正式发布已完成；生产 run `34202648965` 成功，200 个发布文件可访问，6 类维护路径返回 404。具体结果和验证限制见 `WEBSITE_STATUS.md`，下文作为后续维护的执行流程保留。

@@ -37,6 +37,7 @@ python scripts/sync-site-chrome.py
 python scripts/test-site-tools.py
 node scripts/test-language-navigation.cjs
 node scripts/test-contact-form.cjs
+node scripts/test-shop.cjs
 python scripts/build-site.py
 python scripts/check-site.py _site
 node --check site.js
@@ -53,15 +54,15 @@ python -m http.server 8000 --bind 127.0.0.1 --directory _site
 
 ## 发布流程与边界
 
-**2026-10-11 新授权：** 用户已明确同意迁移至 Cloudflare Pages，取代旧的仅用 GitHub Pages 约束。保留仓库、静态技术栈、正式域名和邮箱；先验证暂存站，再切换域名及正式发布链路。迁移实施见 `docs/WEBSITE_CLOUDFLARE.md`，是否已经切换以 `docs/WEBSITE_STATUS.md` 的实证为准。新站验证前保持既有 GitHub Pages 工作流和部署不变；不要将允许迁移误写为已经上线。
+**2026-10-11 新授权：** 用户已明确同意迁移至 Cloudflare Pages Free，取代旧的仅用 GitHub Pages 约束。保留仓库、静态技术栈、正式域名和邮箱；先验证暂存站，再合并迁移改动、切换域名及正式发布链路。迁移实施见 `docs/WEBSITE_CLOUDFLARE.md`，是否已经切换以 `docs/WEBSITE_STATUS.md` 的实证为准。新站验证前不合并迁移改动或切换正式发布；不要将允许迁移误写为已经上线。
 
-常规流程为：独立任务分支 → 修改与测试 → 审查最终 diff / PR 检查 → 合并到 `main` → 发布到 `xilume.co` → 线上验证 → 更新状态。发布链路为 `.github/workflows/pages.yml` → `scripts/build-site.py` → 检查后的 `_site/` → GitHub Pages。白名单统一维护于 `scripts/site_files.py`；新增根 CSS/JS/图标必须进入名单，新增页面同时核对中英文和 sitemap。`scripts/check-site.py` 检查实际 artifact 并拒绝维护资料；保留根 `.nojekyll` 及上传步骤的 `include-hidden-files: true`。
+常规流程为：独立任务分支 → 修改与测试 → 审查最终 diff / PR 检查 → 合并到 `main` → 发布到 `xilume.co` → 线上验证 → 更新状态。Cloudflare Pages 使用正确仓库的 Git 集成，正式分支 `main`、迁移预览分支 `codex/cloudflare-20261011`，Framework preset 为 None，Root directory 为仓库根目录。构建命令为 `python scripts/build-site.py && python scripts/check-site.py _site`，Build output directory 为 `_site`；只发布检查后的产物，不能发布整个仓库。白名单统一维护于 `scripts/site_files.py`；新增根 CSS/JS/图标必须进入名单，新增页面同时核对中英文和 sitemap。`scripts/check-site.py` 检查实际 artifact 并拒绝维护资料；保留根 `.nojekyll` 和 `404.html`。
 
-workflow 对 PR 只运行检查，不上传或部署；合并后的 `main` 网站改动或在 `main` 手动运行经检查后部署。`push.paths-ignore` 排除 `AGENTS.md`、`README.md`、`docs/**`，仅这些维护文档变化时不重复部署，PR 仍运行检查。正式部署并发组不取消正在运行的部署。已有长期授权覆盖常规维护合并与发布，不需要另设逐批人工批准步骤。
+`.github/workflows/pages.yml` 已改为仅检查，保留 Python 3.12、Node.js 24、维护工具、语言导航、联系表单、Shop、构建产物及 JavaScript 检查，不再上传或部署 GitHub Pages。Shop 合并前必须停用旧发布链路。`push.paths-ignore` 排除 `AGENTS.md`、`README.md`、`docs/**`，仅这些维护文档变化时跳过 GitHub CI，PR 仍运行检查；Cloudflare Git 构建由 Pages 项目另行控制。迁移预览必须核对实际部署 SHA、构建日志和响应头 `X-Robots-Tag: noindex`。已有长期授权覆盖常规维护合并与发布，不需要另设逐批人工批准步骤。
 
-**本次发布迁移：** 2026-09-08 发布前只读 Pages API 曾确认 `build_type: legacy`，既有动态流程上传仓库根目录并提供 README 和维护脚本。已按本次授权将 Pages Source 切为 **GitHub Actions**，并于 `2026-09-08T07:53:30Z` 通过 GET 核实 `build_type: workflow`、`cname: xilume.co`、`https_enforced: true`。响应仍保留 `source: main /` 字段，生效发布类型以 `build_type` 为准，不因此切回 legacy。设置与本批修复已正式发布，生产 run `34202648965` 成功，线上 200 个发布文件可访问，6 类维护路径返回 404。完整范围和工具限制见 `docs/WEBSITE_STATUS.md`；后续仍须分别核对设置、部署和线上结果。
+**2026-09-08 GitHub Pages 发布历史：** 发布前只读 Pages API 曾确认 `build_type: legacy`，既有动态流程上传仓库根目录并提供 README 和维护脚本。已按当时授权将 Pages Source 切为 **GitHub Actions**，并于 `2026-09-08T07:53:30Z` 通过 GET 核实 `build_type: workflow`、`cname: xilume.co`、`https_enforced: true`。响应仍保留 `source: main /` 字段，生效发布类型以 `build_type` 为准，不因此切回 legacy。设置与该批修复已正式发布，生产 run `34202648965` 成功，线上 200 个发布文件可访问，6 类维护路径返回 404。完整范围和工具限制见 `docs/WEBSITE_STATUS.md`；后续仍须分别核对设置、部署和线上结果。
 
-发布后检查实际运行、关键网页和下载，并验证 `/README.md`、`/AGENTS.md`、`/docs/WEBSITE_CONTEXT.md`、`/scripts/sync-site-chrome.py` 不再提供源文件。Logo、型号参数、价格、域名、大规模删除/重构和与任务无关的配置不在常规维护授权内，不得擅改。发布失败先定位原因并保护最后一次成功版本，不强推 main，不以重复触发代替诊断。具体步骤见 `docs/WEBSITE_RELEASE.md`。
+发布后检查实际运行、关键网页和下载，并验证 `/README.md`、`/AGENTS.md`、`/docs/WEBSITE_CONTEXT.md`、`/scripts/sync-site-chrome.py` 不再提供源文件。Logo、型号参数、价格、域名、大规模删除/重构和与任务无关的配置不在常规维护授权内，不得擅改。发布失败先定位原因并保护最后一次成功版本，不强推 main，不以重复触发代替诊断。当前迁移步骤见 `docs/WEBSITE_CLOUDFLARE.md`；`docs/WEBSITE_RELEASE.md` 保留旧 GitHub Pages 发布与回退流程。
 
 所有仓库文件按公开资料处理，不写密码、Token、私人聊天全文、未公开客户信息或商业资料。原始交接文件夹只作本地参考，不整体提交。
 
