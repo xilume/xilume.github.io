@@ -13,6 +13,8 @@ img { max-width: 100%; }
 .site-header .header-inner .site-language-switch { margin-left: 0; padding: 7px 9px; background: transparent; border-color: #283341; }
 .site-header .header-inner .site-language-switch a { font-size: 11px; }
 .site-header .header-inner > nav:not(.site-language-switch) a { line-height: 1.4; }
+.site-header .header-inner > nav:not(.site-language-switch) { gap: clamp(10px, 1.3vw, 22px); }
+.site-header .header-inner > nav:not(.site-language-switch) > a { white-space: nowrap; }
 .site-header .nav-finder { border-color: #314356; box-shadow: none; }
 .site-menu-toggle { min-width: 44px; min-height: 44px; }
 .site-footer { background: #050a12; color: #c5cdd7; border-top: 1px solid #1a2633; }
@@ -91,4 +93,13 @@ img { max-width: 100%; }
  .solutions-mega-links > a > em { align-self:end; font-size:10px; }
  .solutions-mega-heading h2 { margin-top:0; font-size:18px; }
  .solutions-mega-heading p { font-size:12px; line-height:1.6; }
+}
+
+/* Fit the Shop entry alongside the existing desktop links at tablet widths. */
+@media (min-width: 901px) and (max-width: 1050px) {
+ .site-header .header-inner { gap: 10px; }
+ .site-header .header-inner > nav:not(.site-language-switch) { gap: 7px; }
+ .site-header .header-inner > nav:not(.site-language-switch) a { font-size: 10.5px; }
+ .site-header .header-inner > .brand-symbol { flex-basis: 120px; width: 120px; }
+ .site-header .brand-symbol img { width: 120px; height: 47px; }
 }

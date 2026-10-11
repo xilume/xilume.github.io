@@ -4,12 +4,12 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='20260908-maintenance1'
+VERSION='20261011-shop1'
 
 def header(zh,path):
  p='/zh-cn' if zh else ''
  label='熙联迈首页' if zh else 'Xilume home'
- navigation=[('products','产品','Products'),('solutions','解决方案','Solutions'),('downloads','软件与驱动','Software &amp; Drivers'),('applications','应用','Applications'),('documentation','文档','Documentation'),('about','公司','Company'),('contact','联系我们','Contact')]
+ navigation=[('products','产品','Products'),('shop','商店','Shop'),('solutions','解决方案','Solutions'),('downloads','软件与驱动','Software &amp; Drivers'),('applications','应用','Applications'),('documentation','文档','Documentation'),('about','公司','Company'),('contact','联系我们','Contact')]
  links=[]
  for target,cn,en in navigation:
   active=' aria-current="page"' if path==f'{p}/{target}/' else ''
@@ -25,7 +25,7 @@ def header(zh,path):
 def footer(zh):
  p='/zh-cn' if zh else ''
  def a(path,label): return f'<a href="{p}/{path}/">{label}</a>'
- groups=[('产品' if zh else 'Products', [('products/embedded-communication','嵌入式通信' if zh else 'Embedded communication'),('products/8hub','Octant 工业通信扩展坞' if zh else 'Octant USB hub'),('products/interface-ics','接口芯片' if zh else 'Interface ICs'),('products/usb-smbus','智能电池接口' if zh else 'Smart-battery interfaces')]),('支持' if zh else 'Support',[('downloads','软件与驱动' if zh else 'Software &amp; Drivers'),('documentation','技术资料' if zh else 'Documentation'),('applications','安装与应用' if zh else 'Applications'),('contact','联系我们' if zh else 'Contact')])]
+ groups=[('产品' if zh else 'Products', [('shop','商店' if zh else 'Shop'),('products/embedded-communication','嵌入式通信' if zh else 'Embedded communication'),('products/8hub','Octant 工业通信扩展坞' if zh else 'Octant USB hub'),('products/interface-ics','接口芯片' if zh else 'Interface ICs'),('products/usb-smbus','智能电池接口' if zh else 'Smart-battery interfaces')]),('支持' if zh else 'Support',[('downloads','软件与驱动' if zh else 'Software &amp; Drivers'),('documentation','技术资料' if zh else 'Documentation'),('applications','安装与应用' if zh else 'Applications'),('contact','联系我们' if zh else 'Contact')])]
  content=''.join(f'<div><h3>{title}</h3>'+''.join(a(path,label) for path,label in items)+'</div>' for title,items in groups)
  return f'''<footer class="site-footer">
     <div class="container footer-grid">

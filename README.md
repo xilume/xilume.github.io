@@ -10,6 +10,8 @@ This is a plain HTML, CSS, and JavaScript site, with no application build step. 
 
 - `/` — brand and catalog overview
 - `/products/` — product catalog
+- `/shop/` — priced hardware and purchase options (prepared; see `docs/WEBSITE_SHOP.md` before activation)
+- `/shop/checkout/` — per-product review and hosted-payment handoff; no payment links active
 - `/solutions/` and `/applications/` — integration choices and actual installation examples
 - `/products/interface-ics/` — production XL1326 and XL1326-A devices, plus XL1108 selection inquiries
 - `/documentation/` — engineering resources with direct product guides

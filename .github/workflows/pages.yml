@@ -30,6 +30,8 @@ jobs:
         run: node scripts/test-language-navigation.cjs
       - name: Test contact form
         run: node scripts/test-contact-form.cjs
+      - name: Test shop purchase states
+        run: node scripts/test-shop.cjs
       - name: Prepare static site
         run: python scripts/build-site.py
       - name: Verify publication files, links and SEO

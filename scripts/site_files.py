@@ -11,7 +11,7 @@ google9b5d5cd94eca340c.html
 
 SITE_DIRS = """
 products images media contact about documentation downloads chip-selector
-applications solutions zh-cn
+applications solutions zh-cn shop
 """.split()
 
 
