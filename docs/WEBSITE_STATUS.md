@@ -8,7 +8,9 @@
 - 已测试：12 项 Shop 状态/安全检查、10 项维护工具测试、12 项导航断言、8 项现有联系表单检查、JS 语法通过；构建 215 文件 / 65 HTML / 49 可索引页 / 2749 本地引用；共享同步二次运行无变化
 - 浏览器验证：未完成实际桌面/手机视觉与交互验收，环境没有可用的受支持浏览器预览；离线检查不替代浏览器与 Stripe 端到端付款测试
 - 发布边界：GitHub Pages 官方 usage limits 明确排除电商网站；此前仅使用 GitHub Pages 的约束仍在，须先由所有者决定允许电商的托管方案。本批保存为独立分支/草稿 PR，不合并 main、不部署，不改域名或 DNS
-- 接入及后续操作见 `docs/WEBSITE_SHOP.md`；推送和 CI 结果以对应分支/PR 为准，不能将本地通过称为上线成功
+- 已推送：草稿 [PR #16](https://github.com/xilume/xilume.github.io/pull/16)，网站代码提交 `344b65bbb6a633b4bd223bf860a9390c42aa62f7`；远端 Git 树与本地检查内容完全一致
+- 已通过远端检查：[PR run 38171665240](https://github.com/xilume/xilume.github.io/actions/runs/38171665240) 全部 build 检查成功，artifact 上传与 deploy 均 skipped；未合并 main、未部署、未做线上功能验证
+- 接入及后续操作见 `docs/WEBSITE_SHOP.md`，不能将草稿代码与 CI 通过称为上线或收款成功
 
 ## 2026-09-25 Contact 自动确认邮件
 
