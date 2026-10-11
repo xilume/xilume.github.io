@@ -1,7 +1,7 @@
 """The existing Pages publication allowlist, shared by build and verification."""
 
 ROOT_FILES = """
-index.html styles.css site-refinement.css company-applications.css zh-cn.css
+index.html 404.html styles.css site-refinement.css company-applications.css zh-cn.css
 finder.js chip-selector.js hero.js site.js favicon.svg favicon.ico
 xilume-icon-96.png xilume-icon-180.png xilume-icon-192.png xilume-icon-512.png
 site.webmanifest brand-mark-48.png brand-mark-96.png brand-mark-180.png

@@ -53,6 +53,8 @@ python -m http.server 8000 --bind 127.0.0.1 --directory _site
 
 ## 发布流程与边界
 
+**2026-10-11 新授权：** 用户已明确同意迁移至 Cloudflare Pages，取代旧的仅用 GitHub Pages 约束。保留仓库、静态技术栈、正式域名和邮箱；先验证暂存站，再切换域名及正式发布链路。迁移实施见 `docs/WEBSITE_CLOUDFLARE.md`，是否已经切换以 `docs/WEBSITE_STATUS.md` 的实证为准。新站验证前保持既有 GitHub Pages 工作流和部署不变；不要将允许迁移误写为已经上线。
+
 常规流程为：独立任务分支 → 修改与测试 → 审查最终 diff / PR 检查 → 合并到 `main` → 发布到 `xilume.co` → 线上验证 → 更新状态。发布链路为 `.github/workflows/pages.yml` → `scripts/build-site.py` → 检查后的 `_site/` → GitHub Pages。白名单统一维护于 `scripts/site_files.py`；新增根 CSS/JS/图标必须进入名单，新增页面同时核对中英文和 sitemap。`scripts/check-site.py` 检查实际 artifact 并拒绝维护资料；保留根 `.nojekyll` 及上传步骤的 `include-hidden-files: true`。
 
 workflow 对 PR 只运行检查，不上传或部署；合并后的 `main` 网站改动或在 `main` 手动运行经检查后部署。`push.paths-ignore` 排除 `AGENTS.md`、`README.md`、`docs/**`，仅这些维护文档变化时不重复部署，PR 仍运行检查。正式部署并发组不取消正在运行的部署。已有长期授权覆盖常规维护合并与发布，不需要另设逐批人工批准步骤。

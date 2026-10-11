@@ -1,5 +1,16 @@
 # Xilume 官网维护状态
 
+## 2026-10-11 Cloudflare Pages 迁移准备（暂存与 DNS 待验）
+
+- 授权：用户已明确同意迁移至 Cloudflare 并注册账户；此前仅使用 GitHub Pages 的托管约束已被本次决定取代，保留仓库、域名与业务邮箱
+- 基线：Shop 草稿 PR #16 的 `588bca7`；独立 worktree / 分支 `codex/cloudflare-20261011`
+- 已修改：新增双语根 `404.html` 并加入发布白名单，避免 Cloudflare Pages 将未知及维护路径按 SPA 回退到首页；新增迁移说明并更新授权记录
+- 构建设置：继续使用现有 `python scripts/build-site.py && python scripts/check-site.py _site`，发布目录 `_site`，不发布仓库根目录，不引入框架、Functions 或账户配置文件
+- 已测试：10 项维护工具测试、12 项 Shop 检查及 artifact 检查通过；216 文件 / 66 HTML / 49 可索引页 / 2756 本地引用。产物共 81,778,876 字节，最大文件 13,878,469 字节，符合 Pages Free 的 20,000 文件与单文件 25 MiB 限制；根 404 存在、维护源文件未混入，diff 空白检查通过
+- 验证边界：本地检查不证明 Cloudflare 的 HTTP 状态、预览页面视觉效果、域名证书、DNS 生效或邮箱收发；这些仍须在实际暂存站与正式域名分别验证
+- 发布状态：本轮修改仅用于迁移暂存，未合并 main；现有 GitHub Pages workflow 保持原样。Cloudflare 身份验证过程中浏览器超时，登录结果未确认；尚未取得项目或部署成功记录，未执行 DNS、正式托管切换或邮箱改动
+- 付款状态：未改 Stripe 付款链接，仍为 null；托管迁移不等于真实收款已启用。迁移步骤见 `WEBSITE_CLOUDFLARE.md`，付款接入见 `WEBSITE_SHOP.md`
+
 ## 2026-10-11 Shop 与托管付款入口（待上线）
 
 - 基线：`c36772cd269089f891943d9fec6fa0a31f0a4861`；独立分支 `codex/shop-checkout-20261011`，保留其他工作区的未提交修改
@@ -7,7 +18,7 @@
 - 付款状态：Stripe 尚未连接，两个公共付款链接均为 null；页面明确未开通在线付款，仅提供联系购买；未创建商户、付款、订单、登录账户、运费或库存承诺
 - 已测试：12 项 Shop 状态/安全检查、10 项维护工具测试、12 项导航断言、8 项现有联系表单检查、JS 语法通过；构建 215 文件 / 65 HTML / 49 可索引页 / 2749 本地引用；共享同步二次运行无变化
 - 浏览器验证：未完成实际桌面/手机视觉与交互验收，环境没有可用的受支持浏览器预览；离线检查不替代浏览器与 Stripe 端到端付款测试
-- 发布边界：GitHub Pages 官方 usage limits 明确排除电商网站；此前仅使用 GitHub Pages 的约束仍在，须先由所有者决定允许电商的托管方案。本批保存为独立分支/草稿 PR，不合并 main、不部署，不改域名或 DNS
+- 发布边界（草稿创建时）：GitHub Pages 官方 usage limits 明确排除电商网站；当时尚未确认其他托管方案，因此保存为独立分支/草稿 PR，不合并 main、不部署，不改域名或 DNS。后续 Cloudflare 迁移授权与进度见本页上方
 - 已推送：草稿 [PR #16](https://github.com/xilume/xilume.github.io/pull/16)，网站代码提交 `344b65bbb6a633b4bd223bf860a9390c42aa62f7`；远端 Git 树与本地检查内容完全一致
 - 已通过远端检查：[PR run 38171665240](https://github.com/xilume/xilume.github.io/actions/runs/38171665240) 全部 build 检查成功，artifact 上传与 deploy 均 skipped；未合并 main、未部署、未做线上功能验证
 - 接入及后续操作见 `docs/WEBSITE_SHOP.md`，不能将草稿代码与 CI 通过称为上线或收款成功

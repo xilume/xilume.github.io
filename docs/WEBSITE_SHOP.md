@@ -2,16 +2,18 @@
 
 Prepared 2026-10-11. This change is a review branch, not an active payment service.
 
-## Publication blocker
+## Hosting migration
 
 The existing official site is hosted on GitHub Pages. Its usage limits explicitly
 exclude hosting an online business or e-commerce site:
 https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
 
-Do not merge this feature into the Pages deployment branch as a live store.
-The owner has previously required GitHub Pages; a commerce-compatible hosting
-choice must be approved before deployment. Keep the existing repository and
-xilume.co domain. No migration, DNS change or new hosting account was performed.
+On 2026-10-11, the owner explicitly authorized migration to Cloudflare Pages and
+registered an account. This replaces the earlier GitHub-Pages-only constraint.
+Keep the existing repository and xilume.co domain. Follow
+`WEBSITE_CLOUDFLARE.md` and verify the new host before changing the existing
+production deployment. Do not deploy this store through the old GitHub Pages
+workflow; the verified migration status is recorded in `WEBSITE_STATUS.md`.
 
 ## Implemented
 

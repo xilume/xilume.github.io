@@ -26,6 +26,12 @@
 
 来源：用户明确要求设置提供的英文确认文案，并确认已关闭 Dynadot 自动回复。表单提交后的确认邮件由 FormSubmit `_autoresponse` 处理；为满足该供应商限制，中英文表单改为原生 POST 并保留验证码。普通业务邮件仍使用 `contact@xilume.co`，不变更邮箱或 DNS。确认邮件实际送达与 Reply-To 需实收验证，不能用代码检查或服务页面代替。
 
+## 2026-10-11 Cloudflare Pages 迁移决定
+
+来源：用户在了解费用方案后明确授权迁移至 Cloudflare，并已注册账户。这项明确授权取代此前仅使用 GitHub Pages 的托管约束；保留现有 GitHub 仓库、静态结构、`xilume.co` 域名和业务邮箱。先验证 Cloudflare 暂存站，再切换域名；现有 GitHub Pages 发布在新站验收前保持不变。DNS 迁移应完整保留邮箱相关记录，域名注册与邮箱服务不因此自动转移。
+
+此决定不证明迁移已完成，也不表示 Stripe 商户已激活。账户身份、凭据与 DNS 私密资料不得写入公开仓库；实际部署、域名和付款状态分别记录在 `WEBSITE_STATUS.md`。迁移步骤见 `WEBSITE_CLOUDFLARE.md`。
+
 ## 工程事实
 
 ### 2026-09-08 快捷联系决定

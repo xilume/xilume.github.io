@@ -53,6 +53,11 @@ On 2026-09-08, the owner explicitly authorized publishing this and future routin
 
 ## GitHub Pages
 
+On 2026-10-11, the owner authorized migration to Cloudflare Pages while retaining
+the repository, domain and business email. See `docs/WEBSITE_CLOUDFLARE.md` for the
+staging and cutover procedure, and `docs/WEBSITE_STATUS.md` for verified progress.
+The GitHub Pages workflow below remains intact until the replacement is verified.
+
 The publication path is `.github/workflows/pages.yml` → `scripts/build-site.py` → checked `_site/` → GitHub Pages. Pull requests run the tool regressions, language-navigation tests, artifact checks and JavaScript syntax checks without uploading or deploying. Website changes merged into `main`, or a manual run on `main`, deploy after checks pass. Pushes changing only `AGENTS.md`, `README.md` or `docs/**` are ignored to avoid another deployment for maintenance records; pull requests still run checks.
 
 The publication allowlist lives in `scripts/site_files.py`. Add each new root asset there; approved site directories are copied recursively with maintenance files excluded. `scripts/check-site.py` checks the actual artifact, local targets and anchors, sitemap/canonical/hreflang, JSON-LD syntax, manifest resources and the four protected robots tags. It rejects maintenance files in the artifact. Files in this public repository must still contain no secrets or private business information.
