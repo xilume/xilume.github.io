@@ -423,4 +423,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://xilume.co/shop/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/shop/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/shop/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/shop/" />
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xilume.co/zh-cn/shop/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xilume.co/shop/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xilume.co/zh-cn/shop/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xilume.co/shop/" />
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

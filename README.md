@@ -10,6 +10,8 @@ This is a plain HTML, CSS, and JavaScript site, with no application build step. 
 
 - `/` — brand and catalog overview
 - `/products/` — product catalog
+- `/shop/` — priced hardware and purchase options (prepared; see `docs/WEBSITE_SHOP.md` before activation)
+- `/shop/checkout/` — per-product review and hosted-payment handoff; no payment links active
 - `/solutions/` and `/applications/` — integration choices and actual installation examples
 - `/products/interface-ics/` — production XL1326 and XL1326-A devices, plus XL1108 selection inquiries
 - `/documentation/` — engineering resources with direct product guides
@@ -34,6 +36,7 @@ Use Python 3.12+ and Node.js 24. From the repository root, run:
 python scripts/test-site-tools.py
 node scripts/test-language-navigation.cjs
 node scripts/test-contact-form.cjs
+node scripts/test-shop.cjs
 python scripts/build-site.py
 python scripts/check-site.py _site
 python -m http.server 8000 --bind 127.0.0.1 --directory _site
@@ -49,15 +52,22 @@ On 2026-09-08, the owner explicitly authorized publishing this and future routin
 
 `styles.css` supplies the base layout; `site-refinement.css` is loaded after page styles for shared refinements. Product refinements live in `products/product-refinement.css`, documentation styles in `documentation/docs-support.css`, and company/application styles in `company-applications.css`. Retain reciprocal language links and the correct canonical URL when adding translated pages. Add indexable pages to `sitemap.xml`; omit redirects, `noindex` pages, and temporary QA pages.
 
-## GitHub Pages
+## Cloudflare Pages and CI
 
-The publication path is `.github/workflows/pages.yml` → `scripts/build-site.py` → checked `_site/` → GitHub Pages. Pull requests run the tool regressions, language-navigation tests, artifact checks and JavaScript syntax checks without uploading or deploying. Website changes merged into `main`, or a manual run on `main`, deploy after checks pass. Pushes changing only `AGENTS.md`, `README.md` or `docs/**` are ignored to avoid another deployment for maintenance records; pull requests still run checks.
+On 2026-10-11, the owner authorized migration to Cloudflare Pages while retaining
+the repository, domain and business email. See `docs/WEBSITE_CLOUDFLARE.md` for the
+staging and cutover procedure, and `docs/WEBSITE_STATUS.md` for verified progress.
+Verify the migration preview before merging these changes or switching the domain.
+
+Cloudflare Pages Free uses Git integration with `xilume/xilume.github.io`: production branch `main`, preview branch `codex/cloudflare-20261011`, framework preset None and repository-root build directory. The build command is `python scripts/build-site.py && python scripts/check-site.py _site`; the output directory is `_site`. Publish that checked output, never the repository root. Confirm the deployed SHA, build log and preview `X-Robots-Tag: noindex` response before promotion.
+
+`.github/workflows/pages.yml` runs checks only for pull requests, website changes on `main` and manual runs. It retains Python 3.12 and Node.js 24 regressions, the build, artifact checks and JavaScript syntax checks; it neither uploads nor deploys to GitHub Pages. Pushes changing only `AGENTS.md`, `README.md` or `docs/**` skip GitHub CI; pull requests still run checks. Cloudflare Git builds are controlled separately in the Pages project.
 
 The publication allowlist lives in `scripts/site_files.py`. Add each new root asset there; approved site directories are copied recursively with maintenance files excluded. `scripts/check-site.py` checks the actual artifact, local targets and anchors, sitemap/canonical/hreflang, JSON-LD syntax, manifest resources and the four protected robots tags. It rejects maintenance files in the artifact. Files in this public repository must still contain no secrets or private business information.
 
-**Pages Source migration and first maintenance release completed:** the pre-migration Pages API check found legacy branch publishing alongside the custom workflow. Following the owner's authorization, Source was switched to **GitHub Actions** and verified at `2026-09-08T07:53:30Z`: `build_type: workflow`, `cname: xilume.co`, `https_enforced: true`. The retained `source: main /` field does not override the workflow build type. PR #3 deployed commit `322902a62883e701a2c348ced358e73e07146972` successfully in [Actions run 34202648965](https://github.com/xilume/xilume.github.io/actions/runs/34202648965). Live checks confirmed all 200 publication files accessible, 115 text resources matching the artifact and six maintenance paths returning 404. See `docs/WEBSITE_STATUS.md` for evidence and validation limits.
+**Historical GitHub Pages release, 2026-09-08:** the pre-migration Pages API check found legacy branch publishing alongside the custom workflow. Following the owner's authorization, Source was switched to **GitHub Actions** and verified at `2026-09-08T07:53:30Z`: `build_type: workflow`, `cname: xilume.co`, `https_enforced: true`. The retained `source: main /` field does not override the workflow build type. PR #3 deployed commit `322902a62883e701a2c348ced358e73e07146972` successfully in [Actions run 34202648965](https://github.com/xilume/xilume.github.io/actions/runs/34202648965). Live checks confirmed all 200 publication files accessible, 115 text resources matching the artifact and six maintenance paths returning 404. See `docs/WEBSITE_STATUS.md` for evidence and validation limits.
 
-After deployment, verify the intended Actions run and live pages, navigation, language links and downloads. Confirm `/README.md`, `/AGENTS.md`, `/docs/WEBSITE_CONTEXT.md` and `/scripts/sync-site-chrome.py` return 404. Update `docs/WEBSITE_STATUS.md` with separate modified/tested/pushed/deployed/live-verified states. See `docs/WEBSITE_RELEASE.md` for the release and failure-handling steps.
+After deployment, verify the intended Cloudflare deployment SHA and live pages, navigation, language links and downloads. Confirm `/README.md`, `/AGENTS.md`, `/docs/WEBSITE_CONTEXT.md` and `/scripts/sync-site-chrome.py` return 404. Update `docs/WEBSITE_STATUS.md` with separate modified/tested/pushed/deployed/live-verified states. Follow `docs/WEBSITE_CLOUDFLARE.md` for migration and cutover; `docs/WEBSITE_RELEASE.md` retains the previous GitHub Pages release and recovery procedure.
 
 ## Status
 
