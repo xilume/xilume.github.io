@@ -1,5 +1,17 @@
 # Xilume 官网维护状态
 
+## 2026-10-11 本机接管与 Cloudflare 项目创建（预览待验）
+
+- 已 fetch：`main` 仍为 `c36772cd269089f891943d9fec6fa0a31f0a4861`，两个任务远端分支仍为 `6519fac3304d851f70bfe5d9d2428a5dbed03708`，未覆盖其他修改
+- 已确认：本机 Chrome 的现有 Cloudflare 登录会话可用；GitHub App 已仅安装至 `xilume/xilume.github.io`，用户在本机完成 GitHub 重新验证
+- 已创建：Cloudflare Pages 项目 `xilume`，生产分支 `main`，None / 仓库根目录，构建 `python scripts/build-site.py && python scripts/check-site.py _site`，输出 `_site`；两环境 `PYTHON_VERSION=3.12.14`
+- 初始 main 构建已触发至 `xilume.pages.dev`，没有绑定生产域名；迁移分支实际预览、日志、HTTP noindex、404 和内容匹配仍待验证
+- 已本地验证：Python 3.12.14 / Node 24.19.0；10 工具测试、12 语言断言、8 联系场景、12 Shop 检查和 13 JS 语法检查通过；216 文件 / 66 HTML / 49 可索引页 / 2756 引用
+- 实际本地隔离 Chrome：14 路由 × 1440px / 390px，共 28 检查，无横向溢出、页面 JS 错误或已加载图片失败；购买回退、双语 SKU 切换、query/hash/返回、手机菜单、联系预填和空邮箱校验通过；没有表单 POST 或扣款
+- DNS：Cloudflare Free zone 已创建但未切 nameservers；自动扫描只得 9 条记录，尚未获得 Dynadot 完整后台导出，不能视为备份。公开 DNS 仍为 Dynadot NS、GitHub Pages A 和 Dynadot MX；公开 DS 查询未见 Answer，注册商 DNSSEC 状态尚待后台核对
+- 支付：重新列出 Stripe 连接后只有 sandbox，`livemode=false`；尚未确认正式商户，两个付款链接继续为 null，网站仍仅联系购买
+- main / 旧托管：未合并 Shop、未改生产 DNS，当前 GitHub Pages workflow 保留至新托管验收；Shop 合并前必须改为仅检查
+
 ## 2026-10-11 Cloudflare Pages 迁移准备（暂存与 DNS 待验）
 
 - 授权：用户已明确同意迁移至 Cloudflare 并注册账户；此前仅使用 GitHub Pages 的托管约束已被本次决定取代，保留仓库、域名与业务邮箱
