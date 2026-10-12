@@ -20,29 +20,44 @@ Preview `530c650d-b40a-467c-bf87-f2b85266446b` deployed
 The live artifact, HTTP indexing/404 behavior and desktop/mobile browser checks
 passed; see `WEBSITE_STATUS.md` for exact scope and remaining checks.
 
-The Free DNS zone is pending activation. Its automatic scan omitted the actual
+The Free DNS zone is active. Its initial automatic scan omitted the actual
 Dynadot DKIM CNAME, demonstrating why a complete provider backup is required.
-The Pages UI currently requires activation of the apex zone before it can add
-`xilume.co`. Preserve the existing website records until the Pages association
-and certificate are ready; changing DNS authority and moving website traffic
-are separate operations. Full DNS backups remain outside the public repository.
+The complete backup remains outside the public repository: six explicit CSV/UI
+records plus the captured Dynadot Email Hosting mode and four generated mail
+records, including TTL, DDNS and DNSSEC state. All ten pre-cutover records were
+checked against both assigned Cloudflare authoritative servers.
 
 PR #16 has since merged as `ad4778f280c9f0949be18da53ba99035cafaa235`.
-The main deployment `9b2fb074-acfb-4f38-a716-edd6cc83471e` is verified at
-`xilume.pages.dev`; the latest preview `57d1d41d` uses PR head `b79110d`.
-The old workflow is now checks only. The complete account backup consists of
-six explicit CSV/UI records plus the captured Dynadot Email Hosting mode and
-four provider-managed mail records omitted from that export; TTL and DDNS state
-were also recorded. Both Cloudflare authoritative servers match all ten records.
+The merge deployment `9b2fb074-acfb-4f38-a716-edd6cc83471e` was verified at
+`xilume.pages.dev`. The subsequent documentation-only commit
+`d8a34910f473ef75cb4b6d9aeff461bb6a705c26` deployed as production `52de383d`
+and preview `f09109af`; both logs confirm the specified build and 216 files.
+The preview returns `X-Robots-Tag: noindex`. The old workflow runs checks only.
 
 The registrar accepted the two assigned Cloudflare nameservers on 2026-10-11;
-DNSSEC is Not Set and no DS was present. Parent delegation and zone activation
-are still pending in the last observed check. Website records remain DNS only
-and point to the previous host until Pages association/certificate readiness.
-The prepared www Single Redirect preserves path and query; it needs proxied www
-traffic before it applies. Do not treat this prepared rule or the registrar's
-saved configuration as a completed traffic cutover. Resume the custom-domain,
-HTTPS, DNS/mail and production checks below once the zone is active.
+DNSSEC is Not Set and no DS is published. Parent delegation took effect at
+17:21 PDT, independently confirmed by Cloudflare and Google recursive resolvers.
+Pages domain activation replaced only the four old website A records and the
+www CNAME with two proxied CNAME records targeting `xilume.pages.dev`.
+MX, SPF, DKIM, DMARC and Google verification remain unchanged and DNS only;
+the resulting zone has seven records. Registrar and email remain at Dynadot.
+
+The Universal SSL certificate is Active for the apex and `*.xilume.co`, and
+Always Use HTTPS is enabled. At 17:35 PDT both `xilume.co` and `www.xilume.co`
+are Active with SSL enabled in the Pages dashboard.
+The Single Redirect `www to xilume.co` uses the exact www hostname, status 301,
+`concat("https://xilume.co", http.request.uri.path)` and preserve-query enabled.
+Its match excludes `/.well-known/acme-challenge/` so it cannot intercept Pages
+HTTP certificate validation. This was verified against the initially blocked
+random challenge route following the official [debugging guidance](https://developers.cloudflare.com/pages/configuration/debugging-pages/#blocked-http-validation).
+Email Address Obfuscation is Off to preserve existing public mailto links and
+the checked artifact without injected decode scripts; only the 51 affected
+HTML files needed rechecking after this setting changed.
+At 17:27 PDT, real HTTPS, HTTP/www redirects with path/query preservation,
+unknown/maintenance 404s and DNS/mail preservation passed. Exact final domain
+dashboard status and complete production artifact/browser scope belong in
+`WEBSITE_STATUS.md`. At 17:30 PDT all 216 artifact files and 28 desktop/mobile
+page checks plus seven interactions passed on the official domain.
 
 ## Scope and build settings
 

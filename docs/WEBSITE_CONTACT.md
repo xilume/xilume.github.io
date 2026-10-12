@@ -8,6 +8,8 @@
 
 此次实测仅提交一次，未追加邮件、修改分类或过滤规则。正式域名当时仍提供旧托管内容，Cloudflare Pages 自定义域名待委派激活，因此实收验证与新托管切换分别记录。未验证中文真实提交、业务直接外发与询单原始 Reply-To，详细边界见 STATUS
 
+17:30 PDT 正式官网已迁至 Cloudflare Pages，双语表单的端点、原生 POST、验证码、自动确认内容与各自固定 `_url` 均已从实际新托管核对。切换保持原正式来源与服务配置，未重复发送邮件；此前的实际收件证据不扩大为切换后的第二次送达实测
+
 ## 目的与页面
 
 让首次询价、选型和技术问题可直接在网页提交。中英文页面为 `contact/index.html` 与 `zh-cn/contact/index.html`，共用 `contact/contact.css`、`contact/contact.js`。保留既有导航、Logo、SEO 和资源链接；不改动产品事实和价格。
@@ -28,7 +30,7 @@
 
 按 [FormSubmit 文档](https://formsubmit.co/documentation) 和 [帮助](https://formsubmit.co/help)，首次需要收件人激活；未激活提交保留 30 天，激活后补投，服务亦提供 30 天提交归档。不要宣称服务不存储。AJAX 不支持自动回复；网页显示成功不等于自动给客户发送确认邮件。
 
-明确设置 `_captcha=true` 和 `_autoresponse`。中英文页面均使用用户在 2026-09-25 提供的英文确认文案，段落换行通过 HTML 字符引用保存在隐藏字段里；移除粘贴时的 Markdown 反斜线与链接语法，保留邮件内容。确认邮件由 FormSubmit 服务生成，不能声称由 Dynadot 发出或自定义了服务端 From/Subject。客户确认邮件的实际 Reply-To 与收件仍需真实邮件验证；供应商文档没有单独的 autoresponse Reply-To 设置。
+明确设置 `_captcha=true` 和 `_autoresponse`。中英文页面均使用用户在 2026-09-25 提供的英文确认文案，段落换行通过 HTML 字符引用保存在隐藏字段里；移除粘贴时的 Markdown 反斜线与链接语法，保留邮件内容。确认邮件由 FormSubmit 服务生成，不能声称由 Dynadot 发出或自定义了服务端 From/Subject。配置变更后须实收核验；本次单次实收及 Spam / 自动确认 Reply-To 证据见上方；供应商文档没有单独的 autoresponse Reply-To 设置。
 
 ## 交互与验证
 

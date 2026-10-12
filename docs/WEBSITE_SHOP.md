@@ -1,6 +1,7 @@
 # Shop and hosted checkout
 
-Prepared 2026-10-11. This change is a review branch, not an active payment service.
+Published on Cloudflare Pages on 2026-10-11 with contact-order fallback.
+Online payment remains disabled; a deployed Shop is not an active payment service.
 
 The 2026-10-11 local takeover rechecked the Stripe connection: only a sandbox
 with `livemode=false` is available. No live merchant has been selected or verified,
@@ -12,16 +13,18 @@ must be completed by the owner directly in Stripe.
 
 ## Hosting migration
 
-The existing official site is hosted on GitHub Pages. Its usage limits explicitly
+The previous official site was hosted on GitHub Pages. Its usage limits explicitly
 exclude hosting an online business or e-commerce site:
 https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
 
 On 2026-10-11, the owner explicitly authorized migration to Cloudflare Pages and
 registered an account. This replaces the earlier GitHub-Pages-only constraint.
 Keep the existing repository and xilume.co domain. Follow
-`WEBSITE_CLOUDFLARE.md` and verify the new host before changing the existing
-production deployment. Do not deploy this store through the old GitHub Pages
-workflow; the verified migration status is recorded in `WEBSITE_STATUS.md`.
+`WEBSITE_CLOUDFLARE.md` for the verified build and migration procedure.
+PR #16 has merged and `xilume.co` now serves the Cloudflare Pages artifact.
+The old GitHub Pages workflow runs checks only. Do not restore its deploy job
+while the published artifact includes Shop; current evidence and rollback
+boundaries are recorded in `WEBSITE_STATUS.md`.
 
 ## Implemented
 

@@ -57,7 +57,9 @@ On 2026-09-08, the owner explicitly authorized publishing this and future routin
 On 2026-10-11, the owner authorized migration to Cloudflare Pages while retaining
 the repository, domain and business email. See `docs/WEBSITE_CLOUDFLARE.md` for the
 staging and cutover procedure, and `docs/WEBSITE_STATUS.md` for verified progress.
-Verify the migration preview before merging these changes or switching the domain.
+The preview was verified, PR #16 merged, and `xilume.co` switched to Pages.
+See `docs/WEBSITE_STATUS.md` for deployed SHAs, production validation and the
+separate disabled-payment status.
 
 Cloudflare Pages Free uses Git integration with `xilume/xilume.github.io`: production branch `main`, preview branch `codex/cloudflare-20261011`, framework preset None and repository-root build directory. The build command is `python scripts/build-site.py && python scripts/check-site.py _site`; the output directory is `_site`. Publish that checked output, never the repository root. Confirm the deployed SHA, build log and preview `X-Robots-Tag: noindex` response before promotion.
 

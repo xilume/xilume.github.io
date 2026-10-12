@@ -1,5 +1,23 @@
 # Xilume 官网维护状态
 
+## 2026-10-11 正式官网已切换至 Cloudflare Pages Free
+
+- 本机 Chrome 现有登录会话完成部署及 DNS 操作，Cloudflare 身份经用户菜单核对；GitHub App 仅获 `xilume/xilume.github.io` 仓库访问。未读取或导出浏览器 Cookie、密码，未购买套餐
+- 生产项目 `xilume`，仓库、框架 None、仓库根目录、`python scripts/build-site.py && python scripts/check-site.py _site`、仅 `_site` 输出、main 生产与指定迁移预览均保持已核实设置
+- 实际生产部署：`52de383d-dd44-4d86-b2ff-80e300ae5c24`，SHA `d8a34910f473ef75cb4b6d9aeff461bb6a705c26`，日志 2026-10-11 17:23:04 PDT（2026-10-12 00:23:04 UTC）成功。此提交只更新维护文档；网站产物与通过 PR CI 的版本相同，216 文件 / 66 HTML / 49 可索引页 / 2756 引用
+- 实际同 SHA 预览：`f09109af-047a-468e-b175-f744fe7fa8af`，日志 17:21:11 PDT 成功，[固定预览](https://f09109af.xilume.pages.dev/)，[迁移分支别名](https://codex-cloudflare-20261011.xilume.pages.dev/)。最新 Shop HTTP 响应头实测 `X-Robots-Tag: noindex`；此前完整预览 HTTP、资源与浏览器验收继续有效
+- DNS 委派 17:21 PDT 生效：父区和 Cloudflare / Google 递归均为 `maisie.ns.cloudflare.com`、`zeus.ns.cloudflare.com`。Pages 激活向导只将四条旧网站 A 与旧 www CNAME 改成两个 proxied CNAME `xilume.pages.dev`；最终区有 7 条记录，MX / SPF / DKIM / DMARC / Google 验证共 5 条逐值保留且 DNS only。两家递归与两台 Cloudflare 权威均核对通过，父区 / 递归无 DS，符合 Dynadot 后台 DNSSEC `Not Set`
+- 域名注册商与邮箱仍为 Dynadot。完整账户 CSV、所有 UI 配置、邮箱自动记录及旧 NS 备份保存在公开仓库外，未把自动扫描或公共 DNS 当作完整备份；初始扫描遗漏 DKIM 已补齐
+- Pages `xilume.co` 与 `www.xilume.co` 均在 17:35 PDT 的账户 UI 明确 Active / SSL enabled，Universal SSL 已 Active 覆盖 apex 与 `*.xilume.co`，Always Use HTTPS 为 On。[正式官网](https://xilume.co/) 和双语 Shop 均已从 Cloudflare 返回经核对的发布内容；HTTPS 证书正常验证，无浏览器安全警告绕过
+- `www to xilume.co` 为 301 动态跳转、保留路径与查询串；精确匹配 www 并排除 `/.well-known/acme-challenge/`，避免拦截 Pages 的 HTTP 证书验证。首次普通 www 流量实测通过；随后发现验证路径被旧表达式重定向，依照官方调试说明补充例外，最终规则状态 Active。17:32:52 PDT 定向 5 项复核通过：普通中英路径 HTTP/HTTPS 仍准确 301，随机 HTTPS ACME token 返回真正 404、无 Location；随后账户 UI 于 17:35 PDT 明确 www Active / SSL enabled，实际验证成功的依据为该账户状态
+- 正式域名验收 17:30 PDT 完成：216/216 文件 GET 200 且内容匹配（111 字节精确、105 文本只规范化 CRLF）；所有二进制图片和软件下载字节匹配；6 类未知 / 维护路径真实 404，双语错误页与 meta noindex 正常；9 项 HTTP→HTTPS / www→apex / SKU 查询保留通过
+- 正式隔离 Chrome 桌面 / 手机：28 项页面/视口及 7 项交互全部通过，无横向溢出、页面 JS 错误或已加载图片失败；双语 Shop/购买入口、语言 SKU/query/hash/返回、手机菜单、联系预填/必填阻断正常。没有安装下载软件，部分长页延迟图未滚动加载，二进制资源匹配另验
+- Cloudflare 默认 Email Address Obfuscation 初次改写 51 HTML；已关闭这一新加入的公开邮箱改写，保留现有 mailto 链接和产物。仅重验受影响的 51 HTML，全部恢复匹配；其余已过测试未无故重跑
+- 双语表单源配置、原生 POST、验证码、自动确认与各自固定 `_url` 在新托管核对正常。唯一授权实收测试发生在此前的相同正式来源域名，业务 Inbox 已实收，Gmail 自动确认进入 Spam、自动确认邮件 Reply-To 已核实为 `contact@xilume.co`；切换后没有第二次发送，不把配置检查称为新托管的再次送达测试
+- 付款仍未启用：只有 `livemode=false` 的 sandbox，两个公开链接 null，正式 Shop 明确联系购买。Stripe 成功 / 取消 / 失败付款流程未测试，没有创建正式订单或真实扣款。待用户选择 / 连接正式商户并亲自完成商户与银行验证，确认可售库存、配送范围/运费、发货条件、退款政策、实际商户资料与税务配置后，再接入平台可靠确认的付款
+- 旧 GitHub Pages 发布 workflow 在 Shop 合并前已改为只检查；原部署与 DNS 回退依据保留。后续 main 网站改动由 Cloudflare Git 自动部署，不将带 Shop 的 main 再发布至旧托管；必要回退见 `WEBSITE_CLOUDFLARE.md` 与历史发布说明
+- 下方为各阶段历史快照，曾出现的“待委派 / 待迁移 / 未合并”不表示当前状态
+
 ## 2026-10-11 正式来源单次邮件实收（托管切换仍待委派）
 
 - 用户明确授权一次测试询单和对应自动确认，并在本机完成 FormSubmit 验证码；仅提交一次，没有重试或追加发送
