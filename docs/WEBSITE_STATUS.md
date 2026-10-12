@@ -1,5 +1,15 @@
 # Xilume 官网维护状态
 
+## 2026-10-11 正式来源单次邮件实收（托管切换仍待委派）
+
+- 用户明确授权一次测试询单和对应自动确认，并在本机完成 FormSubmit 验证码；仅提交一次，没有重试或追加发送
+- 17:10 PDT：Dynadot `contact@xilume.co` 的 Inbox 实际收到该测试，邮件正文包含唯一测试标记、已批准的测试名称与 Other 类型；没有以 HTTP 200 或回到首页代替收件证据
+- Gmail 实际收到自动确认，时间 17:10:29 PDT，From 为 FormSubmit `autoresponse@formsubmit.co`，Reply-To 为 `contact@xilume.co`；Gmail 对 FormSubmit 发送域的 SPF / DKIM / DMARC 均判 pass，但邮件被归入 Spam，不能称为到达普通收件箱。未修改用户邮件标签或过滤规则
+- 本次测试发生在正式域名仍提供旧站、Pages apex 尚未关联期间，验证的是不变的正式来源和 FormSubmit/Dynadot 邮件服务，不证明已切换至 Cloudflare；未再次提交同一测试
+- 未验证：业务邮箱直接外发 SMTP、询单原始 Reply-To（原文查看被浏览器客户端阻止）、中文实际提交与其他收件人的分类；没有把此轮实收扩展成完整邮件服务审计
+- 后台 Free / renew 提示不再作为邮箱不能收件的推断；本轮已取得实际业务收件证据，未购买、续费或改动邮箱方案
+- 维护记录 `abca300ece0febf04ae9535fc74babccdd396909` 也已由 Cloudflare main 部署成功：`1c8f0b99-8123-4628-81c4-f9091562eef6`，2026-10-11 17:09:34 PDT（2026-10-12 00:09:34 UTC）；此提交只改维护文档，网站产物不变。预览 `7a2001d2.xilume.pages.dev` 同 SHA，Shop 实测 noindex
+
 ## 2026-10-11 Cloudflare main 已部署，DNS 委派已提交（域名激活等待中）
 
 - 已合并：[PR #16](https://github.com/xilume/xilume.github.io/pull/16)，最终 head `b79110d72158d8abd6077aac46dfd40895e8af04`；[最终 PR CI](https://github.com/xilume/xilume.github.io/actions/runs/38185779724) 成功，合并 SHA `ad4778f280c9f0949be18da53ba99035cafaa235`
@@ -11,7 +21,7 @@
 - 委派提交：2026-10-11 16:59 PDT 已在 Dynadot 保存 `maisie.ns.cloudflare.com` 和 `zeus.ns.cloudflare.com`，后台 DNSSEC 明确 `Not Set`，父区无 DS；没有禁用既有 DNSSEC。17:02 PDT 的父区和两家递归查询仍为旧 Dynadot NS，Cloudflare UI 仍等待激活，不把注册商保存误写为正式站切换完成
 - www 跳转已在 Cloudflare 准备：规则 `www to xilume.co`，精确匹配 `www.xilume.co`，301 至 `concat("https://xilume.co", http.request.uri.path)`，保留 query。当前 DNS only 流量不会应用该规则；待 Pages 关联及证书就绪后再启用对应代理并实际验证
 - 尚未完成：Pages UI 当前要求区域激活后才能关联 apex，`xilume.co` 的新 Pages 绑定、正式流量切换、custom-domain HTTPS 与新规则实测仍待委派生效；当前正式域名仍由旧站提供，不能宣称官网已迁移完成
-- 邮件：保留已有业务邮箱与全部相关 DNS，但未发送本轮测试邮件。Dynadot 旧托管详情页同时显示 Free 与 `Please renew your hosting`，服务状态需实收核对，不据此购买套餐或宣称邮箱失效；实际询单 / 自动确认 / Reply-To / 收发仍未验证
+- 邮件：保留已有业务邮箱与全部相关 DNS；后续已完成授权的一次业务实收与自动确认核对，结果及 Spam / Reply-To 边界见上方。Dynadot 旧详情页的 Free / renew 提示未引发购买或方案变更；直接外发及新托管来源仍未验证
 - 支付：未启用。连接仍仅为 `livemode=false` sandbox，两个链接为 null，公开 Shop 仅联系购买；正式商户选择、商户/银行验证、可售库存、配送国家/运费、退款政策及税务配置未完成，未做真实扣款或 Stripe 成功 / 取消 / 失败流程实测
 - 回退依据：原网站部署与 DNS 组合备份均保留；必要时恢复记录 / 原 NS `ns1.dyna-ns.net`、`ns2.dyna-ns.net`，不 reset main 或覆盖其他修改。重新启用旧 workflow 前必须移除商店并按旧站构建验收，不能直接将已含 Shop 的 main 再部署到 GitHub Pages
 

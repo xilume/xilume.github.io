@@ -2,6 +2,12 @@
 
 日期：2026-09-25
 
+## 2026-10-11 正式来源实收
+
+用户明确批准一次英文迁移测试询单及对应自动确认，并亲自在本机完成验证码。17:10 PDT，业务邮箱 Inbox 收到带唯一标记的询单；Gmail 收到供应商自动确认但将其归入 Spam。确认邮件原始头的 Reply-To 为 `contact@xilume.co`，供应商发送域 SPF / DKIM / DMARC pass；这不等于业务域直接外发已测试或所有客户的普通收件箱投递均可靠
+
+此次实测仅提交一次，未追加邮件、修改分类或过滤规则。正式域名当时仍提供旧托管内容，Cloudflare Pages 自定义域名待委派激活，因此实收验证与新托管切换分别记录。未验证中文真实提交、业务直接外发与询单原始 Reply-To，详细边界见 STATUS
+
 ## 目的与页面
 
 让首次询价、选型和技术问题可直接在网页提交。中英文页面为 `contact/index.html` 与 `zh-cn/contact/index.html`，共用 `contact/contact.css`、`contact/contact.js`。保留既有导航、Logo、SEO 和资源链接；不改动产品事实和价格。
