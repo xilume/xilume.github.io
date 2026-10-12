@@ -27,6 +27,23 @@ The Pages UI currently requires activation of the apex zone before it can add
 and certificate are ready; changing DNS authority and moving website traffic
 are separate operations. Full DNS backups remain outside the public repository.
 
+PR #16 has since merged as `ad4778f280c9f0949be18da53ba99035cafaa235`.
+The main deployment `9b2fb074-acfb-4f38-a716-edd6cc83471e` is verified at
+`xilume.pages.dev`; the latest preview `57d1d41d` uses PR head `b79110d`.
+The old workflow is now checks only. The complete account backup consists of
+six explicit CSV/UI records plus the captured Dynadot Email Hosting mode and
+four provider-managed mail records omitted from that export; TTL and DDNS state
+were also recorded. Both Cloudflare authoritative servers match all ten records.
+
+The registrar accepted the two assigned Cloudflare nameservers on 2026-10-11;
+DNSSEC is Not Set and no DS was present. Parent delegation and zone activation
+are still pending in the last observed check. Website records remain DNS only
+and point to the previous host until Pages association/certificate readiness.
+The prepared www Single Redirect preserves path and query; it needs proxied www
+traffic before it applies. Do not treat this prepared rule or the registrar's
+saved configuration as a completed traffic cutover. Resume the custom-domain,
+HTTPS, DNS/mail and production checks below once the zone is active.
+
 ## Scope and build settings
 
 Keep the existing GitHub repository, static HTML/CSS/JavaScript, `xilume.co` and
