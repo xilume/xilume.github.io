@@ -11,7 +11,9 @@
 - 验证边界：新 CLI 的直接持钥网络请求未执行；公开双语 Shop 内容读取确认当前价格与联系购买提示，但浏览器连接未完成，未声称本轮桌面/手机交互通过。没有 Stripe 成功/失败/取消/异步付款、收据实收或真实扣款测试
 - 必须由本人完成：选择实际正式商户及国家/主体类型、真实商户/身份资料和税号、Stripe 要求的身份核验、银行验证及条款声明；由本人确认可售库存、配送国家/运费/发货时间、退款保修隐私政策及税务决定
 - 尚缺工程：签名验证的付款 webhook、持久订单记录、按 Session 去重/并发与重试处理、异步支付结果处理、通知及实际端到端验收。未部署新后端、数据库或通知服务
-- 本节记录安全改动与核验范围；本轮 PR、合并与部署结果在完成后追加。真实收款启用仍是单独的后续步骤
+- 已推送并合并：[PR #17](https://github.com/xilume/xilume.github.io/pull/17)，代码 head `192ec459817dab7e36d40b883ca887f13d4fdda1`，合并 SHA `819e624a81ae3cfd9d4990fb5fd7140c79f3d352`；[PR CI](https://github.com/xilume/xilume.github.io/actions/runs/39873375758) 与 [main CI](https://github.com/xilume/xilume.github.io/actions/runs/39873435744) 全部成功，新 Stripe 离线核验步骤实际执行成功
+- 已部署：Cloudflare Pages 对该合并 SHA 的官方 check 于 2026-10-22 16:43:47 PDT（23:43:47 UTC）报告 Deploy successful，部署 `2d7adb68-8b44-4b48-bdcb-7778f13eb058`，[固定部署](https://2d7adb68.xilume.pages.dev/)。主分支重新读取确认 checkout=false、两个链接 null。此记录不将部署成功等同于付款上线
+- 线上验证边界：双语 Shop 公开页面内容读取仍为原价和联系购买；本轮未完成线上 JS 字节对比、真实桌面/手机交互或 Stripe 端到端付款验收。真实收款仍关闭，没有启用订单后端
 - 详细对象检查、本人事项和验收矩阵见 `WEBSITE_SHOP.md`；本轮未创建或更改 Stripe 对象、未发送邮件、未填写未知商户/库存/配送资料
 
 ## 2026-10-11 正式官网已切换至 Cloudflare Pages Free
