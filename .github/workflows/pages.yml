@@ -36,6 +36,8 @@ jobs:
         run: node scripts/test-contact-form.cjs
       - name: Test shop purchase states
         run: node scripts/test-shop.cjs
+      - name: Test Stripe price audit (offline)
+        run: node --test scripts/test-stripe-prices.cjs
       - name: Prepare static site
         run: python scripts/build-site.py
       - name: Verify publication files, links and SEO

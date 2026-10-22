@@ -37,6 +37,7 @@ python scripts/test-site-tools.py
 node scripts/test-language-navigation.cjs
 node scripts/test-contact-form.cjs
 node scripts/test-shop.cjs
+node --test scripts/test-stripe-prices.cjs
 python scripts/build-site.py
 python scripts/check-site.py _site
 python -m http.server 8000 --bind 127.0.0.1 --directory _site

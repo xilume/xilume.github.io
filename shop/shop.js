@@ -5,8 +5,9 @@
   const zh = document.documentElement.lang.toLowerCase().startsWith('zh');
   const prefix = zh ? '/zh-cn' : '';
   const links = window.XILUME_PAYMENT_LINKS;
+  const paymentFor = id => shop.checkoutURL(id, links, window.XILUME_CHECKOUT_ENABLED);
   const setupNotice = document.querySelector('[data-shop-setup-notice]');
-  if (setupNotice && Object.keys(shop.products).every(id => shop.paymentURL(id, links))) {
+  if (setupNotice && Object.keys(shop.products).every(id => paymentFor(id))) {
     setupNotice.hidden = true;
   }
 
@@ -27,7 +28,7 @@
   checkout.querySelector('[data-product-details]').href = prefix + item.path;
   checkout.querySelector('[data-product-contact]').href = `${prefix}/contact/?product=${item.id}`;
 
-  const payment = shop.paymentURL(id, links);
+  const payment = paymentFor(id);
   if (payment) {
     const payLink = checkout.querySelector('[data-payment-link]');
     payLink.href = payment;
