@@ -31,16 +31,26 @@
   function paymentURL(id, links) {
     if (!product(id) || !links || !Object.prototype.hasOwnProperty.call(links, id)) return null;
     const value = links[id];
-    if (typeof value !== 'string') return null;
+    // Check the original string before URL parsing can normalize whitespace,
+    // backslashes, dot segments or an explicit port into a permitted URL.
+    if (typeof value !== 'string' || !/^https:\/\/buy\.stripe\.com\/[a-zA-Z0-9]+$/.test(value)) return null;
     try {
       const url = new URL(value);
       if (url.origin !== 'https://buy.stripe.com' || url.username || url.password ||
           url.search || url.hash || !/^\/[a-zA-Z0-9]+$/.test(url.pathname)) return null;
-      return url.href;
+      return url.href === value ? value : null;
     } catch (_) { return null; }
   }
 
-  const api = Object.freeze({ products, product, paymentURL });
+  function checkoutURL(id, links, enabled) {
+    if (enabled !== true) return null;
+    const url = paymentURL(id, links);
+    // A copy/paste mistake must not send two SKUs to the same checkout.
+    if (!url || Object.keys(products).some(other => other !== id && paymentURL(other, links) === url)) return null;
+    return url;
+  }
+
+  const api = Object.freeze({ products, product, paymentURL, checkoutURL });
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.XilumeShop = api;
 })(typeof window !== 'undefined' ? window : globalThis);
