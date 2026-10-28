@@ -27,7 +27,7 @@ img { max-width: 100%; }
 .site-footer a:hover { color: #fff; }
 .site-footer .footer-bottom { color: #8795a4; border-color: #1a2633; padding-top: 22px; padding-bottom: 24px; font-size: 11px; gap: 20px; }
 .product-hero-carousel .product-hero-kicker { font-size: 12px; letter-spacing: .1em; }
-.product-hero-carousel :is(.chip-hero-copy,.product-hero-copy) h2 { text-wrap: balance; }
+.product-hero-carousel :is(.chip-hero-copy,.product-hero-copy) :is(h1,h2) { text-wrap: balance; }
 .home-flow-heading h2 { font-size: clamp(30px,3.8vw,48px); line-height: 1.12; }
 .engineering-image img { object-fit: cover; }
 .engineering-copy h2 { font-size: clamp(28px,3.1vw,42px); }

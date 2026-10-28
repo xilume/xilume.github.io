@@ -18,7 +18,7 @@
   let activeIndex = 0;
   let timer = null;
   let interactionPaused = false;
-  let userPaused = false;
+  let userPaused = true;
   let transitionRequest = 0;
   const slideReadyPromises = new Map();
   const failedSlides = new Set();

@@ -4181,7 +4181,7 @@ footer {
 
 .product-hero-selector.container {
   display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
+  grid-template-columns:repeat(4,minmax(0,1fr));
   width:100%;
   margin:0;
 }
@@ -4351,7 +4351,7 @@ footer {
   }
   .product-hero-selector.container {
     overflow-x:auto;
-    grid-template-columns:repeat(5,minmax(145px,1fr));
+    grid-template-columns:repeat(4,minmax(145px,1fr));
     scrollbar-width:thin;
   }
   .hero-product-tab {
@@ -4430,7 +4430,7 @@ footer {
     min-height:74px;
   }
   .product-hero-selector.container {
-    grid-template-columns:repeat(5,140px);
+    grid-template-columns:repeat(4,140px);
   }
   .hero-product-tab {
     grid-template-columns:25px 1fr;
@@ -6476,7 +6476,7 @@ footer {
   max-width:610px;
 }
 
-.chip-hero-copy h2 {
+.chip-hero-copy :is(h1,h2) {
   margin:0;
   color:#f7f9fb;
   font-size:clamp(54px,5.3vw,78px);
@@ -6485,7 +6485,7 @@ footer {
   line-height:.93;
 }
 
-.chip-hero-copy h2 span {
+.chip-hero-copy :is(h1,h2) span {
   color:#78bfff;
 }
 
@@ -7570,7 +7570,7 @@ footer {
     padding-top:38px;
     padding-bottom:35px;
   }
-  .chip-hero-copy h2 {
+  .chip-hero-copy :is(h1,h2) {
     font-size:58px;
   }
   .chip-hero-scenes {
@@ -7696,7 +7696,7 @@ footer {
     grid-template-rows:auto 94px;
     min-height:700px;
   }
-  .chip-hero-copy h2 {
+  .chip-hero-copy :is(h1,h2) {
     font-size:47px;
   }
   .chip-hero-copy > p:not(.product-hero-kicker) {

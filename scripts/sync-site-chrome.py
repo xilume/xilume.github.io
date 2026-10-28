@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='20261011-shop1'
+VERSION='20261028-growth1'
 
 def header(zh,path):
  p='/zh-cn' if zh else ''
@@ -25,7 +25,7 @@ def header(zh,path):
 def footer(zh):
  p='/zh-cn' if zh else ''
  def a(path,label): return f'<a href="{p}/{path}/">{label}</a>'
- groups=[('产品' if zh else 'Products', [('shop','商店' if zh else 'Shop'),('products/embedded-communication','嵌入式通信' if zh else 'Embedded communication'),('products/8hub','Octant 工业通信扩展坞' if zh else 'Octant USB hub'),('products/interface-ics','接口芯片' if zh else 'Interface ICs'),('products/usb-smbus','智能电池接口' if zh else 'Smart-battery interfaces')]),('支持' if zh else 'Support',[('downloads','软件与驱动' if zh else 'Software &amp; Drivers'),('documentation','技术资料' if zh else 'Documentation'),('applications','安装与应用' if zh else 'Applications'),('contact','联系我们' if zh else 'Contact')])]
+ groups=[('产品' if zh else 'Products', [('shop','商店' if zh else 'Shop'),('products/embedded-communication','嵌入式通信' if zh else 'Embedded communication'),('products/8hub','Octant 工业通信扩展坞' if zh else 'Octant USB hub'),('products/interface-ics','接口芯片' if zh else 'Interface ICs'),('products/mini-pcie-dual-can-fd','双路 Mini PCIe CAN FD' if zh else 'Dual Mini PCIe CAN FD')]),('支持' if zh else 'Support',[('downloads','软件与驱动' if zh else 'Software &amp; Drivers'),('documentation','技术资料' if zh else 'Documentation'),('applications','安装与应用' if zh else 'Applications'),('contact','联系我们' if zh else 'Contact')])]
  content=''.join(f'<div><h3>{title}</h3>'+''.join(a(path,label) for path,label in items)+'</div>' for title,items in groups)
  return f'''<footer class="site-footer">
     <div class="container footer-grid">
@@ -33,7 +33,7 @@ def footer(zh):
       {content}
       <div><h3>{'销售与技术咨询' if zh else 'Sales &amp; technical inquiries'}</h3><a href="mailto:contact@xilume.co">contact@xilume.co</a><a href="tel:+16573459435">+1 (657) 345-9435</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 {'熙联迈' if zh else 'Xilume'}</span><span>CAN FD · RS-485 · RS-232 · SBS / SMBus</span></div>
+    <div class="container footer-bottom"><span>© 2026 {'熙联迈' if zh else 'Xilume'}</span><span>CAN FD · RS-485 · RS-232 · USB</span></div>
   </footer>'''
 
 changed=[]

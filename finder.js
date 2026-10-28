@@ -32,7 +32,7 @@
       "description": "用于自有 PCB 的 USB 接口芯片",
       "status": "2 CAN FD · LQFP48",
       "price": "样品与批量报价",
-      "href": "products/interface-ics/#xl1326-a"
+      "href": "products/interface-ics/xl1326-a/"
     }
   },
   {
@@ -62,7 +62,7 @@
       "description": "用于自有 PCB 的 USB 接口芯片",
       "status": "6 serial + 2 CAN FD · LQFP48",
       "price": "样品与批量报价",
-      "href": "products/interface-ics/#xl1326"
+      "href": "products/interface-ics/xl1326/"
     }
   },
   {
@@ -83,7 +83,7 @@
       "description": "用于自有 PCB 的 USB 接口芯片",
       "status": "2 CAN FD · LQFP48",
       "price": "样品与批量报价",
-      "href": "products/interface-ics/#xl1326-a"
+      "href": "products/interface-ics/xl1326-a/"
     }
   },
   {
@@ -129,7 +129,7 @@
       "description": "USB interface IC for your PCB",
       "status": "2 CAN FD · LQFP48",
       "price": "Sample and volume pricing",
-      "href": "products/interface-ics/#xl1326-a"
+      "href": "products/interface-ics/xl1326-a/"
     }
   },
   {
@@ -159,7 +159,7 @@
       "description": "USB interface IC for your PCB",
       "status": "6 serial + 2 CAN FD · LQFP48",
       "price": "Sample and volume pricing",
-      "href": "products/interface-ics/#xl1326"
+      "href": "products/interface-ics/xl1326/"
     }
   },
   {
@@ -180,7 +180,7 @@
       "description": "USB interface IC for your PCB",
       "status": "2 CAN FD · LQFP48",
       "price": "Sample and volume pricing",
-      "href": "products/interface-ics/#xl1326-a"
+      "href": "products/interface-ics/xl1326-a/"
     }
   },
   {
