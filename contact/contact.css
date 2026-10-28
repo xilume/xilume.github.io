@@ -40,6 +40,12 @@
 .contact-topic-option span:hover { border-color:#80a9d1; background:#f6faff; }
 .contact-topic-option input:checked + span { color:#145a9e; background:#eaf4ff; border-color:#80b3e6; box-shadow:inset 0 0 0 1px #80b3e6; }
 .contact-topic-option input:focus-visible + span { outline:2px solid var(--contact-blue); outline-offset:3px; }
+.contact-context { margin:0 0 17px; padding:12px 14px; border:1px solid #cbdcec; border-radius:7px; background:#f4f8fd; }
+.contact-context[hidden] { display:none; }
+.contact-context p { display:flex; flex-wrap:wrap; gap:3px 12px; margin:0 0 4px; color:#243c52; font-size:13px; line-height:1.7; }
+.contact-context strong { font-weight:650; }
+.contact-context span { color:#52677b; }
+.contact-context a { display:inline-block; color:#1264c3; font-size:12px; line-height:1.7; text-decoration:underline; text-underline-offset:3px; }
 .contact-honeypot { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
 .contact-submit { display:flex; justify-content:center; align-items:center; gap:12px; width:100%; min-height:50px; padding:13px 18px; border:1px solid #1264c3; border-radius:7px; color:#fff; background:#1264c3; font:inherit; font-size:15px; font-weight:600; line-height:1.5; cursor:pointer; box-shadow:0 3px 6px #1264c31c; transition:background .15s,box-shadow .15s; }
 .contact-submit svg { width:18px; height:18px; flex:0 0 18px; }
@@ -54,6 +60,12 @@
 .contact-privacy a { color:#235f91; text-decoration:underline; text-underline-offset:3px; }
 .contact-noscript { margin:0 0 16px; padding:12px; border:1px solid #cbd7e2; border-radius:6px; color:#52677b; font-size:13px; line-height:1.7; }
 .contact-noscript a { color:#1264c3; text-decoration:underline; }
+.contact-email-tools { margin:-6px 0 16px; color:#52677b; font-size:12px; line-height:1.7; }
+.contact-email-tools button { min-height:38px; margin-right:10px; padding:6px 10px; border:1px solid #bdcbd8; border-radius:6px; color:#145f9f; background:#fff; font:inherit; cursor:pointer; }
+.contact-email-tools button[hidden] { display:none; }
+.contact-email-tools button:hover { border-color:#1264c3; background:#f4f8fd; }
+.contact-email-tools button:focus-visible { outline:2px solid #1264c3; outline-offset:3px; }
+.contact-email-tools span:empty { display:none; }
 .contact-other { padding-top:46px; padding-bottom:24px; }
 .contact-other-heading { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 25px; margin-bottom:22px; }
 .contact-other-heading h2 { margin:0; color:var(--contact-ink); font-size:22px; font-weight:550; letter-spacing:-.02em; line-height:1.35; }

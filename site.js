@@ -55,9 +55,9 @@
             <p>XL 系列器件与接口产品</p>
           </div>
           <div class="product-mega-links">
-            <a href="/zh-cn/products/interface-ics/#family-mixed">
+            <a href="/zh-cn/products/interface-ics/xl1326/">
               <span>串行接口 + CAN FD</span>
-              <strong>混合接口芯片</strong>
+              <strong>XL1326 · 串口 + CAN FD</strong>
               <small>6 路串行 + 2 路 CAN FD</small>
               <b aria-hidden="true">→</b>
             </a>
@@ -67,25 +67,10 @@
               <small>8 路串行通道</small>
               <b aria-hidden="true">→</b>
             </a>
-            <a href="/zh-cn/products/interface-ics/#family-canfd">
+            <a href="/zh-cn/products/interface-ics/xl1326-a/">
               <span>CAN FD</span>
-              <strong>CAN FD 接口芯片</strong>
+              <strong>XL1326-A · 双路 CAN FD</strong>
               <small>2 路 CAN FD 通道</small>
-              <b aria-hidden="true">→</b>
-            </a>
-          </div>
-        </section>
-        <section class="product-mega-group" aria-labelledby="product-family-power">
-          <div class="product-mega-group-heading">
-            <small>04</small>
-            <h2 id="product-family-power">智能电池接口</h2>
-            <p>SBS / SMBus 数据</p>
-          </div>
-          <div class="product-mega-links">
-            <a href="/zh-cn/products/usb-smbus/">
-              <span>智能电池状态</span>
-              <strong>电池显示模块</strong>
-              <small>为 Windows 和 Linux 提供电池数据与系统状态</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>
@@ -142,9 +127,9 @@
             <p>XL devices by interface mix</p>
           </div>
           <div class="product-mega-links">
-            <a href="/products/interface-ics/#family-mixed">
+            <a href="/products/interface-ics/xl1326/">
               <span>Serial + CAN FD</span>
-              <strong>Mixed-interface ICs</strong>
+              <strong>XL1326 · Serial + CAN FD</strong>
               <small>6 serial + 2 CAN FD controller channels</small>
               <b aria-hidden="true">→</b>
             </a>
@@ -154,25 +139,10 @@
               <small>8 serial controller channels</small>
               <b aria-hidden="true">→</b>
             </a>
-            <a href="/products/interface-ics/#family-canfd">
+            <a href="/products/interface-ics/xl1326-a/">
               <span>CAN FD</span>
-              <strong>CAN FD interface ICs</strong>
+              <strong>XL1326-A · Dual CAN FD</strong>
               <small>2 CAN FD controller channels</small>
-              <b aria-hidden="true">→</b>
-            </a>
-          </div>
-        </section>
-        <section class="product-mega-group" aria-labelledby="product-family-power">
-          <div class="product-mega-group-heading">
-            <small>04</small>
-            <h2 id="product-family-power">Smart-Battery Interfaces</h2>
-            <p>SBS / SMBus data</p>
-          </div>
-          <div class="product-mega-links">
-            <a href="/products/usb-smbus/">
-              <span>Smart-Battery Status</span>
-              <strong>Battery Display Module</strong>
-              <small>Battery data and native status for Windows and Linux</small>
               <b aria-hidden="true">→</b>
             </a>
           </div>

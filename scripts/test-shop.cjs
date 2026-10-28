@@ -152,7 +152,8 @@ test('contact prefill uses known products, preserves drafts and never auto-submi
       ['?product=%3Cscript%3E', '', '']
     ]) {
       const field = { value: initial };
-      const form = { elements: { namedItem: () => field }, submit() { throw new Error('Automatic submit'); } };
+      const fields = { message: field, product: { value: '' }, intent: { value: '' }, topic: { value: 'price' } };
+      const form = { elements: { namedItem: name => fields[name] || null }, querySelector: () => null, submit() { throw new Error('Automatic submit'); } };
       const document = { documentElement: { lang }, querySelector: () => form };
       const window = { XilumeShop: shop, location: { href: 'https://xilume.co/contact/' + query } };
       vm.runInNewContext(read('shop/contact-prefill.js'), { window, document, URL });
