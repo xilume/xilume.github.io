@@ -14,6 +14,7 @@ This is a plain HTML, CSS, and JavaScript site, with no application build step. 
 - `/shop/checkout/` — per-product review and hosted-payment handoff; no payment links active
 - `/solutions/` and `/applications/` — integration choices and actual installation examples
 - `/products/interface-ics/` — production XL1326 and XL1326-A devices, plus XL1108 selection inquiries
+- `/products/interface-ics/xl1326/` and `/products/interface-ics/xl1326-a/` — individual controller IC selection, datasheets, reference circuits and sample/design-in inquiries
 - `/documentation/` — engineering resources with direct product guides
 - `/documentation/dual-canfd/` — Dual Mini PCIe CAN FD integration guide
 - `/documentation/octant-xe826/` — Octant and XE826 integration guide
