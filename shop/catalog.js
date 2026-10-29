@@ -4,7 +4,7 @@
     dualcanfd: Object.freeze({
       id: 'dualcanfd', name: 'Dual Mini PCIe CAN FD', nameZh: '双路 Mini PCIe CAN FD',
       priceCents: 6999, currency: 'USD',
-      image: '/images/shop-dual-canfd-xl1326-a-studio-v1.webp',
+      image: '/images/catalog-dual-canfd-xl1326-a-263aa1-v2.webp',
       path: '/products/mini-pcie-dual-can-fd/',
       summary: 'Two isolated CAN / CAN FD channels. Windows and Linux drivers.',
       summaryZh: '双路隔离 CAN / CAN FD，支持 Windows 与 Linux 驱动',

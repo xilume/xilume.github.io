@@ -1,0 +1,46 @@
+/* Shared studio packshots; scoped to explicitly marked product cards. */
+.family-visual.catalog-photo,
+.pd-product-media.catalog-photo {
+  display: block;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  overflow: hidden;
+  background: #e9ebee;
+}
+.family-visual.catalog-photo img,
+.pd-product-media.catalog-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+}
+.interface-catalog-page #products { scroll-margin-top: 64px; }
+.interface-catalog-page .purpose-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.interface-catalog-page .family-grid .family-card:last-child { grid-column: auto; }
+.interface-catalog-page .family-card { display: flex; min-width: 0; flex-direction: column; }
+.interface-catalog-page .family-body { display: flex; flex: 1; flex-direction: column; padding: 26px 24px; }
+.interface-catalog-page .use-label { min-height: 30px; font-size: 10px; line-height: 1.5; letter-spacing: .07em; }
+.interface-catalog-page .family-card h3 { margin: 8px 0 12px; font-size: 22px; line-height: 1.3; }
+.interface-catalog-page .family-card p { flex: 1; min-height: 0; margin: 0 0 22px; font-size: 14px; line-height: 1.65; }
+.interface-catalog-page .technical-path { margin: 0; padding: 12px 8px; font-size: 11px; line-height: 1.5; }
+.interface-catalog-page .family-commerce { display: flex; min-height: 68px; align-items: center; justify-content: space-between; gap: 10px; margin-top: 0; padding: 18px 0; border: 0; background: transparent; }
+.interface-catalog-page .family-commerce strong { font-size: 18px; line-height: 1.3; white-space: nowrap; }
+.interface-catalog-page .family-commerce span { max-width: 52%; font-size: 10px; line-height: 1.5; text-align: right; }
+.interface-catalog-page .family-meta { margin-top: 0; padding-top: 17px; }
+.interface-catalog-page .family-meta > span:first-child { font-size: 11px; line-height: 1.5; }
+.interface-catalog-page .family-meta .status { flex-shrink: 0; font-size: 10px; }
+@media (max-width: 1100px) {
+  .interface-catalog-page .purpose-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .interface-catalog-page .purpose-grid { grid-template-columns: 1fr; gap: 24px; }
+  .interface-catalog-page .family-grid .family-card:last-child { grid-column: auto; }
+  .interface-catalog-page .family-body { padding: 24px; }
+  .interface-catalog-page .use-label { min-height: 0; margin-bottom: 8px; }
+  .interface-catalog-page .family-card h3 { margin-top: 0; }
+}
