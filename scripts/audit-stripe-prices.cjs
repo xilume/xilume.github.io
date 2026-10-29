@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const { products, paymentURL } = require('../shop/catalog.js');
 
 const skuMetadata = Object.freeze({
+  'mini-pcie-canfd-rs485': 'XILUME-MINIPCIE-CANFD-RS485',
   dualcanfd: 'XILUME-DUAL-MINIPCIE-CAN-FD', octant: 'XILUME-OCTANT'
 });
 const has = (object, key) => object && Object.prototype.hasOwnProperty.call(object, key);
@@ -16,7 +17,7 @@ function validateConfig(config) {
   if (!/^acct_[a-zA-Z0-9]+$/.test(config?.accountId || '')) errors.push('accountId is required');
   const seen = new Set();
   if (!config?.products || Object.keys(config.products).sort().join(',') !== Object.keys(products).sort().join(',')) {
-    errors.push('products must contain exactly dualcanfd and octant');
+    errors.push(`products must contain exactly ${Object.keys(products).sort().join(', ')}`);
   }
   for (const id of Object.keys(products)) {
     const entry = has(config?.products, id) ? config.products[id] : null;

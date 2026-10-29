@@ -2,6 +2,7 @@
   "mode": "test",
   "accountId": null,
   "products": {
+    "mini-pcie-canfd-rs485": { "productId": null, "priceId": null, "paymentLinkId": null },
     "dualcanfd": { "productId": null, "priceId": null, "paymentLinkId": null },
     "octant": { "productId": null, "priceId": null, "paymentLinkId": null }
   }

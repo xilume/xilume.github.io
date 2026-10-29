@@ -87,6 +87,21 @@
     }
   },
   {
+    "host": "mini-pcie",
+    "target": "canfd-rs485",
+    "title": "Mini PCIe CAN FD + RS-485 扩展卡",
+    "summary": "Mini PCIe 内置扩展，提供两路 CAN FD 与六路 RS-485，含两条 DB9 转接线",
+    "href": "products/mini-pcie-canfd-rs485/",
+    "module": {
+      "name": "Mini PCIe CAN FD + RS-485 扩展卡",
+      "description": "Mini PCIe 内置扩展卡",
+      "status": "2 CAN FD + 6 RS-485",
+      "price": "US$99",
+      "href": "products/mini-pcie-canfd-rs485/"
+    },
+    "controller": null
+  },
+  {
     "host": "usb",
     "target": "smbus",
     "title": "USB 智能电池接口",
@@ -182,6 +197,21 @@
       "price": "Sample and volume pricing",
       "href": "products/interface-ics/xl1326-a/"
     }
+  },
+  {
+    "host": "mini-pcie",
+    "target": "canfd-rs485",
+    "title": "Mini PCIe CAN FD + RS-485",
+    "summary": "Mini PCIe expansion with two CAN FD and six RS-485 channels. Two DB9 breakout cables included.",
+    "href": "products/mini-pcie-canfd-rs485/",
+    "module": {
+      "name": "Mini PCIe CAN FD + RS-485",
+      "description": "Internal Mini PCIe expansion card",
+      "status": "2 CAN FD + 6 RS-485",
+      "price": "US$99",
+      "href": "products/mini-pcie-canfd-rs485/"
+    },
+    "controller": null
   },
   {
     "host": "usb",
