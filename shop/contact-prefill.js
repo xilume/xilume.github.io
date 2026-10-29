@@ -3,6 +3,7 @@
   const form = document.querySelector('[data-contact-form]');
   if (!form) return;
   const products = {
+    'mini-pcie-canfd-rs485': { name: 'Mini PCIe CAN FD + RS-485', zh: 'Mini PCIe CAN FD + RS-485 扩展卡', path: '/products/mini-pcie-canfd-rs485/', defaultIntent: 'order' },
     dualcanfd: { name: 'Dual Mini PCIe CAN FD', zh: '双路 Mini PCIe CAN FD', path: '/products/mini-pcie-dual-can-fd/', defaultIntent: 'order' },
     octant: { name: 'Octant', zh: 'Octant', path: '/products/8hub/', defaultIntent: 'order' },
     xe826: { name: 'XE826', zh: 'XE826', path: '/products/8hub-embedded/', defaultIntent: 'quote' },

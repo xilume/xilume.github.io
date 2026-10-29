@@ -263,6 +263,7 @@ for (const language of ['en', 'zh-CN']) {
   });
 
   const products = {
+    'mini-pcie-canfd-rs485': ['Mini PCIe CAN FD + RS-485', 'Mini PCIe CAN FD + RS-485 扩展卡', '/products/mini-pcie-canfd-rs485/'],
     dualcanfd: ['Dual Mini PCIe CAN FD', '双路 Mini PCIe CAN FD', '/products/mini-pcie-dual-can-fd/'],
     octant: ['Octant', 'Octant', '/products/8hub/'],
     xe826: ['XE826', 'XE826', '/products/8hub-embedded/'],
@@ -277,7 +278,7 @@ for (const language of ['en', 'zh-CN']) {
         const p = page(language, undefined, {
           url: `https://xilume.co${prefix}/contact/?product=${id}${intent ? '&intent=' + intent : ''}&email=DO_NOT_FORWARD&message=DO_NOT_FORWARD&price=0&redirect=https://evil.invalid#private-fragment`
         });
-        const effectiveIntent = intent || (id === 'dualcanfd' || id === 'octant' ? 'order' : 'quote');
+        const effectiveIntent = intent || (catalog.product(id) ? 'order' : 'quote');
         assert.equal(p.context.hidden, false);
         assert.equal(p.productName.textContent, language === 'en' ? enName : zhName);
         assert.equal(p.productLink.href, prefix + productPath);

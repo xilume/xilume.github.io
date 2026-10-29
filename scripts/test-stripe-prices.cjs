@@ -5,13 +5,17 @@ const { test } = require('node:test');
 const { products } = require('../shop/catalog.js');
 const { validateConfig, validateProduct, createReader, audit } = require('./audit-stripe-prices.cjs');
 const config = { mode: 'test', accountId: 'acct_fixture', products: {
+  'mini-pcie-canfd-rs485': { productId: 'prod_minipcie', priceId: 'price_minipcie', paymentLinkId: 'plink_minipcie' },
   dualcanfd: { productId: 'prod_dual', priceId: 'price_dual', paymentLinkId: 'plink_dual' },
   octant: { productId: 'prod_octant', priceId: 'price_octant', paymentLinkId: 'plink_octant' }
 } };
 
 function fixture(id, mode = 'test') {
   const ids = config.products[id];
-  const metadata = { sku: id === 'dualcanfd' ? 'XILUME-DUAL-MINIPCIE-CAN-FD' : 'XILUME-OCTANT' };
+  const metadata = { sku: {
+    'mini-pcie-canfd-rs485': 'XILUME-MINIPCIE-CANFD-RS485',
+    dualcanfd: 'XILUME-DUAL-MINIPCIE-CAN-FD', octant: 'XILUME-OCTANT'
+  }[id] };
   const shared = { active: true, livemode: mode === 'live', metadata };
   const price = { ...shared, id: ids.priceId, object: 'price', product: ids.productId,
     currency: 'usd', unit_amount: products[id].priceCents, type: 'one_time', recurring: null,
@@ -19,7 +23,7 @@ function fixture(id, mode = 'test') {
   return {
     product: { ...shared, id: ids.productId, object: 'product' }, price,
     link: { ...shared, id: ids.paymentLinkId, object: 'payment_link', currency: 'usd',
-      url: `https://buy.stripe.com/${mode === 'test' ? 'test_' : ''}${id}fixture`,
+      url: `https://buy.stripe.com/${mode === 'test' ? 'test_' : ''}${id.replaceAll('-', '')}fixture`,
       allow_promotion_codes: false, after_completion: { type: 'hosted_confirmation' } },
     lineItems: { object: 'list', has_more: false, data: [
       { price, quantity: 1, currency: 'usd', amount_subtotal: products[id].priceCents, adjustable_quantity: null }
@@ -81,7 +85,8 @@ test('configuration rejects missing identities, extra SKUs, duplicates and injec
   for (const candidate of [null, {}, { ...config, mode: 'unknown' },
     { ...config, accountId: null }, { ...config, products: {} },
     { ...config, products: { ...config.products, extra: {} } },
-    { ...config, products: { dualcanfd: config.products.dualcanfd, octant: config.products.dualcanfd } },
+    { ...config, products: { dualcanfd: config.products.dualcanfd, octant: config.products.octant } },
+    { ...config, products: { ...config.products, octant: config.products.dualcanfd } },
     { ...config, products: { ...config.products, dualcanfd: { ...config.products.dualcanfd, priceId: 'price_x/../../customers' } } }
   ]) {
     assert.ok(validateConfig(candidate).length);

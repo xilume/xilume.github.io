@@ -101,16 +101,20 @@ for (const lang of ['en', 'zh-CN']) for (const id of Object.keys(shop.products))
   });
 }
 
-test('duplicate SKU targets fail closed; setup notice needs both distinct enabled links', () => {
-  const duplicate = { dualcanfd: 'https://buy.stripe.com/fixture123', octant: 'https://buy.stripe.com/fixture123' };
+test('duplicate SKU targets fail closed; setup notice needs all distinct enabled links', () => {
+  const ids = Object.keys(shop.products);
+  const duplicate = Object.fromEntries(ids.map(id => [id, 'https://buy.stripe.com/fixture123']));
   for (const id of Object.keys(shop.products)) {
     const get = render(`?product=${id}`, 'en', duplicate, true);
     assert.equal(get('[data-payment-link]').hidden, true);
     assert.equal(get('[data-shop-setup-notice]').hidden, false);
   }
-  const distinct = { ...duplicate, octant: 'https://buy.stripe.com/fixture456' };
+  const distinct = Object.fromEntries(ids.map((id, index) => [id, `https://buy.stripe.com/fixture${index}`]));
   assert.equal(render('', 'en', distinct, true)('[data-shop-setup-notice]').hidden, true);
   assert.equal(render('', 'en', distinct, false)('[data-shop-setup-notice]').hidden, false);
+  for (const missing of ids) {
+    assert.equal(render('', 'en', { ...distinct, [missing]: null }, true)('[data-shop-setup-notice]').hidden, false);
+  }
 });
 
 test('missing catalog leaves static contact links usable without an exception', () => {
@@ -131,11 +135,11 @@ test('missing or invalid products preserve the no-script selection fallback', ()
   }
 });
 
-test('release stays locked: switch false and both exact SKU links null', () => {
+test('release stays locked: switch false and all exact SKU links null', () => {
   const window = {};
   vm.runInNewContext(read('shop/payment-links.js'), { window });
   assert.equal(window.XILUME_CHECKOUT_ENABLED, false);
-  assert.deepEqual(Object.keys(window.XILUME_PAYMENT_LINKS).sort(), ['dualcanfd', 'octant']);
+  assert.deepEqual(Object.keys(window.XILUME_PAYMENT_LINKS).sort(), ['dualcanfd', 'mini-pcie-canfd-rs485', 'octant']);
   assert.equal(Object.isFrozen(window.XILUME_PAYMENT_LINKS), true);
   for (const [id, value] of Object.entries(window.XILUME_PAYMENT_LINKS)) {
     assert.ok(shop.product(id));
@@ -147,6 +151,7 @@ test('contact prefill uses known products, preserves drafts and never auto-submi
   for (const lang of ['en', 'zh-CN']) {
     for (const [query, initial, expected] of [
       ['?product=octant&email=private@example.invalid', '', '199.00'],
+      ['?product=mini-pcie-canfd-rs485&email=private@example.invalid', '', '99.00'],
       ['?product=dualcanfd', 'Existing draft', 'Existing draft'],
       ['?product=__proto__', '', ''],
       ['?product=%3Cscript%3E', '', '']
@@ -157,7 +162,7 @@ test('contact prefill uses known products, preserves drafts and never auto-submi
       const document = { documentElement: { lang }, querySelector: () => form };
       const window = { XilumeShop: shop, location: { href: 'https://xilume.co/contact/' + query } };
       vm.runInNewContext(read('shop/contact-prefill.js'), { window, document, URL });
-      if (expected === '199.00') assert.ok(field.value.includes(expected));
+      if (['199.00', '99.00'].includes(expected)) assert.ok(field.value.includes(expected));
       else assert.equal(field.value, expected);
       assert.ok(!field.value.includes('private@example.invalid'));
     }

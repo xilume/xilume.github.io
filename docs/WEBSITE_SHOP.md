@@ -4,6 +4,19 @@ The bilingual Shop runs on Cloudflare Pages. **Real payments remain disabled.**
 Keep contact purchasing available. No merchant details, inventory, shipping
 decisions or tax declarations may be invented.
 
+## New Mini PCIe multi-interface card — 2026-10-29
+
+The owner authorized the new `mini-pcie-canfd-rs485` product at USD 99.00
+(9900 cents), including one Mini PCIe expansion card and two DB9 breakout
+cables. Confirmed interfaces are 2 CAN FD and 6 RS-485; communication uses USB.
+The new product has bilingual details, catalog, comparison, Shop, review and
+contact-prefill entries. It does not inherit the other cards' drivers or ratings.
+
+A fresh connected-account read on this date still returned only Xilume sandbox,
+livemode=false. No Stripe objects or merchant settings were changed. Checkout
+remains disabled, with all three payment links null; orders use the existing
+contact route. The new price is a website listing, not a live Stripe payment.
+
 ## Verified audit — 2026-10-22
 
 Source baseline: 8bc0ea81aa9bcea46642470876b7aba31b07e1c9.

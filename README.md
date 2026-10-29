@@ -26,6 +26,7 @@ This is a plain HTML, CSS, and JavaScript site, with no application build step. 
 - `/products/usb-dual-can-fd/` and `/products/usb-canfd-rs485/` — selection pages linking to current named products
 - `/products/usb-smbus/` — Battery Display Module for Windows and Linux integration
 - `/products/mini-pcie-dual-can-fd/` — Dual Mini PCIe CAN FD interface
+- `/products/mini-pcie-canfd-rs485/` — Mini PCIe expansion card with 2 CAN FD and 6 RS-485 channels, US$99 including two DB9 breakout cables
 - `/contact/` — direct pricing, product selection and support inquiries, plus email and phone contact options
 - `/about/` — company and development direction
 

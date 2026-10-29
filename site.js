@@ -25,6 +25,7 @@
               <small>2 路带信号隔离的 CAN/CAN FD 通道</small>
               <b aria-hidden="true">→</b>
             </a>
+            <a href="/zh-cn/products/mini-pcie-canfd-rs485/"><span>Mini PCIe 内置扩展卡</span><strong>Mini PCIe CAN FD + RS-485</strong><small>2 路 CAN FD + 6 路 RS-485 · US$99</small><b aria-hidden="true">→</b></a>
             <a href="/zh-cn/products/8hub-embedded/">
               <span>嵌入式 8 通道通信模块</span>
               <strong>XE826</strong>
@@ -97,6 +98,7 @@
               <small>Two isolated internal CAN FD channels</small>
               <b aria-hidden="true">→</b>
             </a>
+            <a href="/products/mini-pcie-canfd-rs485/"><span>Mini PCIe expansion card</span><strong>Mini PCIe CAN FD + RS-485</strong><small>2 CAN FD + 6 RS-485 · US$99</small><b aria-hidden="true">→</b></a>
             <a href="/products/8hub-embedded/">
               <span>Embedded 8-Channel Communication Module</span>
               <strong>Xilume XE826</strong>
