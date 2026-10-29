@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Choose Mini PCIe CAN FD expansion, internal USB CAN FD/serial modules, external USB test adapters or USB controller ICs for your PCB.">
+  <meta name="description" content="Compare five integration paths: Mini PCIe with 2 CAN FD and 6 RS-485, dual CAN FD, internal XE826, external Octant, or XL controller ICs for your PCB.">
   <title>CAN FD &amp; RS-485 Integration for PCs and OEM Designs | Xilume</title>
-  <link rel="icon" href="/favicon.svg?v=20261029-minipcie1" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/xilume-icon-180.png?v=20261029-minipcie1" sizes="180x180">
-  <link rel="stylesheet" href="/styles.css?v=20261029-minipcie1">
-  <link rel="stylesheet" href="/solutions/solutions.css?v=20260907-octant">
-  <script defer src="/site.js?v=20261029-minipcie1"></script>
+  <link rel="icon" href="/favicon.svg?v=20261029-siteflow2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/xilume-icon-180.png?v=20261029-siteflow2" sizes="180x180">
+  <link rel="stylesheet" href="/styles.css?v=20261029-siteflow2">
+  <link rel="stylesheet" href="/solutions/solutions.css?v=20261029-compact1">
+  <script defer src="/site.js?v=20261029-siteflow2"></script>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://xilume.co/solutions/">
   <link rel="alternate" hreflang="en" href="https://xilume.co/solutions/">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="Xilume">
   <meta property="og:type" content="website">
   <meta property="og:title" content="CAN FD &amp; RS-485 Integration for PCs and OEM Designs | Xilume">
-  <meta property="og:description" content="Choose Mini PCIe CAN FD expansion, internal USB CAN FD/serial modules, external USB test adapters or USB controller ICs for your PCB.">
+  <meta property="og:description" content="Compare five integration paths: Mini PCIe with 2 CAN FD and 6 RS-485, dual CAN FD, internal XE826, external Octant, or XL controller ICs for your PCB.">
   <meta property="og:url" content="https://xilume.co/solutions/">
   <meta property="og:image" content="https://xilume.co/images/8hub-embedded-top-dark-v1.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,32 +30,38 @@
       "@type": "CollectionPage",
       "name": "Xilume Industrial Connectivity Solutions",
       "url": "https://xilume.co/solutions/",
-      "description": "Choose Octant for field commissioning and automotive bench testing, or explore embedded CAN FD, multibus modules and interface IC integration.",
+      "description": "Compare five integration paths: Mini PCIe with 2 CAN FD and 6 RS-485, dual CAN FD, internal XE826, external Octant, or XL controller ICs for your PCB.",
       "mainEntity": {
         "@type": "ItemList",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "Embedded CAN FD Expansion",
-            "url": "https://xilume.co/solutions/#embedded-can-fd-expansion"
+            "name": "CAN FD and six RS-485 channels inside a PC.",
+            "url": "https://xilume.co/solutions/#mini-pcie-multibus-expansion"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "CAN FD + Serial Port Expansion",
-            "url": "https://xilume.co/solutions/#can-fd-serial-expansion"
+            "name": "Add two CAN FD networks inside the host.",
+            "url": "https://xilume.co/solutions/#embedded-can-fd-expansion"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Octant Field Commissioning & Automotive Bench Testing",
-            "url": "https://xilume.co/solutions/#external-usb-expansion"
+            "name": "Bring CAN FD and serial ports into one machine.",
+            "url": "https://xilume.co/solutions/#can-fd-serial-expansion"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "name": "Interface IC Integration",
+            "name": "Add industrial ports to a portable test computer.",
+            "url": "https://xilume.co/solutions/#external-usb-expansion"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Design the interfaces into your own board.",
             "url": "https://xilume.co/solutions/#interface-ic-integration"
           }
         ]
@@ -82,7 +88,7 @@
 }
   </script>
   <link rel="stylesheet" href="/company-applications.css?v=20260907-1">
-  <link rel="stylesheet" href="/site-refinement.css?v=20261029-minipcie1">
+  <link rel="stylesheet" href="/site-refinement.css?v=20261029-siteflow2">
 </head>
 <body class="solutions-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -94,260 +100,50 @@
   </header>
 
   <main id="main-content">
-    <section class="sl-hero">
-      <div class="sl-shell">
-        <p class="sl-breadcrumbs"><a href="/">Home</a><span>/</span><span>Solutions</span></p>
-        <div class="sl-hero-copy">
-          <p class="sl-kicker">Solutions</p>
-          <h1>CAN FD and serial integration for PCs and OEM boards.</h1>
-          <p class="sl-hero-lead">From field commissioning and automotive test benches to embedded equipment and custom PCBs, choose the interfaces and hardware format your application needs.</p>
-          <div class="sl-hero-criteria" aria-label="Solution selection criteria">
-            <span>Host connection</span>
-            <span>Field interfaces</span>
-            <span>Installation location</span>
-            <span>Product format</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sl-choice-section" aria-labelledby="solution-choice-heading">
-      <div class="sl-shell">
-        <div class="sl-section-heading">
-          <h2 id="solution-choice-heading">What does your system need?</h2>
-          <p>Begin with the sentence that matches your integration problem. Each path shows the system fit before recommending hardware.</p>
-        </div>
-        <div class="sl-choice-grid">
-          <a class="sl-choice-card" href="#embedded-can-fd-expansion">
-            <small>01 · MINI PCIE HOST</small>
-            <h3>Need CAN FD inside an embedded PC?</h3>
-            <p>Add two isolated CAN/CAN FD channels inside a compatible industrial or embedded computer—without an external adapter.</p>
-            <span class="sl-choice-result">Recommended: Dual Mini PCIe CAN FD <b aria-hidden="true">→</b></span>
-          </a>
-          <a class="sl-choice-card" href="#can-fd-serial-expansion">
-            <small>02 · INTERNAL USB HOST</small>
-            <h3>Need CAN FD and serial ports in one machine?</h3>
-            <p>Bring two CAN FD, four RS-485, and two RS-232 channels inside a robot or industrial machine through one internal connection.</p>
-            <span class="sl-choice-result">Recommended: Xilume XE826 <b aria-hidden="true">→</b></span>
-          </a>
-          <a class="sl-choice-card" href="#external-usb-expansion">
-            <small>03 · FIELD &amp; AUTOMOTIVE TESTING</small>
-            <h3>Need to test equipment in the field or on an automotive bench?</h3>
-            <p>Connect your laptop to CAN FD, RS-485 and RS-232 equipment with Octant to exchange test data, check communication and capture logs.</p>
-            <span class="sl-choice-result">Recommended: Xilume Octant <b aria-hidden="true">→</b></span>
-          </a>
-          <a class="sl-choice-card" href="#interface-ic-integration">
-            <small>04 · CUSTOM PCB</small>
-            <h3>Need serial or CAN FD built into your own product?</h3>
-            <p>Integrate an XL interface IC into your PCB and select the device by the required channel mix.</p>
-            <span class="sl-choice-result">Recommended: XL Interface ICs <b aria-hidden="true">→</b></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="sl-solution" id="embedded-can-fd-expansion" aria-labelledby="canfd-solution-heading">
-      <div class="sl-shell">
-        <div class="sl-solution-intro">
-          <span class="sl-solution-index">01 / SOLUTION</span>
-          <div>
-            <p class="sl-kicker">Embedded CAN FD Expansion</p>
-            <h2 id="canfd-solution-heading">Add two isolated CAN FD networks inside the host.</h2>
-            <p>For industrial and embedded computers that need permanent CAN connectivity, use the existing Mini PCIe location instead of adding an external USB adapter and enclosure.</p>
-          </div>
-        </div>
-
-        <div class="sl-solution-layout">
-          <div class="sl-solution-detail">
-            <p class="sl-fit-title">Best fit when</p>
-            <dl class="sl-fit-list">
-              <div><dt>Host</dt><dd>A compatible Mini PCIe slot provides USB 2.0 signals.</dd></div>
-              <div><dt>Networks</dt><dd>Two independent CAN or CAN FD channels are required.</dd></div>
-              <div><dt>Installation</dt><dd>The interface must stay inside an industrial or embedded computer.</dd></div>
-              <div><dt>Software</dt><dd>The system runs Windows or Linux.</dd></div>
-            </dl>
-
-            <div class="sl-architecture" aria-label="Embedded CAN FD expansion architecture">
-              <small>System architecture</small>
-              <div class="sl-flow">
-                <div class="sl-flow-node"><small>Host</small><strong>Industrial or embedded PC</strong></div>
-                <div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node is-xilume"><small>Internal interface</small><strong>Mini PCIe + USB 2.0</strong></div>
-                <div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node"><small>Field side</small><strong>2 × isolated CAN FD networks</strong></div>
-              </div>
-            </div>
-          </div>
-
-          <article class="sl-product-recommendation">
-            <figure class="sl-product-media"><img src="/images/dual-mini-pcie-canfd-front-v4.webp" alt="Xilume Dual Mini PCIe CAN FD module" width="1600" height="900" loading="lazy" decoding="async"></figure>
-            <div class="sl-product-copy">
-              <small>Recommended hardware</small>
-              <div class="sl-product-title-row"><h3>Dual Mini PCIe CAN FD</h3><span>Internal module</span></div>
-              <div class="sl-proof-grid" aria-label="Dual Mini PCIe CAN FD highlights">
-                <div><strong>2 × CAN FD</strong><span>Independent channels</span></div>
-                <div><strong>Up to 8 Mbit/s</strong><span>CAN FD data phase</span></div>
-                <div><strong>Windows + Linux</strong><span>Driver support</span></div>
-              </div>
-              <div class="sl-product-actions"><a href="/products/mini-pcie-dual-can-fd/">View product →</a><a href="/contact/">Discuss an integration</a></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="sl-solution is-alt" id="can-fd-serial-expansion" aria-labelledby="serial-solution-heading">
-      <div class="sl-shell">
-        <div class="sl-solution-intro">
-          <span class="sl-solution-index">02 / SOLUTION</span>
-          <div>
-            <p class="sl-kicker">CAN FD + Serial Port Expansion</p>
-            <h2 id="serial-solution-heading">Consolidate CAN FD and serial inside one machine.</h2>
-            <p>For robots and industrial equipment that need several field interfaces, replace a collection of adapters with one internally mounted board and one host connection.</p>
-          </div>
-        </div>
-
-        <div class="sl-solution-layout">
-          <div class="sl-solution-detail">
-            <p class="sl-fit-title">Best fit when</p>
-            <dl class="sl-fit-list">
-              <div><dt>Host</dt><dd>An internal USB header is available inside the machine.</dd></div>
-              <div><dt>Networks</dt><dd>CAN FD, RS-485, and RS-232 must operate from one host.</dd></div>
-              <div><dt>Installation</dt><dd>The interface board mounts permanently inside a robot or industrial system.</dd></div>
-              <div><dt>Software</dt><dd>The system runs Windows or Linux.</dd></div>
-            </dl>
-
-            <div class="sl-architecture" aria-label="Embedded multi-bus integration architecture">
-              <small>System architecture</small>
-              <div class="sl-flow">
-                <div class="sl-flow-node"><small>Host</small><strong>Robot controller or industrial PC</strong></div>
-                <div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node is-xilume"><small>Internal interface</small><strong>One internal USB connection</strong></div>
-                <div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node"><small>Field side</small><strong>CAN FD + RS-485 + RS-232</strong></div>
-              </div>
-            </div>
-          </div>
-
-          <article class="sl-product-recommendation">
-            <figure class="sl-product-media"><img src="/images/8hub-embedded-top-dark-v1.webp" alt="Xilume XE826 embedded 8-channel industrial communication module" width="1600" height="900" loading="lazy" decoding="async"></figure>
-            <div class="sl-product-copy">
-              <small>Recommended hardware</small>
-              <div class="sl-product-title-row"><h3>Xilume XE826</h3><span>Embedded 8-channel communication module</span></div>
-              <div class="sl-proof-grid" aria-label="Xilume XE826 highlights">
-                <div><strong>2 × CAN FD</strong><span>Up to 8 Mbit/s</span></div>
-                <div><strong>6 × Serial</strong><span>4 RS-485 + 2 RS-232</span></div>
-                <div><strong>1 × Internal USB</strong><span>Windows + Linux</span></div>
-              </div>
-              <div class="sl-product-actions"><a href="/products/8hub-embedded/">View product →</a><a href="/contact/">Discuss an integration</a></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="sl-solution" id="external-usb-expansion" aria-labelledby="external-usb-solution-heading">
-      <div class="sl-shell">
-        <div class="sl-solution-intro">
-          <span class="sl-solution-index">03 / SOLUTION</span>
-          <div><p class="sl-kicker">Octant · Field commissioning &amp; automotive testing</p><h2 id="external-usb-solution-heading">Industrial interfaces for the workbench and the field.</h2><p>When a computer lacks industrial ports, testing needs extra adapters. Octant brings CAN FD, RS-485 and RS-232 together in one enclosed hub, connecting a laptop or industrial PC over USB for commissioning, automotive component tests and communication troubleshooting.</p></div>
-        </div>
-        <div class="sl-solution-layout">
-          <div class="sl-solution-detail">
-            <p class="sl-fit-title">Where Octant fits</p>
-            <dl class="sl-fit-list sl-octant-scenarios">
-              <div><dt>Field commissioning</dt><dd>Connect a laptop to drives, sensors or controllers. Check traffic and communication settings, and capture intermittent problems.</dd></div>
-              <div><dt>Automotive bench testing</dt><dd>Connect CAN or CAN FD modules such as ECUs and BMS units on a test bench. Send frames according to the device protocol, observe responses and keep a traffic record.</dd></div>
-              <div><dt>Industrial equipment</dt><dd>Connect RS-485 instruments and sensors alongside RS-232 equipment. Check communication from the same computer with fewer separate adapters.</dd></div>
-            </dl>
-            <div class="sl-architecture" aria-label="External USB communication architecture">
-              <small>System architecture</small>
-              <div class="sl-flow">
-                <div class="sl-flow-node"><small>Host</small><strong>Laptop or industrial PC</strong></div><div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node is-xilume"><small>External USB</small><strong>Octant</strong></div><div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node"><small>Field side</small><strong>CAN FD + RS-485 + RS-232</strong></div>
-              </div>
-            </div>
-          </div>
-          <article class="sl-product-recommendation">
-            <figure class="sl-product-media"><img src="/images/8hub-workbench-system.webp" alt="Xilume Octant industrial communication hub on a workbench" width="1672" height="941" loading="lazy" decoding="async"></figure>
-            <div class="sl-product-copy"><small>Recommended hardware</small><div class="sl-product-title-row"><h3>Octant</h3><span>Industrial communication hub</span></div>
-              <div class="sl-proof-grid" aria-label="Octant highlights"><div><strong>2 × CAN FD</strong><span>Up to 8 Mbit/s data phase</span></div><div><strong>6 × Serial</strong><span>4 RS-485 + 2 RS-232</span></div><div><strong>Windows + Linux</strong><span>Hardware driver support</span></div></div>
-              <div class="sl-product-actions"><a href="/products/8hub/">View Octant →</a><a href="/downloads/">Software & drivers</a></div>
-            </div>
-          </article>
-        </div>
-        <div class="sl-octant-tools" aria-labelledby="octant-tools-heading">
-          <div class="sl-octant-tools-intro"><p class="sl-kicker">Software &amp; diagnostics</p><h3 id="octant-tools-heading">CAN FD tools for testing and troubleshooting</h3></div>
-          <a href="/downloads/control-center/"><small>Windows</small><strong>Xilume CAN FD Control Center <span aria-hidden="true">→</span></strong><p>Single and cyclic transmission, live receive monitoring, ID filtering and CSV logs.</p></a>
-          <a href="/downloads/tracebox-analyzer-pro/"><small>Windows x64</small><strong>TraceBox Analyzer Pro <span aria-hidden="true">→</span></strong><p>Review traffic trends, capture data around an incident and export diagnostic reports.</p></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="sl-solution is-alt" id="interface-ic-integration" aria-labelledby="interface-ic-solution-heading">
-      <div class="sl-shell">
-        <div class="sl-solution-intro">
-          <span class="sl-solution-index">04 / SOLUTION</span>
-          <div>
-            <p class="sl-kicker">Interface IC Integration</p>
-            <h2 id="interface-ic-solution-heading">Build the required interfaces into your own product.</h2>
-            <p>For custom PCBs, controllers, and embedded equipment, choose an XL interface IC by the required serial and CAN FD channel mix.</p>
-          </div>
-        </div>
-
-        <div class="sl-solution-layout">
-          <div class="sl-solution-detail">
-            <p class="sl-fit-title">Best fit when</p>
-            <dl class="sl-fit-list">
-              <div><dt>Product</dt><dd>A custom PCB is being designed or revised.</dd></div>
-              <div><dt>Interfaces</dt><dd>Serial, CAN FD, or both are required directly on the board.</dd></div>
-              <div><dt>Selection</dt><dd>The device is selected by interface type and channel count.</dd></div>
-              <div><dt>Design</dt><dd>Package, electrical, and support-circuit requirements are confirmed with Xilume.</dd></div>
-            </dl>
-
-            <div class="sl-architecture" aria-label="Interface IC product integration architecture">
-              <small>Integration path</small>
-              <div class="sl-flow">
-                <div class="sl-flow-node"><small>Product design</small><strong>Customer PCB</strong></div>
-                <div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node is-xilume"><small>Interface IC</small><strong>XL device selected by channel mix</strong></div>
-                <div class="sl-flow-arrow" aria-hidden="true">›</div>
-                <div class="sl-flow-node"><small>Interfaces</small><strong>Serial, CAN FD, or both</strong></div>
-              </div>
-            </div>
-          </div>
-
-          <article class="sl-product-recommendation sl-ic-recommendation">
-            <div class="sl-product-copy">
-              <small>Recommended family</small>
-              <div class="sl-product-title-row"><h3>XL Interface ICs</h3><span>For customer PCB</span></div>
-              <p class="sl-ic-summary">Select the device by the interfaces and channel count required in the product.</p>
-              <div class="sl-ic-table-wrap" tabindex="0" role="region" aria-label="Scrollable XL interface IC channel comparison">
-                <table class="sl-ic-table">
-                  <caption class="sr-only">XL interface IC channel comparison</caption>
-                  <thead><tr><th scope="col">Device</th><th scope="col">Serial</th><th scope="col">CAN FD</th></tr></thead>
-                  <tbody>
-                    <tr><th scope="row"><a href="/products/interface-ics/#xl1326">XL1326</a><small>LQFP48 · 6 serial + 2 CAN FD</small></th><td>6 channels</td><td>2 channels</td></tr>
-                    <tr><th scope="row"><a href="/products/interface-ics/#xl1108">XL1108</a><small>Serial</small></th><td>8 channels</td><td>0</td></tr>
-                    <tr><th scope="row"><a href="/products/interface-ics/#xl1326-a">XL1326-A</a><small>LQFP48 · CAN FD only</small></th><td>0</td><td>2 channels</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="sl-ic-note">Contact Xilume engineering for current package, electrical, and support-circuit requirements.</p>
-              <div class="sl-product-actions"><a href="/products/interface-ics/">View interface ICs →</a><a href="/contact/">Discuss a product design</a></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="sl-next-step">
-      <div class="sl-shell sl-next-step-inner">
-        <div><h2>Not sure whether to use a module or integrate an interface IC?</h2><p>Share the product type, required interface channels, host connection, and installation constraints. Xilume can confirm the right path.</p></div>
-        <a href="/contact/">Contact Xilume →</a>
-      </div>
-    </section>
+    <section class="sl-intro"><div class="sl-shell"><p class="sl-breadcrumbs"><a href="/">Home</a><span>/</span><span>Solutions</span></p><p class="sl-kicker">Solutions</p><h1>Start with your system and its interfaces.</h1><p class="sl-intro-lead">Choose an integration path by installation location, channel mix and hardware format.</p></div></section>
+    <section class="sl-catalog" aria-label="Communication integration solutions"><div class="sl-shell"><div class="sl-solution-grid">
+        <article class="sl-solution-card" id="mini-pcie-multibus-expansion" aria-labelledby="solution-1-title">
+          <header class="sl-card-header"><div><p class="sl-kicker">01 / Mini PCIe · Multiple interfaces</p><h2 id="solution-1-title">CAN FD and six RS-485 channels inside a PC.</h2></div><a class="sl-card-image" href="/products/mini-pcie-canfd-rs485/" tabindex="-1" aria-hidden="true"><img src="/images/catalog-mini-pcie-canfd-rs485-v1.webp" alt="Mini PCIe CAN FD + RS-485" width="1586" height="992" loading="lazy" decoding="async"></a></header>
+          <p class="sl-card-summary">Connect CAN FD devices and RS-485 instruments from one Mini PCIe expansion card inside an industrial PC, robot controller or test system.</p>
+          <ul class="sl-card-facts" aria-label="Interfaces and installation"><li>Mini PCIe</li><li>2 × CAN FD</li><li>6 × RS-485</li></ul>
+          <div class="sl-card-product"><a href="/products/mini-pcie-canfd-rs485/">Mini PCIe CAN FD + RS-485</a><span>US$99 · two DB9 cables included</span></div>
+          <div class="sl-card-actions"><a href="/products/mini-pcie-canfd-rs485/">View product <span aria-hidden="true">→</span></a><a href="/contact/?product=mini-pcie-canfd-rs485&amp;intent=integration">Check system fit</a></div>
+          <details class="sl-card-more"><summary>Host and integration</summary><div><p>The Mini PCIe card communicates over USB. Confirm the host slot provides the required USB connection, then check the operating system, pinout and wiring with Xilume.</p><p>US$99 includes one expansion card and both DB9 breakout cables.</p></div></details>
+        </article>
+        <article class="sl-solution-card" id="embedded-can-fd-expansion" aria-labelledby="solution-2-title">
+          <header class="sl-card-header"><div><p class="sl-kicker">02 / Industrial PC upgrades</p><h2 id="solution-2-title">Add two CAN FD networks inside the host.</h2></div><a class="sl-card-image" href="/products/mini-pcie-dual-can-fd/" tabindex="-1" aria-hidden="true"><img src="/images/catalog-dual-canfd-xl1326-a-263aa1-v2.webp" alt="Dual Mini PCIe CAN FD" width="1586" height="992" loading="lazy" decoding="async"></a></header>
+          <p class="sl-card-summary">Use a compatible Mini PCIe slot to connect motor drives, control modules or sensors through two isolated CAN/CAN FD channels, with the interface installed inside the computer.</p>
+          <ul class="sl-card-facts" aria-label="Interfaces and installation"><li>2 × isolated CAN FD</li><li>Mini PCIe</li><li>Windows + Linux</li></ul>
+          <div class="sl-card-product"><a href="/products/mini-pcie-dual-can-fd/">Dual Mini PCIe CAN FD</a><span>US$69.99</span></div>
+          <div class="sl-card-actions"><a href="/products/mini-pcie-dual-can-fd/">View product <span aria-hidden="true">→</span></a><a href="/contact/?product=dualcanfd&amp;intent=integration">Check system fit</a></div>
+          <details class="sl-card-more"><summary>Host requirements and resources</summary><div><p>The Mini PCIe slot must provide USB 2.0 signals. Two independent channels support a CAN FD data phase up to 8 Mbit/s; the actual rate depends on the network and connected equipment.</p><p><a href="/documentation/dual-canfd/">Installation and integration guide →</a></p></div></details>
+        </article>
+        <article class="sl-solution-card" id="can-fd-serial-expansion" aria-labelledby="solution-3-title">
+          <header class="sl-card-header"><div><p class="sl-kicker">03 / Robotics and automation</p><h2 id="solution-3-title">Bring CAN FD and serial ports into one machine.</h2></div><a class="sl-card-image" href="/products/8hub-embedded/" tabindex="-1" aria-hidden="true"><img src="/images/catalog-xe826-studio-v1.webp" alt="XE826" width="1586" height="992" loading="lazy" decoding="async"></a></header>
+          <p class="sl-card-summary">Mount XE826 inside a robot or industrial system to connect drives, instruments and sensors through one internal USB host connection.</p>
+          <ul class="sl-card-facts" aria-label="Interfaces and installation"><li>2 × CAN FD</li><li>4 × RS-485 + 2 × RS-232</li><li>Internal USB</li></ul>
+          <div class="sl-card-product"><a href="/products/8hub-embedded/">XE826</a><span>Request pricing</span></div>
+          <div class="sl-card-actions"><a href="/products/8hub-embedded/">View product <span aria-hidden="true">→</span></a><a href="/contact/?product=xe826&amp;intent=integration">Check system fit</a></div>
+          <details class="sl-card-more"><summary>Host requirements and resources</summary><div><p>An internal USB header and space to mount the module are required. Windows and Linux drivers are available; CAN FD data phase is up to 8 Mbit/s.</p><p><a href="/documentation/octant-xe826/">Installation and integration guide →</a></p></div></details>
+        </article>
+        <article class="sl-solution-card" id="external-usb-expansion" aria-labelledby="solution-4-title">
+          <header class="sl-card-header"><div><p class="sl-kicker">04 / Field commissioning and automotive tests</p><h2 id="solution-4-title">Add industrial ports to a portable test computer.</h2></div><a class="sl-card-image" href="/products/8hub/" tabindex="-1" aria-hidden="true"><img src="/images/shop-octant-studio-v1.webp" alt="Octant" width="1586" height="992" loading="lazy" decoding="async"></a></header>
+          <p class="sl-card-summary">Connect a laptop or industrial PC to CAN FD, RS-485 and RS-232 equipment through the enclosed Octant hub for field troubleshooting, commissioning and ECU or BMS bench tests.</p>
+          <ul class="sl-card-facts" aria-label="Interfaces and installation"><li>2 × CAN FD</li><li>4 × RS-485 + 2 × RS-232</li><li>External USB</li></ul>
+          <div class="sl-card-product"><a href="/products/8hub/">Octant</a><span>US$199</span></div>
+          <div class="sl-card-actions"><a href="/products/8hub/">View product <span aria-hidden="true">→</span></a><a href="/contact/?product=octant&amp;intent=integration">Check system fit</a></div>
+          <details class="sl-card-more"><summary>Test setup and software</summary><div><p>Windows and Linux hardware drivers are available. Match frame format, bus settings and messages to the device protocol; CAN FD data phase is up to 8 Mbit/s.</p><ul><li><a href="/downloads/control-center/">Xilume CAN FD Control Center</a> — single and cyclic transmission, live reception, filtering and CSV logs (Windows)</li><li><a href="/downloads/tracebox-analyzer-pro/">TraceBox Analyzer Pro</a> — traffic trends, incident capture and diagnostic reports (Windows x64)</li><li><a href="/documentation/octant-xe826/">Installation and integration guide →</a></li></ul></div></details>
+        </article>
+        <article class="sl-solution-card" id="interface-ic-integration" aria-labelledby="solution-5-title">
+          <header class="sl-card-header"><div><p class="sl-kicker">05 / Custom controllers and PCBs</p><h2 id="solution-5-title">Design the interfaces into your own board.</h2></div><a class="sl-card-image" href="/products/interface-ics/" tabindex="-1" aria-hidden="true"><img src="/images/chip-family-hero-xl1326-v4.webp" alt="XL Interface ICs" width="1586" height="992" loading="lazy" decoding="async"></a></header>
+          <p class="sl-card-summary">Choose an XL interface IC by the serial and CAN FD channel mix needed in a custom controller or dedicated device. Confirm the electrical and support-circuit requirements before PCB design.</p>
+          <ul class="sl-card-facts" aria-label="Interfaces and installation"><li>Serial or CAN FD</li><li>Custom PCB</li><li>Device selection</li></ul>
+          <div class="sl-card-product"><a href="/products/interface-ics/">XL Interface ICs</a><span>Sample and volume pricing</span></div>
+          <div class="sl-card-actions"><a href="/products/interface-ics/">View product <span aria-hidden="true">→</span></a><a href="/contact/?product=interface-ics&amp;intent=integration">Check system fit</a></div>
+          <details class="sl-card-more"><summary>Compare controller channels</summary><div><div class="sl-table-wrap" tabindex="0" role="region" aria-label="XL controller channel comparison"><table><caption class="sr-only">XL interface IC controller channels</caption><thead><tr><th scope="col">Device</th><th scope="col">Serial</th><th scope="col">CAN FD</th></tr></thead><tbody><tr><th scope="row"><a href="/products/interface-ics/#xl1326">XL1326</a></th><td>6</td><td>2</td></tr><tr><th scope="row"><a href="/products/interface-ics/#xl1108">XL1108</a></th><td>8</td><td>0</td></tr><tr><th scope="row"><a href="/products/interface-ics/#xl1326-a">XL1326-A</a></th><td>0</td><td>2</td></tr></tbody></table></div><p>XL1326 and XL1326-A use LQFP48 packages and require external bus transceivers. Confirm the current electrical, package and support-circuit details with engineering.</p></div></details>
+        </article>
+      </div></div></section>
+    <section class="sl-contact"><div class="sl-shell"><div><h2>Need help choosing a path?</h2><p>Share your host, required channels and installation constraints so we can check the fit.</p></div><a href="/contact/">Contact Xilume <span aria-hidden="true">→</span></a></div></section>
   </main>
 
   <footer class="site-footer">

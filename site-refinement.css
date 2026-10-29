@@ -76,16 +76,17 @@ img { max-width: 100%; }
  .site-header .header-inner .site-language-switch a { font-size: 9px; }
 }
 
-/* Four solution paths remain readable in the desktop disclosure. */
+/* Repeatable solution links fit more entries without filling the viewport. */
 @media (min-width:901px) {
- .solutions-mega-menu-inner { grid-template-columns:190px minmax(0,1fr); gap:40px; }
+ .solutions-mega-menu-inner { grid-template-columns:170px minmax(0,1fr); gap:30px; padding-top:24px; padding-bottom:26px; }
  .solutions-mega-content { display:block; }
- .solutions-mega-heading { margin-bottom:20px; }
- .solutions-mega-links { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
- .solutions-mega-links > a { padding:17px 35px 17px 18px; }
- .solutions-mega-links > a > strong { margin-top:7px; font-size:15px; white-space:normal; overflow:visible; text-overflow:clip; }
- .solutions-mega-links > a > small { margin-top:9px; font-size:12px; line-height:1.65; white-space:normal; overflow:visible; text-overflow:clip; }
- .solutions-mega-links > a > em { position:static; max-width:none; margin-top:14px; text-align:left; transform:none; font-size:9px; }
+ .solutions-mega-heading { margin-bottom:16px; }
+ .solutions-mega-links { grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+ .solutions-mega-links > a { padding:14px 27px 14px 15px; min-height:0; }
+ .solutions-mega-links > a > strong { margin-top:6px; font-size:14px; line-height:1.35; white-space:normal; overflow:visible; text-overflow:clip; }
+ .solutions-mega-links > a > small { margin-top:7px; font-size:11px; line-height:1.5; white-space:normal; overflow:visible; text-overflow:clip; }
+ .solutions-mega-links > a > em { position:static; max-width:none; margin-top:10px; text-align:left; transform:none; font-size:9px; }
+ .site-mega-menu-solutions { max-height:calc(100dvh - 76px); overflow-y:auto; }
 }
 
 @media (min-width:901px) {
@@ -93,6 +94,54 @@ img { max-width: 100%; }
  .solutions-mega-links > a > em { align-self:end; font-size:10px; }
  .solutions-mega-heading h2 { margin-top:0; font-size:18px; }
  .solutions-mega-heading p { font-size:12px; line-height:1.6; }
+}
+@media (min-width:901px) and (max-width:1150px) {
+ .solutions-mega-menu-inner { grid-template-columns:150px minmax(0,1fr); gap:24px; }
+ .solutions-mega-links { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+/* A product promotion belongs in the carousel; family navigation stays at family level. */
+.product-hero-selector.container { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.product-hero-multibus { --hero-accent:126,189,227; --hero-action:#1769c2; background:#071321; }
+.product-hero-multibus::before { opacity:.08; }
+.product-hero-multibus .home-multibus-layout { grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); gap:36px; }
+.home-multibus-copy h1 { font-size:clamp(50px,5.1vw,72px); line-height:1.04; }
+.home-multibus-copy h1 span { display:block; margin-top:16px; font-size:clamp(26px,3vw,43px); color:#9dc9e6; line-height:1.2; letter-spacing:-.035em; }
+.product-hero-multibus .home-multibus-copy > p:not(.product-hero-kicker) { max-width:470px; font-size:17px; }
+.product-hero-multibus .home-multibus-copy > p.home-multibus-note { margin-top:20px; font-size:11px; color:#8197a8; }
+.home-multibus-media { display:flex; align-items:center; justify-content:center; margin:0; min-width:0; height:100%; max-height:560px; }
+.home-multibus-media img { width:100%; height:100%; object-fit:cover; object-position:center; mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+.home-solution-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.home-solution-card { display:flex; flex-direction:column; }
+.home-solution-card figure { height:170px; min-height:0; border-right:0; border-bottom:1px solid #cfd7dd; background:#e9ebee; }
+.home-solution-copy { min-height:0; padding:24px; }
+.home-solution-copy > span { display:none; }
+.home-solution-copy h3 { margin-top:13px; font-size:23px; line-height:1.2; }
+.home-solution-copy > p { margin-top:13px; font-size:13px; }
+.home-solution-copy > div { margin-top:18px; padding:12px 0; }
+.home-solution-copy > b { padding-top:18px; }
+@media (max-width:1100px) {
+ .home-solution-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:860px) {
+ .product-hero-selector.container { grid-template-columns:repeat(5,minmax(145px,1fr)); }
+ .product-hero-multibus .home-multibus-layout { grid-template-columns:1fr; grid-template-rows:auto 250px; gap:16px; padding-top:30px; padding-bottom:22px; }
+ .home-multibus-media { max-height:250px; }
+ .home-multibus-copy h1 { font-size:48px; }
+ .home-multibus-copy h1 span { font-size:30px; margin-top:10px; }
+ .product-hero-multibus .home-multibus-copy > p:not(.product-hero-kicker) { font-size:15px; margin-top:17px; }
+ .product-hero-multibus .home-multibus-copy > p.home-multibus-note { margin-top:14px; font-size:10px; }
+}
+@media (max-width:600px) {
+ .product-hero-selector.container { grid-template-columns:repeat(5,140px); }
+ .product-hero-multibus .home-multibus-layout { min-height:0; grid-template-rows:auto 225px; padding-top:27px; padding-bottom:18px; gap:12px; }
+ .home-multibus-copy h1 { font-size:43px; }
+ .home-multibus-copy h1 span { font-size:27px; }
+ .product-hero-multibus .hero-actions { gap:8px; margin-top:18px; }
+ .product-hero-multibus .hero-actions .primary-button { padding-top:10px; padding-bottom:10px; }
+ .home-solution-grid { grid-template-columns:1fr; }
+ .home-solution-card figure { height:160px; }
+ .home-solution-copy { padding:22px; }
 }
 
 /* Fit the Shop entry alongside the existing desktop links at tablet widths. */
