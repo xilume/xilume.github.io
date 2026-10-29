@@ -4,7 +4,7 @@
     'mini-pcie-canfd-rs485': Object.freeze({
       id: 'mini-pcie-canfd-rs485', name: 'Mini PCIe CAN FD + RS-485', nameZh: 'Mini PCIe CAN FD + RS-485 扩展卡',
       priceCents: 9900, currency: 'USD',
-      image: '/images/catalog-mini-pcie-canfd-rs485-v1.webp',
+      image: '/images/catalog-mini-pcie-canfd-rs485-xl1326-v2.webp',
       path: '/products/mini-pcie-canfd-rs485/',
       summary: 'Mini PCIe expansion card with two CAN FD and six RS-485 channels. Communicates over USB.',
       summaryZh: 'Mini PCIe 扩展卡，提供两路 CAN FD 与六路 RS-485，通过 USB 通信',
