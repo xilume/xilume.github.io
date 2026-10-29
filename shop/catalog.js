@@ -4,7 +4,7 @@
     dualcanfd: Object.freeze({
       id: 'dualcanfd', name: 'Dual Mini PCIe CAN FD', nameZh: '双路 Mini PCIe CAN FD',
       priceCents: 6999, currency: 'USD',
-      image: '/images/dual-mini-pcie-canfd-front-v4.webp',
+      image: '/images/shop-dual-canfd-xl1326-a-studio-v1.webp',
       path: '/products/mini-pcie-dual-can-fd/',
       summary: 'Two isolated CAN / CAN FD channels. Windows and Linux drivers.',
       summaryZh: '双路隔离 CAN / CAN FD，支持 Windows 与 Linux 驱动',
@@ -14,7 +14,7 @@
     octant: Object.freeze({
       id: 'octant', name: 'Octant', nameZh: 'Octant',
       priceCents: 19900, currency: 'USD',
-      image: '/images/8hub-hero-studio.webp', path: '/products/8hub/',
+      image: '/images/shop-octant-studio-v1.webp', path: '/products/8hub/',
       summary: 'USB communication hub. 2 CAN FD, 4 RS-485 and 2 RS-232 channels.',
       summaryZh: 'USB 工业通信扩展坞，提供 2 路 CAN FD、4 路 RS-485、2 路 RS-232',
       included: 'Single-unit hardware. Academic and volume pricing available by enquiry.',
