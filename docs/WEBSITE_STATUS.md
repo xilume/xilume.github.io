@@ -1,6 +1,6 @@
 # Xilume 官网维护状态
 
-## 2026-10-29 Mini PCIe CAN FD + RS-485 新产品（实施与本地验收）
+## 2026-10-29 Mini PCIe CAN FD + RS-485 新产品（正式上线已验证）
 
 - 用户明确要求新产品完整融入官网并发布；已确认 Mini PCIe、2 CAN FD、6 RS-485、USB 通信，单张 US$99 含两条 DB9 转接线。未继承其他型号的隔离、速率、系统或驱动参数
 - 基线 main `daf7cfd`，独立分支 `codex/mini-pcie-canfd-rs485-20261029`；新增中英文 `/products/mini-pcie-canfd-rs485/` 详情、统一摄影主图与配件实物图，接入双语 Products、嵌入式通信、接口比较、全站产品菜单、选型器、Shop、购买预览及联系预填，补齐 sitemap、canonical、hreflang 与 Product/Offer
@@ -9,7 +9,11 @@
 - 实际本地浏览器：双语详情、产品总览、嵌入式列表、接口比较、Shop、新卡购买预览与采购联系，共 14 路由 × 1440×1000 / 390×844。28 项均无横向溢出或可见坏图，购买预览均 US$99.00、无付款按钮，联系表单正确预填新商品与单价；错误/警告日志为空。桌面详情与 Products、中文手机首屏已目视检查
 - 独立静态审查未发现阻碍发布的问题；类别架构文案已改为核对系统适配，避免将旧型号系统支持推广至新卡。主图按实物参考生成，细小丝印有重绘，接线与元件识别以正式资料为准
 - 实际本地交互：产品菜单键盘展开显示新卡、Escape 关闭；选型器 Mini PCIe + CAN FD/485 返回新卡 US$99；新详情语言切换保留查询参数及规格锚点，浏览器后退恢复；中文手机菜单开关/Escape 均正常。桌面 Shop 三款摄影风格与价格列已目视核对
-- 此节写入时尚未推送或正式发布，部署、线上与最终测试记录待实际完成后补充
+- 已合并：[PR #25](https://github.com/xilume/xilume.github.io/pull/25)，代码 head `8cafcad13cde4a71991261df3fef514fd6ad52ee`；[PR CI](https://github.com/xilume/xilume.github.io/actions/runs/40956421774) 与 [main CI](https://github.com/xilume/xilume.github.io/actions/runs/40956541744) 均成功，合并 SHA `86294c6cd313b86d85029aaff3a66c2468a05d9d`
+- 已正式部署：Cloudflare Pages `b30b75f8-2fe1-4274-8c5b-7d4ad2925183` 于 2026-10-29 14:19:37 PDT（21:19:37 UTC）报告 success，[固定部署](https://b30b75f8.xilume.pages.dev/)。实际构建日志确认该 main SHA、指定构建命令及 230 文件 / 72 HTML / 55 可索引页 / 3175 引用，正式别名包含 `xilume.co` 与 `www.xilume.co`
+- 已线上文件核验：68 个本轮发布资源全部 HTTP 200、MIME 正确、内容匹配构建；HTML 仅允许已知 Cloudflare 空 beacon 注入及相邻换行，未忽略其他内容差异；图片/JS/CSS 与源产物一致。4 类维护路径返回 404。双语新卡 Product/Offer 均 USD 99.00、2 CAN FD、6 RS-485 和两条 DB9 线，线上付款配置 false / 三链接 null
+- 已实际线上浏览器验收：同样 14 路由 × 1440×1000 / 390×844 共 28 项均无横向溢出、图片加载失败或误启付款；首次快速检查的 6 项尚未加载完图片，在等待 network idle 后复核全部正常。购买预览与联系预填均 US$99.00，错误/警告日志为空。实际从中文详情点击采购选项再进入联系购买，正确带入新卡与单价，未提交表单
+- 本地另检查 900×1000 平板宽度的双语详情、嵌入式分类及 Shop，共 6 项均无溢出，分类/Shop 正确为两列。正式桌面详情截图与主图/制作说明保存于该任务交付目录；本轮没有进行真实支付、实际发货或新增型号驱动验收
 
 ## 2026-10-28 接口选型卡片与芯片批号（正式发布已验证）
 
